@@ -1,0 +1,174 @@
+%%%
+%\documentclass[10pt, a4paper]{report}
+%\documentclass[12pt, a4paper]{article}
+\documentclass[12pt, a4paper]{book}
+%%%\documentclass[12pt, b5paper, draft]{report}
+%%%\documentclass[10pt, a4paper, twocolumn]{book}
+%%%\documentclass[10pt, a4paper]{book}
+
+\usepackage[english]{babel}
+\usepackage[left=2.5cm,right=2.5cm,top=3cm,bottom=3.5cm]{geometry}
+%%\usepackage[top=3cm,bottom=2cm,inner=2.5cm,outer=1.5cm]{geometry}
+%\usepackage[small]{titlesec}
+\usepackage{enumitem}
+\usepackage[affil-it]{authblk}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{lineno}
+\usepackage[bookmarks]{hyperref}
+\usepackage{cite}
+\usepackage{titling}
+\pagestyle{fancy}
+%%\addtolength{\headwidth}{\marginparsep}
+%%\addtolength{\headwidth}{\marginparwidth}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\fancyhf{}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\fancyfoot[LE,RO]{\bfseries \thepage}
+\fancypagestyle{plain}{%
+%%\fancyhead{} % leva l’intestazione
+\renewcommand{\headrulewidth}{0pt} % e la linea da inizio capitolo
+}
+
+%%%layout decorations:
+%%\renewcommand{\headrulewidth}{1.4pt}
+%%\renewcommand{\footrulewidth}{0.4pt}
+
+%%\renewcommand\footrule{\begin{minipage}{1\textwidth}
+%%\hrule width \hsize height 2pt \kern 1mm \hrule width \hsize   
+%%\end{minipage}\par}%
+
+\renewcommand\headrule{
+\begin{minipage}{1\textwidth}
+\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
+\end{minipage}}%
+
+\renewcommand{\footrulewidth}{0.4pt}
+
+%%%font style
+%%\renewcommand{\familydefault}{\sfdefault}
+%%\renewcommand*\sfdefault{ppl}
+%%\renewcommand*\sfdefault{iwona}
+
+%%\renewcommand{\familydefault}{\rmdefault}
+%%\renewcommand*\rmdefault{ppl}
+%%\renewcommand*\rmdefault{iwona}
+
+%%\renewcommand{\familydefault}{\ttdefault}
+
+%%%others:
+%%barocco
+%%\usepackage{gfsartemisia-euler}
+%%\usepackage[T1]{fontenc}
+%% un po' schiacciato
+%%\usepackage[sfmath]{kpfonts}
+%%\renewcommand*\familydefault{\sfdefault}
+%%\usepackage[T1]{fontenc}
+%%
+%%\usepackage[default]{gfsneohellenic}
+%%\usepackage[LGR,T1]{fontenc} %% LGR encoding is needed for loading the package gfsneohellenic
+%% particolare:
+\usepackage[math]{iwona}
+\usepackage[T1]{fontenc}
+%%
+%%\usepackage[sc]{mathpazo}
+%%\linespread{1.05}         % Palladio needs more leading (space between lines)
+%%\usepackage[T1]{fontenc}
+%% carino:
+%\usepackage{fouriernc}
+%\usepackage[T1]{fontenc}
+%%
+%%\usepackage[adobe-utopia]{mathdesign}
+%%\usepackage[T1]{fontenc}
+
+%CMS symbols
+
+%
+
+
+\title{Search for heavy resonances decaying into a $Z$ boson and a vector boson in the $\nu \nu$ $q\bar{q}$ final state at CMS}
+\date{}
+\author{Supervisor: Prof. Franco Simonetto \\ Candidate: Lisa Benato} %, {\itshape Universit\`a degli studi di Padova}}
+\affil{Universit\`a degli studi di Padova}
+
+
+\begin{document}
+
+\begin{titlingpage} %This starts the title page
+\begin{center}
+\includegraphics[height=3.5cm]{logo}\\ %Put the logo you want here
+\begin{large}
+Universit\`a degli studi di Padova \\ %The name your university
+Dipartimento di Fisica e Astronomia\\
+\end{large}
+\vspace{1.5cm} %You can control the vertical distance
+\begin{large}
+Tesi di Dottorato \\
+\end{large}
+\begin{Huge} 
+\textbf{\thetitle} \\
+\end{Huge}
+\vspace{3.5cm}
+\theauthor\\
+\vspace{5cm} %Put the distance you need.
+Scuola di Dottorato di Ricerca, XXX ciclo
+%\thedate
+\end{center}
+\end{titlingpage}
+
+%\maketitle
+\newpage\null\thispagestyle{empty}\newpage
+\thispagestyle{empty}
+\begin{flushright}
+\null\vspace{\stretch{1}}
+%Joy in looking and comprehending is nature's most beautiful gift.
+"I have no special talent. I am only passionately curious."\\
+(A. Einstein)
+%A Rita, Margherita, Milla.\\
+%\vspace*{0.4cm}
+%Miei miti, miei esempi, mie ispirazioni.\\
+%A Fabiola, Roberto, Piero e Alberto.\\
+\vspace{\stretch{2}}\null
+\end{flushright}
+
+\newpage\null\thispagestyle{empty}\newpage
+\thispagestyle{empty}
+
+\frontmatter %numeri romani
+\tableofcontents
+
+\linenumbers
+\chapter*{Abstract} 
+\mainmatter %numeri arabi da qui in poi
+\input{introduction}
+
+\input{theory}
+
+\input{samples}
+
+\input{objects}
+
+\input{reconstruction}
+
+\input{alpha}
+
+\input{uncertainties}
+
+\input{results}
+
+\input{conclusions}
+
+\clearpage
+
+\bibliography{Benato_PhD_Thesis}
+\bibliographystyle{siam}
+
+
+\end{document}
