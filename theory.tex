@@ -38,7 +38,7 @@ Super Symmetryc (SUSY) models state that every fermion (boson) of the Standard M
 
 Two other possible theoretical pictures are extensively described in sec.~\ref{sec:theory_HVT}-\ref{sec:theory_WED}.
 
-\clearpage
+\newpage
 
 \section{Heavy Vector Triplet}
 \label{sec:theory_HVT}
@@ -49,7 +49,7 @@ Since a simplified model is not a complete theory, its validity is restricted to
 Limits on production cross-section times branching ratio ($\sigma  \mathcal{B}$), as a function of the invariant mass spectrum of the probed resonance, can be extracted from experimental data. Given that $\sigma  \mathcal{B}$ are functions of the simplified model parameters and of the parton luminosities, it is then possible to interpret the observed limits in the parameter space.
 
 \subsection{Simplified Lagrangian}
-\label{sec:theory_lagr}
+\label{sec:HVT_lagr}
 
 The heavy vector triplet framework assumes the existence of an additional vector triplet, $V_{\mu}^a$, $a=1,2,3$, in which two spin-1 particles are charged and one is neutral:
 
@@ -70,13 +70,12 @@ The triplet interactions are described by a simplified Lagrangian, that is invar
 \\
 In the first line of the formula~\ref{eq:Lagrangian}, $V$ mass and kinematic terms are included, described with the covariant derivative $D_{\mu} V_{\nu}^a = \partial_{\mu} V_{\nu}^a + g \epsilon^{abc} W_{\mu}^b V_{\nu}^c$, where $W_{\mu}^a$ are the fields of the weak interaction and $g$ is the weak gauge coupling. $V_{\mu}^a$ are not mass eigenstates, since they mix with the electroweak fields after the spontaneous symmetry breaking, therefore $m_V$ isn't the physical mass of the $V$ bosons.\\
 The second line describes the interaction of the triplet with the Higgs field and the SM left-handed fermions; $c_H$ describes the vertices with the physical Higgs and the three unphysical Goldstone bosons that, for the Goldstone equivalence theorem, are connected to the longitudinal polarization of W and Z bosons at high-energy; hence, $c_H$ is related to the bosonic decays of the resonances. $c_F$ is the analogous parameter describing the $V$ interaction with fermions, that can be generalized as a flavour dependent coefficent, once defined $J_F^{\mu \mbox{ } a} = \sum_{f} \bar{f}_L \gamma^{\mu} \tau^a f_L$: $c_F V_{\mu}^a  J_F^{\mu \mbox{ } a} = c_{\ell} V_{\mu}^a  J_{\ell}^{\mu \mbox{ } a} + c_{q} V_{\mu}^a  J_{q}^{\mu \mbox{ } a} + c_{3} V_{\mu}^a  J_{3}^{\mu \mbox{ } a}$.\\
-{\color{red} \bf CHE COSA C'ENTRA IL GOLDSTONE BOSON EQUIVALENCE THEOREM CON LE W-Z AD ALTA ENERGIA? APPROFONDISCI}\\
-The last part of the equation does not describe vertices of $V$ with SM fields, hence it can be neglected while describing the LHC phenomenology, under the assumptions previously made {(\color{red} \bf NEXT SECTION...)}, along with dimension four quadrilinear $V$ interactions, otherwise their effects would be appreciated in electroweak precision tests and precise Higgs coupling measurements~\cite{Giudice:2007fh}.\\
+The last part of the equation includes terms that are relevant only in strongly coupled scenarios (see sec.~\ref{sec:HVT_decay_bosons}) through the $V$-$W$ mixing, but it does not include vertices of $V$ with light SM fields, hence it can be neglected while describing the majority of the LHC phenomenology, under the assumptions previously stated. Additional dimension four quadrilinear $V$ interactions are non relevant for the processes discussed, otherwise their effects would be appreciated in electroweak precision tests and precise Higgs coupling measurements~\cite{Giudice:2007fh}.\\
 
 The parameters in the Lagrangian can be interpreted as follows: $g_V$ describes the strenght of the interaction, that is weighted by $c$ parameters. $g_V$ ranges from $g_V \sim 1$ when the coupling is weak (sec. \ref{sec:theory_HVT_A}), to $g_V \sim 4 \pi$ when the coupling is strong (sec. \ref{sec:theory_HVT_B}). $c$ parameters are expected to be $c \sim 1$, except to $c_H$, that can be smaller for weak couplings. The combinations describing the vertices, $g_V c_H$ and $g^2/g_v c_F$, can be considered as the fundamental parameters, used to interpret the experimental results.
 
 \subsection{Mass eigenstates, mixing parameters and decay widths}
-\label{sec:theory_widths}
+\label{sec:HVT_pheno}
 
 The newly introduced $SU(2)_L$ triplet is expected to mix with the weak SM fields. The $U(1)_{em}$ symmetry is left unbroken by the new interaction, hence the massless combination of the electroweak fields, namely the photon, is the same as the SM:
 \begin{equation}
@@ -154,7 +153,7 @@ where $\hat{m}_W$ is defined as:
 \begin{equation}
 \left\{
 \begin{array}{l}
-\hat{m}_W = \frac{e}{2 \sin{\theta_W}}\hat{v} = \hat{m}_Z \cos{\theta_W} \\
+\hat{m}_W = \frac{e}{2 \sin{\theta_W}} \hat{v} = \hat{m}_Z \cos{\theta_W} \\
 \end{array};
 \right.
 \label{eq:mass_matrix_param_W}
@@ -197,7 +196,7 @@ Given that this model aims at searching new particles in the TeV scale and that 
 ;
 \label{eq:mass_hierarchy}
 \end{equation}
-$\zeta$ parameter can be $\zeta \ll 1$ (weakly coupled scenario) or $\zeta \sim 1$ (strongly coupled scenario). When eq.~\ref{eq:Mass_hierarchy} applies, the second lines in eq.~\ref{eq:mass_eig_Z} and eq.~\ref{eq:mass_eig_W} can be approximated as follows:
+$\zeta$ parameter can be $\zeta \ll 1$ (weakly coupled scenario) or $\zeta \sim 1$ (strongly coupled scenario). When eq.~\ref{eq:mass_hierarchy} applies, the second lines in eq.~\ref{eq:mass_eig_Z} and eq.~\ref{eq:mass_eig_W} can be approximated as follows:
 \begin{equation}
 \begin{split}
 & m_Z^2 = \hat{m}_Z^2 \left( 1 - c_H^2 {\zeta}^2\right) \left( 1 + \mathcal{O}(\hat{m}_Z^2/\hat{m}_V^2) \right) \\
@@ -217,16 +216,93 @@ that satisfies the SM tree-level relation $\rho = 1$ if ${\cos{{\theta}_W}}^2 \a
 M_{\pm}^2 = M_0^2 \left(1 + \mathcal{O}(\%) \right).
 \label{eq:HVT_degeneracy}
 \end{equation}
-
+\\
 Another consequence of the mass hierarchy~(\ref{eq:mass_hierarchy}) is that the mixing angles $\theta_{(N,C)}$ between the electroweak fields and the triplet are small:
 \begin{equation}
 {\theta}_{(N,C)} \approx c_H \zeta \frac{\hat{m}_{(W,Z)}}{ \hat{m}_V } \ll 1,
 \label{eq:HVT_small_angles}
 \end{equation}
-hence the couplings among SM particles are very close to the SM couplings.
+hence the couplings among SM particles are very close to the couplings predicted by the SM.
 
+%\vspace*{1\baselineskip}
+\subsubsection{Decay widths into fermions}
+\label{sec:HVT_decay_fermions}
 
-\subsection{HVT productions}
+The couplings among the triplet and SM fermions are expressed as a function of the rotational parameters $\theta_{(C,N)}$ and SM couplings (omitting the CKM matrix elements for quarks):
+\begin{equation}
+\begin{split}
+&
+\left\{
+\begin{array}{l}
+g_L^N = \frac{g^2}{g_V} \frac{c_F}{2} \cos{{\theta}_N} + \left( g_L^Z \right)_{SM} \sin{{\theta}_N} \approx \frac{g^2}{g_V} \frac{c_F}{2} \\
+g_R^N = \left( g_R^Z \right)_{SM} \sin{{\theta}_N} \approx 0\\
+\end{array}
+\right.
+,\\
+&
+\left\{
+\begin{array}{l}
+g_L^C = \frac{g^2}{g_V} \frac{c_F}{2} \cos{{\theta}_C} + \left( g_L^W \right)_{SM} \sin{{\theta}_N} \approx \frac{g^2}{g_V} \frac{c_F}{2} \\
+g_R^C = 0\\
+\end{array}
+\right.
+,\\
+\end{split}
+\label{eq:HVT_couplings}
+\end{equation}
+where $g_L^W = g/2$. The $V$ bosons interact with SM left fermions, and the strenght of the couplings with fermions is determined by $g^2/g_V c_F$, as stated in sec.~\ref{sec:HVT_lagr}. The decay width into fermions is then given by:
+\begin{equation}
+\Gamma_{V^{\pm} \rightarrow f \bar{f'}} \approx 2 \Gamma_{V^{0} \rightarrow f \bar{f}} \approx N_c {\left( \frac{g^2 c_F}{g_V}\right)}^2 \frac{M_V}{48 \pi},
+\label{eq:HVT_width_fermions}
+\end{equation}
+where $N_c$ is the number of colours (3 for quarks, 1 for leptons).
+
+\subsubsection{Decay widths into bosons}
+\label{sec:HVT_decay_bosons}
+As a starting point, a proper choice of the gauge makes easier the derivation of approximate decay widths. While the unitary gauge is very convenient in discussing the electroweak symmetry breaking mechanism, since it provides a basis in which the Goldstone components of the scalar fields of the theory are set to zero, it does not properly describe the logitudinally polarized bosons in high-enery regimes, since it introduces a dependence of the type $E/m$ in the logitudinal polarization vector, not corresponding to the experimental results. This pathological behaviour can be overcome profiting of the equivalence theorem: while calculating the scattering amplitude of an high-energy process, the longitudinally polarized vectors are equivalent to their corresponding Goldstone scalars. The scattering amplitude can therefore be calculated with Goldstone diagrams.\\
+In the so-called equivalent gauge~\cite{Wulzer:2013mza}, the Higgs doublet is then parametrized as:
+\begin{equation}
+H =
+\begin{pmatrix}
+i \pi_+ \\
+\frac{\hat{h} + h -i \pi_0}{\sqrt{2}} \\
+\end{pmatrix}
+,
+\label{eq:equiv_gauge}
+\end{equation}
+and the Goldstones $\pi_0$ and $\pi_+$ describe respectively $W$ and $Z$ longitudinal bosons; $h$ is the physical Higgs boson. Rewriting the simplified Lagrangian ~\ref{eq:Lagrangian} with \ref{eq:equiv_gauge} parametrization, two terms held the information of the interaction of the $V$s with the Goldstones:
+\begin{equation}
+\mathcal{L}_{\pi} = ... + c_H \zeta {\hat{m}}_V V_{\mu}^a {\partial}^{\mu} {\pi}^a + \frac{g_V c_H}{2} V_{\mu}^a \left( {\partial}^{\mu} h {\pi}^a - h {\partial}^{\mu} {\pi}^a + {\epsilon}^{abc} \pi^b \partial^{\mu} \pi^c \right) + ...
+,
+\label{eq:lagr_goldstone}
+\end{equation}
+that are ruled by the $c_H g_V$ parameters combination. When $\zeta$ parameter is $\zeta \approx 1$, the first term in eq.~\ref{eq:lagr_goldstone} becomes important, and it is absorbed by a redefinition of the $V_{\mu}^a$ and $\pi^a$ fields,
+\begin{equation}
+\begin{split}
+ & V_{\mu}^a \rightarrow V_{\mu}^a + \frac{c_H \zeta}{\hat{m}_V} \partial_{\mu} \pi^a\\
+ & \pi^a \rightarrow \frac{1}{\sqrt{1 - c_H^s \zeta^2}} \pi^a; \mbox{ } c_H^s \zeta^2 < 1\\
+\end{split}
+.
+\label{eq:field_redef}
+\end{equation}
+By properly taking into account all the terms of the simplified lagrangian in the equivalent gauge, the partial widths of the dibosonic decays are:
+\begin{equation}
+\begin{split}
+ & \\
+ & \\
+\end{split}
+.
+\label{eq:HVT_dib_decay}
+\end{equation}
+ 
+
+\subsection{Model A: weak coupling scenario}
+\label{sec:theory_HVT_A}
+
+\subsection{Model B: strong coupling scenario}
+\label{sec:theory_HVT_B}
+
+\subsection{HVT production}
 \label{sec:theory_widths}
 %Comments on the parameter range
 
@@ -252,12 +328,7 @@ hence the couplings among SM particles are very close to the SM couplings.
 
 
 
-\subsection{Model A: weak coupling scenario}
-\label{sec:theory_HVT_A}
-
-\subsection{Model B: strong coupling scenario}
-\label{sec:theory_HVT_B}
-
+\newpage
 \section{Warped extra dimension}
 \label{sec:theory_WED}
 
