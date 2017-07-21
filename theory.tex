@@ -1,4 +1,6 @@
+\begin{tcolorbox}[breakable,colback=black!5!white,colframe=red!80!black,width=\textwidth]
 \chapter{Theoretical motivation}
+\end{tcolorbox}
 \label{sec:theory}
 
 The Standard Model (SM) of particles represents, so far, the best available description of the particles and their interactions. It is the summation of two gauge theories: the electroweak interaction, that pictures together the weak and electromagnetic interactions, and the strog interaction, or Quantum Chromodynamics (QCD). Particles, namely quarks and leptons, are described by spin 1/2 fermions, whilst interactions are embodied by spin 1 bosons. The simmetry group of the standard model is:
@@ -36,6 +38,7 @@ Super Symmetryc (SUSY) models state that every fermion (boson) of the Standard M
 
 Two other possible theoretical pictures are extensively described in sec.~\ref{sec:theory_HVT}-\ref{sec:theory_WED}.
 
+\clearpage
 
 \section{Heavy Vector Triplet}
 \label{sec:theory_HVT}
@@ -45,6 +48,8 @@ The adopted approach is that of the simplified model, in which an effective Lagr
 Since a simplified model is not a complete theory, its validity is restricted to the on-shell quantities related to the production and decay mechanisms of new resonances, that is the case of most of the LHC BSM searches are performed. Given these conditions, experimental results in the resonant region are sensitive to a limited number of the phenomenological Lagrangian parameters (or to a combination of those), whilst the remaining parameters tend to influence the tail of the distributions.\\
 Limits on production cross-section times branching ratio ($\sigma  \mathcal{B}$), as a function of the invariant mass spectrum of the probed resonance, can be extracted from experimental data. Given that $\sigma  \mathcal{B}$ are functions of the simplified model parameters and of the parton luminosities, it is then possible to interpret the observed limits in the parameter space.
 
+\subsection{Simplified Lagrangian}
+\label{sec:theory_lagr}
 
 The heavy vector triplet framework assumes the existence of an additional vector triplet, $V_{\mu}^a$, $a=1,2,3$, in which two spin-1 particles are charged and one is neutral:
 
@@ -58,38 +63,172 @@ The triplet interactions are described by a simplified Lagrangian, that is invar
 \begin{split}
 \mathcal{L_V} ={} & -\frac{1}{4} \left(D_{\mu}V_{\nu}^a - D_{\nu}V_{\mu}^a \right) \left( D^{\mu}V^{\nu \mbox{ } a} - D^{\nu}V^{\mu \mbox{ } a} \right) + \frac{m_V^2}{2}V_{\mu}^aV^{\mu \mbox{ } a} \\
  & +i g_V c_H V_{\mu}^a \left( H^{\dagger} \tau^a D^{\mu}H - D^{\mu}H^{\dagger} \tau^a H \right) + \frac{g^2}{g_V}c_F V_{\mu}^a \sum_{f} \bar{f}_L \gamma^{\mu} \tau^a f_L \\
- & + \frac{g_V}{2} c_{VVV} \epsilon_{abc} V_{\mu}^a V_{\nu}^b \left( D^{\mu}V^{\nu \mbox{ } c} - D^{\nu}V^{\mu \mbox{ } c}\right) + g_v^2 c_{VVHH} V_{\mu}^a V^{\mu \mbox{ } a} H^{\dagger} H - \frac{g}{2} c_{VVW} \epsilon_{abc} W^{\mu \nu \mbox{ } a} V_{\mu}^b V_{\nu}^c.
+ & + \frac{g_V}{2} c_{VVV} \epsilon_{abc} V_{\mu}^a V_{\nu}^b \left( D^{\mu}V^{\nu \mbox{ } c} - D^{\nu}V^{\mu \mbox{ } c}\right) + g_V^2 c_{VVHH} V_{\mu}^a V^{\mu \mbox{ } a} H^{\dagger} H - \frac{g}{2} c_{VVW} \epsilon_{abc} W^{\mu \nu \mbox{ } a} V_{\mu}^b V_{\nu}^c.
 \end{split}
 \label{eq:Lagrangian}
 \end{equation}
 \\
-In the first line of the formula~\ref{eq:Lagrangian}, $V$ mass and kinematic terms are included, described with the covariant derivative $D_{\mu} V_{\nu}^a = \partial_{\mu} V_{\nu}^a + g \epsilon^{abc} W_{\mu}^b V_{\nu}^c$, where $W_{\mu}^a$ are the fields of the weak interaction and $g$ is the weak gauge coupling.\\
+In the first line of the formula~\ref{eq:Lagrangian}, $V$ mass and kinematic terms are included, described with the covariant derivative $D_{\mu} V_{\nu}^a = \partial_{\mu} V_{\nu}^a + g \epsilon^{abc} W_{\mu}^b V_{\nu}^c$, where $W_{\mu}^a$ are the fields of the weak interaction and $g$ is the weak gauge coupling. $V_{\mu}^a$ are not mass eigenstates, since they mix with the electroweak fields after the spontaneous symmetry breaking, therefore $m_V$ isn't the physical mass of the $V$ bosons.\\
 The second line describes the interaction of the triplet with the Higgs field and the SM left-handed fermions; $c_H$ describes the vertices with the physical Higgs and the three unphysical Goldstone bosons that, for the Goldstone equivalence theorem, are connected to the longitudinal polarization of W and Z bosons at high-energy; hence, $c_H$ is related to the bosonic decays of the resonances. $c_F$ is the analogous parameter describing the $V$ interaction with fermions, that can be generalized as a flavour dependent coefficent, once defined $J_F^{\mu \mbox{ } a} = \sum_{f} \bar{f}_L \gamma^{\mu} \tau^a f_L$: $c_F V_{\mu}^a  J_F^{\mu \mbox{ } a} = c_{\ell} V_{\mu}^a  J_{\ell}^{\mu \mbox{ } a} + c_{q} V_{\mu}^a  J_{q}^{\mu \mbox{ } a} + c_{3} V_{\mu}^a  J_{3}^{\mu \mbox{ } a}$.\\
-{\color{red} \bf CHE COSA C'ENTRA IL GOLDSTONE BOSON EQUIVALENCE THEOREM CON LE W-Z AD ALTA ENERGIA? APPROFONDISCI\\}
-The last part of the equation does not describe vertices of $V$ with SM fields, hence it can be neglected while describing the LHC phenomenology, under the assumptions previously made {(\color{red} \bf NEXT SECTION...)}, along with dimension four quadrilinear $V$ interactions, otherwise their effects would be appreciated in electroweak precision tests and precise Higgs coupling measurements.\\
+{\color{red} \bf CHE COSA C'ENTRA IL GOLDSTONE BOSON EQUIVALENCE THEOREM CON LE W-Z AD ALTA ENERGIA? APPROFONDISCI}\\
+The last part of the equation does not describe vertices of $V$ with SM fields, hence it can be neglected while describing the LHC phenomenology, under the assumptions previously made {(\color{red} \bf NEXT SECTION...)}, along with dimension four quadrilinear $V$ interactions, otherwise their effects would be appreciated in electroweak precision tests and precise Higgs coupling measurements~\cite{Giudice:2007fh}.\\
 
+The parameters in the Lagrangian can be interpreted as follows: $g_V$ describes the strenght of the interaction, that is weighted by $c$ parameters. $g_V$ ranges from $g_V \sim 1$ when the coupling is weak (sec. \ref{sec:theory_HVT_A}), to $g_V \sim 4 \pi$ when the coupling is strong (sec. \ref{sec:theory_HVT_B}). $c$ parameters are expected to be $c \sim 1$, except to $c_H$, that can be smaller for weak couplings. The combinations describing the vertices, $g_V c_H$ and $g^2/g_v c_F$, can be considered as the fundamental parameters, used to interpret the experimental results.
+
+\subsection{Mass eigenstates, mixing parameters and decay widths}
+\label{sec:theory_widths}
+
+The newly introduced $SU(2)_L$ triplet is expected to mix with the weak SM fields. The $U(1)_{em}$ symmetry is left unbroken by the new interaction, hence the massless combination of the electroweak fields, namely the photon, is the same as the SM:
+\begin{equation}
+A_{\mu} = B_{\mu} \cos{\theta_W} + W_{\mu}^3 \sin{\theta_W},
+\label{eq:A_mu}
+\end{equation} 
+with the usual definitions of the electroweak parameters:
+\begin{equation}
+\begin{split}
+ & \tan{\theta_W}=\frac{g'}{g} \\
+ & e = \frac{g g'}{\sqrt{g^2 + {g'}^2}} \\
+ & g = e/\sin{\theta_w}; g' = e/\cos{\theta_w}.
+\end{split}
+\label{eq:ewk_param}
+\end{equation}
+
+The $Z$ boson, on the other hand, mixes with the neutral component of the triplet, $V^0$, with a rotation parametrized with the angle $\theta_N$:
+\begin{equation}
+\begin{pmatrix}
+\cos{\theta_N} & \sin{\theta_N} \\
+-\sin{\theta_N} & \cos{\theta_N}d \\
+\end{pmatrix}
+\begin{pmatrix}
+Z  \\
+V^0  \\
+\end{pmatrix}
+.
+\label{eq:mixing}
+\end{equation}
+The mass matrix of the rotated system is given by:
+\begin{equation}
+\mathbb{M}_N^2 =
+\begin{pmatrix}
+\hat{m}_Z^2 & c_H \zeta \hat{m}_Z \hat{m}_V \\
+c_H \zeta \hat{m}_Z \hat{m}_V & \hat{m}_V^2 \\
+\end{pmatrix}
+,
+\label{eq:mass_matrix_Z}
+\end{equation}
+where the parameters are defined as:
+\begin{equation}
+\left\{
+\begin{array}{l}
+\hat{m}_Z = \frac{e}{2 \sin{\theta_W} \cos{\theta_W}}\hat{v} \\
+\hat{m}_V^2 = m_V^2 + g_V^2 c_{VVHH} {\hat{v}}^2\\
+\zeta = \frac{g_V \hat{v}}{2 \hat{m}_V}\\
+\frac{\hat{v}^2}{2} = \langle H^{\dagger} H \rangle
+\end{array},
+\right.
+\label{eq:mass_matrix_param_Z}
+\end{equation}
+and $\hat{v}$, the vacuum expectation value of the Higgs field, can be different from the SM $v = 246$ GeV. The physical masses of $Z$ and $V^0$, $m_Z$ and $M_0$, and $\theta_N$ come from the matrix relations:
+\begin{equation}
+\begin{split}
+ & \mbox{Tr}\left( \mathbb{M}_N^2 \right) = \hat{m}_Z^2 + \hat{m}_V^2 = m_Z^2 + M_0^2\\
+ & \left\| \mathbb{M}_N^2 \right\| = \hat{m}_Z^2 + \hat{m}_V^2 \left( 1 - c_H^2 {\zeta}^2\right) = m_Z^2 M_0^2 \\
+ & \tan{2 \theta_N} = \frac{2 c_H \zeta \hat{m}_Z \hat{m}_V}{\hat{m}_V^2 - \hat{m}_Z^2}.
+\end{split}
+\label{eq:mass_eig_Z}
+\end{equation}
+%\\
+%Given that $\hat{m}_V > \hat{m}_Z$, the tangent in eq.\ref{eq:mass_eig} is bijective.
+
+The $W^{\pm}$ bosons mix with the charged components of the triplet, $V^{\pm}$, leading to a mass matrix analogous to eq.~\ref{eq:mass_matrix_Z}:
+\begin{equation}
+\mathbb{M}_C^2 =
+\begin{pmatrix}
+\hat{m}_W^2 & c_H \zeta \hat{m}_W \hat{m}_V \\
+c_H \zeta \hat{m}_W \hat{m}_V & \hat{m}_V^2 \\
+\end{pmatrix}
+,
+\label{eq:mass_matrix_Z}
+\end{equation}
+where $\hat{m}_W$ is defined as:
+\begin{equation}
+\left\{
+\begin{array}{l}
+\hat{m}_W = \frac{e}{2 \sin{\theta_W}}\hat{v} = \hat{m}_Z \cos{\theta_W} \\
+\end{array};
+\right.
+\label{eq:mass_matrix_param_W}
+\end{equation}
+the physical masses of $W$ and $V^{\pm}$, $m_W$ and $M_{\pm}$, and the angle $\theta_C$ parametrizing the rotation of the charged sector are described by:
+\begin{equation}
+\begin{split}
+ & \mbox{Tr}\left( \mathbb{M}_C^2 \right) = \hat{m}_W^2 + \hat{m}_V^2 = m_W^2 + M_{\pm}^2\\
+ & \left\| \mathbb{M}_C^2 \right\| = \hat{m}_W^2 + \hat{m}_V^2 \left( 1 - c_H^2 {\zeta}^2\right) = m_W^2 M_{\pm}^2 \\
+ & \tan{2 \theta_C} = \frac{2 c_H \zeta \hat{m}_W \hat{m}_V}{\hat{m}_V^2 - \hat{m}_W^2}.
+\end{split}
+\label{eq:mass_eig_W}
+\end{equation}
+
+The custodial symmetry of eq.~\ref{eq:Lagrangian} guarantees that:
+\begin{equation}
+\mathbb{M}_C^2 =
+\begin{pmatrix}
+\cos{{\theta}_W} & 0 \\
+0 & 1 \\
+\end{pmatrix}
+\mathbb{M}_N^2
+\begin{pmatrix}
+\cos{{\theta}_W} & 0 \\
+0 & 1 \\
+\end{pmatrix}
+.
+\label{eq:custodial_matrix}
+\end{equation}
+\\
+By taking the determinant of this matrices, a custodial relation among the masses can be extracted:
+\begin{equation}
+m_W^2 M_{\pm}^2 = \cos{{\theta}_W} m_Z^2 M_0^2,
+\label{eq:custodial_relation}
+\end{equation}
+that has some very important consequences.\\
+Given that this model aims at searching new particles in the TeV scale and that the scale of the electroweak interactions must lay at $\sim 100$ GeV,  a hierarchy of the physical masses seems very natural:
+\begin{equation}
+\frac{\hat{m}_{(W,Z)}}{\hat{m}_V} \sim \frac{{m}_{(W,Z)}}{M_{(\pm, 0)}} \ll 1
+;
+\label{eq:mass_hierarchy}
+\end{equation}
+$\zeta$ parameter can be $\zeta \ll 1$ (weakly coupled scenario) or $\zeta \sim 1$ (strongly coupled scenario). When eq.~\ref{eq:Mass_hierarchy} applies, the second lines in eq.~\ref{eq:mass_eig_Z} and eq.~\ref{eq:mass_eig_W} can be approximated as follows:
+\begin{equation}
+\begin{split}
+& m_Z^2 = \hat{m}_Z^2 \left( 1 - c_H^2 {\zeta}^2\right) \left( 1 + \mathcal{O}(\hat{m}_Z^2/\hat{m}_V^2) \right) \\
+& m_W^2 = \hat{m}_W^2 \left( 1 - c_H^2 {\zeta}^2\right) \left( 1 + \mathcal{O}(\hat{m}_W^2/\hat{m}_V^2) \right) \\
+\end{split}
+.
+\label{eq:mass_simpl}
+\end{equation}
+\\
+From eq.~\ref{eq:mass_matrix_param_W}, the ratio of the physical masses of the charged and neutral electroweak bosons can be approximated as:
+\begin{equation}
+\frac{m_W^2}{m_Z^2} \approx {\cos{{\theta}_W}}^2,
+\label{eq:mass_ewk_ratio}
+\end{equation}
+that satisfies the SM tree-level relation $\rho = 1$ if ${\cos{{\theta}_W}}^2 \approx 1. - 0.23$. Adding this approximation into eq.~\ref{eq:custodial_relation}, the $V$ bosons are expected to have the same masses, hence the same production rates:
+\begin{equation}
+M_{\pm}^2 = M_0^2 \left(1 + \mathcal{O}(\%) \right).
+\label{eq:HVT_degeneracy}
+\end{equation}
+
+Another consequence of the mass hierarchy~(\ref{eq:mass_hierarchy}) is that the mixing angles $\theta_{(N,C)}$ between the electroweak fields and the triplet are small:
+\begin{equation}
+{\theta}_{(N,C)} \approx c_H \zeta \frac{\hat{m}_{(W,Z)}}{ \hat{m}_V } \ll 1,
+\label{eq:HVT_small_angles}
+\end{equation}
+hence the couplings among SM particles are very close to the SM couplings.
+
+
+\subsection{HVT productions}
+\label{sec:theory_widths}
 %Comments on the parameter range
-
-In Eq. (2.2) we adopted a rather peculiar parametrization of the interaction terms, with a
-coupling g V weighting extra insertions of V , of H and of the fermionic fields. Similarly, the
-insertions of W in the last line is weighted by the SU (2) L coupling g. We take g V to represent
-the typical strength of V interactions while the dimensionless coefficients “c” parametrize the
-departures from the typical size. The parametrization of the fermion couplings is an exception
-to this rule. In this case one extra factor of g 2 /g V 2 has been introduced. This is convenient
-because in all the explicit models we will be interested in, both of weakly- and strongly-coupled
-origin, this factor is indeed present and the c F ’s, as defined in Eq. (2.2), are of order one. The
-other c’s are typically of order one, except for c H which is of order one in the strongly-coupled
-scenario but can be reduced in the weakly coupled case as described in Section 4. In all cases,
-the c’s are never parametrically larger than one, with the notable exception of the third family
-coupling c 3 , which could be enhanced in strongly-coupled scenarios where the top quark mass
-is realized by the mechanism of Partial Compositeness, see for instance [71]. The coupling g V
-can easily vary over one order of magnitude in different scenarios, ranging from g V ∼ g ∼ 1
-in the “typical” weakly-coupled case up to g V ' 4π in the extreme strong limit. Therefore
-it is useful to factor it out of the operator estimate. Notice that there is no sharp separation
-between the weak and strong coupling regimes as nothing forbids to consider theories with a
-“weak” UV origin but with large g V , of the order of a few, and “strong” models where g V is
-reduced by the large number of colors of the strong sector, g V = 4π/ N c . This provides one
-additional motivation for our approach which interpolates between the two cases.
 
 %Comments on the L symmetry
 
@@ -104,17 +243,19 @@ additional motivation for our approach which interpolates between the two cases.
 %the phenomenological parameters can be computed explicitly.)
 
 {\color{red}
-the simple but well-motivated example of electroweak-charged spin one resonances which are a
-common prediction of many New Physics scenarios. The latter can be weakly coupled, like for
-instance Z 0 [6, 17–27] or W 0 [7, 8, 10, 11, 28–32] models, or strongly coupled constructions such
-as Composite Higgs models [33–39] and some variants of Technicolor [40–48].}
+!\\
+%the simple but well-motivated example of electroweak-charged spin one resonances which are a
+%common prediction of many New Physics scenarios. The latter can be weakly coupled, like for
+%instance Z 0 [6, 17–27] or W 0 [7, 8, 10, 11, 28–32] models, or strongly coupled constructions such
+%as Composite Higgs models [33–39] and some variants of Technicolor [40–48].
+}
 
 
 
-\subsection{Model A}
+\subsection{Model A: weak coupling scenario}
 \label{sec:theory_HVT_A}
 
-\subsection{Model B}
+\subsection{Model B: strong coupling scenario}
 \label{sec:theory_HVT_B}
 
 \section{Warped extra dimension}
