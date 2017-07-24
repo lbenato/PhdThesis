@@ -216,6 +216,7 @@ that satisfies the SM tree-level relation $\rho = 1$ if ${\cos{{\theta}_W}}^2 \a
 M_{\pm}^2 = M_0^2 \left(1 + \mathcal{O}(\%) \right).
 \label{eq:HVT_degeneracy}
 \end{equation}
+The degenerate mass of the triplet will be called $M_V \approx M_{\pm} \approx M_0$; given~\ref{eq:mass_hierarchy}, $M_V = \hat{m}_V$.
 \\
 Another consequence of the mass hierarchy~(\ref{eq:mass_hierarchy}) is that the mixing angles $\theta_{(N,C)}$ between the electroweak fields and the triplet are small:
 \begin{equation}
@@ -280,30 +281,169 @@ that are ruled by the $c_H g_V$ parameters combination. When $\zeta$ parameter i
 \begin{equation}
 \begin{split}
  & V_{\mu}^a \rightarrow V_{\mu}^a + \frac{c_H \zeta}{\hat{m}_V} \partial_{\mu} \pi^a\\
- & \pi^a \rightarrow \frac{1}{\sqrt{1 - c_H^s \zeta^2}} \pi^a; \mbox{ } c_H^s \zeta^2 < 1\\
+ & \pi^a \rightarrow \frac{1}{\sqrt{1 - c_H^2 \zeta^2}} \pi^a; \mbox{ } c_H^2 \zeta^2 < 1\\
 \end{split}
 .
 \label{eq:field_redef}
 \end{equation}
-By properly taking into account all the terms of the simplified lagrangian in the equivalent gauge, the partial widths of the dibosonic decays are:
+By properly taking into account all the terms of the simplified lagrangian in the equivalent gauge, the partial widths of the dibosonic decays are ($\hat{m}_V = M_V$):
 \begin{equation}
 \begin{split}
- & \\
- & \\
+ & \Gamma_{V^0 \rightarrow W^+_L W^-_L} \approx \Gamma_{V^{\pm} \rightarrow W^{\pm}_L Z_L} \approx \frac{g_V^2 c_H^2 M_V}{192 \pi} \frac{ \left( 1 + c_H c_{VVV} \zeta^2 \right)^2 }{ \left( 1 - c_H^2 \zeta^2\right)^2 } = \frac{g_V^2 c_H^2 M_V}{192 \pi} \left( 1 + \mathcal{O}(\zeta^2) \right)\\
+ & \Gamma_{V^0 \rightarrow Z_L h} \approx \Gamma_{V^{\pm} \rightarrow W^{\pm}_L h} \approx \frac{g_V^2 c_H^2 M_V}{192 \pi} \frac{ \left( 1 - 4 c_H c_{VVV} \zeta^2 \right)^2 }{ \left( 1 - c_H^2 \zeta^2\right)^2 } = \frac{g_V^2 c_H^2 M_V}{192 \pi} \left( 1 + \mathcal{O}(\zeta^2) \right).\\
 \end{split}
-.
-\label{eq:HVT_dib_decay}
+\label{eq:HVT_width_dibosons}
 \end{equation}
- 
 
-\subsection{Model A: weak coupling scenario}
-\label{sec:theory_HVT_A}
-
-\subsection{Model B: strong coupling scenario}
-\label{sec:theory_HVT_B}
+\subsubsection{Decays in fermions and bosons: concluding remarks}
+\label{sec:theory_remarks}
+{\color{red} VEDI SE SPOSTARE DOPO}\\
+From eq.~\ref{eq:HVT_width_fermions}-\ref{eq:HVT_width_dibosons}, some important conclusions can be extracted.
+\begin{itemize}
+\item When $\zeta$ parameter is small, all the triplet decays (both in fermions and in dibosons), branching fractions and productions are completely determined by $g^2 c_F /g_V$, $g_V c_H$, and the degenerate mass of the triplet $M_V$
+\item $c_{VVV}$, $c_{VVHH}$, $c_{VVW}$ can be neglected, as long as the interest is focused in narrow resonances
+\end{itemize}
 
 \subsection{HVT production}
 \label{sec:theory_widths}
+Given the mass scale of the resonances, the relevant expected production mechanisms are Drell-Yan (fig.~\ref{fig:theory_HVT_DY_prod}) and Vector Boson Fusion (VBF) (fig.~\ref{fig:theory_HVT_VBF_prod}).
+
+\begin{figure}[!htb]
+  \centering
+\feynmandiagram [horizontal=a to b] {
+  i1 [particle=\(q\)] -- [fermion] a -- [fermion] i2 [particle=\(\overline{q}' \)],
+  a -- [red!80!black, boson, edge label=\(V^{-}\), very thick] b,
+  f1 [particle=\(\overline{\nu}_{\ell}\)] -- [fermion] b -- [fermion] f2 [particle=\(\ell\)],
+};
+%
+\feynmandiagram [horizontal=a to b] {
+  i1 [particle=\(q\)] -- [fermion] a -- [fermion] i2 [particle=\(\overline{q}\)],
+  a -- [red!80!black, boson, edge label=\(V^{0}\), very thick] b,
+  f1 [particle=\(Z\)] -- [boson] b -- [boson] f2 [particle=\(Z\)],
+};
+\caption{Examples of Drell-Yan production mechanism of a heavy $V$ HVT boson: $q$~--~$\bar{q}'$ quark scattering producing a charged $V^{-}$ that decays leptonically (left); $q$~--~$\bar{q}$ scattering producing a neutral $V^0$ that decays in a couple of $Z$ bosons (right).}
+\label{fig:theory_HVT_DY_prod}
+\end{figure}
+
+% A bit uglier:
+%
+%\feynmandiagram [vertical'=a to c, horizontal=b to d] {
+%a -- [boson, edge label=\(W^+\)] b,
+%b -- [boson, edge label=\(W^-\)] c,
+%b -- [red!80!black, boson, edge label=\(V^0\), very thick] d,
+%f3 [particle=\(\overline f\)] -- [boson] d -- [boson] f4 [particle=\(f\)],
+%
+%i1 [particle=\(e^{-}\)]
+%-- [fermion] a
+%-- [fermion] f1 [particle=\(e^{-}\)],
+%
+%i2 [particle=\(e^{+}\)]
+%-- [fermion] c
+%-- [fermion] f2 [particle=\(e^{+}\)],
+%};
+
+%\feynmandiagram [vertical'=a to c, horizontal=b to d] {
+%i1 [particle=\(e^{-}\)]
+%-- [fermion] a
+%-- [fermion] f1 [particle=\(e^{-}\)],
+%
+%i2 [particle=\(e^{+}\)]
+%-- [fermion] c
+%-- [fermion] f2 [particle=\(e^{+}\)],
+%
+%a -- [boson, edge label=\(W^+\)] b,
+%b -- [boson, edge label=\(W^-\)] c,
+%b -- [red!80!black, boson, edge label=\(V^0\), very thick] d,
+%
+%};
+\begin{figure}[!htb]
+  \centering
+\begin{tikzpicture}
+\begin{feynman}
+\vertex (e);
+\vertex [right=of e] (v); % vertice del bosone V0
+\vertex [above right=of v] (m) {\( Z \)};
+\vertex [below right=of v] (n) {\( Z \)};
+\vertex [above left=of e] (c) {\( W^{+} \)};
+\vertex [above left=of c] (a);
+\vertex [right=of c] (f);
+
+\vertex [below left=of e] (d) {\( W^{-} \)};
+\vertex [below left=of d] (b);
+\vertex [right=of d] (g);
+
+\diagram* {
+(c) -- [boson, edge label'=\(\)] (e), %il bosone collega il vertice (c) col vertice (e) 
+(d) -- [boson, edge label=\(\)] (e), %il bosone collega il vertice (d) col vertice (e) W^{-}
+(e) -- [red!80!black!, boson, edge label=\(V^0\), very thick] (v), %il bosone collega il vertice (e) col vertice (v)
+(v) -- [boson, edge label'=\(\)] (m),
+(v) -- [boson, edge label=\(\)] (n),
+(a) -- [fermion, edge label=\(u\)] (c),
+(b) -- [fermion, edge label=\(d\)] (d),
+(c) -- [fermion, edge label=\(d\)] (f),
+(d) -- [fermion, edge label=\(u\)] (g),
+
+};
+\end{feynman}
+\end{tikzpicture}
+\caption{Examples of VBF production mechanism of a heavy $V$ HVT boson: a neutral $V^0$ boson is produced by a couple of $W$ bosons, as a result of an electroweak interactions of initial state $u$ and $d$ quarks. $V^0$ decays in a couple of $Z$ bosons. The final state signature includes the presence of a pair of quarks, as a result of the primary interactions.}
+\label{fig:theory_HVT_VBF_prod}
+\end{figure}
+
+The cross-section of the production mechanisms is given by:
+\begin{equation}
+\sigma (pp \rightarrow V + X) = \left. \sum_{i, j \in p} \frac{\Gamma_{V \rightarrow ij}}{M_V} f(J, S_i, S_j) g(C_i, C_j) \frac{dL_{ij}}{ds} \right|_{s = M_V^2},
+\label{eq:prod_xsec}
+\end{equation}
+where $i$, $j$ are the partons involved in the hard interaction, $\Gamma_{ij}$ is the partial width of the process $V \rightarrow ij$, $f(J, S_i, S_j)$ is a function of the spin of the resonance and of the partons, $g(C_i, C_j)$ is a function of the colour factors of each parton, $s$ is the center-of-mass energy and $\frac{dL_{ij}}{ds}$ are the parton luminosities, that are independent from HVT model (that enters only in $\Gamma_{ij}$).
+\\
+Parton luminosities, calculated for a center-of-mass energy of 14 TeV starting from quark and antiquark parton distribution functions (PDF), are displayed in fig.~\ref{fig:HVT_DY_partolumi} (Drell-Yan mechanism) and~\ref{fig:HVT_VBF_partolumi} (VBF mechanism). VBF luminosities are suppressed by the $\alpha_{EW}$ factor, therefore the process is relevant only when the bosonic decays of the triplet are dominant (strongly coupled scenario). 
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.495\textwidth]{figures/Figures_LumiDY14.png}
+  \caption{Parton luminosities for Drell-Yan process between $i$ and $j$ partons, as a function of the parton center-of-mass energy, for the LHC proton-proton collisions performed at 14 TeV.}
+  \label{fig:HVT_DY_partolumi}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.495\textwidth]{figures/Figures_LumiVBF14.png}
+  \caption{Parton luminosities for VBF process between $i$ and $j$ partons, as a function of the parton center-of-mass energy, for the LHC proton-proton collisions performed at 14 TeV.}
+  \label{fig:HVT_VBF_partolumi}
+\end{figure}
+
+\subsection{Benchmark model A: weak coupling scenario}
+\label{sec:theory_HVT_A}
+Model A scenario aims at reproducing a simple generalization of the SM~\cite{Barger:1980ix}, obtained by extending the gauge symmetry group with an additional $SU(2)'$. The low-energy phenonemna are expected to be dominated by the SM, while the high-energy processes are relevant for the additional symmetry, bringing additional light vector bosons in play.\\
+It can be shown that this kind of picture is portrayed by HVT when $c_H \sim -g^2/g_V^2$ and $c_F \sim 1$. This implies that:
+\begin{equation}
+\begin{split}
+ & g_V c_H \approx g^2/g_v\\
+ & g^2 c_F \approx g^2/g_V,\\
+\end{split}
+\label{eq:theory_HVT_modelA}
+\end{equation}
+hence the partial decay in widths into fermions (eq.~\ref{eq:HVT_width_fermions}) and bosons (eq.~\ref{eq:HVT_width_dibosons}) differ only by a factor 2 and the colour factor ($N_c$). Branching fractions for the model A scenario ($g_V =1$) are shown in fig.~\ref{fig:HVT_modelA_BR_width} (left); total widths are reported in fig.\ref{fig:HVT_modelA_BR_width} (right) for different coupling parameters $g_V$.  
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.495\textwidth]{figures/Figures_BRWC.png}%
+    \includegraphics[width=.495\textwidth]{figures/Figures_WidthWC.png}
+  \caption{HVT model A scenario: branching fractions for fermionic and bosonic decays when $g_V = 1$ (left) as a function of the mass of the resonance $M_0$; total width of the resonance, as a function of its mass, considering different values of the parameter $g_V$ (right).}
+  \label{fig:HVT_modelA_BR_width}
+\end{figure}
+
+\subsection{Benchmark model B: strong coupling scenario}
+\label{sec:theory_HVT_B}
+Ref. 36
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.495\textwidth]{figures/Figures_BRSC.png}%
+    \includegraphics[width=.495\textwidth]{figures/Figures_WidthSC.png}
+  \caption{HVT model B scenario: branching fractions for fermionic and bosonic decays when $g_V = 3$ (left) as a function of the mass of the resonance $M_0$; total width of the resonance, as a function of its mass, considering different values of the parameter $g_V$ (right).}
+  \label{fig:HVT_modelB_BR_width}
+\end{figure}
 %Comments on the parameter range
 
 %Comments on the L symmetry
