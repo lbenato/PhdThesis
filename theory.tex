@@ -1,7 +1,7 @@
 \begin{tcolorbox}[breakable,colback=black!5!white,colframe=red!80!black,width=\textwidth]
 \chapter{Theoretical motivation}
 \end{tcolorbox}
-\label{sec:theory}
+\label{chap:theory}
 
 The Standard Model (SM) of particles represents, so far, the best available description of the particles and their interactions. It is the summation of two gauge theories: the electroweak interaction, that pictures together the weak and electromagnetic interactions, and the strog interaction, or Quantum Chromodynamics (QCD). Particles, namely quarks and leptons, are described by spin 1/2 fermions, whilst interactions are embodied by spin 1 bosons. The simmetry group of the standard model is:
 \begin{equation}
@@ -297,7 +297,7 @@ By properly taking into account all the terms of the simplified lagrangian in th
 
 \subsubsection{Decays in fermions and bosons: concluding remarks}
 \label{sec:theory_remarks}
-{\color{red} VEDI SE SPOSTARE DOPO}\\
+%%{\color{red} VEDI SE SPOSTARE DOPO}\\
 From eq.~\ref{eq:HVT_width_fermions}-\ref{eq:HVT_width_dibosons}, some important conclusions can be extracted.
 \begin{itemize}
 \item When $\zeta$ parameter is small, all the triplet decays (both in fermions and in dibosons), branching fractions and productions are completely determined by $g^2 c_F /g_V$, $g_V c_H$, and the degenerate mass of the triplet $M_V$
@@ -418,12 +418,12 @@ Model A scenario aims at reproducing a simple generalization of the SM~\cite{Bar
 It can be shown that this kind of picture is portrayed by HVT when $c_H \sim -g^2/g_V^2$ and $c_F \sim 1$. This implies that:
 \begin{equation}
 \begin{split}
- & g_V c_H \approx g^2/g_v\\
- & g^2 c_F \approx g^2/g_V,\\
+ & g_V c_H \approx g^2/g_V\\
+ & g^2 c_F/g_V \approx g^2/g_V,\\
 \end{split}
 \label{eq:theory_HVT_modelA}
 \end{equation}
-hence the partial decay in widths into fermions (eq.~\ref{eq:HVT_width_fermions}) and bosons (eq.~\ref{eq:HVT_width_dibosons}) differ only by a factor 2 and the colour factor ($N_c$). Branching fractions for the model A scenario ($g_V =1$) are shown in fig.~\ref{fig:HVT_modelA_BR_width} (left); total widths are reported in fig.\ref{fig:HVT_modelA_BR_width} (right) for different coupling parameters $g_V$.  
+hence the partial decay in widths into fermions (eq.~\ref{eq:HVT_width_fermions}) and bosons (eq.~\ref{eq:HVT_width_dibosons}) differ only by a factor 2 and the colour factor ($N_c$). Branching fractions for the model A benchmark scenario ($g_V =1$) are shown in fig.~\ref{fig:HVT_modelA_BR_width} (left); total widths are reported in fig.\ref{fig:HVT_modelA_BR_width} (right) for different coupling parameters $g_V$.  
 
 \begin{figure}[!htb]
   \centering
@@ -435,7 +435,16 @@ hence the partial decay in widths into fermions (eq.~\ref{eq:HVT_width_fermions}
 
 \subsection{Benchmark model B: strong coupling scenario}
 \label{sec:theory_HVT_B}
-Ref. 36
+In composite Higgs models~\cite{Contino2011}, the Higgs boson is the result of the spontaneous symmetry breaking of an $SO(5)$ symmetry to a $SO(4)$ group. New vector bosons are expected to appear, and the lightest ones can be represented by HVT model B when $c_H \sim c_F \sim 1$.\\ 
+In this case:
+\begin{equation}
+\begin{split}
+ & g_V c_H \approx -g_V\\
+ & g^2 c_F/g_V \approx g^2/g_V,\\
+\end{split}
+\label{eq:theory_HVT_modelB}
+\end{equation}
+hence the decay into bosons is not suppressed by $g_V$ parameter. In the benchmark scenario $g_V=3$, decays into dibosons are largely dominant, as it can be seen in fig.~\ref{fig:HVT_modelB_BR_width} (left); the total decay width increases for larger $g_V$ (fig.~\ref{fig:HVT_modelB_BR_width}, right). When the resonances start to be very broad, \textit{i.e.} $\Gamma/M_V \gg 0.1$, the assumptions leading to the simplified model are no longer valid, hence higher order, non -resonant effects must be taken into account.
 
 \begin{figure}[!htb]
   \centering
@@ -444,30 +453,11 @@ Ref. 36
   \caption{HVT model B scenario: branching fractions for fermionic and bosonic decays when $g_V = 3$ (left) as a function of the mass of the resonance $M_0$; total width of the resonance, as a function of its mass, considering different values of the parameter $g_V$ (right).}
   \label{fig:HVT_modelB_BR_width}
 \end{figure}
-%Comments on the parameter range
 
-%Comments on the L symmetry
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%Firstly, this allows us to derive robust model-independent phenomenological features
-%and, conversely, to identify the peculiarities of different explicit realizations.
-
-%(The experimental results should be presented in the parameter space of the
-%phenomenological Lagrangian, expressed by confidence level curves or, if possible, in terms of
-%a likelihood function. In this way they could be easily translated into any specific model where
-%the phenomenological parameters can be computed explicitly.)
-
-{\color{red}
-!\\
-%the simple but well-motivated example of electroweak-charged spin one resonances which are a
-%common prediction of many New Physics scenarios. The latter can be weakly coupled, like for
-%instance Z 0 [6, 17–27] or W 0 [7, 8, 10, 11, 28–32] models, or strongly coupled constructions such
-%as Composite Higgs models [33–39] and some variants of Technicolor [40–48].
-}
-
-
-
+\subsection{HVT limits set by LHC at a center-of-mass energy of 8 TeV and perspectives at 14 TeV}
+\label{sec:theory_HVT_limits_LHC_Run1}
+Data collected by ATLAS and CMS experiments are used to set limits on the HVT resonance masses and coupling parameters. Experimental results, both from Run 1 LHC data (at a center-of-mass energy of 8 TeV) and Run 2 (at a center-of-mass energy of 13 TeV) will be discussed in detail in chapter~\ref{chap:LHC_CMS}.\\
+A weakly coupled resonance, in the context of benchmark model A ($g_V = 1$) is excluded up to 3 TeV by Run 1 data. By looking at parton luminosities in fig.\ref{fig:HVT_DY_partolumi}, in data produced by LHC proton-proton collision at 14 TeV, collected for an integrated luminosity of 300 $\mbox{fb}^{-1}$, sensitivity should increase up to $m_V \approx 6$ TeV. A strongly coupled resonance, in the context of benchmark model B ($g_V = 3$) is excluded up to 2 TeV by Run 1 data. Data produced by LHC at 14 TeV should increase the sensitivity up to $m_V \approx 3-4$ TeV.
 \newpage
 \section{Warped extra dimension}
 \label{sec:theory_WED}
