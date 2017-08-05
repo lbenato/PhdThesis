@@ -476,7 +476,68 @@ In the Randall-Sundrum model~\cite{Randall:1999ee,Randall:1999vf}, only one addi
 ds^2 = e^{-2 k r_c \phi} \eta_{\mu \nu} dx^{\mu} dx^{\nu} + r_c^2 d{\phi}^2;
 \label{eq:theory_metric}
 \end{equation}
-$x^{\mu}$ are the usual 4-dimensional coordinates, $k$ is a scale (order of the Planck scale), $\phi$ is the coordinate of the extra dimension, $0 < |\phi| < \pi$, and $r_c$ is the compactification radius of this finite interval. 4-dimensional mass scales are obtained multiplying bulk masses by $e^{-2 k r_c \phi}$: given the exponential form of the warp factor, a small $r_c$ suffices for generating a large hierarchy between Planck and Higgs scales.
+$x^{\mu}$ are the usual 4-dimensional coordinates, $\eta_{\mu \nu} = diag(-1, 1, 1, 1)$, $k$ is a scale (order of the Planck scale), $\phi$ is the coordinate of the extra dimension, $0 < |\phi| < \pi$, and $r_c$ is the compactification radius of this finite interval. 4-dimensional mass scales are obtained multiplying bulk masses by $e^{-2 k r_c \phi}$: given the exponential form of the warp factor, a small $r_c$ suffices for generating a large hierarchy between Planck and Higgs scales.\\
+The two 4-dimensional three-branes are located at the boundaries of the fifth dimension: the visible brane at $\phi = \pi$; the hidden brane at $\phi = 0$, and their metrics are obtained starting from the bulk 5-dimensional metric $G_{MN}$, where $M,N = \mu, \phi$:
+\begin{equation}
+\begin{split}
+ & g_{\mu \nu}^{\text{vis}} (x^{\mu}) = G_{\mu \nu} \left( x^{\mu}, \phi = \pi \right)\\
+ & g_{\mu \nu}^{\text{hid}} (x^{\mu}) = G_{\mu \nu} \left( x^{\mu}, \phi = 0 \right).\\
+\end{split}
+\label{eq:theory_brane_metrics}
+\end{equation}
+The classical action is given by:
+\begin{equation}
+\begin{split}
+ & S = S_{\text{gravity}} + S_{\text{vis}} + S_{\text{hid}}\\
+ & S_{\text{gravity}} = \int d^4x \int_{-\pi}^{+\pi} d\phi \sqrt{-G} \left( -\Lambda + 2 M^3 \mathcal{R} \right)\\
+ & S_{\text{vis}} = \int d^4x \sqrt{-g_{\text{vis}}} \left( \mathcal{L_{\text{vis}}} -V_{\text{vis}} \right)\\
+ & S_{\text{hid}} = \int d^4x \sqrt{-g_{\text{hid}}} \left( \mathcal{L_{\text{hid}}} -V_{\text{hid}} \right),\\
+\end{split}
+\label{eq:theory_classical_action}
+\end{equation}
+where $G$ ($g$) is the trace of the $G_{MN}$ ($g_{\mu \nu}$) metric, $\Lambda$ is the cosmological constant in the bulk, $\mathcal{R}$ is the 5-dimensional Ricci scalar, $\mathcal{L}$ and $V$ are the lagrangian and the vacuum energy of the hidden and visible branes.\\
+A 5-dimensional metric that preserves the 4-dimensional Poincar\'e invariance is:
+\begin{equation}
+ds^2 = e^{-2 \sigma(\phi)} \eta_{\mu \nu} dx^{\mu} dx^{\nu} + r_c^2 d{\phi}^2.
+\label{eq:theory_poincare_metric}
+\end{equation}
+The Poincar\'e invariance guarantees that $r_c$ does not depend on $x^{\mu}$. Given~\ref{eq:theory_poincare_metric}, the solution of the 5-dimensional Einstein's equations simplifies into:
+\begin{equation}
+\sigma = r_c \left| \phi \right| \sqrt{\frac{- \Lambda}{24 M^3}}.
+\label{eq:theory_einstein_solution}
+\end{equation}
+Furthermore, the Poincar\'e invariance imposes constraints to the vacuum energies and cosmological constant:
+\begin{equation}
+\begin{split}
+ & V_{\text{hid}} = - V_{\text{vis}} = 24 M^3 k \\
+ & \Lambda = -24 M^3 k^2.\\
+\end{split}
+\label{eq:theory_vacuum_energies}
+\end{equation}
+The final 5-dimensional metric is then:
+\begin{equation}
+ds^2 = e^{-2 k r_c \left| \phi \right|} \eta_{\mu \nu} dx^{\mu} dx^{\nu} + r_c^2 d{\phi}^2.
+\label{eq:theory_metric_solution}
+\end{equation}
+
+A small $r_c$ is considered, so the effects of the fifth dimension on 4-dimensional spacetime can't be appreciated. A 4-dimensional effective field theory approach is therefore motivated, and its mass parameters are related to the bulk parameters, $M$, $k$ and $r_c$.\\
+The gravitons, in the effective field theory, are the zero modes ($\overline{h}_{\mu \nu}$) of the quantum fluctuations of the classical solution (~\ref{eq:theory_metric_solution}):
+\begin{equation}
+ds^2 = e^{-2 k T(x) \left| \phi \right|} \left( \eta_{\mu \nu} + \overline{h}_{\mu \nu}(x) \right) dx^{\mu} dx^{\nu} + T^2(x) d{\phi}^2,
+\label{eq:theory_metric_perturbation}
+\end{equation}
+where the usual Minkowski metric has been replaced by $\overline{g}_{\mu \nu} (x) = \eta_{\mu \nu} + \overline{h}_{\mu \nu}$; $\overline{h}_{\mu \nu}$ are the tensor fluctuations around the Minkowski space, and represent both the physical graviton in 4-dimensions and the massless mode of the Kaluza-Klein decomposition of the bulk metric. $r_c$ is the vacuum expectation value of $T(x)$.\\
+Substituting eq.~\ref{eq:theory_metric_perturbation} in the classical action~\ref{eq:theory_classical_action}, an effective action can be extracted, and in particular for the curvature term it helds:
+\begin{equation}
+S_{\text{eff}} \sim \int d^4 x \int_{-\pi}^{+\pi} d \phi 2 M^3 r_c e^{-2 k r_c \left| \phi \right|} \overline{\mathcal{R}} \sqrt{-\overline{g}},
+\label{eq:theory_effective_action}
+\end{equation}
+where $\overline{g}$ is the trace of $\overline{g}_{\mu \nu}$ and $\overline{\mathcal{R}}$ is the 4-dimensional Ricci scalar of $\overline{g}_{\mu \nu}$ metric. In this effective 4-dimensional action, the $\phi$ dependence can be integrated out, and the 4-dimensional Planck mass can be calculated:
+\begin{equation}
+M_{PL}^2 = M^3 r_c \int_{-\pi}^{+\pi} d \phi e^{-2 k r_c \left| \phi \right|} = \frac{M^3}{k} \left( 1 - e^{-2 k r_c \pi} \right).
+\label{eq:theory_effective_planck_mass}
+\end{equation}
+
 
 \subsection{Bulk extension of RS1}
 \subsection{Bulk graviton production and decays}
