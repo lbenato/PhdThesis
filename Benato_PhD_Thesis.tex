@@ -28,7 +28,10 @@
 \usepackage{sectsty}
 \usepackage{tikz-feynman}
 \usepackage{multicol}
+\usepackage[explicit]{titlesec}
+%%%\usepackage[many]{tcolorbox}
 \chapterfont{\color{red!80!black}\bf\textit}%
+%\chapterfont{\color{white}\bf\textit}%
 \pagestyle{fancy}
 %%\addtolength{\headwidth}{\marginparsep}
 %%\addtolength{\headwidth}{\marginparwidth}
@@ -103,6 +106,82 @@
 
 %
 
+\definecolor{titlebgdark}{RGB}{0,163,243}
+\definecolor{titlebglight}{RGB}{191,233,251}
+
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries}
+  {}
+  {20pt}
+  {%
+    \begin{tcolorbox}[
+      enhanced,
+      colback=black!5!white,
+      boxrule=0.25cm,
+      colframe=black!15!white,
+      arc=0pt,
+      outer arc=0pt,
+      leftrule=0pt,
+      rightrule=0pt,
+      fontupper=\color{red!80!black},
+      enlarge left by=-1in-\hoffset-\oddsidemargin, 
+      enlarge right by=-\paperwidth+1in+\hoffset+\oddsidemargin+\textwidth,
+      width=\paperwidth, 
+      left=1in+\hoffset+\oddsidemargin, 
+      right=\paperwidth-1in-\hoffset-\oddsidemargin-\textwidth,
+      top=0.6cm, 
+      bottom=0.6cm,
+      overlay={
+        \node[
+          fill=black!5!white,
+          draw=black!15!white,
+          line width=0.15cm,
+          inner sep=0pt,
+          text width=1.7cm,
+          minimum height=1.7cm,
+          align=center,
+          font=\Huge\color{red!80!black}
+        ] 
+        (chapname)
+        at ([xshift=-4cm]frame.north east)
+        {\thechapter};
+        \node[font=\normalsize\color{red!80!black},anchor=south,inner sep=2pt] at (chapname.north)
+        {\chaptertitlename};  
+      } 
+    ]
+    #1
+    \end{tcolorbox}%
+  }
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\huge\bfseries}
+  {}
+  {20pt}
+  {%
+    \begin{tcolorbox}[
+      enhanced,
+      colback=black!5!white,
+      boxrule=0.25cm,
+      colframe=black!15!white,
+      arc=0pt,
+      outer arc=0pt,
+      remember as=title,
+      leftrule=0pt,
+      rightrule=0pt,
+      fontupper=\color{red!80!black}\huge,
+      enlarge left by=-1in-\hoffset-\oddsidemargin, 
+      enlarge right by=-\paperwidth+1in+\hoffset+\oddsidemargin+\textwidth,
+      width=\paperwidth, 
+      left=1in+\hoffset+\oddsidemargin, 
+      right=\paperwidth-1in-\hoffset-\oddsidemargin-\textwidth,
+      top=0.6cm, 
+      bottom=0.6cm, 
+    ]
+    #1
+    \end{tcolorbox}%
+  }
+\titlespacing*{\chapter}
+  {0pt}{0pt}{40pt}
+\makeatother
 
 \title{Search for heavy resonances decaying into a $Z$ boson and a vector boson in the $\nu \bar{\nu}$ $q\bar{q}$ final state at CMS}
 
