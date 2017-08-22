@@ -29,6 +29,11 @@
 \usepackage{tikz-feynman}
 \usepackage{multicol}
 \usepackage[explicit]{titlesec}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
+\patchcmd{\ttlh@hang}{\noindent}{}{}{}
+\makeatother
 %%%\usepackage[many]{tcolorbox}
 \chapterfont{\color{red!80!black}\bf\textit}%
 %\chapterfont{\color{white}\bf\textit}%
