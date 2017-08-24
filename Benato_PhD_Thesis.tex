@@ -18,6 +18,7 @@
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{fancyhdr}
 \usepackage{lineno}
 \usepackage[bookmarks]{hyperref}
@@ -30,6 +31,7 @@
 \usepackage{multicol}
 \usepackage[explicit]{titlesec}
 \usepackage{etoolbox}
+\usepackage{xspace}
 \makeatletter
 \patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
 \patchcmd{\ttlh@hang}{\noindent}{}{}{}
@@ -188,6 +190,19 @@
   {0pt}{0pt}{40pt}
 \makeatother
 
+\newcommand{\pt}{\ensuremath{p_T}\xspace}
+\newcommand{\kt}{\ensuremath{k_T}\xspace}
+\newcommand{\Z}{\text{Z}\xspace}
+\newcommand{\PW}{\text{W}\xspace}
+\newcommand{\cm}{\text{cm}\xspace}
+\newcommand{\GeV}{\text{GeV}\xspace}
+\newcommand{\TeV}{\text{TeV}\xspace}
+\newcommand{\tev}{\text{TeV}\xspace}
+\newcommand{\fb}{\text{fb}\xspace}
+\newcommand{\pb}{\text{pb}\xspace}
+\newcommand{\met}{\ensuremath{E_T^{\text{miss}}}\xspace}
+\newcommand{\MET}{\ensuremath{E_T^{\text{miss}}}\xspace}
+
 \title{Search for heavy resonances decaying into a $Z$ boson and a vector boson in the $\nu \bar{\nu}$ $q\bar{q}$ final state at CMS}
 
 \date{}
@@ -232,10 +247,6 @@ Scuola di Dottorato di Ricerca, XXX ciclo
 %Joy in looking and comprehending is nature's most beautiful gift.
 "I have no special talent. I am only passionately curious."\\
 (A. Einstein)
-%A Rita, Margherita, Milla.\\
-%\vspace*{0.4cm}
-%Miei miti, miei esempi, mie ispirazioni.\\
-%A Fabiola, Roberto, Piero e Alberto.\\
 \vspace{\stretch{2}}\null
 \end{flushright}
 
