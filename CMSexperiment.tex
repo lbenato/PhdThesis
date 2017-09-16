@@ -2,242 +2,383 @@
 \chapter{The Large Hadron Collider and the CMS experiment}
 %\end{tcolorbox}
 \label{chap:LHC_CMS}
+Brief intro to CERN and LHC
+\begin{itemize}
+\item research
+\item technology
+\item education
+\item collaboration
+\end{itemize}
 
 \section{The Large Hadron Collider}
-The Large Hadron Collider (LHC) is a 27 km ring structure designed for the acceleartion and collision of protons and heavy ions. It is situated approximatively 100 m underground, between France and Switzerland, in the Geneva area, and it is the most important of the CERN (Conseil europ\'een pour la recherche nucl\'eaire) facilities. It has been designed to fit the pre-existing underground tunnel of the LEP collider [ref. 24 Jacopo], built to accelerate electrons and positrons until the year 2000, in order to reduce the cost of the project, definetively approved in 1996.\\
+The Large Hadron Collider (LHC) is a 27 km ring structure designed for the acceleartion and collision of protons and heavy ions. It is situated approximatively 100 m underground, between France and Switzerland, in the Geneva area, and it is the most important of the CERN (Conseil europ\'een pour la recherche nucl\'eaire) facilities. In order to reduce the cost of the project, definetively approved in 1996, the LHC has been designed to fit the pre-existing underground tunnel of the Large Electron-Positron collider (LEP) [ref. 24 Jacopo], built to accelerate electrons and positrons and running until the year 2000.\\
 Moving from an electron-positron collider to an hadron collider allowed to reach higher energies in the center-of-mass frame, since the syncrotron radiation loss is inversely proportional to the fourth power of the mass of the particle involved: hence, it is reduced by a factor $m_p/m_e \sim 10^3$. Furthermore, at a proton-proton collider it is possible to collect higher luminosities (and hence more statistics) with regards to, for example, a proton-antiproton collider, like Tevatron at Fermilab, in the USA.\\
-In the LHC two identical beam pipes rings are designed to let protons circulate in opposite directions, in ultrahigh vacuum conditions ($10^{-13}$ atm) in order to avoid collisions with gas molecules. 
-
-LHC \`e dotato di due anelli identici, entro cui i fasci di particelle corrono in direzioni opposte in tubi a vuoto. La geometria di LHC si basa su quella precedente di LEP: l'acceleratore \`e diviso in 8 strutture ad arco per la curvatura delle traiettorie e in segmenti lunghi 520 m utili per l'iniezione e per strumenti di controllo del sistema. I fasci di protoni collidono in 4 punti di interazione, nei quali sono installati i quattro principali rivelatori: ALICE, ATLAS, CMS, LHCb.
+In the LHC two identical beam pipes rings are designed to let protons circulate in opposite directions, in ultrahigh vacuum conditions ($10^{-11}$--$10^{-10}$ mbar) in order to avoid collisions with gas molecules. Given the reduced available diameter in the tunnel (4 m), the two proton beams are magnetically coupled. The collider is composed by 8 arc sections (48 km) driving protons around the ring, and straight sections (6 km) where beam control systems and detectors are inserted. Proton beams collide in four interaction points, where the four main LHC experiments are installed: ALICE, ATLAS, CMS, LHCb.
 
 \begin{figure}[!htb]
   \centering
-    \includegraphics[width=.75\textwidth]{figures/LHC-magnets.jpg}
-  \caption{Sezione della struttura ad arco per la curvatura delle traiettorie dei protoni.}
+    \includegraphics[width=.6\textwidth]{figures/LHC-magnets.jpg}
+  \caption{Section of the LHC dipole magnet structure.}
   \label{fig:LHC_dipole}
 \end{figure}
 
-\noindent Il ridotto diametro interno del tunnel, di circa 4 m, ha comportato delle limitazioni nella costruzione dei magneti superconduttori, costringendo ad accoppiare magneticamente i due fasci. In figura \ref{fig:dipolo} \`e mostrata una sezione delle strutture ad arco. Attorno ai tubi di fascio sono disposti due magneti dipolari a superconduttore, essi generano due campi magnetici verticali paralleli e discordi e sono preposti alla curvatura delle traiettorie. Oltre a questi, si trovano magneti quadrupolari, utili per la focalizzazione dei fasci, e altri piccoli magneti con sei o otto poli per piccole correzioni sulla dimensione dei fasci e sulla loro posizione. Tutti i magneti e le cavit\`a acceleratrici sono costruite in metalli (titanio e niobio) superconduttori, che vengono raffreddati a $-271.3^{\circ}$C (1.9K) con sistemi ad elio liquido. In LHC ci sono un totale di 1232 magneti dipolari e 392 quadrupolari, capaci di creare un campo magnetico massimo di 8.33 T.
+\noindent In fig.~\ref{fig:LHC_dipole}, a slice of the arc section is displayed. Around the beam pipes, two superconducting magnetic dipoles are located: they generate vertical magnetic fields in opposite directions. The superconducting coils are made of niobium-titanium, materials that are superconducting at very low temperature. At the LHC, they are kept at a temperature of 1.9 K (-$271.3^{\circ}$C) by a closed liquid helium circuit. A current of 11850 A flows through the magnets, without any energy loss due to electrical resistance, generating a magnetic field of 8.33 T. Magnets of higher order in multipole expansion (quadrupoles, sextupoles, octupoles, ...) are used to optimize the proton trajectories; in particular, quadrupoles allow to focus and squeeze the beams. Along the LHC ring here are 9593 magnets; 1232 are dipoles, 392 are quadrupoles.
 
 \begin{figure}[!htb]
   \centering
     %\includegraphics[width=.75\textwidth]{figures/Cern-accelerator-complex.png}\\
     \includegraphics[width=.75\textwidth]{figures/Cern-Accelerator-Complex.jpg}
-  \caption{Schema dell'apparato di iniezione e rivelazione nel tunnel di LHC. LHC \`e preposto a molteplici scopi oltre alle collisioni protone-protone, tra cui accelerazione e collisioni tra ioni pesanti (esperimento ALICE), produzione di fasci di neutrini per osservarne le oscillazioni (esperimento CerN to Gran Sasso).}
+  \caption{The CERN accelerator complex.}
   \label{fig:LHC_accelerator_complex}
 \end{figure}
 
-\noindent Come detto, LHC \`e soltanto la fase terminale di una serie di macchine che accelerano i protoni ad energie crescenti. I protoni vengono estratti da atomi di idrogeno, quindi vengono immessi in un acceleratore lineare, Linac2, che li porta a 50 MeV. Successivamente vengono accelerati in un piccolo sincrotrone, un Booster, che ne aumenta l'energia fino a 1.4 GeV, quindi nel Proton Synchrotron dove arrivano a 25 GeV. Il Super Proton Synchrotron li accelera fino a 450 GeV ed infine essi vengono iniettati nell'anello principale di LHC, dove le cavit\`a a radiofrequenza li porteranno, nominalmente, fino a 14 TeV. Uno schema degli apparati di accelerazione e iniezione \`e mostrato in figura \ref{fig:LHCiniettori}[13].\\%: $http://ab-div.web.cern.ch/ab-div/Publications/LHC-DesignReport.html$]
-I fasci, ad LHC, sono suddivisi in pacchetti, necessari per risolvere una delle problematiche che sorgono ai sincrotroni (detta stabilit\`a di fase). Prima della collisione, speciali magneti riducono ciascun pacchetto ad una larghezza di 16 $\mu$m e ad una lunghezza di 80 mm. In ognuno sono presenti circa $10^{11}$ protoni. Presso l'esperimento CMS, secondo il progetto di costruzione, le collisioni avverranno ogni 25 ns (fino ad ora sono avvenute ogni 50 ns), corrispondenti a una frequenza di 40 MHz e ad una luminosit\`a istantanea di $10^{34}\mbox{ cm}^{-2} \mbox{s}^{-1}$. Queste frequenze elevate generano un problema noto con il nome di ``pile-up'', che consiste nel moltiplicarsi del numero di vertici primari di interazione. Ad un medesimo evento registrato prodotto dalle collisioni ogni 50 ns, infatti, corrispondono fino a 30 vertici di interazione; essi aumenteranno a 40 quando si arriver\`a a realizzare una collisione ogni 25 ns.\\
-Le quantit\`a di rilevanza per un acceleratore sono l'energia del centro di massa, che definisce la massima energia disponibile negli scontri tra le particelle, corrispondente alla somma delle energie dei singoli fasci, e la luminosit\`a, che descrive invece la frequenza di interazione tra i fasci. Ammettendo che ciascun pacchetto di un fascio contenga $n_1$ protoni e l'altro ne contenga $n_2$, che l'area in cui i pacchetti si urtano sia $\Sigma$ e che la frequenza di rivoluzione attorno all'anello sia $f$, abbiamo che la luminosit\`a istantanea \`e data da:
+\noindent The LHC represents the final step of the CERN accelerator complex, showed in fig.~\ref{fig:LHC_accelerator_complex}. Protons are extracted from hydrogen atoms and inserted in the linear accelerator Linac2, that brings them to an energy of 50 MeV. They circulate around a little synchrotron, Proton Synchrotron Booster, reaching an energy of 1.4 GeV, and then in the Proton Syncrhrotron (PS), where their energy is increased to 25 GeV. The second to last step is the Super Proton Synchrtotron, SPS, accelerating protons up to 450 GeV. They are finally injected in the Large Hadron Collider, where sixteen radiofrequency cavities (RF) accelerate protons inside each beam up to an energy of 6.5 TeV, providing a center-of-mass energy of 13 TeV when colliding. The RF cavities provide an accelerating electromagnetic field up to 5 MV/m (maximum voltage of 2 MV), that oscillates with a frequency of 400 MHz. Like the magnets, the cavities are kept at low temperature (4.5 K, or -$268.7^{\circ}$C) in order to allow superconducting conditions. The maximum beam energy can be reached in 15 minutes. After several hours of collisions ($\sim$ 10 hours), the quality of the beams deteriorates and they are extracted from the machine and dumped.\\
+
+\noindent Protons circulate inside the LHC ring in bunches of $\sim10^{11}$ particles each, 80 mm long. Focusing magnets allow to reduce the bunch diameter down to 16 $\mu$m. Different bunches are separated by 25 ns (or, $\sim 7.5$ m), corresponding to a frequency of 40 MHz and an instantaneous (peak) luminosity (defined in eq.~\ref{eq:LHC_luminosity_def}) of $1.2 \times 10^{34}\mbox{ cm}^{-2} \mbox{s}^{-1}$. Given the structure of the beams, at every bunch crossing many protons interact simultaneously: this phenomenon is called pile-up. The designed maximum number of bunches is 2808.\\
+%Protons with slightly different energies arriving earlier or later will be accelerated or decelerated so that they stay close to the energy of the ideal particle. In this way, the particle beam is sorted into discrete packets called "bunches". Top energy is reached in around 15 minutes, the bunches having passed the cavities around 1 million times.
+%Queste frequenze elevate generano un problema noto con il nome di ``pile-up'', che consiste nel moltiplicarsi del numero di vertici primari di interazione. Ad un medesimo evento registrato prodotto dalle collisioni ogni 50 ns, infatti, corrispondono fino a 30 vertici di interazione; essi aumenteranno a 40 quando si arriver\`a a realizzare una collisione ogni 25 ns.\\
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.5\textwidth]{PPD_results/int_lumi_per_day_cumulative_pp_2016.pdf}%
+    \includegraphics[width=.5\textwidth]{PPD_results/int_lumi_per_day_cumulative_pp_2016_Golden_23Sep-PromEraH_Morion.png}
+
+    \includegraphics[width=.5\textwidth]{PPD_results/int_lumi_per_day_pp_2016.pdf}%
+    \includegraphics[width=.5\textwidth]{PPD_results/pileup_pp_2016.pdf}
+
+  \caption{Luminosity in 2016 LHC data. Top-left plot: the cumulative integrated luminosity delivered by LHC (in blue) and recorded by CMS (in orange), as a function of the data taken period. Top-right plot: data recorded by CMS and declared as optimal for the physics analyses (in light orange), corresponding to a total integrated luminosity of 35.9 $\text{fb}^{-1}$. Bottom-left plot: maximum integrated luminosity per day. Bottom-right plot: number of proton interactions per bunch crossing (pile-up).}
+  \label{fig:LHC_lumi}
+\end{figure}
+
+\noindent The main parameters that describes an hadronic collider are the center-of-mass energy, corresponding to the sum of the energies of the beams, and the instantaneous luminosity, that describes the frequency of the interactions among the bunches in the beams. If the bunches in the first beam contain $n_1$ protons, and the bunches in the second beam contain $n_2$ protons, and if the colliding area is $\Sigma$, the frequency of complete turns
+around the ring is $f$, the instantaneous luminosity $\mathcal{L_{\text{inst}}}$ is:
+
 \begin{equation}
-\mathcal{L} = f \frac{n_1 n_2}{\Sigma}.
+\mathcal{L_{\text{inst}}} = f \frac{n_1 n_2}{\Sigma}.
+\label{eq:LHC_luminosity_def}
 \end{equation}
-Un generico processo i-esimo con sezione d'urto $\sigma_i$ avr\`a allora la frequenza di interazione $R_i$:
+
+\noindent If a generic physics procces $i$ has a cross-section of $\sigma_i$, the interaction rate $R_i$ is:
 \begin{equation}
-R_i = \frac{dN_i}{dt}= \sigma_i \mathcal{L},
+R_i = \frac{dN_i}{dt}= \sigma_i \mathcal{L_{\text{inst}}},
+\label{eq:LHC_interaction_rate}
 \end{equation}
-mentre il numero di eventi totali registrati nell'intervallo di tempo $(0,\tau)$ si ottiene tramite la luminosit\`a integrata:
+and the number of events recorded in the time interval $(0,\tau)$ is obtained by the integrated luminosity $\mathcal{L} = \int_0^{\tau} \mathcal{L_{\text{inst}}} dt$:
 \begin{equation}
-N_i = \sigma_i \int_0^{\tau} \mathcal{L} dt.
+N_i = \sigma_i \int_0^{\tau} \mathcal{L_{\text{inst}}} dt.
 \end{equation}
-\subsection{Interazioni protone-protone}
+
+\noindent In fig.~\ref{fig:LHC_lumi}, a summary of the luminosity measurement in 2016 data is presented. The luminosity delivered by LHC is represented in blue, the recorded by CMS is in orange. The mean number of interaction per bunch crossing (pile-up) is presented as well. The average number of interactions per collision is 27, the maximum is around 50.
+
+\subsection{Proton-proton interactions}
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.5\textwidth]{figures/78events_PU.png}
+  \caption{78 events.}
+  \label{fig:pp_pileup}
+\end{figure}
+%Figura da CMS Collaboration, DAQ generic figures gallery online at http://cmsdoc.cern.ch/cms/TDR/DAQ/TDRweb/daqgenericjpg.htm
+Proton-proton collisions allow to reach higher energies and luminosities, but the drawback is the complexity of the events when compared to electron-positron collisions: not only because of the increasing backgrounds due to strong interactions among partons, but also because the momenta of the proton partons taking part in the interaction are unknown; not to mention the problem of disentangling the tracks of the particles coming from the interesting hard interactions from the spectator pile-up interactions (in fig.~\ref{fig:pp_pileup}, 78 proton collisions were happening at the same bunch crossing).\\
+The majority of the LHC events is represented by soft interactions, with low transverse momentum transfer, namely elastic and diffractive scatterings. In the so-called hard interactions, on the other hand, the transferred momentum among particles is high, allowing to produce massive resonant phenomena. These events manifest in peculiar final state signatures that can be distinguished from the soft interaction background.\\
+At high momentum transfer (perturbative regime), a proton can be described as a collection of partons, each bringing a fraction $x$ of the initial beam momentum, whose distribution is described by the parton distribution functions (PDF), $f(x,Q^2)$, as a function of the Bjorken's variable and of the momentum transfer $Q^2$. At very high center-of-mass energies (13 TeV), the proton masses can be neglected; the available energy in the parton 1 and parton 2 scattering is unknown, $\sqrt{x_1 x_2 s}$. The total cross-section is given by:
+\begin{equation}
+\sigma = \int dx_1 f_1(x_1,Q^2) \int dx_2 f_2(x_2,Q^2) \sigma_{12}(x_1 p_1, x_2 p_2, Q^2),
+\end{equation}
+where $\sigma_{12}$ is the cross-section at parton level, and $f_1,f_2$ are the parton PDFs. In fig.~\ref{fig:LHC_pp_cross_section}, parton cross-sections are displayed as a function of the center-of-mass energy.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.5\textwidth]{figures/crosssections2013.jpg}
-  \caption{Sezioni d'urto e frequenza di eventi attesi da collisioni protone-protone in funzione della massa della particella prodotta (o dell'energia trasversa pi\`u alta dei jets prodotti) per $\sqrt{s}=14$ TeV[14].}
+  \caption{Cross-sections and number of expected events in proton-proton collisions, as a function of the center-of-mass energy. Rare phenomena, such as the Higgs boson production, can be observed at the LHC.}
   \label{fig:LHC_pp_cross_section}
 \end{figure}
 
-%Figura da CMS Collaboration, DAQ generic figures gallery online at http://cmsdoc.cern.ch/cms/TDR/DAQ/TDRweb/daqgenericjpg.htm
-\noindent Nonostante la possibilit\`a di raggiungere luminosit\`a ed energie maggiori, le collisioni tra protoni sono molto pi\`u complesse rispetto a quelle tra leptoni: non soltanto per la proliferazione dei fondi, specialmente da QCD, che rendono molto difficoltoso discriminare il segnale e distinguere i vertici di interazione primari (il loro moltiplicarsi va sotto il nome di {\itshape pileup}), ma anche per l'impossibilit\`a di conoscere con esattezza l'impulso dei partoni che partecipano alla collisione.\\
-La maggior parte degli eventi ad LHC sono le interazioni soffici, vale a dire con basso momento trasverso: si tratta tipicamente di urti elastici o difrattivi che non sono di interesse per indagini di nuova fisica. Nei processi detti duri, al contrario, la quantit\`a di momento trasferito \`e elevata: questi eventi sono i pi\`u semplici da distinguere nelle geometrie dei rivelatori e sono quelli in cui vengono prodotte le particelle pi\`u massive.\\
-Come \`e noto dalla QCD, ad alti momenti trasferiti \`e lecito trattare un protone come un insieme di partoni, ciascuno dei quali trasporta una frazione $x$ del momento iniziale del fascio e la cui struttura \`e descritta dalle parton distribution function (PDF) $f(x,Q^2)$, funzioni della variabile di Bjorken e del momento trasferito $Q^2$. Nel caso in cui l'energia del centro di massa sia elevata al punto da rendere trascurabili le masse dei singoli oggetti, l'energia effettivamente disponibile per gli urti tra due partoni 1 e 2 \`e una quantit\`a incognita, $\sqrt{x_1 x_2 s}$. La sezione d'urto di un processo partonico generico si pu\`o esprimere sfruttando la fattorizzazione lecita in regime di QCD perturbativa:
-\begin{equation}
-\sigma = \int dx_1 f_1(x_1,Q^2) \int dx_2 f_2(x_2,Q^2) \sigma_{12}(x_1 p_1, x_2 p_2, Q^2),
-\end{equation}
-dove $\sigma_{12}$ indica la sezione d'urto elementare del processo partonico ed $f_1,f_2$ sono le PDF. In figura \ref{fig:cross_section} sono rappresentate le sezioni d'urto elementari in funzione della massa della particella prodotta: grazie all'elevata luminosit\`a di LHC \`e possibile osservare fenomeni molto rari mai visti prima, come ad esempio il decadimento del bosone di Higgs in due fotoni o in quattro leptoni, canali nei quali la particella \`e stata scoperta nel 2012.
-
 \section{CMS detector}
 
-Compact Muon Solenoid, installato in una caverna sotterranea nei pressi di Cessy, in Francia, \`e un rivelatore di forma cilindrica, \`e lungo 22 m, ha un diametro di 15 m, una massa di 12500 tonnellate ed \`e preposto a molteplici scopi. La maggior parte dei processi fisici che si vogliono esplorare hanno basse sezioni d'urto, mentre, come \`e ben noto, i prodotti delle collisioni tra protoni sono dominati da elevati fondi QCD: CMS \`e progettato in modo da avere un'elevata capacit\`a di discriminazione degli eventi rari, sfruttando in particolare i canali comprendenti elettroni e muoni, e una grande precisione di misura dei vertici secondari, necessaria per distinguere i $\tau$ e gli adroni contenenti quark pesanti. L'elevata luminosit\`a nominale di LHC, come accennato, comporta il problema del pile-up: questi effetti possono essere ridotti utilizzando rivelatori ad elevata granularit\`a. L'occupazione si abbassa segmentando l'apparato in molti sottogruppi di rivelatori, al costo di dover ottenere un'ottima sincronizzazione tra di essi. L'alta frequenza di interazione, inoltre, necessita un'alta risoluzione temporale. Infine, gli elevati livelli di radiazione attorno al vertice richiedono apparati robusti e resistenti.
+The Compact Muon Solenoid (CMS) is a multi-purpose detector built in the LHC ring. It is situated in a cavern 100 m underground, near Cessy, in France. It is a cylinder 22 m long, with a diameter of 15 m, and a weight of 12500 tons. Its physics programme includes the search for the Higgs boson (discovered in 2012), precision measurements of the Standard Model parameters and rare decays (physics of beauty quark), and search for new physics beyond the standard model (SUSY, exotic phenomena, dark matter, extra dimensions).\\
+The CMS detector is structured in many layers of sub-detectors, giving different responses depending on the nature and the momentum of the particle passing through. The inner detectors have been finely segmented in order to afford the high radiation levels and particle multiplicity at the interaction point, so that the reduced occupancy of each layer allows to measure and distinguish precisely the primary vertices of the hard interactions from the pile-up events. A very precise time resolution is vital in order to synchronize all the subsystems together.\\
+%La maggior parte dei processi fisici che si vogliono esplorare hanno basse sezioni d'urto, mentre, come \`e ben noto, i prodotti delle collisioni tra protoni sono dominati da elevati fondi QCD: CMS \`e progettato in modo da avere un'elevata capacit\`a di discriminazione degli eventi rari, sfruttando in particolare i canali comprendenti elettroni e muoni, e una grande precisione di misura dei vertici secondari, necessaria per distinguere i $\tau$ e gli adroni contenenti quark pesanti. L'elevata luminosit\`a nominale di LHC, come accennato, comporta il problema del pile-up: questi effetti possono essere ridotti utilizzando rivelatori ad elevata granularit\`a. L'occupazione si abbassa segmentando l'apparato in molti sottogruppi di rivelatori, al costo di dover ottenere un'ottima sincronizzazione tra di essi. L'alta frequenza di interazione, inoltre, necessita un'alta risoluzione temporale. Infine, gli elevati livelli di radiazione attorno al vertice richiedono apparati robusti e resistenti.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.99\textwidth]{figures/cms_3d.png}
-  \caption{Rappresentazione grafica del rivelatore CMS.}
+  \caption{The CMS experiment.}
   \label{fig:CMS_1}
 \end{figure}
 
-\noindent In figura \ref{fig:CMS_1} \`e rappresentato uno schema dell'esperimento e dei principali gruppi di rivelatori. Prima di passare a descriverne ciascuno nel dettaglio, ponendo particolare attenzione ai tracciatori e al sistema per l'identificazione dei muoni, voglio precisare alcuni termini ricorrenti. Vista la struttura geometrica di CMS, si preferisce chiamare ``barrel'' la superficie laterale del cilindro, ``endcap'' le due basi circolari. I rivelatori ``forward'', disposti oltre gli endcap, servono per coprire un'ulteriore regione geometrica dove la radiazione \`e pi\`u intensa. I rivelatori di traccia al silicio sono spesso chiamati col nome ``tracker''; per il calorimetro elettromagnetico si usa la sigla ECAL; per il calorimetro adronico si usa la sigla HCAL; per il trigger di livello 1 si usa la sigla L1 trigger; per il trigger di alto livello si usa la sigla HLT.\\
-La figura \ref{fig:particelle} esemplifica con chiarezza qual \`e la traiettoria che ciascun tipo di particella, mediamente, percorre all'interno di CMS.
+\noindent Fig.~\ref{fig:CMS_1} shows a sketch of the CMS detector. It is longitudinally segmented in the barrel region and two endcaps. In the forward region (over the endcaps), where the beam radiation is very intense, additional calorimeters have been placed. In fig.~\ref{fig:CMS_particles}, the mean path of a specific particle through the sub-detectors is represented, depending on its flavour.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.99\textwidth]{figures/CMS_particles.jpg}
-  \caption{Percorso medio di una particella all'interno di CMS. Un muone, in azzurro, attraversa tutti i rivelatori percorrendo una traiettoria curva, lasciando segnale nel tracciatore, nei calorimetri e nelle varie stazioni per i muoni. Un elettrone, in rosso, lascia segnale nei tracciatori e viene assorbito dal calorimetro elettromagnetico. Un fotone, in azzurro tratteggiato, percorre una traiettoria dritta e sciama soltanto nel calorimetro elettromagnetico, senza rilasciare segnale nel tracciatore. Un adrone, in verde (tratteggiato se neutro), lascia segnale nei tracciatori se carico e sciama nel calorimetro adronico.}
+  \caption{Mean path of a particle through the CMS detector. A muon, in light blue, passes through with a bended trajectory, depending on its momentum and charge, triggering signals in all the sub-systems. An electron, in red, leaves a track in the silicon tracker and is absorbed by the electromagnetic calorimeter. A neutral or charged hadron, in green, stops inside the hadronic calorimeter. A photon, dotted blue line, showers in the electromagnetic calorimeter, without leaving any track in the silicon detector.}
   \label{fig:CMS_particles}
 \end{figure}
 
-\subsection{Il sistema di coordinate}
-Il sistema di coordinate, al quale far\`o spesso riferimento, \`e orientato nel seguente modo. L'asse $\mathrm{x}$, in direzione radiale, punta verso il centro dell'anello di LHC; l'asse $\mathrm{y}$ \`e verticale e punta verso l'alto; l'asse $\mathrm{z}$ \`e lungo la direzione del fascio. L'angolo azimutale, $\Phi$, giace nel piano $\mathrm{xy}$ e si misura a partire dall'asse $\mathrm{x}$; la coordinata radiale in questo piano si indica con $\mathrm{r}$. L'angolo polare $\theta$ \`e definito nel piano $\mathrm{rz}$. La componente del momento trasversa alla direzione del fascio, indicata con $p_T$, si calcola dalle componenti $\mathrm{x}$ ed $\mathrm{y}$. L'energia trasversa \`e definita da $E_T = E \sin{\theta}$.\\
-\`E bene introdurre altre due grandezze di comodo utilizzo, la rapidit\`a $y$ e la pseudorapidit\`a $\eta$, definite nei modi seguenti in funzione dell'energia della particella $E$, del suo momento longitudinale lungo l'asse $\mathrm{z}$ e del modulo del momento:
+\subsection{The coordinate system}
+The CMS cooridnate system is depicted in fig.~\ref{fig:CMS_CoordSys}. $x$ and $y$ are the coordinates in the transverse plane, $z$ is the longitudinal coordinate. The $x$ axis points at the center of the LHC ring, the $y$ axis points upward, the $z$ axis is along the beam direction. The azimuthal angle $\phi$ lays in the in the transverse plane, and it is measured starting from the $x$ axis; the radial coordinate is $r$. The polar angle $\theta$ lays in the plane $rz$. The transverse component of the 3-momentum, $\vec{p}_T$, is orthogonal to the beam axis and lays in the plane $xy$. The transverse energy is defined as the magnitude of $\vec{p}_T$: $E_T = E \sin{\theta}$.\\
+Two other commonly used variables are the rapidity, $y$, and pseudorapidity, $\eta$, defined as functions of the particle energy $E$, the longitudinal component of the momentum $p_z$ and the 3-momentum modulus:
 \begin{equation}
-y = \frac{1}{2} \log{\frac{E + p_z}{E - p_z}}\\
+\begin{split}
+ & y = \frac{1}{2} \log{\frac{E + p_z}{E - p_z}}\\
+ & \eta = \frac{1}{2} \log{\frac{|\vec{p}| + p_z}{|\vec{p}| - p_z}} = -\log{\tan{\frac{\theta}{2}}}.
+\end{split}
 \end{equation}
-\begin{equation}
-\eta = \frac{1}{2} \log{\frac{|\bar{p}| + p_z}{|\bar{p}| - p_z}} = -\log{\tan{\frac{\theta}{2}}}.
-\end{equation}
-Quando la particella \`e emessa in avanti, ossia per $\theta = 0$, $\eta \rightarrow \infty$. Quando la particella \`e emessa trasversalmente al fascio, ossia per $\theta = \pi /2$, $\eta = 0$. Ad energie elevate, quando le masse diventano trascurabili, rapidit\`a e pseudorapidit\`a coincidono. Queste due grandezze vengono ampiamente usate perch\'e sono invarianti per boost di Lorentz lungo la direzione del fascio.
+When the considered particle is produced in the forward region, hence at $\theta = 0$, $\eta \rightarrow \infty$. When the particle is produced in the transverse plane, hence $\theta = \pi /2$, $\eta = 0$. At high energies, when the masses can be neglected, rapidity and pseudorapidity coincide; these variables are largely used at colliders because they are invariant under Lorentz boosts along the beam direction.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.3\textwidth]{figures/CMS_CoordSys.jpg}
-  \caption{Coord sys.}
+  \caption{CMS coordinate system.}
   \label{fig:CMS_CoordSys}
 \end{figure}
 
-\subsection{Il solenoide}
-Il grande solenoide superconduttore, un cilindro cavo lungo 13 m e di diametro interno pari a 6 m, fornisce un intenso campo magnetico massimo di 3.8 T, capace di piegare le traiettorie delle particelle cariche per le misure del loro momento $p$, data la relazione tra braccio di leva $R$ e campo magnetico $B$: $p [\text{GeV}] = 0.3 B [\text{T}] R [\text{m}]$. Le linee di campo del magnete sono chiuse da circa 10000 tonnellate di ferro, che costituiscono il giogo di ritorno intervallato alle apparecchiature di rivelazione dei muoni. All'interno dei filamenti di niobio e titanio che generano il campo scorre una corrente elettrica massima di 19 kA; l'energia massima immagazzinata nel solenoide ammonta a 2.6 GJ.
+\subsection{The magnet}
+The CMS superconducting magnet is an hollow cylinder (13 m long, 6 m of diameter, showed in fig.~\ref{fig:CMS_solenoid}). In the niobium and titanium fibers that constitute the solenoid, an electrical current of 19 kA flows, providing a maximum magnetic field of 3.8 T and storing a maximum energy of 2.6 GJ. Superconductiong conditions are allowed by a liquid helium cooling system, keeping the solenoid at 4.5 K. In order to avoid stray fields, the magnetic field lines are closed by the return yoke, composed by 10 ktons of magnetized iron blocks, located in the outer part of CMS and alternated to the muon chambers. The homogeneus magnetic field inside the detector bends the trajectories of the charged particles, allowing the measurement of their momenta $p$, given the relation with the magnetic field strenght $B$ and the radial coordinate $R$ of the trajectory:
+\begin{equation}
+p [\text{GeV}] = 0.3 \times B [\text{T}] \times R [\text{m}]. 
+\end{equation}
+
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.5\textwidth]{figures/CMS_solenoid.jpeg}
-  \caption{Solenoid.}
+  \caption{Installation of the superconducting solenoid in the CMS cavern.}
   \label{fig:CMS_solenoid}
 \end{figure}
 
-\subsection{I tracciatori}
-Il sistema dei tracciatori a CMS \`e interamente costituito da rivelatori al silicio. La loro elevata precisione nella ricostruzione dei vertici secondari li rende strumenti di vitale importanza per l'identificazione di quark (charm, beauty) e leptoni pesanti ($\tau$), prodotti in numerosissimi processi fisici interessanti.\\
-I tracciatori coprono una pseudorapidit\`a $|\eta|<2.5$ per un'area attiva di circa $200\mbox{ m}^2$ e sono suddivisi nel pixel detector, pi\`u vicino al vertice di interazione, e nello strip detector, che copre un raggio compreso tra 0.2 e 1.2 m. L'elevata granularit\`a, come accennato, permette di abbassare l'occupazione, vale a dire di avere meno eventi per ciascun sotto-rivelatore: i pixel hanno un'area di $100 \times 150 \mbox{ }{\mu{m}}^2$ e uno spessore di 285 $\mu$m. Le strip adoperate a raggi intermedi (20-55 cm) hanno dimensioni 10 cm $\times$ 80 $\mu$m $\times$ 320 $\mu$m; quelle a raggi maggiori (55-110 cm) 25 cm $\times$ 180 $\mu$m $\times$ 500 $\mu$m. In totale ci sono 1440 moduli di pixel per un totale di 66 milioni di canali di lettura, e 15148 moduli di strip per un totale di 9.3 milioni di canali di lettura.\\
-L'altissima frequenza degli eventi implica l'utilizzo di un'elettronica capace di leggere molto rapidamente i segnali, portando ad un elevato consumo energetico: questo richiede un efficace sistema di raffreddamento che mantenga il rivelatore ad una temperatura di $\approx10^{\circ}$ C in modo da preservarne la durata.\\
-Il pixel detector \`e costituito da tre strati di rivelatori nel barrel e da due dischi agli endcaps. I moduli nel barrel sono disposti parallelamente al campo magnetico, mentre agli endcaps sono inclinati di circa $20^{\circ}$: le coppie elettrone-lacuna prodotte nel semiconduttore sono allora soggette ad una forza di Lorentz e il loro moto di deriva non avviene pi\`u lungo le linee del campo elettrico, bens\`i esse si sparpagliano lungo diversi pixel. Calcolando il centro della distribuzione di carica raccolta, \`e possibile determinare la posizione della particella carica che ha attraversato il rivelatore con una risoluzione di 15 $\mu$m, sia nel piano $\mathrm{r}\Phi$, sia lungo $\mathrm{z}$.\\
-Il tracciatore a strip \`e composto da quattro sotto-sistemi: il tracker inner barrel, diviso in 4 strati; il tracker outer barrel, in 6 strati; il tracker inner disk, in 3 strati; il tracker endcaps, in 9 strati. I moduli pi\`u esterni, sia del barrel che dell'endcap, sono leggibili sia dal fronte che dal retro.\\
+\subsection{The tracking system}
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.9\textwidth]{figures/cmstracker.png}
-  \caption{Tracker.}
+  \caption{The CMS tracking system: the inner pixel detector, close to the interaction point, and the outer strip detector.}
   \label{fig:CMS_tracker}
 \end{figure}
+
+The CMS tracking system is composed by a cylinder of silicon detectors (2.5 m of diameter and 5.8 m length). Their design allows a precise reconstruction of the tracks left by charged particles and of the interaction vertices, a fundamental tool to identify heavy quarks (charm, beauty) and leptons (taus).
+Tracker detectors cover a pseudorapidity region of $|\eta|<2.5$ and have an active area of $210\text{ m}^2$. The two sub-detectors of the tracking system are the pixel detector, closer to the interaction point, and the strip detector, covering a radius of 0.2 -- 1.2 m. The high granularity of the pixels and micro strips allows to keep the occupancy at acceptable levels, given the high multiplicity of the tracks ($\sim$1 MHz/$\text{mm}^2$). The silicon detectors and the electronic cables are cooled down to a temperature of $\sim 10^{\circ}$ C. The structure of the tracking system is showed in fig.~\ref{fig:CMS_tracker}.
+
+\subsubsection{The pixel detector}
+The pixel detector is composed by 66 millions of silicon cells, whose dimensions are $100 \times 150 \text{ }{\mu{m}}^2$, 285 $\mu$m of thickness, placed in 1440 modules. Silicon cells are set in three layers in the barrel region and in two disks at each endcap. Barrel modules are disposed parallel to the magnetic filed, whilst at the endcap they are tilted by about $20^{\circ}$. 
+%Il pixel detector \`e costituito da tre strati di rivelatori nel barrel e da due dischi agli endcaps. I moduli nel barrel sono disposti parallelamente al campo magnetico, mentre agli endcaps sono inclinati di circa $20^{\circ}$: le coppie elettrone-lacuna prodotte nel semiconduttore sono allora soggette ad una forza di Lorentz e il loro moto di deriva non avviene pi\`u lungo le linee del campo elettrico, bens\`i esse si sparpagliano lungo diversi pixel. Calcolando il centro della distribuzione di carica raccolta, \`e possibile determinare la posizione della particella carica che ha attraversato il rivelatore con una risoluzione di 15 $\mu$m, sia nel piano $\mathrm{r}\Phi$, sia lungo $\mathrm{z}$.\\
+Pixels allow a spatial resolution of 10 $\mu$m in the transverse plane, and of $\sim$20 $\mu$m along the longitudinal coordinate. Their reduced size guarantees an occupancy of $10^{-4}$ per pixel at each bunch crossing, in high luminosity regime.
+
+\subsubsection{The strip detector}
+The strip system is divided in the four-layered tracker inner barrel (TIB), covering a region $20 < r < 55$ cm with respect to the interaction point, the six-layered tracker outer barrel (TOB), located at $55 < r < 110$ cm, the three tracker inner disks (TID) and the nine tracker endcaps (TEC) at each cylinder base. Given the lower radiation level at higher radii (and hence a lower occupancy, around few percent), micro strips are bigger than the pixels. Silicon strips in TIB and TID are 320 $\mu$m thick, 10 cm long, and with a pitch ranging from 80 to 120 $\mu$m; strips in TOB and TEC are 25 cm long, with a different thickness (320 $\mu$m for TID, 500 $\mu$m for TEC) and pitch (97-184 $\mu$m). There are 15148 strip modules, and 9.3 million redout channels. The strip spatial resolution is about 20 -- 50 $\mu$m in the transverse plane and about 200 -- 500 $\mu$m along the longitudinal coordinate.
 %Nel capitolo 4 descriver\`o le tecniche di ricostruzione delle tracce nei rivelatori al silicio, in particolare dei muoni.\\
 %L'efficienza di ricostruzione delle tracce dei muoni \`e stata misurata essere attorno al 99\%, essa cala drasticamente per $|\eta|>2.1$ a causa della ridotta copertura geometrica del pixel detector. Le efficienze di rivelazione degli adroni sono tipicamente pi\`u basse perch\'e interagiscono con il materiale. La risoluzione in $p_T$, sempre per i muoni, \`e attorno all'1-2\% per $|\eta|>1.6$ e per momenti elevati; a momenti pi\`u bassi dominano effetti di scattering multiplo e dipendono dalla quantit\`a di materiale attraversato.\\
 
-\subsection{Il calorimetro elettromagnetico}
-Il calorimetro elettromagnetico di CMS \`e un rivelatore omogeneo composto da cristalli scintillatori di tungstenato di piombo ($\mbox{PbWO}_4$), ideali per le misure di fotoni ed elettroni. Il calorimetro \`e suddiviso in due gruppi di sotto-rivelatori, uno nel barrel ed uno per ciascun endcap; nel complesso copre una regione geometrica fino ad $|\eta|<3$. Il $\mbox{PbWO}_4$ \`e stato scelto perch\'e permette una risposta temporale rapida (in 25 ns, ad ogni collisione tra pacchetti, viene emesso l'85\% della luce di scintillazione), ha elevate efficienza di scintillazione e resistenza alla radiazione. I 61200 cristalli impiegati nella regione di barrel hanno dimensioni $(22 \times 22) \mbox{ mm}^2 \times 23 \mbox{ cm}$, per una corrispondente lunghezza di radiazione di $25.8 X_0$; i 7324 cristalli negli endcaps hanno dimensioni $ 28.6 \times 28.6 \mbox{ mm}^2 \times 22 \mbox{ cm}$, per una corrispondente lunghezza di radiazione di $24.7 X_0$. Prima della regione di endcaps, \`e disposto un rivelatore di preshower costituito da due strati di sandwich piombo/silicio, per una lunghezza di radiazione di $3X_0$: questo permette una maggiore efficienza di rivelazione nella regione in avanti e permette di utilizzare cristalli pi\`u piccoli agli endcaps; \`e stato installato appositamente per distinguere due fotoni dal decadimento del $\pi_0$ e per poter indagare il canale di decadimento raro dell'Higgs $H \rightarrow \gamma \gamma$.\\
-La luce scintillata nel barrel viene raccolta e amplificata da dei fotodiodi a valanga; agli endcaps, dove la frequenza degli eventi \`e pi\`u alta, il segnale \`e letto da fototridiodi a vuoto. La raccolta e l'amplificazione della radiazione da scintillazione \`e fortemente dipendente dalla temperatura, rendendo necessario un sistema di controllo e raffreddamento ad acqua che mantenga il calorimetro a $18^{\circ}$ C costanti.
+\subsection{The elctromagnetic calorimeter}
+The CMS electromagnetic calorimeter (ECAL, shown in fig.~\ref{fig:CMS_ecal}) is a homogeneous detector composed by lead tungstate ($\text{PbWO}_4$) scintillating crystals, designed to measure the energy deposits of photons and electrons through their electromagnetic showers. $\text{PbWO}_4$ is transparent and dense (8.3 gr/$\text{cm}^3$); it has a fast time response (the 85\% of the scintillating light is emitted at every bunch crossing, namely 24 ns), high scintillating efficiency and radiation resistance; it has a radiation length is $X_0 = 0.89$ cm and a Moli\`ere radius of 2.19 cm. The ECAL is divided in the barrel region ($\eta < 1.479$, at a radius of 1.3 m) and the endcaps ($1.479 < \eta < 3$).  The 61200 crystals employed in the barrel region, whose size is $(22 \times 22) \text{ mm}^2 \times 23 \text{ cm}$, have a radiation length of $25.8 X_0$; the 7324 crystals in the endcaps, $ 28.6 \times 28.6 \text{ mm}^2 \times 22 \text{ cm}$, have a radiation length of $24.7 X_0$. Before the endcaps, on each side, a pre-shower detector is installed: it is composed by two disks of lead absorber and two layers of silicon strips, up to a radiation length of $3X_0$. It has been designed to distinguish the photons coming from the $\pi^0$ decay from the rare Higgs decay $H \rightarrow \gamma \gamma$. The readout and amplification of the scintillating light, performed by avalanche photodiodes in the barrel and by vacuum phototriodes in the endcaps, requires a stable temperature of $18^{\circ}$ C, mantained by a water cooling system.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.7\textwidth]{figures/cmsecal.png}
-  \caption{Ecal.}
+  \caption{The CMS electromagnetic calorimeter.}
   \label{fig:CMS_ecal}
 \end{figure}
 
-\begin{figure}%{l}{0.5\textwidth}
-\centering
-%\includegraphics[scale=0.3]{risoluzione_ECAL.png}
-\caption{Risoluzione in energia di ECAL in funzione dell'energia del fascio di elettroni utilizzato per le misure. Sono mostrati anche i valori per i parametri di fit[16].}
-\label{fig:risoluzione_ECAL}
-\end{figure}
+%\begin{figure}%{l}{0.5\textwidth}
+%\centering
+%%\includegraphics[scale=0.3]{risoluzione_ECAL.png}
+%\caption{Risoluzione in energia di ECAL in funzione dell'energia del fascio di elettroni utilizzato per le misure. Sono mostrati anche i valori per i parametri di fit[16].}
+%\label{fig:risoluzione_ECAL}
+%\end{figure}
 
-\noindent La risoluzione in energia del calorimetro \`e parametrizzata secondo l'espressione seguente:
+\noindent The energy resolution of the calorimeter is parametrized as:
 \begin{equation}
 {\left( \frac{\sigma}{E} \right)}^2 = {\left( \frac{S}{\sqrt{E}} \right)}^2 + {\left( \frac{N}{E} \right)}^2 + C^2,
 \end{equation}
-dove $S$ \`e il termine stocastico, $N$ il contributo dal rumore, $C$ un termine costante (contiene le dipendenze dalla calibrazione). In figura \ref{fig:risoluzione_ECAL} sono mostrati i risultati ottenuti da misure di prova con un fascio di elettroni: le stime ottenute sono $S=0.028 \mbox{ GeV}^{\frac{1}{2}}$, $N=0.12 GeV$, $C=0.003$.
+where $S=0.028 \text{ GeV}^{\frac{1}{2}}$ is the stochastic term, $N=0.12$ GeV is related to noise contribution, and $C=0.003$ is a constant term depending on the calibration.
+%In figura \ref{fig:risoluzione_ECAL} sono mostrati i risultati ottenuti da misure di prova con un fascio di elettroni: le stime ottenute sono $S=0.028 \mbox{ GeV}^{\frac{1}{2}}$, $N=0.12 GeV$, $C=0.003$.
 
-\subsection{Il calorimetro adronico}
-Il calorimetro adronico \`e costruito a strati alterni di ottone e di scintillatore plastico. La qualit\`a della misura dipende dalla granularit\`a del rivelatore, dalla sua ermeticit\`a e dalla frazione di energia depositata dagli adroni che il calorimetro \`e in grado di rivelare, quindi deve essere spesso abbastanza da assorbire tutti gli sciami adronici. L'estensione radiale del rivelatore nella regione di barrel \`e per\`o limitata dalla presenza dell'ECAL e del solenoide superconduttore: per raggiungere una lunghezza di assorbimento sufficiente (11.8$\lambda$) \`e stato installato un ulteriore strato calorimetrico al di fuori del magnete.\\
-La luce di scintillazione, tipicamente nella parte blu-violetta dello spettro elettromagnetico, \`e interpretata da fibre (``wavelenght shifter'') che ne spostano la lunghezza d'onda al verde e la trasportano fino a fotorivelatori ibridi. I primi strati di scintillatore sono disposti immediatamente a ridosso dell'ECAL, mentre gli ultimi a contatto con le camere per i muoni, permettendo cos\`i di raccogliere tutta l'informazione possibile.\\
-La risoluzione energetica combinata dei due calorimetri \`e data da:
+
+\subsection{The hadronic calorimeter}
+The hadronic calorimeter (HCAL, displayed in fig.~\ref{fig:CMS_hcal}) is a sampling calorimeter, composed by brass and plastic scintillator layers. It has been designed in order to guarantee a good hermeticity, allowing to perform a precise measurement of the missing transverse energy. It is located within the electromagnetic calorimeter and the solenoid, covering a region of $|\eta|<1.3$ in the barrel, and $1.3<|\eta|<3$ in the endcaps. Brass is non-magnetic and has short interaction length (16.4 cm): the 60 mm thick absorber layers used in the barrel allow to reach 5.6 interaction lengths at $\eta=0$ and 10.8 interaction lenghts at $\eta = 1.3$; the 80 mm thick layers in the endcaps reach 11 interaction lenghts. An additional calorimetric layer has been installed out of the solenoid, in order to reach 11.8 interaction lenghts in the barrel region. The scintillation light, typically in the blue-violet region of the electromagnetic spectrum, is collected by wavalenght-shifter fibers, translated and amplified by multi-channel hybrid photodiodes, proportionally to the magnitude of the energy deposits. An additional hadronic calorimeter has been placed in the forward region, $3 < |\eta| < 5.2$, at 11.2 m from the interaction point. It has beeen designed to afford the high levels of radiations: it is composed by 55 mm thick absorber layers of stainless-steel, and quartz fibers, able to detect the Cherenkov scintillating light of the charged particles of the hadronic showering. A longitudinally segmentation allow to distinguish hadronic particles from electromagnetic components.
+The energy resolution of the hadronic calorimeter is:
 \begin{equation}
-\left( \frac{\sigma}{E} \right) \approx \frac{100\%}{\sqrt{E}} \oplus 45\%.
+\left( \frac{\sigma}{E} \right) \approx \frac{a}{\sqrt{E}} \oplus b\%,
 \end{equation}
-Le regioni di barrel e di endcaps dell'HCAL coprono un intervallo di $|\eta|<3$; il calorimetro ``forward'' aggiuntivo arriva fino ad $|\eta|<5.2$. Esso si trova a 11.2 m dal punto di interazione ed \`e stato progettato appositamente in previsione del raggiungimento dell'energia massima di 14 TeV: si calcola infatti che il deposito energetico medio di un adrone prodotto in collisioni $pp$ in queste condizioni sia di 760 GeV nella direzione in avanti, da confrontare con i 100 GeV medi delle altre regioni geometriche. Il calorimetro ``forward'' \`e composto da strati assorbitori di acciaio spessi 55 mm in cui sono innestate delle fibre di quarzo, che agisce da mezzo attivo poich\'e rivela la luce Cherenkov emessa dalle particelle cariche dello sciame, principalmente quella della componente elettromagnetica. La segmentazione longitudinale permette di distinguere i segnali lasciati dagli adroni rispetto a quelli lasciati da elettroni e fotoni.
+where $a=65\%$ in the barrel region, $85\%$ in the endcaps, $100\%$ in the forward region, and $b=5\%$.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.7\textwidth]{figures/cmshcal.png}
-  \caption{Hcal.}
+  \caption{The CMS hadronic calorimeter.}
   \label{fig:CMS_hcal}
 \end{figure}
 
-\subsection{Sistema per l'identificazione dei muoni}
+
+\subsection{The muon system}
+
+
+The outer system of the CMS experiment consists into gas detectors for identifying muons, that are located between the iron return yokes, designed to close the magnetic field generated by the solenoid. In the barrel region, where a smaller number of muons is expected and the magnetic field is less strong, Drift Tubes (DT) detectors are installed. In the endcaps, where the flux of particles is larger, Cathod Strip Chambers (CSC) are used, and disposed in three disks. CSCs are designed to allow faster responses, higher granulatiy and radiation resistance. Resistive Plate Chambers (RPC) are installed both in the barrel and in the endcaps as additional triggering system. The geometry of the muon system is showed in fig.~\ref{fig:CMS_muon}; it consists of 250 DTs, 530 CSCs, 610 RPCs, and it covers a region $|\eta|<2.4$.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.9\textwidth]{figures/cmsmuon.png}
-  \caption{Mu.}
+  \caption{Section of CMS detector, in the plane $\mathrm{rz}$, parallel to the beamline, that emphasizes the location of the muon detectors, in particular: Drift Tubes (DT, in yellow); Cathode Strip Chambers (CSC, in green); Resistive Plate Chambers (RPC, in blue).}
   \label{fig:CMS_muon}
 \end{figure}
 
-\begin{figure}%{l}{0.5\textwidth}
-\centering
-%\includegraphics[scale=0.4]{camere_muoni.png}
-\caption{Sezione di CMS fatta parallelamente alla linea del fascio, nel piano $\mathrm{rz}$. Si osservi in particolare la disposizione delle camere a muoni nel barrel (MB) e nell'endcap (ME).}
-\label{fig:camere_muoni}
-\end{figure}
 
-\noindent L'ultimo gruppo di rivelatori di CMS consiste in una serie di rivelatori a gas per l'identificazione dei muoni, intervallati agli strati di ferro che chiudono le linee del campo magnetico generato dal solenoide. Nel barrel, le stazioni per i muoni sono separate in quattro cilindri concentrici; negli endcaps sono organizzate in tre dischi, ciascuno contenente quattro stazioni. Si pu\`o vedere la loro disposizione in figura \ref{fig:camere_muoni}.\\
-Nella regione di barrel, dove ci sono meno muoni e meno neutroni di fondo e dove il campo magnetico \`e meno intenso, vengono utilizzate delle camere con tubi a deriva (DT, drift tube). Agli endcaps, dove i flussi sono maggiori, ci sono delle camere a strip catodici (CSC, cathode strip chambers), che permettono una risposta pi\`u rapida, una maggiore granularit\`a e resistenza agli alti livelli di radiazione. Inoltre, dei rivelatori resistivi (RPC, resistive plate chamber) vengono sfruttati come ulteriore sistema di trigger indipendente per i muoni. In totale sono installati 250 DT, 540 CSC, 610 RPC.
+\subsubsection{The Drift Tubes}
+Drift Tube detectors cover a region of $|\eta|<1.2$ and are arranged in four stations, segmented along the beam line in five wheels. The basic element of the detector is the cell, that has a size $42 \times 13 \text{ mm}^2$. Each cell is filled with a gas mixture (85\% argon, 15\% $\text{CO}_2$), in which the process of ionization takes places; the ionization electrons drift from the 50 $\mu$m thick steel anodic wire, in the center of the cell, towards the aluminium cathodic strips, located at its edge. Additional electrodes on the surface of the cells allows to shape the electric field, in order to make the drift speed of the electrons uniform: the muon position is then extrapolated from the measurement of the drift time. Every station is composed by three cells superlayers. In the inner and the outer superlayers, the cells are oriented such in a way that the anodic wire is located along the $z$ axis, in order to measure the $\phi$ coordinate. In the intermediate superlayer, wires are parallel to the radial coordinate, hence they can measure the $z$ position. The spatial resolution of the system is 100 $\mu$m in the $r \phi$ plane, 1 mrad in the $\phi$ coordinate, and 150 $\mu$m in the longitudinal $z$ coordinate.
 
-\begin{figure}%{l}{0.5\textwidth}
-\centering
-%\includegraphics[scale=0.3]{DT.jpg}
-%\caption{Schema di una cella elementare nei Drift Tubes. Le tensioni tipicamente applicate sono: +3600 V al filo anodico, +1800 V alle strip di elettrodi, -1200 V ai catodi di alluminio.}
-\label{fig:DT}
-\end{figure}
+\subsubsection{The Cathode Strip Chambers}
+Cathode Strip Chambers cover a region of $0.9<|\eta|<2.4$, overlapping with the DT in the pseudorapidity range $0.9 < |\eta| < 1.2$. The anodic wires inside each CSC are located into six planes, with the aim of measuring the radial coordinate; the wire planes are perpendicularly crossed by cathodic strips, disposed along the radial direction to measure the $\phi$ coordinate. Ionization electrons produced by muons passing through the gas mixture in the chambers migrate towards the anode, inducing a charge distribution on the cathodes, from which the azimuthal coordinate can be reconstructed. The spatial resolution in the $r$ coordinate is 200 $\mu$m, and it is 75 -- 150 $\mu$m in the $r \phi$ plane. CSCs are arranged in four disks and in three concentric rings.
+
+\subsubsection{The Resistive Plate Chambers}
+Resistive Plate Chambers (RPC) are located both in the barrel (disposed in six layers) and in the endcap region (three layers), up to a pseudorapidity of $|\eta|<1.6$. These gas detectors are charged at very high voltages, in order to work in the avalanche ionization mode. The plastic resitive plates are equipped with readout strips. The spatial resolution of the detector is low (1-2 cm), but the fast timing response (2-3 ns) and good time resolution (1 ns) allow to employ RPCs as an additional triggering system and to profit of a precise measurement of the bunch-crossing time.
+
+%\subsection{Other CMS sub-detectors}
+%Tracciatori e camere per i muoni coprono una regione di $|\eta|<2.5$, gli apparati calorimetrici arrivano fino ad $|\eta|<5.2$. Ci sono altri due rivelatori che permettono misure nella regione $5 \leq |\eta| \leq 11$, TOTEM e CASTOR. TOTEM sfrutta dei rivelatori a gas per le misure di scattering elastico protone protone in funzione del loro momento. CASTOR \`e un calorimetro elettromagnetico ed adronico che raccoglie luce Cherenkov, serve per misure di QCD in collisioni p-p, p-ione, ione-ione.
+
+\subsection{The trigger system and data acquisition}
+The CMS trigger system has been designed considering the high instantaneous luminosity, such that it can provide a fast response and it allows to reduce the nominal event rate of 40 MHz in proton proton collision. The complexity of the CMS detector and the very high number of readout channels result into a huge amount of data per event, approaching the order of few MB per bunch crossing, hence 40 TB per second. The handling and the recording of data is currently limited at the order of $\sim$100 Hz; hence, applying online selections to skim the events that are going to be written on tape, without rejecting interesting signals of hard processes and rare phenomena becomes a crucial and challenging point for every data analysis. Events are filtered by trigger selections at different levels: the Level-1 (L1) trigger is an hardware device, that allows to reduce the event rate from 40 MHz to the order of 100 kHz; the High Level Trigger (HLT) is a set of software algorithms that skims the event rate down to few hundred Hz. Once the trigger decisions are taken, the final events are handled by the Data Acquisition System (DAQ), that collects the informations coming from to the subdetectors and sends them to the storage devices.
+
+\subsubsection{The Level-1 trigger}
+The L1 trigger is an hardware device composed by customized electronics, and it accesses the informations coming from the calorimeters and the muon system, while the tracker is not considered given the excessively large bandwidth needed by its readout channels. The L1 trigger perform a first raw local reconstruction of each object, called ``trigger primitive''. The L1 trigger is composed by three subsystems: the calorimeter trigger, the muon trigger (divided in three independent sub-subsystems for each muon subdetector, namely DTs, RPCs and CSCs), and the global trigger, that combines the informations of the former subsystems. The best quality trigger primitives reconstructed by the calorimeter and muon detectors (namely, roughly reconstructed electrons, photons, muons, jets, jets coming from the hadronic decays of tau leptons, and missing energy) are handled by the global trigger, who takes the decision of discarding or keeping the event every 3.2 $\mu$s. The simplest trigger selections require the presence of a single object, whose energy or transverse momentum is higher than a certain threshold; more complicated triggers involve multiple objects or geometrical selections, that can be performed in parallel up to 128 simultaneous requirements.
+
+\subsubsection{The High Level Trigger}
+The HLT skims the L1 output rate down to few hundreds of Hz by applying a set of algorithms implemented in the same software used for the offline analysis, consisting in the event reconstructions exploiting the whole informations coming from all subdetectors. The computing time is still a crucial factor, hence selections applied to HLT physics objects are generally less accurate than those of the offline analysis; furthermore, HLT can discard the event even before its full reconstruction (\textit{i.e.} by looking only at certain region of the detectors). Events filtered by the HLT decisions are assigned to precise trigger paths and recorded in precise categories of datasets.
+
+\subsubsection{Data acquisition, computing and storage}
+The DAQ system deals with the storage, transfer and handling of the data collected by CMS; it also supports and stores the data simulations and calibrations of the subdetectors. The CMS computational resources are located in worldwide distributed data nodes, called Tiers. The CMS software (CMSSW) is based on an object oriented architecture (mainly C++). The basic unity of every data, both real and simulated ones, is the Event, that could contain very rough informations (RAW data format) or higher level refined objects (AOD, Analysis Object Data) where all the calibrations and corrections needed to properly deal with the final physics objects are already in place. Data are handled by C++ or python modules, and the outputs are written in ROOT files. [citazione]
+
+\subsection{Particle Flow event reconstruction}
+-- ref from paper
+The global event reconstruction at CMS relies on the particle flow (PF) [69, 70] algorithm, which
+reconstructs and identifies each individual particle with an optimized combination of informa-
+tion from the various elements of the CMS detector. The energy of photons is directly obtained
+from the ECAL measurement, while the energy of electrons is determined from a combina-
+tion of the electron momentum at the primary interaction vertex as determined by the tracker,
+the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung pho-
+tons spatially compatible with originating from the electron track. The momentum of muons
+is obtained from the curvature of the corresponding track. The energy of charged hadrons is
+determined from a combination of their momentum measured in the tracker and the match-
+ing ECAL and HCAL energy deposits, and the energy of neutral hadrons is obtained from the
+corresponding ECAL and HCAL energy.
+The core of the particle flow reconstruction technique is the algorithm used to link the signals
+of the individual subdetectors. The association criteria is purely geometrical. The aim is a
+full reconstruction of each single particle, while reducing any possible double counting from
+different detectors. Given the granularity of the calorimeters, energy deposits and tracks are
+linked if their trajectory intersects one of the calorimetric cells, and likewise clusters in the
+ECAL pre-shower, ECAL and HCAL are linked if the cluster position is compatible in the η, φ
+plane between the extrapolated track position and the cluster position.
+
+
+The particle-flow event reconstruction aims at reconstructing and identifying all sta-
+ble particles in the event, i.e. electrons, muons, photons, charged hadrons and neu-
+tral hadrons, by mean of an optimized combination of informations from all CMS sub-
+detectors. The algorithm is described in detail in References [44–46] where information
+on its commissioning with early data are also provided. The CMS PF algorithm relies
+on a efficient and pure track reconstruction, on a clustering algorithm able to disentangle
+overlapping showers, and on an efficient link procedure to connect together the deposits
+of each particle in the sub-detectors. Tracks are extrapolated through the calorimeters: if
+they fall within the boundaries of one or several clusters, the clusters are associated to
+the track. The set of track and cluster(s) constitute a charged hadron and are not con-
+sidered anymore in the rest of the algorithm. The muons are identified beforehand so
+that their track does not give rise to a charged hadron. The electrons are more difficult to
+deal with. Indeed, due to the frequent Bremsstrahlung photon emission, a specific track
+reconstruction (the GSF already discussed in Section 2.2.3.1) is needed as well as a ded-
+icated treatment to properly attach the photon clusters to the electron and avoid energy
+double counting. Once all the tracks are treated, the remaining clusters result in photons
+in case of the electromagnetic calorimeter (ECAL), and in neutral hadrons in the case a
+hadron calorimeter (HCAL) cluster is matched to an ECAL cluster. Once all the deposits
+of a particle are associated, its nature can be assessed, and the information of the sub-
+detectors combined to determine optimally its four-momentum. In case the calibrated
+calorimeter energy of the clusters, which is simply a linear combination of the ECAL and
+HCAL energy deposits, associated to a track is found to be in excess with respect to the
+track momentum at more than one sigma, the excess is attributed to an overlapping neu-
+tral particle (photon or hadron), carrying an energy corresponding to the difference of
+the two measurements. The resulting list of particles, namely charged hadrons, photons,
+neutral hadrons, electrons and muons, is then used to reconstruct the jets, the missing
+transverse energy, to reconstruct and identify the τ from their decays products and to
+measure the isolation of the particles.
+The association used in the linking stage is purely geometrical: tracks are linked to calori-
+metric clusters if their trajectory intersects one of the calorimetric cells of the cluster; and
+likewise clusters in the ECAL preshower, ECAL and HCAL are linked if the cluster posi-
+tion measured in the finer granularity subdetector lies within the envelop of the cluster 
+in the coarser granularity subdetector. In order to account for uncertainties from mul-
+tiple scattering in the track extrapolation and on the estimated position of the shower
+maximum in the calorimeters, a geometrical tolerance of the size of one calorimeter cell
+is included when defining links; this tolerance can also account for gaps and cracks in
+the calorimeters. By design, the linking algorithm is simple and robust, as it does not
+rely on the precise knowledge of the position resolution in each subdetector. Special-
+ized algorithms are used for linking tracks to recover bremsstrahlung clusters in the
+case of electrons by considering tangents to electron trajectories at the crossing points
+with the tracker layers. Blocks of one or more linked objects are then processed to iden-
+tify and reconstruct particle candidates. Isolated electrons and muons are selected first,
+and reconstructed using the dedicated algorithms developed for them; similarly, non-
+isolated tracks which satisfy tight muon identification criteria are immediately identi-
+fied as muons. Charged hadrons are identified as tracks in the inner tracker, normally
+linked to calorimetric deposits if the particle p T is sufficient for the trajectory to reach the
+calorimeters. If the momentum measurements from the track and calorimeter are com-
+patible, after accounting for non-linearities and zero suppression effects, the best energy
+determination is obtained as a combination of the two. If the track momentum signif-
+icantly exceeds the measured calorimetric energy, the particle is identified as muon if
+it satisfies very loose muon identification criteria; otherwise, tight track quality require-
+ments are applied to to reject mis-reconstructed tracks. If instead an excess of calorimetric
+energy deposition is found with respect to the momentum of the associated track, e.g. in
+the case of collimated hadronic jets, the residual energy is identified as a photon or a neu-
+tral hadron. Additional photons and neutral hadrons are also identified from calorimetric
+deposits not linked to any track.
+\subsection{Physics objects}
+
+\subsubsection{Track and vertex reconstruction}
+\subsubsection{Electron reconstruction}
+\subsubsection{Photon reconstruction}
+\subsubsection{Muon reconstruction}
+L'intero sistema misura in maniera ``standalone'' l'impulso con una risoluzione in $p_T$ di circa $\Delta p_T/p_T \approx 8-15\%$ per muoni di $p_T = 10$ GeV/c e di $\Delta p_T/p_T \approx 20-40\%$ per muoni di $p_T = 1$ TeV/c. Combinando con la misura nei rivelatori al silicio la risoluzione passa rispettivamente all'$1\%$ e al $7-16\%$.\\
+\subsubsection{Jet reconstruction}
+\subsubsection{Tau reconstruction}
+\subsubsection{Missing transverse energy reconstruction}
+\subsubsection{b-quark tagging}
+
+
+\section{ATLAS, ALICE, LHCb detectors}
+
+\subsection{ATLAS}
+ATLAS (A Toroidal LHC ApparatuS) is a multi-purpose experiment, that shares the same scientifical aims of CMS. The simultaneous observation of an Higgs boson-like particle at the two experimental facilities represented an irrefutable proof of the discovery of the Higgs boson.\\
+ATLAS has a cylindrical shape (diameter of 25 m, length of 46 m) and weights 7000 tons. Like CMS, ATLAS is composed by many sub-detectors: trackers, calorimeters and muon system. The ATLAS magnetic field is provided by a solenoid, located inside the cylinder, and a big toroid, located outside the sub-detectors, able to reach a magnetic field of 2 T at the interaction point. The main differences among the two experiments are listed below.
 
 \begin{itemize}
-\item Ogni cella DT, di dimensioni di $42 \times 13 \mbox{ mm}^2$, contiene una miscela di gas (85\% Ar e 15\% $\mbox{CO}_2$), un filo anodico a carica positiva e due strisce catodiche di alluminio (si veda la figura \ref{fig:DT}) che separano una cella dall'altra. Un piano di celle \`e isolato dall'altro mediante materiale plastico. L'anodo \`e realizzato da un filo di acciaio di 50 $\mu$m posto al centro della cella; in totale a CMS sono montati circa 195000 fili. La distanza della traccia dal filo \`e misurata dal tempo di deriva degli elettroni indotti dalla ionizzazione del gas: due strisce di elettrodi posizionate su due superfici della cella hanno l'obiettivo di dare forma al campo in modo da rendere la velocit\`a di deriva quanto pi\`u uniforme possibile. La risoluzione spaziale complessiva del sistema \`e di 180 $\mu$m. Ogni camera con tubi a deriva (indicata con MB nella figura \ref{fig:camere_muoni}) ha una superficie di circa $2 \times 2.5 \mbox{ m}^2$ e contiene 12 strati di celle DT, arrangiate in tre gruppi di quattro. Il gruppo di celle di mezzo, i cui fili anodici sono disposti perpendicolarmente alla linea di fascio, misura la coordinata $\mathrm{z}$, i due gruppi esterni, in cui i fili anodici sono paralleli al fascio, misurano la coordinata nel piano $\mathrm{r}\Phi$. Le camere di diverse stazioni sono sovrapposte in modo da coprire tutta la coordinata $\Phi$.\\
-\item Le CSC sono delle camere proporzionali a molti fili di forma trapezoidale. Sono costituite da 6 piani con i fili anodici attraversati da 7 pannelli con strip catodiche di rame, tutto immerso in una miscela di gas. I fili anodici misurano la coordinata radiale $\mathrm{r}$; le strisce catodiche sono disposte a $\Phi$ costante: interpolando la carica indotta nelle strip \`e possibile ricostruire anche la coordinata azimutale. Come nel caso dei DT, anche le CSC sono sovrapposte in modo da coprire tutta la coordinata $\Phi$. A ciascun endcap ci sono 4 stazioni di CSC che arrivano ad una regione geometrica di $|\eta|<2.4$. Per $0.9<|\eta|<1.2$, un muone attraversa sia i DT del barrel che le CSC degli endcaps. Le CSC di CMS contengono, nel complesso, un volume di gas maggiore di 50 $\mbox{m}^3$ e pi\`u di 2 milioni di fili. Le CSC pi\`u grandi hanno dimensioni massime di 3.4 m lungo la direzione dei catodi e 1.5 m lungo la direzione dei fili anodici. La risoluzione raggiungibile alla massima tensione \`e di circa 80 $\mu$m.\\
-\item Gli RPC sono dei piatti plastici ad alta resistivit\`a, separati da un volume riempito di gas, e caricati a tensioni elevate, in modo da lavorare nel regime di ionizzazione a valanga. I piatti sono provvisti di strisce di lettura che raccolgono il segnale al passaggio del muone attraverso il gas. La loro risoluzione spaziale \`e molto bassa, circa 1-2 cm; al contrario la loro rapida risposta temporale (2-3 ns) e l'alta risoluzione (circa 1 ns) li rendono strumenti ideali per il trigger e per la misura del tempo a cui avviene l'interazione. Nel barrel sono montati 6 strati di RPC, negli endcaps ne sono montati 3.\\
+\item {\itshape Tracker --} the CMS tracker has a better $p_T$ resolution (mainly due to the higher magnetic field): $\sigma_{p_T}/p_T \approx 5 \cdot 10^{-4} p_T + 0.01$ at ATLAS; $\sigma_{p_T}/p_T \approx 1.5 \cdot 10^{-4} p_T + 0.005$ at CMS.
+\item {\itshape Electromagnetic calorimeter --} the CMS electromagnetic calorimeter is completely enclosed inside the solenoid, whilst ATLAS calorimeter is outside of the solenoid. The particles going through the solenoid suffer an energy loss and a consequent deterioration of the energy resolution. The CMS ECAL has an enery resolution of $\sigma_E /E \approx 3\%/\sqrt{E}$; the ATLAS calorimeter has a sandwich structure (liquid argon and lead layers) and a resolution of $\sigma_E / E \approx 10\%/\sqrt{E}$.
+\item {\itshape Hadronic calorimeter --} the CMS HCAL is partly inside the solenoid, partly outside, depauperating the resolution. The ATLAS hadronic calorimeter (made of iron and plastic scintillator tiles) has an energy resolution $\sigma_E /E \approx 50\%/\sqrt{E} + 0.03$ GeV; CMS HCAL has a resolution of $\sigma_E /E \approx 100\%/\sqrt{E} + 0.05$ GeV.
+\item {\itshape Muon system --} the peculiar geometry of the ATLAS muon system allows a better resolution of the standalone measurement of the muon momenta (\textit{i.e.}, without using tracker and calorimeters), that is around 10\% at 1 TeV. CMS has better performance when combining the informations coming from the inner detectors (7\% at 1 TeV against the 35\% for the standalone measurement).
 \end{itemize}
-L'intero sistema misura in maniera ``standalone'' l'impulso con una risoluzione in $p_T$ di circa $\Delta p_T/p_T \approx 8-15\%$ per muoni di $p_T = 10$ GeV/c e di $\Delta p_T/p_T \approx 20-40\%$ per muoni di $p_T = 1$ TeV/c. Combinando con la misura nei rivelatori al silicio la risoluzione passa rispettivamente all'$1\%$ e al $7-16\%$.\\
-Vista l'importanza dei muoni per il lavoro di tesi, nel prossimo capitolo illustrer\`o nel dettaglio le tecniche utilizzate per la ricostruzione del segnale.
-\subsection{Altri rivelatori}
-Tracciatori e camere per i muoni coprono una regione di $|\eta|<2.5$, gli apparati calorimetrici arrivano fino ad $|\eta|<5.2$. Ci sono altri due rivelatori che permettono misure nella regione $5 \leq |\eta| \leq 11$, TOTEM e CASTOR. TOTEM sfrutta dei rivelatori a gas per le misure di scattering elastico protone protone in funzione del loro momento. CASTOR \`e un calorimetro elettromagnetico ed adronico che raccoglie luce Cherenkov, serve per misure di QCD in collisioni p-p, p-ione, ione-ione.
-\subsection{Sistema di trigger}
-Il sistema di trigger di CMS \`e stato realizzato in funzione delle elevate luminosit\`a e frequenza di interazione; deve essere efficiente nello studio di fenomeni rari e molto diversi da loro, e deve applicare delle selezioni in modo da abbassare la frequenza degli eventi da 40 MHz a circa 100 Hz, tali da consentire la registrazione software. Esso deve inoltre avere tempi decisionali molto brevi, dal momento che ogni 25 ns avviene una collisione: questo intervallo temporale \`e troppo ristretto anche solo per poter leggere i dati raccolti dal rivelatore. Il problema viene superato operando le selezioni in fasi successive, in ciascuna delle quali vengono prese delle decisioni sulla base di una sola parte dei dati. Il trigger di livello 1, L1, \`e un dispositivo elettronico hardware che permette di scende con la frequenza all'ordine di 100 kHz; il trigger di livello alto, HLT, \`e invece basato su algoritmi software capaci di rielaborare il segnale, ed \`e a sua volta separato in due livelli logici (Level-2 e Level-3).\\
-\subsubsection{Il trigger di livello 1}
-Il trigger L1 ha accesso solamente alle informazioni provenienti dai calorimetri e dalle camere per i muoni. Esso \`e segmentato in pi\`u processi in parallelo, ciascuno dei quali impiega singolarmente meno di 25 ns. La decisione complessiva del L1 viene presa ogni 3.2 $\mu$s, tenendo conto anche dei tempi tecnici per il trasporto del segnale ai dispositivi: questo significa che la parte puramente computazionale deve impiegare meno di 1 $\mu$s.\\
-Il trigger di livello 1 \`e suddiviso in tre sistemi: il trigger calorimetrico, il trigger muonico, a sua volta diviso in tre sotto-sistemi indipendenti per ciascuna categoria di rivelatori (DT, RPC, CSC) e il trigger globale, che combina i risultati dei precedenti. Lo scopo del trigger muonico, in particolare, \`e quello di identificare i muoni, ricostruirne la posizione e assegnarne delle variabili relative al punto di collisione. Avere tre sottosistemi differenti permette di combinarne i rispettivi vantaggi: l'elevata risoluzione spaziale (dei DT e delle CSC) e l'eccellente risoluzione temporale (degli RPC).\\
-I trigger, pi\`u che operare delle vere e proprie decisioni autonome, hanno l'obiettivo di identificare dei precisi oggetti: elettroni/fotoni e muoni isolati o non isolati, jets centrali, in avanti o provenienti da $\tau$. I quattro candidati migliori di ciascuna categoria vengono mandati al trigger globale insieme a: una misura della loro posizione, momento trasverso e ad un'etichetta che ne identifica la qualit\`a; informazioni di energia trasversa totale e mancante dal trigger calorimetrico; un importante controllo sull'attivit\`a nella regione calorimetrica, che pu\`o essere o meno compatibile con il deposito di energia lasciato dal passaggio di un muone. A questo punto il trigger globale opera le selezioni necessarie, scegliendo uno o pi\`u oggetti che abbiano energia o momento sopra a una determinata soglia; si possono aggiungere richieste sulla geometria, fino ad un massimo di 128 condizioni in parallelo. I trigger pi\`u semplici si basano solitamente sulla presenza di un solo oggetto che abbia $p_T$ o $E_T$ sopra ad una certa soglia (trigger ``single-object''), oppure sulla presenza di due oggetti (trigger ``di-object''), che possono avere soglie identiche o differenti tra loro. In casi particolari, si pu\`o triggerare anche su oggetti differenti.\\
-Le scelte del trigger L1 devono sempre tenere conto della capacit\`a del sistema di acquisizione (Data Acquisition System), monitorato da un sistema di controllo del trigger. In alcuni casi, in particolare per fenomeni con elevate sezioni d'urto (come ad esempio per le misure di fisica del quark b), pu\`o essere utile ricorrere a trigger prescalati: gli eventi vengono scelti e salvati a campione, in modo da garantire una sufficiente quantit\`a di dati senza occupare eccessiva memoria. \\
-\subsubsection{L'High Level Trigger}
-Se un evento \`e stato accettato dal trigger di livello 1, tutta l'informazione del rivelatore, che ammonta a circa 1 MB, viene letta dal sistema di acquisizione ad una frequenza massima di 100 kHz e successivamente passata all'HLT. Gli algoritmi dell'HLT sono implementati nello stesso software utilizzato per l'analisi offline e constano in una serie di passaggi che comprendono la ricostruzione del segnale e le selezioni. Ciascun oggetto processato con i criteri voluti dall'HLT viene assegnato ad un preciso ``trigger path'' e successivamente salvato come un sottocampione di eventi del campione filtrato dal L1.
-\subsection{Il sistema di calcolo}
-Il sistema di calcolo si occupa del salvataggio, del trasferimento e della manipolazione dei dati raccolti da CMS; esso supporta inoltre la produzione e l'analisi di dati simulati ed informazioni sulla calibrazione degli apparati. Le risorse di calcolo non sono situate solo a CMS, bens\`i sono distribuite in diversi centri detti ``Tier'', anche esterni al CERN, secondo una specifica gerarchia. L'enorme mole di dati raccolti richiede grosse capacit\`a computazionali ed un metodo flessibile per ridurre le informazioni al minimo necessario senza ridondanze, ma che permetta al contempo una grande variet\`a di operazioni ad ogni livello dell'analisi.\\
-Il software di CMS, abbreviato in CMSSW, \`e sviluppato su un metodo di programmazione a oggetti, principalmente in linguaggio C++. L'unit\`a base di ciascun tipo di dato, reale o simulato, \`e l'evento, Event: esso \`e un contenitore di molteplici informazioni, dal dato ``grezzo'' (RAW), al ricostruito (RECO), all'oggetto per l'analisi (AOD, Analysis Object Data) sul quale sono state applicate opportune selezioni. Tipicamente, i dati vengono rielaborati tramite moduli in linguaggio C++ o python; gli output vengono salvati in ROOT files.\\
 
-\section{ATLAS, ALICE, LHCb}
+\subsection{ALICE}
+ALICE (A Large Ion Collider Experiment) studies the heavy ion collisions (lead-lead) or proton-ion in order to explore the physics of the hadrons in high density (or temperature) regimes, when a new state of matter appears, the so-called quark-gluon plasma (QGP). The QGP played a crucial role in the very first instants of life of the universe.
 
-\subsection{ATLAS vs CMS}
-La ricerca di nuova fisica ad LHC viene portata avanti in collaborazione/competizione tra due esperimenti simili tra loro, ATLAS e CMS. Prima di confrontare direttamente i limiti ottenuti da entrambi, procedo a una breve descrizione dei due apparati e delle loro differenze. Discuter\`o nel dettaglio l'esperimento CMS nel capitolo successivo.
+\subsection{LHCb}
+LHCb (Large Hadron Collider beauty) is a detector designed to study the b quark properties, in particular the CP violation and other rare phenomena involved in b hadrons. The final aim of these measurements is trying to solve the matter-antimatter asymmetry problem.
 
-ATLAS (A Toroidal LHC ApparatuS) e CMS (Compact Muon Solenoid) sono i due esperimenti di dimensioni maggiori dentro al tunnel di LHC, situati a 9 km di distanza tra loro. Avere due rivelatori indipendenti capaci di osservare le medesime particelle \`e di vitale importanza per un confronto incrociato in caso di scoperta.
+\vspace*{1\baselineskip}
+
+\noindent The three detectors are depicted in fig.~\ref{fig:ATLAS}--\ref{fig:LHCb}.
+
 
 \begin{figure}%{l}{0.5\textwidth}
 \centering
-%\includegraphics[scale=0.6]{ATLAS.jpg}
-\caption{Rappresentazione dell'esperimento ATLAS.}
+\includegraphics[width=.6\textwidth]{figures/ATLAS.jpg}
+\caption{The ATLAS experiment.}
 \label{fig:ATLAS}
 \end{figure}
 
-\noindent ATLAS \`e un rivelatore cilindrico di 25 m di diametro e 46 m di lunghezza, dal peso di 7000 tonnellate. Il suo campo magnetico \`e prodotto all'interno da un solenoide, all'esterno da un grande magnete toroidale (si veda la figura \ref{fig:ATLAS}), capace di raggiungere i 2 T nel punto di interazione.\\
-Anche CMS \`e un cilindro, ma il suo campo magnetico di 3.8 T \`e interamente prodotto da un grande solenoide centrale, le cui linee di campo sono chiuse da una rilevante quantit\`a di ferro, che serve anche da assorbitore per le particelle che lo attraversano.\\
-Entrambi gli esperimenti sono strutturati in tre strati principali che avvolgono completamente la linea di fascio attorno al punto di interazione. A ridosso dell'anello di accelerazione si trovano gli array di rivelatori al silicio, necessari per precise misure posizionali delle tracce cariche. Nel secondo strato, si trovano gli apparati calorimetrici: all'interno il calorimetro elettromagnetico, per la misura dell'energia e posizione di elettroni e fotoni, all'esterno il calorimetro adronico. La struttura pi\`u periferica serve per l'identificazione dei muoni. Gli intensi campi magnetici permettono di misurare il momento e la carica delle particelle elettricamente cariche, che vengono deflesse per effetto della forza di Lorentz.\\
-Viste le analogie strutturali e gli scopi comuni tra i due, elenco di seguito le differenze:
-\begin{itemize}
-\item {\itshape Tracciatori:} hanno una struttura sostanzialmente identica e presentano solo una differenza nella risoluzione del momento trasverso $p_T$, migliore in CMS (principalmente a causa del campo magnetico pi\`u intenso): $\sigma_{p_T}/p_T \approx 5 \cdot 10^{-4} p_T + 0.01$ per ATLAS; $\sigma_{p_T}/p_T \approx 1.5 \cdot 10^{-4} p_T + 0.005$ per CMS.
-\item {\itshape Calorimetri elettromagnetici:} a CMS il calorimetro elettromagnetico \`e interamente contenuto all'interno del solenoide, mentre in ATLAS \`e situato al suo esterno. Ci\`o comporta una perdita di energia delle particelle ed un conseguente peggioramento nella risoluzione. Il calorimetro a cristalli di tungstenato di piombo di CMS ha una risoluzione sull'energia $\sigma_E /E \approx 3\%/\sqrt{E}$; quello a sandwich di argon liquido pi\`u assorbitori di piombo di ATLAS ha risoluzione $\sigma_E / E \approx 10\%/\sqrt{E}$.
-\item {\itshape Calorimetri adronici:} nel caso di CMS, soltanto una parte del calorimetro adronico \`e inclusa nel solenoide, ed essa non basta per assorbire completamente le particelle adroniche; si \`e perci\`o provveduto ad aggiungere un ulteriore strato calorimetrico al di fuori del magnete. Questa segmentazione abbassa il potere risolutivo. Il calorimetro a sandwich di ferro e scintillatore/rame ed argon liquido di ATLAS ha una risoluzione $\sigma_E /E \approx 50\%/\sqrt{E} + 0.03$ GeV; quello a ottone e scintillatore di CMS $\sigma_E /E \approx 100\%/\sqrt{E} + 0.05$ GeV.
-\item {\itshape Spettrometri per identificare i muoni:} in entrambi gli esperimenti, i rivelatori di muoni posti all'esterno del calorimetro, possono ricostruire la traccia del muone in maniera a s\'e stante (``standalone''). La particolare geometria per il sistema di magneti in ATLAS permette delle risoluzioni nettamente migliori nel momento in configurazione standalone, che resta attorno al 10\% anche ad energie prossime ad 1 TeV. CMS invece risulta pi\`u preciso combinando le informazioni delle camere per i muoni con quelle dei tracciatori (7\% ad 1 TeV rispetto al 35\% per gli standalone).
-\end{itemize}
-\subsection{Altri esperimenti}
-Per completezza, riassumo in breve gli scopi degli altri due esperimenti di LHC.
-\begin{itemize}
-\item ALICE (A Large Ion Collider Experiment) si occupa principalmente di studiare le collisioni tra nuclei pesanti (piombo) alle energie elevate disponibili ad LHC, con l'obiettivo di esplorare meglio la fisica adronica ad elevate densit\`a, in condizioni in cui si forma una nuova fase detta quark-gluon plasma, di fondamentale interesse per comprendere a fondo la QCD.
-\item LHCb (Large Hadron Collider beauty) \`e un rivelatore per lo studio del quark b, in particolare per le violazioni di CP e per fenomeni rari associati agli adroni che lo contengono. L'obiettivo di queste ricerche \`e cercare una risposta per il problema dell'asimmetria materia-antimateria.
-\end{itemize}
+\begin{figure}%{l}{0.5\textwidth}
+\centering
+\includegraphics[width=.6\textwidth]{figures/ALICE.jpg}
+\caption{The ALICE experiment.}
+\label{fig:ALICE}
+\end{figure}
+
+\begin{figure}%{l}{0.5\textwidth}
+\centering
+\includegraphics[width=.6\textwidth]{figures/LHCb.png}
+\caption{The LHCb experiment.}
+\label{fig:LHCb}
+\end{figure}
+
 \clearpage

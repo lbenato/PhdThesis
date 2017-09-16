@@ -32,6 +32,7 @@
 \usepackage[explicit]{titlesec}
 \usepackage{etoolbox}
 \usepackage{xspace}
+\usepackage{gensymb}
 \makeatletter
 \patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
 \patchcmd{\ttlh@hang}{\noindent}{}{}{}
@@ -97,7 +98,7 @@
 %\usepackage[math]{iwona}
 %\usepackage[T1]{fontenc}
 %%
-%% ben leggibile:
+%% ben leggibile, scelto:
 \usepackage[sc]{mathpazo}
 \linespread{1.05}         % Palladio needs more leading (space between lines)
 \usepackage[T1]{fontenc}
@@ -203,6 +204,8 @@
 \newcommand{\met}{\ensuremath{E_T^{\text{miss}}}\xspace}
 \newcommand{\MET}{\ensuremath{E_T^{\text{miss}}}\xspace}
 
+\setcounter{secnumdepth}{4}
+
 \title{Search for heavy resonances decaying into a $Z$ boson and a vector boson in the $\nu \bar{\nu}$ $q\bar{q}$ final state at CMS}
 
 \date{}
@@ -265,6 +268,8 @@ Scuola di Dottorato di Ricerca, XXX ciclo
 
 \input{CMSexperiment}
 
+\input{analysis_intro}
+
 \input{samples}
 
 \input{objects}
@@ -276,6 +281,8 @@ Scuola di Dottorato di Ricerca, XXX ciclo
 \input{uncertainties}
 
 \input{results}
+
+\input{combination}
 
 \input{conclusions}
 

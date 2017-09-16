@@ -1,4 +1,4 @@
-\chapter{Physics objects}
+\section{Event selection}
 \label{sec:objects}
 
 In this section, a list of the physics objects used in the analysis is presented, together with performance and validation plots. 
@@ -7,7 +7,7 @@ The objects are selected according to the standard Run2 reccomendations provided
 
 The version of CMSSW used for the analysis is {\tt CMSSW\_8\_0\_25}.
 
-\section{Vertex and Pile-up}
+\subsection{Vertex and Pile-up}
 {\color{red} How the vertices and pile-up are reconstructed}
 
 Due to pileup several primary vertices are typically reconstructed in an event.
@@ -36,7 +36,7 @@ The comparison between the distributions of primary vertices in data and MC afte
  \end{figure}
 
 
-\section{Electrons}\label{ssec:electrons}
+\subsection{Electrons}\label{ssec:electrons}
 {\color{red} How the electrons are reconstructed}
 
 Electrons are reconstructed from energy deposits in the ECAL matched to tracks reconstructed in the silicon tracker. 
@@ -83,7 +83,7 @@ Scale factors for electron identification (including isolation) are provided by 
 
 %\clearpage
 
-\section{Muons}\label{ssec:muons}
+\subsection{Muons}\label{ssec:muons}
 
 {\color{red} How the muons are reconstructed}
 
@@ -143,13 +143,13 @@ In the VZ event selection, all muons identified with the \texttt{Loose} standard
 Scale factors for muon identification and isolation are centrally provided as a function of the muon \pt and $\eta$ by the Muon POG~\cite{MuonSF}, and are applied consistently in the analysis.
 
 
-\section{Taus}\label{sec:tau}
+\subsection{Taus}\label{sec:tau}
 {\color{red} How the taus are reconstructed}
  
 The presence of hadronically-decaying taus only act as veto for the events both in the signal and in the control regions to suppress electroweak backgrounds. The selection criteria for taus are $\pt > 18$ GeV and $|\eta| < 2.3$. The Run2 TauPOG recomended identification criteria~\cite{TauPOG} (\texttt{decayModeFinding}, \texttt{byLooseCombinedIsolationDeltaBetaCorr3Hits})  are required and applied in order to identify possible tau candidates.
 % % The tau-lepton multiplicity in the inclusive $\Z \to \mu\mu$ is reported in Fig.~\ref{fig:ZmmInc_taupho}.
 % 
-\section{Photons}
+\subsection{Photons}
 {\color{red} How the photons are reconstructed}
 
 As in the case of tau leptons, a photon veto is applied in the analysis both for the signal and the control regions.
@@ -183,7 +183,7 @@ Scale factors for photon identification (including isolation) are provided by Eg
 \clearpage
 
 
-\section{Jets}\label{ssec:jets}
+\subsection{Jets}\label{ssec:jets}
 {\color{red} How the jets are reconstructed}
 
 Events in the CMS detector are reconstructed using the particle-flow algorithm~\cite{bib:PF1,bib:PF2}, which combines information from all sub-detectors in order to reconstruct stable particles (muons, electrons, photons, neutral and charged hadrons). The charged hadron subtraction algorithm (CHS) removes candidates not associated to the primary vertex in order to remove contributions from pileup~\cite{CMS-PAS-JME-14-001}. The remaining particles are used as input to jet clustering algorithms to reconstruct particle-flow jets. The jets are clustered using the {\sc FastJet} package~\cite{bib:fastjet} with the anti-\kt jet clustering algorithm~\cite{Cacciari:2008gp} with a clustering parameter of $R = 0.8$ (``fat''-jets or AK8 jets) or $R = 0.4$ (``standard''-jets or AK4 jets). In order to avoid double-counting of PF candidates, AK4 jets are considered only if the angular separation from the leading AK8 jet is larger than $\Delta R>0.8$.
@@ -392,7 +392,7 @@ Figure~\ref{fig:fatjet_pre_tau21} shows the $\tau_{21}$ distributions for the PU
 
 
 
-\section{b-tagging}\label{ssec:btagging}
+\subsection{b-tagging}\label{ssec:btagging}
  
 %The presence of a pair of b-quarks from the $\htobb$ decay is a very distinctive signature that permits a strong discrimination against all the backgrounds that involve jets with light flavors. The only  background which cannot be reduced with this technique is the $\Z$ production in association with one or two b-quarks, and the $\Z \to \bbbar$ decay which is also topologically similar to the signal. The latter can be only reduced by applying a jet mass cut, as described in Section~\ref{ssec:jetmass}.
 % 
@@ -477,7 +477,7 @@ B-tagging efficiency is not the same in data and MC. In order to take into accou
 
 In this analysis, b-tagging is used in order to reject events where a top quark is involved, by asking to the AK4 jets not laying in the AK8 jet cone to be anti b-tagged (in practice, the maximum CSV value allowed is the loose working point, CSVL).
 
-\section{Missing Energy}
+\subsection{Missing Energy}
 {\color{red} How the MET is reconstructed}
  
 The \MET is the imbalance in the transverse momentum of all visible particles, and it is reconstructed with the particle flow algorithm~\cite{bib:PF1}. The \emph{raw} \MET is defined as the inverse vectorial sum of the transverse momentum of all the reconstructed charged and neutral particle flow candidates: $\vec{\MET}= - \sum_{i=0}^{all} \vec{\pt}_i$.
