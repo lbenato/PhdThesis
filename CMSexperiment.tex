@@ -183,8 +183,7 @@ The CMS electromagnetic calorimeter (ECAL, shown in fig.~\ref{fig:CMS_ecal}) is 
 %\caption{Risoluzione in energia di ECAL in funzione dell'energia del fascio di elettroni utilizzato per le misure. Sono mostrati anche i valori per i parametri di fit[16].}
 %\label{fig:risoluzione_ECAL}
 %\end{figure}
-
-\noindent The energy resolution of the calorimeter is parametrized as:
+{\color{red} Controlla nuove calibrazioni} \noindent The energy resolution of the calorimeter is parametrized as:
 \begin{equation}
 {\left( \frac{\sigma}{E} \right)}^2 = {\left( \frac{S}{\sqrt{E}} \right)}^2 + {\left( \frac{N}{E} \right)}^2 + C^2,
 \end{equation}
@@ -246,93 +245,54 @@ The HLT skims the L1 output rate down to few hundreds of Hz by applying a set of
 The DAQ system deals with the storage, transfer and handling of the data collected by CMS; it also supports and stores the data simulations and calibrations of the subdetectors. The CMS computational resources are located in worldwide distributed data nodes, called Tiers. The CMS software (CMSSW) is based on an object oriented architecture (mainly C++). The basic unity of every data, both real and simulated ones, is the Event, that could contain very rough informations (RAW data format) or higher level refined objects (AOD, Analysis Object Data) where all the calibrations and corrections needed to properly deal with the final physics objects are already in place. Data are handled by C++ or python modules, and the outputs are written in ROOT files. [citazione]
 
 \subsection{Particle Flow event reconstruction}
--- ref from paper
-The global event reconstruction at CMS relies on the particle flow (PF) [69, 70] algorithm, which
-reconstructs and identifies each individual particle with an optimized combination of informa-
-tion from the various elements of the CMS detector. The energy of photons is directly obtained
-from the ECAL measurement, while the energy of electrons is determined from a combina-
-tion of the electron momentum at the primary interaction vertex as determined by the tracker,
-the energy of the corresponding ECAL cluster, and the energy sum of all bremsstrahlung pho-
-tons spatially compatible with originating from the electron track. The momentum of muons
-is obtained from the curvature of the corresponding track. The energy of charged hadrons is
-determined from a combination of their momentum measured in the tracker and the match-
-ing ECAL and HCAL energy deposits, and the energy of neutral hadrons is obtained from the
-corresponding ECAL and HCAL energy.
-The core of the particle flow reconstruction technique is the algorithm used to link the signals
-of the individual subdetectors. The association criteria is purely geometrical. The aim is a
-full reconstruction of each single particle, while reducing any possible double counting from
-different detectors. Given the granularity of the calorimeters, energy deposits and tracks are
-linked if their trajectory intersects one of the calorimetric cells, and likewise clusters in the
-ECAL pre-shower, ECAL and HCAL are linked if the cluster position is compatible in the η, φ
-plane between the extrapolated track position and the cluster position.
+The particle flow (PF) algorithm [ref. paper] aims at identifying and reconstructing each particle produced by the proton-proton collisions, combining the informations coming from all the CMS subdetectors. It is particularly suitable to improve the reconstruction of jets, missing transverse momentum (used to identify neutrinos) and hadronically decaying tau leptons.\\
+The association of the informations is performed at different stages. The reconstruction of the charged particles in the silicon detector is performed with an iterative algorithm, and the reconstructed object is called a tracker track. Then, a clustering algorithm is performed to collect and combine the energy deposits in the calorimeters, in such a way to distinguish neutral from charged particles, reconstruct their directions, improve the energy measurement of the very energetic charged particles, whose tracks are less bended by the magnet and hence less precisely determined. The last informations are provided by the hits collected in the muon system. The three sets of reconstructions are then combined with a link algorithm, that aims at associating tracker tracks to calorimeter clusters and muon hits with geometrical criteria. A track in the silicon detector is linked to a calorimeter cluster if the extrapolated position lies in the cluster itself. Similarly, clusters in different calorimeters are linked when the position in the more granular calorimeter (\textit{i.e.} ECAL) lies in the envelope of the clusters in the less granular calorimeter (\textit{i.e.} HCAL). The decision of linking a tracker track to a muon track is based on the $\chi^2$ of a global fit between the two tracks.\\
+The particle flow algorithm then interprets the collected and linked informations as different particles. Muons are identified by the combination of a track in the silicon detectors and a track in the muon chambers. Photons are determined directly by ECAL clusters. Electrons energies and positions are measured by ECAL clusters, linked to a corresponding tracker track, and considering all the energy clusters produced by the bremsstrahlung photons radiated while interacting with the material. The hadrons are identified by the tracks (if charged) linked to the corresponding ECAL and HCAL clusters. Finally, the missing transverse momentum is defined as the negative sum of the transverse momenta of all the particles identified by the PF algorithm.\\
 
-
-The particle-flow event reconstruction aims at reconstructing and identifying all sta-
-ble particles in the event, i.e. electrons, muons, photons, charged hadrons and neu-
-tral hadrons, by mean of an optimized combination of informations from all CMS sub-
-detectors. The algorithm is described in detail in References [44–46] where information
-on its commissioning with early data are also provided. The CMS PF algorithm relies
-on a efficient and pure track reconstruction, on a clustering algorithm able to disentangle
-overlapping showers, and on an efficient link procedure to connect together the deposits
-of each particle in the sub-detectors. Tracks are extrapolated through the calorimeters: if
-they fall within the boundaries of one or several clusters, the clusters are associated to
-the track. The set of track and cluster(s) constitute a charged hadron and are not con-
-sidered anymore in the rest of the algorithm. The muons are identified beforehand so
-that their track does not give rise to a charged hadron. The electrons are more difficult to
-deal with. Indeed, due to the frequent Bremsstrahlung photon emission, a specific track
-reconstruction (the GSF already discussed in Section 2.2.3.1) is needed as well as a ded-
-icated treatment to properly attach the photon clusters to the electron and avoid energy
-double counting. Once all the tracks are treated, the remaining clusters result in photons
-in case of the electromagnetic calorimeter (ECAL), and in neutral hadrons in the case a
-hadron calorimeter (HCAL) cluster is matched to an ECAL cluster. Once all the deposits
-of a particle are associated, its nature can be assessed, and the information of the sub-
-detectors combined to determine optimally its four-momentum. In case the calibrated
-calorimeter energy of the clusters, which is simply a linear combination of the ECAL and
-HCAL energy deposits, associated to a track is found to be in excess with respect to the
-track momentum at more than one sigma, the excess is attributed to an overlapping neu-
-tral particle (photon or hadron), carrying an energy corresponding to the difference of
-the two measurements. The resulting list of particles, namely charged hadrons, photons,
-neutral hadrons, electrons and muons, is then used to reconstruct the jets, the missing
-transverse energy, to reconstruct and identify the τ from their decays products and to
-measure the isolation of the particles.
-The association used in the linking stage is purely geometrical: tracks are linked to calori-
-metric clusters if their trajectory intersects one of the calorimetric cells of the cluster; and
-likewise clusters in the ECAL preshower, ECAL and HCAL are linked if the cluster posi-
-tion measured in the finer granularity subdetector lies within the envelop of the cluster 
-in the coarser granularity subdetector. In order to account for uncertainties from mul-
-tiple scattering in the track extrapolation and on the estimated position of the shower
-maximum in the calorimeters, a geometrical tolerance of the size of one calorimeter cell
-is included when defining links; this tolerance can also account for gaps and cracks in
-the calorimeters. By design, the linking algorithm is simple and robust, as it does not
-rely on the precise knowledge of the position resolution in each subdetector. Special-
-ized algorithms are used for linking tracks to recover bremsstrahlung clusters in the
-case of electrons by considering tangents to electron trajectories at the crossing points
-with the tracker layers. Blocks of one or more linked objects are then processed to iden-
-tify and reconstruct particle candidates. Isolated electrons and muons are selected first,
-and reconstructed using the dedicated algorithms developed for them; similarly, non-
-isolated tracks which satisfy tight muon identification criteria are immediately identi-
-fied as muons. Charged hadrons are identified as tracks in the inner tracker, normally
-linked to calorimetric deposits if the particle p T is sufficient for the trajectory to reach the
-calorimeters. If the momentum measurements from the track and calorimeter are com-
-patible, after accounting for non-linearities and zero suppression effects, the best energy
-determination is obtained as a combination of the two. If the track momentum signif-
-icantly exceeds the measured calorimetric energy, the particle is identified as muon if
-it satisfies very loose muon identification criteria; otherwise, tight track quality require-
-ments are applied to to reject mis-reconstructed tracks. If instead an excess of calorimetric
-energy deposition is found with respect to the momentum of the associated track, e.g. in
-the case of collimated hadronic jets, the residual energy is identified as a photon or a neu-
-tral hadron. Additional photons and neutral hadrons are also identified from calorimetric
-deposits not linked to any track.
 \subsection{Physics objects}
 
 \subsubsection{Track and vertex reconstruction}
-\subsubsection{Electron reconstruction}
-\subsubsection{Photon reconstruction}
+The reconstruction of the trajectories of the charged particles passing through the CMS detector is performed by multiple iterations of the Combined Track Finder algorithm, that is based on a Kalman filter approach [73 A]; given the high multiplicity of particles produced at each bunch crossing and the multiple scatterings throughout the detector materials, this represents a challenging task. The CTF algorithm builds a track starting from the so-called seeds, namely triplets of hits collected in the pixel detector inner layers, or couples of hits if the track originates from the interaction point. The initial guess of the track given by the seeds is then extrapolated to the outer layers: if other hits are found to be compatible with the trajectory hypotesis ($\chi^2$-based hypotesis test), they are added to the track. Once the outer layers are reached, another reconstruction is performed backward, in order to clean the track from spurious hits and enhance the tracking efficiency. The final collected hits are re-fitted with Kalman Filter and more precise algorithms, in order to improve the quality of the measurement. If two tracks share more than a half of their hits, the worst quality track is rejected. The track reconstruction efficiency for particles with $p_T >0.9$ GeV is 94\% in the barrel and 85\% of the endcap region [72 A].
+
+\subsubsection{Electrons and photons reconstruction}
+Electrons are reconstructed combining a track with the energy deposits clustered in the ECAL, due to the showering of the electron through the detector and the emission of bremsstrahlung photons. The combination can proceed both from the silicon detector in the outgoing direction and in the opposite way: the tracker seeding as starting point is suitable for low energy electrons, whose trajectories are less bended and hence more accurately measured by the tracker system; the grouping of ECAL clusters (called superclusters) followed by a consecutive track extrapolation, performed by taking into account the electron interaction with the detector material, is more efficient in case of high energetic electrons, due to the higher resolution of the ECAL scintillating crystals. A Gaussian-sum filter algorithm (GSF) [ref 78 alberto] allows to properly take into account the effects of the bremsstrahlung radiation, that is distributed not as a single Gaussian (standard Kalman filters) but rather as a sum of Gaussian functions.\\
+The identification of an electron relies on three groups of variables: observables combining measurement performed in the silicon detectors and in the calorimeter; purely calorimetric observables; purely tracking informations. Different selections are used for electron candidates found in the barrel and in the endcaps, and they can vary from loose criteria (high detection efficiency but less purity, namely more contamination from object misidentified as electrons) to tight criteria. Data and Monte Carlo simulations reproducing $Z$, $\upsilon$ and $J/\Psi$ decays in $e^+ e^-$ are used to study the optimal working points, each one targeting at a different purity.\\
+The electron energy is determined correcting the raw energy measurement of the ECAL superclusters by taking into account the effects of the losses due to radiation or gaps between the calorimeter modules, and the pile-up contribution. The electron momentum resolution has been measured in $Z \rightarrow e^+ e^-$ decays in Run 1 LHC data, and it varies from 1.7 to 4.5\% depending on the pseudorapidity range. [arXiv 1502.02701]%With respect to traditional supercluster corrections, this technique improves the electron resolution by about 10\%.
+The electron isolation variable is defined as the $p_T$ sum of the charged and neutral particles laying in a cone of $\Delta R = 0.3$ around the electron trajectory, divided by the transverse momentum of the electron:
+\begin{equation}
+I_{\Delta R = 0.3}^e = \frac{\sum_{\text{char. hadrons}} p_T + max\left[ 0, \sum_{\text{neut. hadrons}} p_T + \sum_{\text{photons}} p_T - 0.5 \sum_{\text{pile-up char. hadrons}} p_T\right]}{p_T^e};
+\label{eq:electron_iso}
+\end{equation}
+the contribution of the pile-up charged particles is removed. The isolation variable is used to distinguish electrons coming from the leptonic decays of electroweak bosons (low $I_{\Delta R = 0.3}^e$) from electrons coming from the decays of heavy fermions, when they are more likely produced in association with light flavour jets and hence topologically close to calorimetric deposits due to hadrons (high $I_{\Delta R = 0.3}^e$).
+
+\vspace*{1\baselineskip}
+
+\noindent Photons are reconstructed with the ECAL clusters only. Given their importance in the discovery of the Higgs boson, dedicated studies have been performed both in data and in Monte Carlo simulations reproducing the $H \rightarrow \gamma \gamma$ process. Particular care has been taken in the treatment of the photon conversions into electron-positron pairs while interacting with the tracker detector. Dedicated selections allow to define different photon identification working points. Similarly to the case of the electrons, the photon isolation variable can be defined. The photon energy resolution varies from 1\% to 3\%, depending on the $\eta$ range. [arXiv 1502.02702]
+
 \subsubsection{Muon reconstruction}
+Muons are reconstructed and identified,
+in isolation as well as in jets, with very large efficiency and purity from a combination of the
+tracker and muon chamber information.
+
 L'intero sistema misura in maniera ``standalone'' l'impulso con una risoluzione in $p_T$ di circa $\Delta p_T/p_T \approx 8-15\%$ per muoni di $p_T = 10$ GeV/c e di $\Delta p_T/p_T \approx 20-40\%$ per muoni di $p_T = 1$ TeV/c. Combinando con la misura nei rivelatori al silicio la risoluzione passa rispettivamente all'$1\%$ e al $7-16\%$.\\
 \subsubsection{Jet reconstruction}
+Charged and neutral hadrons deposit their energy in the hadron calorimeter (HCAL) made
+of brass and scintillators, installed inside the coil and surrounding the ECAL, with a similar
+pseudo-rapidity coverage. The granularity of the HCAL is 25 times coarser than that of
+the ECAL, which would not allow charged and neutral hadrons to be spatially separated in
+jets with a transverse momentum much above 100 GeV/c. The hadron energy resolution in
+the combined ECAL–HCAL system is, however, of the order of 10\% at 100 GeV. This resolution
+allows neutral hadrons to be detected as an energy excess on top of the energy deposited
+by the charged hadrons pointing to the same calorimeter cells. The charged hadrons are reconstructed
+with the superior angular and energy resolutions of the tracker. Particles with
+pseudo-rapidities between 3.0 and 5.0 are more coarsely measured with an additional forward
+calorimeter (HF), placed 11 m from the interaction point.
+[PF paper]
 \subsubsection{Tau reconstruction}
 \subsubsection{Missing transverse energy reconstruction}
+Finally, the presence of neutrinos and other weaklyinteracting
+particles can be detected by transverse missing energy (EmissT), defined as the modulus
+of the vector sum of the transverse momenta of all reconstructed particles.
 \subsubsection{b-quark tagging}
 
 
