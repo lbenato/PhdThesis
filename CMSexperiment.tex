@@ -247,12 +247,14 @@ The DAQ system deals with the storage, transfer and handling of the data collect
 \subsection{Particle Flow event reconstruction}
 The particle flow (PF) algorithm [ref. paper] aims at identifying and reconstructing each particle produced by the proton-proton collisions, combining the informations coming from all the CMS subdetectors. It is particularly suitable to improve the reconstruction of jets, missing transverse momentum (used to identify neutrinos) and hadronically decaying tau leptons.\\
 The association of the informations is performed at different stages. The reconstruction of the charged particles in the silicon detector is performed with an iterative algorithm, and the reconstructed object is called a tracker track. Then, a clustering algorithm is performed to collect and combine the energy deposits in the calorimeters, in such a way to distinguish neutral from charged particles, reconstruct their directions, improve the energy measurement of the very energetic charged particles, whose tracks are less bended by the magnet and hence less precisely determined. The last informations are provided by the hits collected in the muon system. The three sets of reconstructions are then combined with a link algorithm, that aims at associating tracker tracks to calorimeter clusters and muon hits with geometrical criteria. A track in the silicon detector is linked to a calorimeter cluster if the extrapolated position lies in the cluster itself. Similarly, clusters in different calorimeters are linked when the position in the more granular calorimeter (\textit{i.e.} ECAL) lies in the envelope of the clusters in the less granular calorimeter (\textit{i.e.} HCAL). The decision of linking a tracker track to a muon track is based on the $\chi^2$ of a global fit between the two tracks.\\
-The particle flow algorithm then interprets the collected and linked informations as different particles. Muons are identified by the combination of a track in the silicon detectors and a track in the muon chambers. Photons are determined directly by ECAL clusters. Electrons energies and positions are measured by ECAL clusters, linked to a corresponding tracker track, and considering all the energy clusters produced by the bremsstrahlung photons radiated while interacting with the material. The hadrons are identified by the tracks (if charged) linked to the corresponding ECAL and HCAL clusters. Finally, the missing transverse momentum is defined as the negative sum of the transverse momenta of all the particles identified by the PF algorithm.\\
+The particle flow algorithm then interprets the collected and linked informations as different particles. Muons are identified by the combination of a track in the silicon detectors and a track in the muon chambers. Photons are determined directly by ECAL clusters. Electrons energies and positions are measured by ECAL clusters, linked to a corresponding tracker track, and considering all the energy clusters produced by the bremsstrahlung photons radiated while interacting with the material. The hadrons are identified by the tracks (if charged) linked to the corresponding ECAL and HCAL clusters. The hadron energy resolution, 10\% at 100 GeV combining ECAL and HCAL, is such that neutral hadrons can be distinguished as an energy calorimetric excess when overlapped by a charged hadron occupying the same calorimetric towers. Finally, the missing transverse momentum is defined as the negative sum of the transverse momenta of all the particles identified by the PF algorithm.\\
 
 \subsection{Physics objects}
 
-\subsubsection{Track and vertex reconstruction}
-The reconstruction of the trajectories of the charged particles passing through the CMS detector is performed by multiple iterations of the Combined Track Finder algorithm, that is based on a Kalman filter approach [73 A]; given the high multiplicity of particles produced at each bunch crossing and the multiple scatterings throughout the detector materials, this represents a challenging task. The CTF algorithm builds a track starting from the so-called seeds, namely triplets of hits collected in the pixel detector inner layers, or couples of hits if the track originates from the interaction point. The initial guess of the track given by the seeds is then extrapolated to the outer layers: if other hits are found to be compatible with the trajectory hypotesis ($\chi^2$-based hypotesis test), they are added to the track. Once the outer layers are reached, another reconstruction is performed backward, in order to clean the track from spurious hits and enhance the tracking efficiency. The final collected hits are re-fitted with Kalman Filter and more precise algorithms, in order to improve the quality of the measurement. If two tracks share more than a half of their hits, the worst quality track is rejected. The track reconstruction efficiency for particles with $p_T >0.9$ GeV is 94\% in the barrel and 85\% of the endcap region [72 A].
+\subsubsection{Track reconstruction}
+The reconstruction of the trajectories of the charged particles passing through the CMS detector is performed by multiple iterations of the Combined Track Finder algorithm, that is based on a Kalman filter approach [73 A]; given the high multiplicity of particles produced at each bunch crossing and the multiple scatterings throughout the detector materials, this represents a challenging task. The CTF algorithm builds a track starting from the so-called seeds, namely triplets of hits collected in the pixel detector inner layers, or couples of hits if the track originates from the interaction point. The initial guess of the track given by the seeds is then extrapolated to the outer layers: if other hits are found to be compatible with the trajectory hypotesis ($\chi^2$-based hypotesis test), they are added to the track. Once the outer layers are reached, another reconstruction is performed backward, in order to clean the track from spurious hits and enhance the tracking efficiency. The final collected hits are re-fitted with Kalman Filter and more precise algorithms, in order to improve the quality of the measurement. If two tracks share more than a half of their hits, the worst quality track is rejected. The track reconstruction efficiency for particles with $p_T >0.9$ GeV is 94\% in the barrel and 85\% of the endcap region [72 A].\\
+%
+%Vertex: in object section. The helicoidal trajectories of the charged particles in the CMS magnetic field are described by two additional parameters, other than the curvature and the transverse and azimuthal angles: the transverse impact parameter $d_0$ and the longitudinal impact parameter $z_0$. The impact parameters are defined as the distance of maximum approach of the track to the primary vertex of the collision.
 
 \subsubsection{Electrons and photons reconstruction}
 Electrons are reconstructed combining a track with the energy deposits clustered in the ECAL, due to the showering of the electron through the detector and the emission of bremsstrahlung photons. The combination can proceed both from the silicon detector in the outgoing direction and in the opposite way: the tracker seeding as starting point is suitable for low energy electrons, whose trajectories are less bended and hence more accurately measured by the tracker system; the grouping of ECAL clusters (called superclusters) followed by a consecutive track extrapolation, performed by taking into account the electron interaction with the detector material, is more efficient in case of high energetic electrons, due to the higher resolution of the ECAL scintillating crystals. A Gaussian-sum filter algorithm (GSF) [ref 78 alberto] allows to properly take into account the effects of the bremsstrahlung radiation, that is distributed not as a single Gaussian (standard Kalman filters) but rather as a sum of Gaussian functions.\\
@@ -270,30 +272,105 @@ the contribution of the pile-up charged particles is removed. The isolation vari
 \noindent Photons are reconstructed with the ECAL clusters only. Given their importance in the discovery of the Higgs boson, dedicated studies have been performed both in data and in Monte Carlo simulations reproducing the $H \rightarrow \gamma \gamma$ process. Particular care has been taken in the treatment of the photon conversions into electron-positron pairs while interacting with the tracker detector. Dedicated selections allow to define different photon identification working points. Similarly to the case of the electrons, the photon isolation variable can be defined. The photon energy resolution varies from 1\% to 3\%, depending on the $\eta$ range. [arXiv 1502.02702]
 
 \subsubsection{Muon reconstruction}
-Muons are reconstructed and identified,
-in isolation as well as in jets, with very large efficiency and purity from a combination of the
-tracker and muon chamber information.
+A muon candidate can be built exploiting the hits collected in the silicon tracker (track) and in the muon system (standalone muon). Each muon subdetector (DTs, RPCs and CSCs) performs a local reconstruction of the candidate; the informations from the three muon chambers are combined with a Kalman filter approach.\\
+Three different strategies are adopted to define a muon candidate in the CMS detector. A standalone muon is reconstructed by only using the local reconstruction in the muon chambers. A tracker muon is built starting from a track in the silicon detector, that is extrapolated up to the muon chambers, taking into account the multiple scattering and the energy loss through the material. The tracker muon is defined if at least one segment, \textit{i.e.} a short track built with CSCs or DTs hits, is matched to the starting track. This technique is the most efficient for the reconstruction of low energetic muons. A global muon is built starting from a standalone muon, and then its trajectory is extrapolated towards the inner layer of the silicon detector and eventually matched to a track; this approach is suitable for highly energetic muons ($p_T>200$ GeV).\\
+Different algorithms are used to assign the momentum to the muon candidate, in order to mitigate the effects of bremsstrahlung, that becomes significant when the muon approaches an energy of the order of 1 TeV. The radiated photons generate spurious hits in the chambers and larger occupancy, significantly deteriorating the momentum measurement.\\
+Starting from 2016 Run, the muon reconstruction takes into account the Alignment Position Errors, namely the uncertainties due to the position of the muon chambers with respect to the silicon detectors. The final resolution on the muon momentum measurement depends on the $p_T$ and $\eta$ of the candidate, and ranges from 1\% for very low momenta, up to $\sim$7\% ($|\eta|<0.9$) -- 10\% ($1.2 < |\eta| < 2.4$). [DP2016\_067]\\
+The muon isolation $I_{\Delta R = 0.4}^{\mu}$ is defined similarly to the electron isolation, but by taking into account a larger cone $\Delta R = 0.4$ around the muon direction.
 
-L'intero sistema misura in maniera ``standalone'' l'impulso con una risoluzione in $p_T$ di circa $\Delta p_T/p_T \approx 8-15\%$ per muoni di $p_T = 10$ GeV/c e di $\Delta p_T/p_T \approx 20-40\%$ per muoni di $p_T = 1$ TeV/c. Combinando con la misura nei rivelatori al silicio la risoluzione passa rispettivamente all'$1\%$ e al $7-16\%$.\\
 \subsubsection{Jet reconstruction}
-Charged and neutral hadrons deposit their energy in the hadron calorimeter (HCAL) made
-of brass and scintillators, installed inside the coil and surrounding the ECAL, with a similar
-pseudo-rapidity coverage. The granularity of the HCAL is 25 times coarser than that of
-the ECAL, which would not allow charged and neutral hadrons to be spatially separated in
-jets with a transverse momentum much above 100 GeV/c. The hadron energy resolution in
-the combined ECAL–HCAL system is, however, of the order of 10\% at 100 GeV. This resolution
-allows neutral hadrons to be detected as an energy excess on top of the energy deposited
-by the charged hadrons pointing to the same calorimeter cells. The charged hadrons are reconstructed
-with the superior angular and energy resolutions of the tracker. Particles with
-pseudo-rapidities between 3.0 and 5.0 are more coarsely measured with an additional forward
-calorimeter (HF), placed 11 m from the interaction point.
-[PF paper]
+The nature of the strong interaction is such that coloured partons, namely quarks and gluons, are forced to aggregate to form a color-neutral hadron, in the process called hadronization. Therefore, partons cannot be observed as free particles in a detector, but rather as collimated jets of hadronic particles.\\
+Jets are reconstructed starting by the PF candidates in the event. The charged hadron subtraction algorithm (CHS) removes candidates not associated to the primary vertex in order to remove contributions from pileup~\cite{CMS-PAS-JME-14-001}. The remaining particles are used as input to jet clustering algorithms
+to reconstruct particle-flow jets. The jets are clustered using the {\sc FastJet} package~\cite{bib:fastjet} with the anti-\kt jet sequential clustering algorithm~\cite{Cacciari:2008gp}. A sequential clustering algorithm is designed in order to be infrared and collinear safe, namely, if the final state particles undergo a soft emission or a collinear gluon splitting, the number and shapes of the jets should not change. The stating point of a sequential clustering algorithm is the definition of the distances bewtween two particles $i$ and $j$, and the distance of a given particle $i$ from the beam-spot $B$:
+\begin{equation}
+\begin{split}
+& d_{ij} = \min \left( p_{T,i}^{2a} p_{T,j}^{2a} \right) \frac{R_{ij}^2}{R^2},\\
+& d_{iB} = p_{T,i}^{2a}\\
+\end{split}
+\label{eq:dist_akt}
+\end{equation}
+where $p_{T(i,j)}$ are the transverse momenta of the particles, $R_{ij}^2 = \left( y_i -y_j \right)^2 + \left( \phi_i - \phi_j\right)^2$ is the angular distance between the particles, $a$ is an exponent depending on the clustering algorithm chosen, and $R$ is the clustering parameter. The algorithm then operates as follows:
+\begin{itemize}
+\item it computes all the possible combination of distances $d_{ij}$ and $d_{iB}$ and it finds the minimum;
+\item if the minimum is $d_{ij}$, the four-momenta of the particles $i$ and $j$ are summed up in one candidate $ij$; $i$ and $j$ are removed from the list of candidates, the distances are updated, and the algorithm proceeds to re-calculate all the possible remaining $d_{ij}$;
+\item the clustering stops when the smallest quantity is $d_iB$: $i$ particle is defined as one jet, and it is removed from the list of particles;
+\item this process is repeated until all the particles are assigned to a jet, that must be separated from another jet at least by a distance $R_{ij} > R$.
+\end{itemize}
+In case of the anti-\kt algorithm, $a = -1$. It tends to cluster high \pt particles first, since the hard term dominates $d_{ij}$ in equation~\ref{eq:dist_akt}. Since the soft particles have lower impacts, the shape of the jet is not sensitive to the soft radiation and rather stable against the softer pile-up contributions.\\
+In this analysis, clustering parameters of $R = 0.8$ and $R = 0.4$ will be used to define the ``fat''-jets or AK8 jets, and the ``standard''-jets or AK4 jets). In order to avoid double-counting of PF candidates, AK4 jets are considered only if the angular separation from the leading AK8 jet is larger than $\Delta R>0.8$.\\
+Since the detector response to different particles is not linear, particular care should be taken in the assignement of the measured momentum of the clustered jet to the corresponding true value of the original parton~\cite{bib:1748-0221-6-11-P11002}. A set of jet energy corrections (JECs) are applied sequentially and with a fixed order. Each correction constists in a rescaling of the jet four-momentum, and it takes into account different effects that are factorizes.
+\begin{itemize}
+\item The L1 JECs remove the effect of the pile-up; they consist into an offset correction of the jet \pt. They are determined from Monte Carlo (MC) simulations of dijet events produced by strong interaction with and without pile-up events on top, and parametrized as a function of kinematical parameters (jet area, pseudorapidity and \pt) and of the average \pt density per unit area $\rho$. Residual difference between data and the detector simulation are evaluated in data collected with a random trigger, called zero bias, applying the only requirement of the beam crossing happening. Pile-up offset corrections are displayed in fig.~\ref{fig:plot_JEC} (top left), as a function of the jet pseudorapidity.
+\item The simulated response of the detector is not uniform over jet \pt and $\eta$. This effect is mitigated by the L2L3 MC-truth corrections. They are calculated in MC simulations of dijet events by taking into account the discrepancy between the reconstructed \pt of the jet and the true \pt at particle level, as a function of jet \pt and $\eta$. L2L3 scale factors describing the simulated jet response are reported in fig.~\ref{fig:plot_JEC} (top right), as a function of the jet pseudorapidity.
+\item The small data-MC discrepancies ($\sim$1\%) left after applying the previous set of JECs are corrected by the L2 and L3 residual corrections. The L2Residuals are calculated in dijet events, as a function of \pt. The L3Residuals are calculated in $Z \rightarrow (\mu \mu, ee)$ + jet events, photon + jet events and multijet events, as a function of $\eta$ and \pt, with the \pt-balancing method~\cite{bib:1748-0221-6-11-P11002}. Data-MC scale factors for L2L3Residuals are displayed in fig.~\ref{fig:plot_JEC} (bottom), as a function of the jet $\eta$ and \pt.
+\item An optional correction, not used in this analysis, is the L5 flavor-dependent correction, that is extracted from MC simulations.
+\end{itemize}
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/stack2016.pdf}%
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/CMSresponse_ak4pfchs_L1FastL2L3.pdf}
+\\
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/L2Res_logpt_MPF_kFSRfit_AK4PFchs_pythia8_2016.pdf}%
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/globalFitL3res_shifted_2016.pdf}
+
+  \caption{Top left: average \pt offset due to additional pile-up events, measured both in data and in MC simulations, as a function of the jet pseudorapidity. Top right: simulated jet response (L2L3 MC-truth corrections), as a function of the jet pseudorapidity. Bottom left: L2L3 residual data-MC corrections, evaluated on dijet events, as a function of the jet $\eta$. Bottom right: L2L3 residual data-MC corrections, evaluated on dijet and $Z/\gamma$ + jet events, as a function of the jet \pt.}
+  \label{fig:plot_JEC}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/JECUncert_DATA_Summary_AK4PFchs_Eta00.pdf}%
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/JECUncert_DATA_Summary_AK4PFchs_Eta27.pdf}
+\\
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/JECUncert_DATA_Summary_AK4PFchs_Pt30.pdf}%
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/JECUncert_DATA_Summary_AK4PFchs_Pt100.pdf}
+
+  \caption{Jet energy corrections uncertainties, as a function of jet \pt (top) and $\eta$ (bottom), calculated in 2015 data. The yellow histograms report the convolution of the uncertainties applied in the analysis.}
+  \label{fig:plot_JEC_unc}
+\end{figure}
+
+\noindent Each jet energy correction is determined with an uncertainty, and reported in fig.~\ref{fig:plot_JEC_unc} for 2015 data, as a function of \pt and $\eta$ of the jet. The total uncertainty for jets with \pt larger than 30 GeV (100 GeV) is smaller than 3\% (1\%) in the barrel, and up to 5\% (3\%) in the endcaps.\\
+An additional effect that must be taken in account is the discrepancy in the jet energy resolution (JER) observed in data and in Monte Carlo samples. A smearing procedure is applied in MC simulations (described in detail in sec.~\ref{ssec:jets}), in order to restore a better agreement. Jet energy resolutions in Monte Carlo simulations are displayed in fig.~\ref{fig:plot_JER} (top), as a function of the jet \pt and the average number $\mu$ of reconstructed primary vertices, considering central (left) and forward (right) jets. The resolution is stable against the pile-up for jet \pt$>$100 GeV, and it ranges from 10\% at 100 GeV, down to 4\% at 1 TeV. In fig.~\ref{fig:plot_JER} (top). In fig.~\ref{fig:plot_JER} (bottom), data-MC smearing scale factors are reported as a function of $\eta$.
+%Jets are also requested to pass loose identification criteria, in order to reject fake jets due to calorimeter noise, with more than 99\% efficiency for true jets.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/RelResVsJetPt_JetEta0to0p5_Mu_80x-1.pdf}%
+    \includegraphics[width=.5\textwidth]{figures/JetPlots/RelResVsJetPt_JetEta3p2to4p7_Mu_80x-1.pdf}
+\\
+\includegraphics[width=.5\textwidth]{figures/JetPlots/JER_SF.png}
+  \caption{Top: jet energy resolution in MC simulations, as a function of the jet \pt. Different curves represent a different average number of primary vertices per event ($\mu$). Bottom: data-MC scale factors, as a function of the jet $\eta$, measured in 2016 data (yellow dots).}
+  \label{fig:plot_JER}
+\end{figure}
+
+%Several levels of jet energy corrections are applied to the momentum of the clustered (raw) jets in order to obtain the energy value that is closer to the true energy of the initial parton
+
+
+%Charged and neutral hadrons deposit their energy in the hadron calorimeter (HCAL) made
+%of brass and scintillators, installed inside the coil and surrounding the ECAL, with a similar
+%pseudo-rapidity coverage. The granularity of the HCAL is 25 times coarser than that of
+%the ECAL, which would not allow charged and neutral hadrons to be spatially separated in
+%jets with a transverse momentum much above 100 GeV/c. The hadron energy resolution in
+%the combined ECAL–HCAL system is, however, of the order of 10\% at 100 GeV. This resolution
+%allows neutral hadrons to be detected as an energy excess on top of the energy deposited
+%by the charged hadrons pointing to the same calorimeter cells. The charged hadrons are reconstructed
+%with the superior angular and energy resolutions of the tracker. Particles with
+%pseudo-rapidities between 3.0 and 5.0 are more coarsely measured with an additional forward
+%calorimeter (HF), placed 11 m from the interaction point.
+%[PF paper]
+
 \subsubsection{Tau reconstruction}
+\noindent Tau leptons have a very small lifetime ($\sim 3 \times 10^{-13}$ s), hence they decay before reaching the pixel detector and they can only be reconstructed through their decay products. Approximatively 60\% of the times, $\tau$ leptons decay in hadrons, hence they are reconstructed as small collimated jets in the CMS detector. The main decay modes of the hadronic tau, $\tau_h$, are one or three charged mesons (mainly $\pi^{\pm}$), also in association with a $\pi^0$ decaying in a couple of photons, and a $\tau$ neutrino. Hence, photons and charged hadrons are the main ingredients of dedicated algorithms to perform the $\tau_h$ reconstruction and identification, in order to distinguish them from quark and gluon-initiated jets. The main CMS $\tau_h$ reconstruction algorithm, Hadron Plus Strips (HPS)~\cite{Chatrchyan:2012zz}, is particle-flow based. HPS builds the tau candidate from a PF jet, clustered with the anti-\kt algorithm with $R = 0.5$, and it reconstructs the $\pi^0 \rightarrow \gamma \gamma$ decays within the jet cone, by taking into account the photon conversions in the silicon detector. The exploitation of the PF informations is such that the HPS algorithm shows stable performances in the reconstruction of the $\tau_h$ energy as a function of the energy itself. The $\tau_h$ candidate is required to be isolated, namely no energy deposits other than the $\tau$ decay products should be present in the tau cone. Depending on the low threshold set to consider the surrounding particles as included in the cone, different isolation working points can be defined. With the looser working point, the probability of misidentifying a quark or gluon jet as a tau is around 1\%~\cite{Chatrchyan:2012zz}.
+
+\subsubsection{b-jets tagging}
+
+
 \subsubsection{Missing transverse energy reconstruction}
 Finally, the presence of neutrinos and other weaklyinteracting
 particles can be detected by transverse missing energy (EmissT), defined as the modulus
 of the vector sum of the transverse momenta of all reconstructed particles.
-\subsubsection{b-quark tagging}
+
 
 
 \section{ATLAS, ALICE, LHCb detectors}
