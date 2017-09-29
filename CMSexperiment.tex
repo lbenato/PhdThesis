@@ -364,14 +364,42 @@ An additional effect that must be taken in account is the discrepancy in the jet
 \noindent Tau leptons have a very small lifetime ($\sim 3 \times 10^{-13}$ s), hence they decay before reaching the pixel detector and they can only be reconstructed through their decay products. Approximatively 60\% of the times, $\tau$ leptons decay in hadrons, hence they are reconstructed as small collimated jets in the CMS detector. The main decay modes of the hadronic tau, $\tau_h$, are one or three charged mesons (mainly $\pi^{\pm}$), also in association with a $\pi^0$ decaying in a couple of photons, and a $\tau$ neutrino. Hence, photons and charged hadrons are the main ingredients of dedicated algorithms to perform the $\tau_h$ reconstruction and identification, in order to distinguish them from quark and gluon-initiated jets. The main CMS $\tau_h$ reconstruction algorithm, Hadron Plus Strips (HPS)~\cite{Chatrchyan:2012zz}, is particle-flow based. HPS builds the tau candidate from a PF jet, clustered with the anti-\kt algorithm with $R = 0.5$, and it reconstructs the $\pi^0 \rightarrow \gamma \gamma$ decays within the jet cone, by taking into account the photon conversions in the silicon detector. The exploitation of the PF informations is such that the HPS algorithm shows stable performances in the reconstruction of the $\tau_h$ energy as a function of the energy itself. The $\tau_h$ candidate is required to be isolated, namely no energy deposits other than the $\tau$ decay products should be present in the tau cone. Depending on the low threshold set to consider the surrounding particles as included in the cone, different isolation working points can be defined. With the looser working point, the probability of misidentifying a quark or gluon jet as a tau is around 1\%~\cite{Chatrchyan:2012zz}.
 
 \subsubsection{b-jets tagging}
-
+\indent The bottom quark plays a fundamental role in numerous standard model processes, \textit{i.e.} the physics related to the top quark (whose decay into a W and a b-quark with a branching fraction of 100\%) and the Higgs boson (decaying into $b \bar{b}$ with a branching fraction $\sim$60\%). Many algorithms have been exploited by the CMS collaboration, with the aim of distinguishing a b-quark initiated jet and jets originating from light quarks or gluons~\cite{CMS-PAS-BTV-15-001}. The most remarkable feature of the b-quark is the long lifetime ($\sim$~1.5 ps), that has the experimental consequence of a displaced decays (few mm) with respect to the primary vertex. The direct leptonic decays of the b-quark (into $\mu$ and $e$) or the cascade leptonic decays involving c-quarks give an additional handle to its identification.\\
+Given the high spatial resolution of the silicon detector, track reconstruction is a key point of the b-tagging procedure. Tracks inside a jet candidate must satisfy criteria related not only to their quality but also on their distance from the interaction point. The track impact parameter is the distance between the primary vertex and the coordinate of closest approach. Tracks that are too far from the interaction point are discarded, in order to suppress the pile-up contributions. The Combine Secondary Vertex (CSV) algorithm~\cite{Chatrchyan:2012jua} sorts jet candidates in categories, based on the number of reconstructed secondary vertices (one reconstructed secondary vertex, no vertex but two tracks with high impact parameters, and the remaining cases). A multivariate approach allows to train the algortihm over the categories, considering as discriminating variables both tracking informations (numbers and properties of the tracks) and their relations with the secondary vertex reconstruction (impact parameters; angular, linear, 2D and 3D distances of the vertex from the tracks and the jet axis, and the invariant mass of the charged particles associated to the secondary vertex).\\
+By tuning the different selections, working points with different efficiencies have been set. The loose working point, used in this analysis, has a 90\% signal efficiency and a 40\% misidentification rate. The b-tagging efficiency is different in data and in simulations. Multiplicative scale factors are calculated in events enriched in b-quark jets.\\
+%It is known that b-tagging efficiency is not the same in data and MC. In order to take into account this shortcoming, the BTV POG provides collections of b-tagging scale factors for b-jets and mistagged light jets, measured for different physics processes, for the supported tagging algorithms and the three standard working points [42]. A weight is calculated on a per-event basis as a function of the b-tagging status and the flavour of the hadron that initiated the jet in the event [40].
 
 \subsubsection{Missing transverse energy reconstruction}
-Finally, the presence of neutrinos and other weaklyinteracting
-particles can be detected by transverse missing energy (EmissT), defined as the modulus
-of the vector sum of the transverse momenta of all reconstructed particles.
+Neutrinos can interact with the other particles only via the electroweak interactions; hence, when a neutrino is produced in the proton-proton collisions, it passes thorugh the CMS experiment, undetected. Its only experimental signature is the momentum imbalance (\met) in the transverse plane $r \phi$. The magnitude of \met vector is also called missing transverse energy, \MET. Given its definition, it is evident that \MET is a delicate variable to deal with, since it depends on all the other objects, on their imperfect measurements, on the detector noise and the pile-up events.\\
+The PF \MET is the negative sum of the transverse momenta of the PF candidates reconstructed in the event. Inefficiencies in the tracker reconstruction and non-linear responses of the calorimeters can be corrected by propagating the jet energy corrections to \met:
+\begin{equation}
+\vec{p}_T^{\text{miss,corr}} = \vec{p}_T^{\text{miss}} - \sum_{j \in \text{jets}} \left( \vec{p}_{T,j}^{\text{corr}} - \vec{p}_{T,j}^{\text{raw}}\right),
+\label{eq:met_typeI}
+\end{equation}
+where "corr" ("raw") is related to corrected (raw) \pt of the considered jet. This correction is known as the "Type-I" correction to \MET. Jets included in the calculation are AK4 with CHS algorithm applied to remove the pile-up contribution, they must have $p_T>15$ GeV and less than 90\% of their energy deposited in the electromagnetic calorimeter. If a muon lies in the jet cone, it is subtracted from the jet and added after the $p_T$ correction. A similar correction is performed to correct \met at trigger level; in this case, a jet \pt threshold of 35 GeV is chosen.\\
+The topology of the final state affects the \MET uncertainties; hence, they are factorized considering the effects 
 
+To estimate the uncertainty
+on the \MET, one can factorize it into its components of jets, electrons, muons, taus, photons
+and jets of \pt $<$10 GeV and PF candidates not within jets (defined as the unclustered energy)
+and vary each object within its scale and resolution uncertainties.  For the unclustered energy
+uncertainty the low energy PF particles are further divided into groups to account for the res-
+olution effect of different detector components: charged PF hadrons (dominated by the tracker
+resolution), neutral PF hadrons (dominated by the HCAL resolution), photon PF candidates
+(dominated by the ECAL resolution) and PF candidates associated with the forward hadronic
+(HF) calorimeter (dominated by the forward HCAL resolution).  The largest contributions to
+the unclustered energy uncertainty are due to the neutral PF hadrons and HF PF candidates.
+The magnitude of the uncertainties due to jet energy scale correction and unclustered energy
+scale variations are found to be 5\% and 30\% respectively in an inclusive ttbar simulation.
 
+%\begin{figure}[!htb]
+%  \centering
+%    \includegraphics[width=.5\textwidth]{figures/MetPlots/TypeI_corr.pdf}%
+%    \includegraphics[width=.5\textwidth]{figures/MetPlots/TypeI_corr.pdf}
+%
+%  \caption{.....}
+%  \label{fig:met_typeI}
+%\end{figure}
 
 \section{ATLAS, ALICE, LHCb detectors}
 
