@@ -2,13 +2,14 @@
 \chapter{The Large Hadron Collider and the CMS experiment}
 %\end{tcolorbox}
 \label{chap:LHC_CMS}
-Brief intro to CERN and LHC
-\begin{itemize}
-\item research
-\item technology
-\item education
-\item collaboration
-\end{itemize}
+
+%Brief intro to CERN and LHC
+%\begin{itemize}
+%\item research
+%\item technology
+%\item education
+%\item collaboration
+%\end{itemize}
 
 \section{The Large Hadron Collider}
 The Large Hadron Collider (LHC) is a 27 km ring structure designed for the acceleartion and collision of protons and heavy ions. It is situated approximatively 100 m underground, between France and Switzerland, in the Geneva area, and it is the most important of the CERN (Conseil europ\'een pour la recherche nucl\'eaire) facilities. In order to reduce the cost of the project, definetively approved in 1996, the LHC has been designed to fit the pre-existing underground tunnel of the Large Electron-Positron collider (LEP) [ref. 24 Jacopo], built to accelerate electrons and positrons and running until the year 2000.\\
@@ -73,8 +74,8 @@ N_i = \sigma_i \int_0^{\tau} \mathcal{L_{\text{inst}}} dt.
 \subsection{Proton-proton interactions}
 \begin{figure}[!htb]
   \centering
-    \includegraphics[width=.5\textwidth]{figures/78events_PU.png}
-  \caption{78 events.}
+    \includegraphics[width=.5\textwidth]{figures/78events_PU_b.png}
+  \caption{CMS collision event, where a record of 78 interactions per single bunch crossing were taking place simultaneously.}
   \label{fig:pp_pileup}
 \end{figure}
 %Figura da CMS Collaboration, DAQ generic figures gallery online at http://cmsdoc.cern.ch/cms/TDR/DAQ/TDRweb/daqgenericjpg.htm
@@ -106,7 +107,8 @@ The CMS detector is structured in many layers of sub-detectors, giving different
   \label{fig:CMS_1}
 \end{figure}
 
-\noindent Fig.~\ref{fig:CMS_1} shows a sketch of the CMS detector. It is longitudinally segmented in the barrel region and two endcaps. In the forward region (over the endcaps), where the beam radiation is very intense, additional calorimeters have been placed. In fig.~\ref{fig:CMS_particles}, the mean path of a specific particle through the sub-detectors is represented, depending on its flavour.
+\noindent Fig.~\ref{fig:CMS_1} shows a sketch of the CMS detector. It is longitudinally segmented in the barrel region and two endcaps. In the forward region (over the endcaps), where the beam radiation is very intense, additional calorimeters have been placed. In fig.~\ref{fig:CMS_particles}, the mean path of a specific particle through the sub-detectors is represented, depending on its flavour.\\
+A detailed description of the CMS detector can be found in~\cite{Chatrchyan:2008zzk}.
 
 \begin{figure}[!htb]
   \centering
@@ -154,7 +156,7 @@ p [\text{GeV}] = 0.3 \times B [\text{T}] \times R [\text{m}].
   \label{fig:CMS_tracker}
 \end{figure}
 
-The CMS tracking system is composed by a cylinder of silicon detectors (2.5 m of diameter and 5.8 m length). Their design allows a precise reconstruction of the tracks left by charged particles and of the interaction vertices, a fundamental tool to identify heavy quarks (charm, beauty) and leptons (taus).
+The CMS tracking system~\cite{Karimäki:368412,Chatrchyan:2014fea} is composed by a cylinder of silicon detectors (2.5 m of diameter and 5.8 m length). Their design allows a precise reconstruction of the tracks left by charged particles and of the interaction vertices, a fundamental tool to identify heavy quarks (charm, beauty) and leptons (taus).
 Tracker detectors cover a pseudorapidity region of $|\eta|<2.5$ and have an active area of $210\text{ m}^2$. The two sub-detectors of the tracking system are the pixel detector, closer to the interaction point, and the strip detector, covering a radius of 0.2 -- 1.2 m. The high granularity of the pixels and micro strips allows to keep the occupancy at acceptable levels, given the high multiplicity of the tracks ($\sim$1 MHz/$\text{mm}^2$). The silicon detectors and the electronic cables are cooled down to a temperature of $\sim 10^{\circ}$ C. The structure of the tracking system is showed in fig.~\ref{fig:CMS_tracker}.
 
 \subsubsection{The pixel detector}
@@ -168,7 +170,7 @@ The strip system is divided in the four-layered tracker inner barrel (TIB), cove
 %L'efficienza di ricostruzione delle tracce dei muoni \`e stata misurata essere attorno al 99\%, essa cala drasticamente per $|\eta|>2.1$ a causa della ridotta copertura geometrica del pixel detector. Le efficienze di rivelazione degli adroni sono tipicamente pi\`u basse perch\'e interagiscono con il materiale. La risoluzione in $p_T$, sempre per i muoni, \`e attorno all'1-2\% per $|\eta|>1.6$ e per momenti elevati; a momenti pi\`u bassi dominano effetti di scattering multiplo e dipendono dalla quantit\`a di materiale attraversato.\\
 
 \subsection{The elctromagnetic calorimeter}
-The CMS electromagnetic calorimeter (ECAL, shown in fig.~\ref{fig:CMS_ecal}) is a homogeneous detector composed by lead tungstate ($\text{PbWO}_4$) scintillating crystals, designed to measure the energy deposits of photons and electrons through their electromagnetic showers. $\text{PbWO}_4$ is transparent and dense (8.3 gr/$\text{cm}^3$); it has a fast time response (the 85\% of the scintillating light is emitted at every bunch crossing, namely 24 ns), high scintillating efficiency and radiation resistance; it has a radiation length is $X_0 = 0.89$ cm and a Moli\`ere radius of 2.19 cm. The ECAL is divided in the barrel region ($\eta < 1.479$, at a radius of 1.3 m) and the endcaps ($1.479 < \eta < 3$).  The 61200 crystals employed in the barrel region, whose size is $(22 \times 22) \text{ mm}^2 \times 23 \text{ cm}$, have a radiation length of $25.8 X_0$; the 7324 crystals in the endcaps, $ 28.6 \times 28.6 \text{ mm}^2 \times 22 \text{ cm}$, have a radiation length of $24.7 X_0$. Before the endcaps, on each side, a pre-shower detector is installed: it is composed by two disks of lead absorber and two layers of silicon strips, up to a radiation length of $3X_0$. It has been designed to distinguish the photons coming from the $\pi^0$ decay from the rare Higgs decay $H \rightarrow \gamma \gamma$. The readout and amplification of the scintillating light, performed by avalanche photodiodes in the barrel and by vacuum phototriodes in the endcaps, requires a stable temperature of $18^{\circ}$ C, mantained by a water cooling system.
+The CMS electromagnetic calorimeter (ECAL, shown in fig.~\ref{fig:CMS_ecal})~\cite{ECAL-TDR} is a homogeneous detector composed by lead tungstate ($\text{PbWO}_4$) scintillating crystals, designed to measure the energy deposits of photons and electrons through their electromagnetic showers. $\text{PbWO}_4$ is transparent and dense (8.3 gr/$\text{cm}^3$); it has a fast time response (the 85\% of the scintillating light is emitted at every bunch crossing, namely 24 ns), high scintillating efficiency and radiation resistance; it has a radiation length is $X_0 = 0.89$ cm and a Moli\`ere radius of 2.19 cm. The ECAL is divided in the barrel region ($\eta < 1.479$, at a radius of 1.3 m) and the endcaps ($1.479 < \eta < 3$).  The 61200 crystals employed in the barrel region, whose size is $(22 \times 22) \text{ mm}^2 \times 23 \text{ cm}$, have a radiation length of $25.8 X_0$; the 7324 crystals in the endcaps, $ 28.6 \times 28.6 \text{ mm}^2 \times 22 \text{ cm}$, have a radiation length of $24.7 X_0$. Before the endcaps, on each side, a pre-shower detector is installed: it is composed by two disks of lead absorber and two layers of silicon strips, up to a radiation length of $3X_0$. It has been designed to distinguish the photons coming from the $\pi^0$ decay from the rare Higgs decay $H \rightarrow \gamma \gamma$. The readout and amplification of the scintillating light, performed by avalanche photodiodes in the barrel and by vacuum phototriodes in the endcaps, requires a stable temperature of $18^{\circ}$ C, mantained by a water cooling system.
 
 \begin{figure}[!htb]
   \centering
@@ -183,16 +185,16 @@ The CMS electromagnetic calorimeter (ECAL, shown in fig.~\ref{fig:CMS_ecal}) is 
 %\caption{Risoluzione in energia di ECAL in funzione dell'energia del fascio di elettroni utilizzato per le misure. Sono mostrati anche i valori per i parametri di fit[16].}
 %\label{fig:risoluzione_ECAL}
 %\end{figure}
-{\color{red} Controlla nuove calibrazioni} \noindent The energy resolution of the calorimeter is parametrized as:
+\noindent The energy resolution of the calorimeter is parametrized as:
 \begin{equation}
 {\left( \frac{\sigma}{E} \right)}^2 = {\left( \frac{S}{\sqrt{E}} \right)}^2 + {\left( \frac{N}{E} \right)}^2 + C^2,
 \end{equation}
-where $S=0.028 \text{ GeV}^{\frac{1}{2}}$ is the stochastic term, $N=0.12$ GeV is related to noise contribution, and $C=0.003$ is a constant term depending on the calibration.
+where $S=0.018 \text{ GeV}^{\frac{1}{2}}$ is the stochastic term, $N=0.04$ GeV is related to noise contribution, and $C=0.005$ is a constant term depending on the calibration.
 %In figura \ref{fig:risoluzione_ECAL} sono mostrati i risultati ottenuti da misure di prova con un fascio di elettroni: le stime ottenute sono $S=0.028 \mbox{ GeV}^{\frac{1}{2}}$, $N=0.12 GeV$, $C=0.003$.
 
 
 \subsection{The hadronic calorimeter}
-The hadronic calorimeter (HCAL, displayed in fig.~\ref{fig:CMS_hcal}) is a sampling calorimeter, composed by brass and plastic scintillator layers. It has been designed in order to guarantee a good hermeticity, allowing to perform a precise measurement of the missing transverse energy. It is located within the electromagnetic calorimeter and the solenoid, covering a region of $|\eta|<1.3$ in the barrel, and $1.3<|\eta|<3$ in the endcaps. Brass is non-magnetic and has short interaction length (16.4 cm): the 60 mm thick absorber layers used in the barrel allow to reach 5.6 interaction lengths at $\eta=0$ and 10.8 interaction lenghts at $\eta = 1.3$; the 80 mm thick layers in the endcaps reach 11 interaction lenghts. An additional calorimetric layer has been installed out of the solenoid, in order to reach 11.8 interaction lenghts in the barrel region. The scintillation light, typically in the blue-violet region of the electromagnetic spectrum, is collected by wavalenght-shifter fibers, translated and amplified by multi-channel hybrid photodiodes, proportionally to the magnitude of the energy deposits. An additional hadronic calorimeter has been placed in the forward region, $3 < |\eta| < 5.2$, at 11.2 m from the interaction point. It has beeen designed to afford the high levels of radiations: it is composed by 55 mm thick absorber layers of stainless-steel, and quartz fibers, able to detect the Cherenkov scintillating light of the charged particles of the hadronic showering. A longitudinally segmentation allow to distinguish hadronic particles from electromagnetic components.
+The hadronic calorimeter (HCAL, displayed in fig.~\ref{fig:CMS_hcal})~\cite{HCAL-TDR} is a sampling calorimeter, composed by brass and plastic scintillator layers. It has been designed in order to guarantee a good hermeticity, allowing to perform a precise measurement of the missing transverse energy. It is located within the electromagnetic calorimeter and the solenoid, covering a region of $|\eta|<1.3$ in the barrel, and $1.3<|\eta|<3$ in the endcaps. Brass is non-magnetic and has short interaction length (16.4 cm): the 60 mm thick absorber layers used in the barrel allow to reach 5.6 interaction lengths at $\eta=0$ and 10.8 interaction lenghts at $\eta = 1.3$; the 80 mm thick layers in the endcaps reach 11 interaction lenghts. An additional calorimetric layer has been installed out of the solenoid, in order to reach 11.8 interaction lenghts in the barrel region. The scintillation light, typically in the blue-violet region of the electromagnetic spectrum, is collected by wavalenght-shifter fibers, translated and amplified by multi-channel hybrid photodiodes, proportionally to the magnitude of the energy deposits. An additional hadronic calorimeter has been placed in the forward region, $3 < |\eta| < 5.2$, at 11.2 m from the interaction point. It has beeen designed to afford the high levels of radiations: it is composed by 55 mm thick absorber layers of stainless-steel, and quartz fibers, able to detect the Cherenkov scintillating light of the charged particles of the hadronic showering. A longitudinally segmentation allow to distinguish hadronic particles from electromagnetic components.
 The energy resolution of the hadronic calorimeter is:
 \begin{equation}
 \left( \frac{\sigma}{E} \right) \approx \frac{a}{\sqrt{E}} \oplus b\%,
@@ -210,7 +212,7 @@ where $a=65\%$ in the barrel region, $85\%$ in the endcaps, $100\%$ in the forwa
 \subsection{The muon system}
 
 
-The outer system of the CMS experiment consists into gas detectors for identifying muons, that are located between the iron return yokes, designed to close the magnetic field generated by the solenoid. In the barrel region, where a smaller number of muons is expected and the magnetic field is less strong, Drift Tubes (DT) detectors are installed. In the endcaps, where the flux of particles is larger, Cathod Strip Chambers (CSC) are used, and disposed in three disks. CSCs are designed to allow faster responses, higher granulatiy and radiation resistance. Resistive Plate Chambers (RPC) are installed both in the barrel and in the endcaps as additional triggering system. The geometry of the muon system is showed in fig.~\ref{fig:CMS_muon}; it consists of 250 DTs, 530 CSCs, 610 RPCs, and it covers a region $|\eta|<2.4$.
+The outer system of the CMS experiment consists into gas detectors for identifying muons~\cite{MUON-TDR}, that are located between the iron return yokes, designed to close the magnetic field generated by the solenoid. In the barrel region, where a smaller number of muons is expected and the magnetic field is less strong, Drift Tubes (DT) detectors are installed. In the endcaps, where the flux of particles is larger, Cathod Strip Chambers (CSC) are used, and disposed in three disks. CSCs are designed to allow faster responses, higher granulatiy and radiation resistance. Resistive Plate Chambers (RPC) are installed both in the barrel and in the endcaps as additional triggering system. The geometry of the muon system is showed in fig.~\ref{fig:CMS_muon}; it consists of 250 DTs, 530 CSCs, 610 RPCs, and it covers a region $|\eta|<2.4$.
 
 \begin{figure}[!htb]
   \centering
@@ -233,7 +235,7 @@ Resistive Plate Chambers (RPC) are located both in the barrel (disposed in six l
 %Tracciatori e camere per i muoni coprono una regione di $|\eta|<2.5$, gli apparati calorimetrici arrivano fino ad $|\eta|<5.2$. Ci sono altri due rivelatori che permettono misure nella regione $5 \leq |\eta| \leq 11$, TOTEM e CASTOR. TOTEM sfrutta dei rivelatori a gas per le misure di scattering elastico protone protone in funzione del loro momento. CASTOR \`e un calorimetro elettromagnetico ed adronico che raccoglie luce Cherenkov, serve per misure di QCD in collisioni p-p, p-ione, ione-ione.
 
 \subsection{The trigger system and data acquisition}
-The CMS trigger system has been designed considering the high instantaneous luminosity, such that it can provide a fast response and it allows to reduce the nominal event rate of 40 MHz in proton proton collision. The complexity of the CMS detector and the very high number of readout channels result into a huge amount of data per event, approaching the order of few MB per bunch crossing, hence 40 TB per second. The handling and the recording of data is currently limited at the order of $\sim$100 Hz; hence, applying online selections to skim the events that are going to be written on tape, without rejecting interesting signals of hard processes and rare phenomena becomes a crucial and challenging point for every data analysis. Events are filtered by trigger selections at different levels: the Level-1 (L1) trigger is an hardware device, that allows to reduce the event rate from 40 MHz to the order of 100 kHz; the High Level Trigger (HLT) is a set of software algorithms that skims the event rate down to few hundred Hz. Once the trigger decisions are taken, the final events are handled by the Data Acquisition System (DAQ), that collects the informations coming from to the subdetectors and sends them to the storage devices.
+The CMS trigger system~\cite{TRIG-TDR} has been designed considering the high instantaneous luminosity, such that it can provide a fast response and it allows to reduce the nominal event rate of 40 MHz in proton proton collision. The complexity of the CMS detector and the very high number of readout channels result into a huge amount of data per event, approaching the order of few MB per bunch crossing, hence 40 TB per second. The handling and the recording of data is currently limited at the order of $\sim$100 Hz; hence, applying online selections to skim the events that are going to be written on tape, without rejecting interesting signals of hard processes and rare phenomena becomes a crucial and challenging point for every data analysis. Events are filtered by trigger selections at different levels: the Level-1 (L1) trigger is an hardware device, that allows to reduce the event rate from 40 MHz to the order of 100 kHz; the High Level Trigger (HLT) is a set of software algorithms that skims the event rate down to few hundred Hz. Once the trigger decisions are taken, the final events are handled by the Data Acquisition System (DAQ), that collects the informations coming from to the subdetectors and sends them to the storage devices.
 
 \subsubsection{The Level-1 trigger}
 The L1 trigger is an hardware device composed by customized electronics, and it accesses the informations coming from the calorimeters and the muon system, while the tracker is not considered given the excessively large bandwidth needed by its readout channels. The L1 trigger perform a first raw local reconstruction of each object, called ``trigger primitive''. The L1 trigger is composed by three subsystems: the calorimeter trigger, the muon trigger (divided in three independent sub-subsystems for each muon subdetector, namely DTs, RPCs and CSCs), and the global trigger, that combines the informations of the former subsystems. The best quality trigger primitives reconstructed by the calorimeter and muon detectors (namely, roughly reconstructed electrons, photons, muons, jets, jets coming from the hadronic decays of tau leptons, and missing energy) are handled by the global trigger, who takes the decision of discarding or keeping the event every 3.2 $\mu$s. The simplest trigger selections require the presence of a single object, whose energy or transverse momentum is higher than a certain threshold; more complicated triggers involve multiple objects or geometrical selections, that can be performed in parallel up to 128 simultaneous requirements.
@@ -242,10 +244,10 @@ The L1 trigger is an hardware device composed by customized electronics, and it 
 The HLT skims the L1 output rate down to few hundreds of Hz by applying a set of algorithms implemented in the same software used for the offline analysis, consisting in the event reconstructions exploiting the whole informations coming from all subdetectors. The computing time is still a crucial factor, hence selections applied to HLT physics objects are generally less accurate than those of the offline analysis; furthermore, HLT can discard the event even before its full reconstruction (\textit{i.e.} by looking only at certain region of the detectors). Events filtered by the HLT decisions are assigned to precise trigger paths and recorded in precise categories of datasets.
 
 \subsubsection{Data acquisition, computing and storage}
-The DAQ system deals with the storage, transfer and handling of the data collected by CMS; it also supports and stores the data simulations and calibrations of the subdetectors. The CMS computational resources are located in worldwide distributed data nodes, called Tiers. The CMS software (CMSSW) is based on an object oriented architecture (mainly C++). The basic unity of every data, both real and simulated ones, is the Event, that could contain very rough informations (RAW data format) or higher level refined objects (AOD, Analysis Object Data) where all the calibrations and corrections needed to properly deal with the final physics objects are already in place. Data are handled by C++ or python modules, and the outputs are written in ROOT files. [citazione]
+The DAQ system deals with the storage, transfer and handling of the data collected by CMS; it also supports and stores the data simulations and calibrations of the subdetectors. The CMS computational resources are located in worldwide distributed data nodes, called Tiers. The CMS software (CMSSW) is based on an object oriented architecture (mainly C++). The basic unity of every data, both real and simulated ones, is the Event, that could contain very rough informations (RAW data format) or higher level refined objects (AOD, Analysis Object Data) where all the calibrations and corrections needed to properly deal with the final physics objects are already in place. Data are handled by C++ or python modules, and the outputs are written in ROOT~\cite{Brun:1997pa} files.
 
 \subsection{Particle Flow event reconstruction}
-The particle flow (PF) algorithm [ref. paper] aims at identifying and reconstructing each particle produced by the proton-proton collisions, combining the informations coming from all the CMS subdetectors. It is particularly suitable to improve the reconstruction of jets, missing transverse momentum (used to identify neutrinos) and hadronically decaying tau leptons.\\
+The particle flow (PF) algorithm~\cite{Sirunyan:2270046} aims at identifying and reconstructing each particle produced by the proton-proton collisions, combining the informations coming from all the CMS subdetectors. It is particularly suitable to improve the reconstruction of jets, missing transverse momentum (used to identify neutrinos) and hadronically decaying tau leptons.\\
 The association of the informations is performed at different stages. The reconstruction of the charged particles in the silicon detector is performed with an iterative algorithm, and the reconstructed object is called a tracker track. Then, a clustering algorithm is performed to collect and combine the energy deposits in the calorimeters, in such a way to distinguish neutral from charged particles, reconstruct their directions, improve the energy measurement of the very energetic charged particles, whose tracks are less bended by the magnet and hence less precisely determined. The last informations are provided by the hits collected in the muon system. The three sets of reconstructions are then combined with a link algorithm, that aims at associating tracker tracks to calorimeter clusters and muon hits with geometrical criteria. A track in the silicon detector is linked to a calorimeter cluster if the extrapolated position lies in the cluster itself. Similarly, clusters in different calorimeters are linked when the position in the more granular calorimeter (\textit{i.e.} ECAL) lies in the envelope of the clusters in the less granular calorimeter (\textit{i.e.} HCAL). The decision of linking a tracker track to a muon track is based on the $\chi^2$ of a global fit between the two tracks.\\
 The particle flow algorithm then interprets the collected and linked informations as different particles. Muons are identified by the combination of a track in the silicon detectors and a track in the muon chambers. Photons are determined directly by ECAL clusters. Electrons energies and positions are measured by ECAL clusters, linked to a corresponding tracker track, and considering all the energy clusters produced by the bremsstrahlung photons radiated while interacting with the material. The hadrons are identified by the tracks (if charged) linked to the corresponding ECAL and HCAL clusters. The hadron energy resolution, 10\% at 100 GeV combining ECAL and HCAL, is such that neutral hadrons can be distinguished as an energy calorimetric excess when overlapped by a charged hadron occupying the same calorimetric towers. Finally, the missing transverse momentum is defined as the negative sum of the transverse momenta of all the particles identified by the PF algorithm.\\
 
@@ -336,10 +338,10 @@ An additional effect that must be taken in account is the discrepancy in the jet
 
 \begin{figure}[!htb]
   \centering
-    \includegraphics[width=.5\textwidth]{figures/JetPlots/RelResVsJetPt_JetEta0to0p5_Mu_80x-1.pdf}%
-    \includegraphics[width=.5\textwidth]{figures/JetPlots/RelResVsJetPt_JetEta3p2to4p7_Mu_80x-1.pdf}
+    \includegraphics[width=.45\textwidth]{figures/JetPlots/RelResVsJetPt_JetEta0to0p5_Mu_80x-1.pdf}%
+    \includegraphics[width=.45\textwidth]{figures/JetPlots/RelResVsJetPt_JetEta3p2to4p7_Mu_80x-1.pdf}
 \\
-\includegraphics[width=.5\textwidth]{figures/JetPlots/JER_SF.png}
+\includegraphics[width=.45\textwidth]{figures/JetPlots/JER_SF.png}
   \caption{Top: jet energy resolution in MC simulations, as a function of the jet \pt. Different curves represent a different average number of primary vertices per event ($\mu$). Bottom: data-MC scale factors, as a function of the jet $\eta$, measured in 2016 data (yellow dots).}
   \label{fig:plot_JER}
 \end{figure}
@@ -371,36 +373,83 @@ By tuning the different selections, working points with different efficiencies h
 
 \subsubsection{Missing transverse energy reconstruction}
 Neutrinos can interact with the other particles only via the electroweak interactions; hence, when a neutrino is produced in the proton-proton collisions, it passes thorugh the CMS experiment, undetected. Its only experimental signature is the momentum imbalance (\met) in the transverse plane $r \phi$. The magnitude of \met vector is also called missing transverse energy, \MET. Given its definition, it is evident that \MET is a delicate variable to deal with, since it depends on all the other objects, on their imperfect measurements, on the detector noise and the pile-up events.\\
-The PF \MET is the negative sum of the transverse momenta of the PF candidates reconstructed in the event. Inefficiencies in the tracker reconstruction and non-linear responses of the calorimeters can be corrected by propagating the jet energy corrections to \met:
+The PF \MET is the negative sum of the transverse momenta of the PF candidates reconstructed in the event. Inefficiencies in the tracker reconstruction and non-linear responses of the calorimeters can be corrected by propagating the jet energy corrections to \met~\cite{CMS:2016ljj}:
 \begin{equation}
 \vec{p}_T^{\text{miss,corr}} = \vec{p}_T^{\text{miss}} - \sum_{j \in \text{jets}} \left( \vec{p}_{T,j}^{\text{corr}} - \vec{p}_{T,j}^{\text{raw}}\right),
 \label{eq:met_typeI}
 \end{equation}
 where "corr" ("raw") is related to corrected (raw) \pt of the considered jet. This correction is known as the "Type-I" correction to \MET. Jets included in the calculation are AK4 with CHS algorithm applied to remove the pile-up contribution, they must have $p_T>15$ GeV and less than 90\% of their energy deposited in the electromagnetic calorimeter. If a muon lies in the jet cone, it is subtracted from the jet and added after the $p_T$ correction. A similar correction is performed to correct \met at trigger level; in this case, a jet \pt threshold of 35 GeV is chosen.\\
-The topology of the final state affects the \MET uncertainties; hence, they are factorized considering the effects 
+The \MET uncertainty is obtained by factorizing \met in components: electrons, photons, muons, taus, jets, jets with \pt$<$10 GeV and all the remaining PF candidates that are not clustered inside jets, called unclustered energy. The momentum of every object is varied within its unvertainties (namely, the energy scale and resolution), and the effects are propagated to \met. The most significant contributions in the unclustered energy is due to neutral PF hadrons and hadrons reconstructed in HF. The effects related to jet energy scale and unclustered energy scale are measured on simulation, in events with a top and an anti-top quarks, and amounts to 5\% and 30\%~\cite{CMS:2016ljj}.\\
 
-To estimate the uncertainty
-on the \MET, one can factorize it into its components of jets, electrons, muons, taus, photons
-and jets of \pt $<$10 GeV and PF candidates not within jets (defined as the unclustered energy)
-and vary each object within its scale and resolution uncertainties.  For the unclustered energy
-uncertainty the low energy PF particles are further divided into groups to account for the res-
-olution effect of different detector components: charged PF hadrons (dominated by the tracker
-resolution), neutral PF hadrons (dominated by the HCAL resolution), photon PF candidates
-(dominated by the ECAL resolution) and PF candidates associated with the forward hadronic
-(HF) calorimeter (dominated by the forward HCAL resolution).  The largest contributions to
-the unclustered energy uncertainty are due to the neutral PF hadrons and HF PF candidates.
-The magnitude of the uncertainties due to jet energy scale correction and unclustered energy
-scale variations are found to be 5\% and 30\% respectively in an inclusive ttbar simulation.
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.45\textwidth]{figures/MetPlots/BeamHalo_event_display.png}%
+    \includegraphics[width=.35\textwidth]{figures/MetPlots/Filters.pdf}
 
-%\begin{figure}[!htb]
-%  \centering
-%    \includegraphics[width=.5\textwidth]{figures/MetPlots/TypeI_corr.pdf}%
-%    \includegraphics[width=.5\textwidth]{figures/MetPlots/TypeI_corr.pdf}
-%
-%  \caption{.....}
-%  \label{fig:met_typeI}
-%\end{figure}
+  \caption{Top: event display of beam halo particles hitting the CSC detector. Bottom: comparison of data and simulations (histograms) when di-jet events are selected, before (open markers) and after (filled markers) anomalous \MET cleaning algorithms have been applied on data.}
+  \label{fig:met_filters}
+\end{figure}
 
+\noindent Many instrumental effects can give rise to anomalous \MET determination: they have been studied in detail during Run1~\cite{Chatrchyan:2011tn,CMS:vgm} and Run2~\cite{CMS:2016ljj}, and they are mainly caused by ECAL and HCAL. In ECAL, anomalous \met is caused by particles hitting the sensors of the photodetectors, or by beam halo particles (namely, particles produced in spurious proton interactions before reaching the interaction point in the detector) showering inside the calorimeter, or by losses due to ECAL dead cells. An event display representing beam halo muons hitting the CSC detector is showed in fig.~\ref{fig:met_filters} (top). In HCAL, spurious \met can be related to noise in the hybrid photodiodes and readout frontend. In HF, missing \pt can be related to particles lost in the light guides and photomultipliers. Anomalous \MET can be produced by low quality muon tracks, that are not linked to segments reconstructed in the muon chambers by the PF algorithm. These tracks are then classified as charged hadrons, taken into account in the \met calculation, and result into a large amount of fake \MET. Dedicated algorithms have been designed to identify and reject events with anomalous \MET, and they are consistently applied on data and simulations. In fig.~\ref{fig:met_filters} (bottom), Monte Carlo simulations (coloured histograms) are compared to data after the algorithms removing the anomalous \MET have been applied (filled markers) and before the cleaning (open markers). The spurious high-\met tail has been suppressed.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.35\textwidth]{figures/MetPlots/u_comp_Z.png}%
+    \includegraphics[width=.35\textwidth]{figures/MetPlots/u_comp_gamma.png}
+
+  \caption{Left (Right): kinematics of $Z \rightarrow \ell \ell$ (photon) events in the $(r, \phi)$ plane; $\vec{u}_T$ is the hadronic recoil, $\vec{q}_T$ is the transverse momentum of the considered boson.}
+  \label{fig:recoil}
+\end{figure}
+
+\noindent Performance of \MET reconstruction are studied in events with a leptonic decay of a Z boson (in two muons or in two electrons) or an isolated photon. The distributions of \MET are showed in top fig.~\ref{fig:recoil_distribution}, separately for the three event categories. The hadronic recoil $\vec{u}_T$ is defined as the vectorial sum of all the particles, except the momentum $\vec{q}_T$of the vector boson considered (Z or $\gamma$). From the momentum conservations, the following relation holds:
+\begin{equation}
+\vec{q}_T + \met + \vec{u}_T = 0.
+\label{eq:recoil_def}
+\end{equation}
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.33\textwidth]{figures/MetPlots/distr_mu.pdf}%
+    \includegraphics[width=.33\textwidth]{figures/MetPlots/distr_ele.pdf}%
+    \includegraphics[width=.33\textwidth]{figures/MetPlots/distr_gamma.pdf}
+
+%    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_para_mu.pdf}%
+%    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_para_ele.pdf}%
+%    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_para_gamma.pdf}
+
+%    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_perp_mu.pdf}%
+%    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_perp_ele.pdf}%
+%    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_perp_gamma.pdf}
+  \caption{Data (black markers) and Monte Carlo (histograms) distributions of \MET variable, in events reconstructing respectively a $Z \rightarrow \mu \mu$ decay (left), a $Z \rightarrow e e$ decay (center), an isolated photon (right).}
+  \label{fig:recoil_distribution}
+\end{figure}
+
+\noindent The two components of the hadronic recoil, $u_{\parallel}$ and $u_{\bot}$, along with the vectors described in eq.\ref{eq:recoil_def}, are schematically represented in fig.~\ref{fig:recoil}.\\
+The \MET response, defined as $- \langle u_{\parallel} \rangle / \langle q_T \rangle$, is calculated as a function of $q_T$ in data and simulations (fig.~\ref{fig:met_response}, left). The distributions of the two components of the hadronic recoil, $u_{\parallel} + q_T$ and $u_{\bot}$, are modelled as Voigtian functions (the convolution of a Gaussian with a Breit-Wigner).%, and are showed in fig.~\ref{fig:recoil_distribution} (central and bottom row), for each data sample ($Z \rightarrow \mu \mu$, $Z \rightarrow e e$, $\gamma$).
+ The \MET resolution of each component is calculated as the full width at half maximum of the corresponding Voigtian, and it is displayed in fig.~\ref{fig:met_response} (center and right plots), as a function of $q_T$.
+
+\begin{figure}[!htb]
+  \centering
+    \includegraphics[width=.33\textwidth]{figures/MetPlots/response.pdf}%
+    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_para_res.pdf}%
+    \includegraphics[width=.33\textwidth]{figures/MetPlots/u_perp_res.pdf}
+
+  \caption{Top plots -- Left: \MET response, as a function of the transverse momentum $q_T$ of the vector boson considered in the event (Z decaying in $\mu \mu$, Z in $ee$ or a photon), measured on data. Center and right: resolution on the measurement of the parallel and perpendicular hadronic recoil in data, as a function of $q_T$. Bottom plots: data and simulation ratio of the corresponding measured variables.}
+  \label{fig:met_response}
+\end{figure}
+
+%\noindent Distribution in fig... The data distributions are modeled well by the simulation. The increase in the uncertainty band in Fig. 6 around 60  GeV is due to the large impact of the unclustered energy uncertainties.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Things I didn't understand:
+
+%1% The back-to-back nature of events implies that u‖ is balanced with qT, thus centering u‖ + qT around zero. The u⊥ distribution is found to be symmetric because of the isotropic nature of energy fluctuations due to detector noise and underlying event.
+
+%2% The curves show that the EmissT is able to fully recover the hadronic recoil activity corresponding to a Z boson qT of 50 GeV, whereas below that, the uncorrected unclustered energy contributions are dominating compared to the corrected energy of the recoiling jets.  The response in data and simulation is in agreement well within the uncertainties.
+
+%3% The resolutions measured in the different samples are in good agreement and are found to be increasing with the qT. The isotropic nature of energy fluctuations, such as detector noise and underlying event, causes the perpendicular component of the recoil energy to have a more stable resolution compared to the parallel component.
+
+%\clearpage
 \section{ATLAS, ALICE, LHCb detectors}
 
 \subsection{ATLAS}
