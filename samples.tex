@@ -65,58 +65,138 @@ Signal samples of a spin-2 (Bulk Graviton) decaying in a pair of \Z bosons are e
 \subsection{Signal characterization}
 
 This analysis is performed in a high mass region (from 1~\TeV to 4.5~\TeV). The \MADGRAPH algorithm generates the hard process production in the collision with \pt = 0. In the next step of the simulation, during the hadronization, \PYTHIA adds the QCD ISR (initial state radiation) and consequently a resonance \pt different from 0.
-The transverse mass and \pt distributions of the heavy resonance after the \PYTHIA simulation is shown in fig.~\ref{fig:genSignal1} for Bulk Graviton signal samples (and in fig.~\ref{fig:genSignal2} for \Wp signal samples). The typical \pt is small compared to the mass of the resonance, and about two thirds of the events have \pt smaller than 50 \GeV. The \pt distributions of the electroweak bosons, along with the mass of the hadronically decaying \Z and the angular separation of the two \Z bosons in the transverse plane, are shown as well.
+%The transverse mass and \pt distributions of the heavy resonance after the \PYTHIA simulation are shown in fig.~\ref{fig:genSignal1} for Bulk Graviton signal samples (and in fig.~\ref{fig:genSignal2} for \Wp signal samples). The typical \pt is small compared to the mass of the resonance, and about two thirds of the events have \pt smaller than 50 \GeV. The \pt distributions of the electroweak bosons, along with the mass of the hadronically decaying \Z (\W) and the angular separation of the two electroweak bosons in the transverse plane are shown as well.
+Kinematical distributions at generator level are showed in fig.~\ref{fig:genGravSignal1}-\ref{fig:genGravSignal3} for spin-2 Bulk Graviton signal, and in fig.~\ref{fig:genWprimeSignal1}-\ref{fig:genWprimeSignal3} for spin-1 HVT \Wp signal.
 
- 
  \begin{figure}[!htb]
    \begin{center}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_XMT.pdf}%GenPhi1pt.pdf}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_XPt.pdf}%GenPhi1y.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_XMT.pdf}%GenPhi1pt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_XPt.pdf}%GenPhi1y.pdf}
      %\\
      %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZLepMass.pdf}%GenZmass.pdf}
      %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZHadMass.pdf}%GenHmass.pdf}
      \\
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZLepPt.pdf}%GenZpt.pdf}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZHadPt.pdf}%GenHpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_ZLepMass.pdf}%GenZpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_ZLepPt.pdf}%GenHpt.pdf}
      \\
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZHadMass.pdf}%GenZdR.pdf}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZZDPhi.pdf}%GenHdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_VHadMass.pdf}%GenZdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_VHadPt.pdf}%GenHdR.pdf}
    \end{center}
-   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-2 Bulk Graviton signal.}
-   \label{fig:genSignal1}
+   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-2 Bulk Graviton signal, considering different mass hypoteses ($m_{\G} = 0.6, 1, 2, 3, 4, 4.5$ TeV). Top: graviton transverse mass and \pt distributions. Center: invisibly decaying \Z mass and \pt. Bottom: hadronically decaying \Z mass and \pt.}
+   \label{fig:genGravSignal1}
  \end{figure}
 
  \begin{figure}[!htb]
    \begin{center}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_XMT.pdf}%GenPhi1pt.pdf}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_XPt.pdf}%GenPhi1y.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_XRapidity.pdf}%GenPhi1pt.pdf}
+     %\includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_VZDR.pdf}%GenPhi1y.pdf}
      %\\
      %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZLepMass.pdf}%GenZmass.pdf}
      %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZHadMass.pdf}%GenHmass.pdf}
      \\
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZLepPt.pdf}%GenZpt.pdf}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZHadPt.pdf}%GenHpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_ZLepEta.pdf}%GenZpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_Lep1Eta.pdf}%GenHpt.pdf}
      \\
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZHadMass.pdf}%GenZdR.pdf}
-     \includegraphics[width=.495\textwidth]{Gen_v7/XZZInv_g_ZZDPhi.pdf}%GenHdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_VHadEta.pdf}%GenZdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_Had1Eta.pdf}%GenHdR.pdf}
    \end{center}
-   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-1 \Wp signal.}
-   \label{fig:genSignal2}
- \end{figure} 
- 
+   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-2 Bulk Graviton signal, considering different mass hypoteses ($m_{\G} = 0.6, 1, 2, 3, 4, 4.5$ TeV). Top: graviton rapidity $\mathcal{Y}$. Center: pseudorapidity $\eta$ of the invisibly decaying \Z, and pseudorapidity of the leading neutrino. Bottom: pseudorapidity $\eta$ of the hadronically decaying \Z, and pseudorapidity of the leading quark.}
+   \label{fig:genGravSignal2}
+ \end{figure}
+
+ \begin{figure}[!htb]
+   \begin{center}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_VZDPhi.pdf}%GenPhi1pt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_VZDR.pdf}%GenPhi1y.pdf}
+     %\\
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZLepMass.pdf}%GenZmass.pdf}
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZHadMass.pdf}%GenHmass.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_LepDR.pdf}%GenZpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_HadDR.pdf}%GenHpt.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_CosThetaStar.pdf}%GenZdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_CosThetaJ.pdf}%GenHdR.pdf}
+   \end{center}
+   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-2 Bulk Graviton signal, considering different mass hypoteses ($m_{\G} = 0.6, 1, 2, 3, 4, 4.5$ TeV). Top: angular separation in the transverse plane $\Delta \phi$ (left) and solid angle $\Delta R$ (right) between leptonic \Z and hadronic \Z. Center: solid angle between the neutrinos and the quarks. Bottom: distribution of $\cos{\theta}^{*}$ and $\cos{\theta}_{J}$ (described in text).}
+   \label{fig:genGravSignal3}
+ \end{figure}
+
+ \begin{figure}[!htb]
+   \begin{center}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_XMT.pdf}%GenPhi1pt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_XPt.pdf}%GenPhi1y.pdf}
+     %\\
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZLepMass.pdf}%GenZmass.pdf}
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZHadMass.pdf}%GenHmass.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_ZLepMass.pdf}%GenZpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_ZLepPt.pdf}%GenHpt.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_VHadMass.pdf}%GenZdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_VHadPt.pdf}%GenHdR.pdf}
+   \end{center}
+   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-1 \Wp signal, considering different mass hypoteses ($m_{\Wp} = 0.6, 1, 2, 3, 4, 4.5$ TeV). Top: \Wp transverse mass and \pt distributions. Center: invisibly decaying \Z mass and \pt. Bottom: hadronically decaying \W mass and \pt.}
+   \label{fig:genWprimeSignal1}
+ \end{figure}
+
+ \begin{figure}[!htb]
+   \begin{center}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_XRapidity.pdf}%GenPhi1pt.pdf}
+     %\includegraphics[width=.495\textwidth]{Gen_v9/XZZInv_g_VZDR.pdf}%GenPhi1y.pdf}
+     %\\
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZLepMass.pdf}%GenZmass.pdf}
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZHadMass.pdf}%GenHmass.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_ZLepEta.pdf}%GenZpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_Lep1Eta.pdf}%GenHpt.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_VHadEta.pdf}%GenZdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_Had1Eta.pdf}%GenHdR.pdf}
+   \end{center}
+   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-1 \Wp signal, considering different mass hypoteses ($m_{\Wp} = 0.6, 1, 2, 3, 4, 4.5$ TeV). Top: \Wp rapidity $\mathcal{Y}$. Center: pseudorapidity $\eta$ of the invisibly decaying \Z, and pseudorapidity of the leading neutrino. Bottom: pseudorapidity $\eta$ of the hadronically decaying \W, and pseudorapidity of the leading quark.}
+   \label{fig:genWprimeSignal2}
+ \end{figure}
+
+ \begin{figure}[!htb]
+   \begin{center}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_VZDPhi.pdf}%GenPhi1pt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_VZDR.pdf}%GenPhi1y.pdf}
+     %\\
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZLepMass.pdf}%GenZmass.pdf}
+     %\includegraphics[width=.495\textwidth]{Gen_v7/g_ZHadMass.pdf}%GenHmass.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_LepDR.pdf}%GenZpt.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_HadDR.pdf}%GenHpt.pdf}
+     \\
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_CosThetaStar.pdf}%GenZdR.pdf}
+     \includegraphics[width=.495\textwidth]{Gen_v9/XWZInv_g_CosThetaJ.pdf}%GenHdR.pdf}
+   \end{center}
+   \caption{Main signal kinematic quantities at generation level after parton showering, for spin-1 \Wp signal, considering different mass hypoteses ($m_{\Wp} = 0.6, 1, 2, 3, 4, 4.5$ TeV). Top: angular separation in the transverse plane $\Delta \phi$ (left) and solid angle $\Delta R$ (right) between leptonic \Z and hadronic \W. Center: solid angle between the neutrinos and the quarks. Bottom: distribution of $\cos{\theta}^{*}$ and $\cos{\theta}_{J}$ (described in text).}
+   \label{fig:genWprimeSignal3}
+ \end{figure}
+
 \clearpage
+
+\noindent Angular distributions are related to the spin, the polarization and the kinematics of the produced resonance; in particular:
+\begin{itemize}
+\item the $\Delta R$ among neutrinos and quarks reflect the boosted nature of the electroweak bosons: the more massive the resonance, the larger the boost, and hence the closer the fermions. By looking at fig.~\ref{fig:genGravSignal3}-\ref{fig:genWprimeSignal3}, with a jet clustering parameter of 0.8 (AK8 jet) it is possible to enclose the quarks produced by the decay of the \V boson, for a resonance mass over 1 \TeV;
+%\item the resonance rapidity $\mathcal{Y}$ is sensitive to the production mechanism
+\item the $\cos{\theta}^{*}$, namely the cosine of the angle between the momentum of the \V boson, calculated in the resonance rest frame, and the flight direction of the resonance itself in the laboratory frame. This variable depends on the spin of the diboson resonance (spin-2 and spin-1 distributions are different, fig.~\ref{fig:genGravSignal3}-\ref{fig:genWprimeSignal3}). % This variable affects the p T distributions of bosons. When cos θ ∗ = 0, the p T of bosons in the lab frame, for a given X mass, reaches the maximum value and the new resonance X has a symmetric decay where the two bosons have equal p T ’s in the lab frame.
+\item the $\cos{\theta}_J$, the cosine of the angle between the momentum of the leading quark, calculated in the \V rest frame, and the flight direction of the \V boson in the laboratory frame. This variable depends on the polarization state of the decay bosons~\cite{Khachatryan:2014vla}; in both HVT and bulk graviton model, electroweak bosons are expected to be longitudinally polarized. When $\cos{\theta}_J \rightarrow 0$, quarks are produced very close in angle and hence it is difficult to disentangle the two substructures in the large-cone jet (sec.~\ref{ssec:jetsub}); when $\cos{\theta}_J \rightarrow \pi$ the quarks are emitted asymmetrically (one is softer than the other).% asymmetric production -> tau21 can fail. This variable affects the pruned mass and the jet substructure variables (e.g. τ 21 ). The pruning algorithm and the τ 21 selections preferentially select jets that are split more symmetrically, which corresponds to a cos θ 1 value closer to zero.
+\end{itemize}
+ 
+
 
 \subsection{Background samples}\label{ssec:backgrounds}
 
-
-All physics processes yielding final states two neutrinos in association with a pair of quarks have to be considered as possible sources of background for the analysis.
-The complete list of background datasets considered is presented in Table~\ref{tab:bkg_datasets1}, where the cross section used to normalize SM backgrounds measured by CMS and/or calculated at (N)NLO by the Standard Model Cross Section Working Group~\cite{} are also reported.
+The physics processes yielding final states with two neutrinos in association with a pair of quarks are considered as sources of background; they are listed in tab.~\ref{tab:bkg_datasets1}, along with the expected cross-sections at next-to-leading order (NLO) or next-to-next-to leading (NNLO).
 
 \begin{itemize}
-  \item {\bf Z + jets}: this process represents the main irreducible background for the signal. The production of single \Z/$\gamma^*$ bosons in association with one or more partons or gluons in the final state is topologically similar to the searched signal, but its final state quarks feature a generally softer \pt spectrum, a non-resonant and rapidly falling di-jet mass distribution, and other less distinctive characteristics (effective spin and color radiation) that should theoretically distinguish it from the signal. This \Z+jets background is produced in samples binned in \pt of the \Z boson starting from 100 \GeV with the {\sc aMC@NLO} generator, with FXFX merging~\cite{bib:FXFX}. The contribution from events with $\pt<100$~GeV is negligible after we require the \met to be greater than 200~\GeV (Section~\ref{sec:selections}).
+  \item {\bf Z + jets}: this process represents the main irreducible background for the signal. The production of a \Z boson in association with one or more partons in the final state has a similar topology to the signal. This \Z+jets background is produced in samples binned in \pt of the \Z boson starting from 100 \GeV with the {\sc aMC@NLO} generator, with FXFX merging~\cite{bib:FXFX}. The contribution from events with $\pt<100$~GeV is negligible after we require the \met to be greater than 200~\GeV (sec.~\ref{sec:selections}).
 
-  \item {\bf W + jets}: the leptonic decay of a \W boson can be an irreducible background in the case the charged lepton escapes undetected (e.g. outside the detector acceptance) or fails the lepton identification requirements. The production of a \W boson has a cross section larger by an order of magnitude with respect to the \Z, and this makes the \W+jets a relevant background also when a lepton veto is applied. This \W+jets background is produced in samples binned in \pt of the \W boson starting from 100 \GeV with the {\sc aMC@NLO} generator. \W+jets background binned in \HT (the sum of the \pt of the hadrons at LHE level) starting from 100 \GeV with the \MADGRAPH LO generator are kept as backup samples.
-
+  \item {\bf W + jets}: the leptonic decay of a \W boson can be an irreducible background in the case the charged lepton escapes undetected (e.g. outside the detector acceptance) or fails the lepton identification requirements. The production of a \W boson has a cross section larger by an order of magnitude with respect to the \Z, and this makes the \W+jets a relevant background also when a lepton veto is applied. This \W+jets background is produced in samples binned in \pt of the \W boson starting from 100 \GeV with the {\sc aMC@NLO} generator.% \W+jets background binned in \HT (the sum of the \pt of the hadrons at generator level) starting from 100 \GeV with the \MADGRAPH LO generator are kept as backup samples.
+\color{red}
   \item $\mathbf{top}$: production of \ttbar pairs represents a particularly challenging background at the LHC, given its large production cross section. These events always contain two energetic b-jets and two \W bosons which may decay to leptons that escape the detector or fail to be identified as leptons. Inclusive \ttbar decays have been considered. The primary handles to reduce the \ttbar background are topological, such as the azimuthal opening angle between the \Z boson and the dijet system, which is more broadly distributed in top pair production than in signal events. In \ttbar production the dilepton mass is not resonating in the Z mass region, and their \pt spectrum is sharply falling, given the absence of a single boosted resonance. This analysis makes use of \ttbar samples based on \POWHEG v2~\cite{bib:POWHEGst} NLO generator.
   Single-top and single-antitop samples are produced in the 5-flavours scheme using \POWHEG v2~\cite{bib:POWHEGtt} NLO generator.
   
@@ -130,28 +210,27 @@ The complete list of background datasets considered is presented in Table~\ref{t
 %\begin{sidewaystable}[!htb]\centering
 \begin{table}[!htb]\centering
 \caption{Simulated samples. The cross section $\times$ branching ratio is shown in \pb.\label{tab:bkg_datasets1} (*) cross sections taken from McM.}
-\begin{tabular}{lll}
- \hline
- Dataset & $\sigma\times\mathcal{B}$ [pb] & Events \\
- 
-% \hline
-DYJetsToNuNu\_PtZ-100To250\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & 170.4 & 5353639\\
-DYJetsToNuNu\_PtZ-100To250\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & 170.4 & 5356674\\
-DYJetsToNuNu\_PtZ-250To400\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & 6.636 & 1052985\\
-DYJetsToNuNu\_PtZ-250To400\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & 6.636 & 1059634\\
-DYJetsToNuNu\_PtZ-400To650\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & 0.9372 & 1050705\\
-DYJetsToNuNu\_PtZ-400To650\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & 0.9372 & 1050592\\
-DYJetsToNuNu\_PtZ-650ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & 0.1042 & 1022595\\
-DYJetsToNuNu\_PtZ-650ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & 0.1042 & 1024620\\
+\begin{tabular}{lcccc}
+ Signal process &  Kinematical cuts & Generator & $\sigma\times\mathcal{B}$ [pb] & Events \\
+ \hline 
+$Z \rightarrow \nu \nu$ + jets & $100 < p_{T,Z} < 250$ \GeV & amcatnloFXFX -- Pythia8 &170.4 & 5353639\\
+$Z \rightarrow \nu \nu$ + jets & $100 < p_{T,Z} < 250$ \GeV & amcatnloFXFX -- Pythia8 &170.4 & 5356674\\
+
+$Z \rightarrow \nu \nu$ + jets & $250 < p_{T,Z} < 400$ \GeV & amcatnloFXFX -- Pythia8 & 6.636 & 1052985\\
+$Z \rightarrow \nu \nu$ + jets & $250 < p_{T,Z} < 400$ \GeV & amcatnloFXFX -- Pythia8 & 6.636 & 1059634\\
+$Z \rightarrow \nu \nu$ + jets & $400 < p_{T,Z} < 650$ \GeV & amcatnloFXFX -- Pythia8 & 0.9372 & 1050705\\
+$Z \rightarrow \nu \nu$ + jets & $400 < p_{T,Z} < 650$ \GeV & amcatnloFXFX -- Pythia8 & 0.9372 & 1050592\\
+$Z \rightarrow \nu \nu$ + jets & $p_{T,Z} > 650$ \GeV & amcatnloFXFX -- Pythia8 & 0.1042 & 1022595\\
+$Z \rightarrow \nu \nu$ + jets & $p_{T,Z} > 650$ \GeV & amcatnloFXFX -- Pythia8 & 0.1042 & 1024620\\
 \hline
-WJetsToLNu\_PtZ-100To250\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & * 676.3 & 10089661\\
-WJetsToLNu\_PtZ-100To250\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & * 676.3& 10088599\\
-WJetsToLNu\_PtZ-250To400\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & * 23.94 & 1001250\\
-WJetsToLNu\_PtZ-250To400\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & * 23.94 & 1000132\\
-WJetsToLNu\_PtZ-400To650\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & * 3.031 & 951713\\
-WJetsToLNu\_PtZ-400To650\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & * 3.031 & 988234\\
-WJetsToLNu\_PtZ-650ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8-v1 & * 0.4524 & 989482\\
-WJetsToLNu\_PtZ-650ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & * 0.4524 & 985127\\
+$W \rightarrow \ell \nu$ + jets & $100 < p_{T,W} < 250$ \GeV & amcatnloFXFX -- Pythia8 & 676.3 & 10089661\\
+$W \rightarrow \ell \nu$ + jets & $100 < p_{T,W} < 250$ \GeV & amcatnloFXFX -- Pythia8 & 676.3& 10088599\\
+$W \rightarrow \ell \nu$ + jets & $250 < p_{T,W} < 400$ \GeV & amcatnloFXFX -- Pythia8 & 23.94 & 1001250\\
+$W \rightarrow \ell \nu$ + jets & $250 < p_{T,W} < 400$ \GeV & amcatnloFXFX -- Pythia8 & 23.94 & 1000132\\
+$W \rightarrow \ell \nu$ + jets & $400 < p_{T,W} < 650$ \GeV & amcatnloFXFX -- Pythia8 & 3.031 & 951713\\
+$W \rightarrow \ell \nu$ + jets & $400 < p_{T,W} < 650$ \GeV & amcatnloFXFX -- Pythia8 & 3.031 & 988234\\
+$W \rightarrow \ell \nu$ + jets & $p_{T,W} < 650$ \GeV & amcatnloFXFX -- Pythia8 & 0.4524 & 989482\\
+$W \rightarrow \ell \nu$ + jets & $p_{T,W} > 650$ \GeV & amcatnloFXFX -- Pythia8 & 0.4524 & 985127\\
 %%
 %%
 %WJetsToLNu\_HT-100To200\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8\_ext1-v1 & 1292.0 & 35244500 \\
@@ -162,18 +241,24 @@ WJetsToLNu\_PtZ-650ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8\_ext1-v1 & * 
 %WJetsToLNu\_HT-1200To2500\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8\_ext1-v1 & 1.334 & 7063909\\
 %WJetsToLNu\_HT-2500ToInf\_TuneCUETP8M1\_13TeV-madgraphMLM-pythia8-v1 & 0.03089 & 2254248 \\
 \hline
-TT\_TuneCUETP8M1\_13TeV-powheg-pythia8\_ext4-v1 & 831.76 & 77229341 \\
-%ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1-v1 & 35.85 & 992024\\
-ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1\_ext1-v1 & 35.85 & 6952830\\
-%ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1-v1 & 35.85 & 998276\\
-ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8\_TuneCUETP8M1\_ext1-v1 & 35.85 & 6933094\\
+\ttbar inclusive & - & Powheg -- Pythia8 & 831.76 & 77229341 \\
+$t$ ($tW$ channel) & - & Powheg -- Pythia8 & 35.85 & 6952830\\
+5f inclusive \\
+$\bar{t}$ ($\bar{t}W$ channel) & - & Powheg -- Pythia8 & 35.85 & 6933094\\
+5f inclusive \\
+$t$ (s-channel) & - & amcatnloFXFX -- Pythia8 & 3.344 & 622990\\
+4f lepton decays \\
+$t$ (t-channel) & - & Powheg -- Madspin -- Pythia8 & 136.02 & 67240808 \\
+4f inclusive \\
+$\bar{t}$ (t-channel) & - & Powheg -- Madspin -- Pythia8 & 80.95 & 38811017\\
+4f inclusive \\
 \hline
-WW\_TuneCUETP8M1\_13TeV-pythia8-v1 & 118.7 & 994012\\
-WW\_TuneCUETP8M1\_13TeV-pythia8\_ext1-v1 & 118.7 & 6987124\\
-WZ\_TuneCUETP8M1\_13TeV-pythia8-v1 & 47.2 & 1000000\\
-WZ\_TuneCUETP8M1\_13TeV-pythia8\_ext1-v1 & 47.2 & 2995828\\
-ZZ\_TuneCUETP8M1\_13TeV-pythia8-v1 & 16.6 & 990064 \\
-ZZ\_TuneCUETP8M1\_13TeV-pythia8\_ext1-v1 & 16.6 & 998034\\
+$WW$ inclusive & - & Pythia8 & $118.7$ & 994012\\%uncertianty: ^{+2.5\%}_{-2.2\%}
+$WW$ inclusive & - & Pythia8 & 118.7 & 6987124\\
+$WZ$ inclusive & - & Pythia8 & 47.2 & 1000000\\
+$WZ$ inclusive & - & Pythia8 & 47.2 & 2995828\\
+$ZZ$ inclusive & - & Pythia8 & 16.6 & 990064 \\
+$ZZ$ inclusive & - & Pythia8 & 16.6 & 998034\\
 \hline
 
 
