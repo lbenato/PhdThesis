@@ -1,17 +1,12 @@
 \section{Event selection}
 \label{sec:objects}
 
-In this section, a list of the physics objects used in the analysis is presented, together with performance and validation plots. 
-
-The objects are selected according to the standard Run2 reccomendations provided by the various POGs for the Summer16 (25ns) MiniAOD-v2 (Moriond reccomendations).
-
-The version of CMSSW used for the analysis is {\tt CMSSW\_8\_0\_25}.
+In this section, a list of the selections applied to the physics objects used in the analysis is presented, together with performance and validation plots. 
+%%The objects are selected according to the standard Run2 reccomendations provided by the various POGs for the Summer16 (25ns) MiniAOD-v2 (Moriond reccomendations).
+%The version of CMSSW used for the analysis is {\tt CMSSW\_8\_0\_25}.
 
 \subsection{Vertex and Pile-up}
-{\color{red} How the vertices and pile-up are reconstructed}
-
-Due to pileup several primary vertices are typically reconstructed in an event.
-The primary vertex of the event is defined as the one with the highest sum of transverse momenta $\sum \pt^2$ of clustered physics objects associated to it, which passes the following selections:
+Due to the pile-up effect, several primary vertices are typically reconstructed in an event. The primary vertex of the event is defined as the one with the highest sum of transverse momenta $\sum \pt^2$ of clustered physics objects associated to it, which passes the following selections:
 \begin{itemize}
   \item number of degrees of freedom $N_{DoF}>4$
   \item vertex position along the beampipe $|z_{vtx}|<24\cm$
@@ -19,41 +14,24 @@ The primary vertex of the event is defined as the one with the highest sum of tr
 \end{itemize}
 where $z_{vtx}$ and $d_0$ are the distance along and perpendicular to the beam line of the vertex with respect the nominal interaction point $(0,0,0)$.
 
-The data sample contains a significant number of additional interactions per bunch crossing, an effect known as pileup (PU). 
+\noindent The Monte Carlo samples listed in sec.~\ref{sec:samples} are generated simulating the pile-up conditions, as expected in the 25 ns bunch crossing pile-up scenario. Nevertheless, the MC pile-up description does not match exactly the conditions in data, and there is therefore the need to reweight the simulated events in order to improve the agreement with the data. 
 
-The {\tt Summer16} \texttt{v2} MINIAOD Monte Carlo samples are generated simulating the PU conditions, using the 25ns asymptotic PU scenario. 
-Nevertheless, the MC PU description does not match exactly the conditions in data, and there is therefore the need to reweight the simulated events in order to improve the agreement with the data. 
-
-The MC samples are reweighted using the standard CMS PU reweighting technique~\cite{bib:pureweight,bib:pureweight2} assuming a total inelastic cross section of $\sigma_{in} = 69\,200 \mu b$.
-
-The comparison between the distributions of primary vertices in data and MC after the PU reweighting is applied is shown in Figure~\ref{fig:npv} for an event selection (called inclusive selection) requiring large amount of \met recoiling against an AK8 fat jet~(Tab.~\ref{tab:sel}).
+\noindent The MC samples are reweighted assuming a total inelastic cross section of $\sigma_{in} = 69\,200 \mu b$. The comparison between the distributions of primary vertices in data and MC after the pile-up reweighting is applied is shown in fig.~\ref{fig:npv} for an event selection (called inclusive selection) requiring large amount of \met recoiling against an AK8 fat jet~(tab.~\ref{tab:sel}).
  
  \begin{figure}[!htb]
   \centering
-    %\includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/nPV.pdf}
-  \caption{Primary vertices distributions after reweighting with the official recipe and $\sigma_{in}=69\,200 \mu b$.}
+    \includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/nPV.pdf}
+  \caption{Primary vertices distributions in data and MC samples, after reweighting.}
   \label{fig:npv}
  \end{figure}
 
 
 \subsection{Electrons}\label{ssec:electrons}
-{\color{red} How the electrons are reconstructed: The electron identification variables that have been found to be the most powerful, and are
-used in the selection, are: the energy-momentum match between the seed cluster and the trackE seed/pin, the variables measuring spatial matching between the track and the supercluster, ∆ηin and ∆φin, the supercluster η width,σiη iη(as taken from the covariance matrix using logarithmic weights), and the hadronic leakage variable H/E. The supercluster η width is to a very good approximation unaffected by the spreading due to the magnetic field of the showering in
-the tracker material.\\ Isolation variables are computed in three sub-detectors: the tracker, the ECAL, and the HCAL. Transverse energy/momentum sums are evaluated in regions of ∆R<0.3. As electrons undergo bremsstrahlung energy loss in the tracker material, care is taken to remove from the isolation sums the contributions from bremsstrahlung photons and possible resulting conversion electrons.}
+%{\color{red} How the electrons are reconstructed: The electron identification variables that have been found to be the most powerful, and are used in the selection, are: the energy-momentum match between the seed cluster and the trackE seed/pin, the variables measuring spatial matching between the track and the supercluster, ∆ηin and ∆φin, the supercluster η width,σiη iη(as taken from the covariance matrix using logarithmic weights), and the hadronic leakage variable H/E. The supercluster η width is to a very good approximation unaffected by the spreading due to the magnetic field of the showering in the tracker material.\\ Isolation variables are computed in three sub-detectors: the tracker, the ECAL, and the HCAL. Transverse energy/momentum sums are evaluated in regions of ∆R<0.3. As electrons undergo bremsstrahlung energy loss in the tracker material, care is taken to remove from the isolation sums the contributions from bremsstrahlung photons and possible resulting conversion electrons.}
 
-Electrons are reconstructed from energy deposits in the ECAL matched to tracks reconstructed in the silicon tracker. 
-The electron trajectories are reconstructed using a dedicated modeling of the electron energy loss and fitted with a Gaussian sum filter.
-Electrons used in this analysis are required to pass the Particle Flow criteria, and to fall in the ECAL pseudorapidity fiducial range ($|\eta|<2.5$). 
+Electrons used in this analysis, reconstructed from energy deposits in the ECAL matched to tracks reconstructed in the silicon tracker, are required to pass the Particle-Flow criteria, and to fall in the ECAL pseudorapidity fiducial range ($|\eta|<2.5$). The electron identification is defined with a ``cut-based'' approach. In the isolation definition the effect of pile-up is considered by taking into account the energy deposits in the calorimeter, estimated through the so-called \emph{$\rho$-area} method, by subtracting the median energy density in the event $\rho$ multiplied by electron effective area. The isolation value is computed in a $\Delta$R cone of 0.3 centered along the lepton direction.
 
-The electron identification used in this analysis is based on the ``cut-based'' Id defined by the EGamma POG for the \texttt{Summer16} 25ns~\cite{EGammaPOG_ele}, and suggested also for the usage in 80X for the so-called Moriond dataset.
-Isolation cuts are already applied within the cut-based Id definitions, therefore no additional Isolation cut is required.
-In the isolation definition the effect of PU is considered by taking into account the energy deposits in the calorimeter, estimated through the so-called \emph{$\rho$-area} method, by subtracting the median energy density in the event $\rho$ multiplied by electron effective area.
-The isolation value is computed in a $\Delta$R cone of 0.3 centered along the lepton direction.
-
-Since in this analysis we are aiming at a final state without any lepton, every electron identified with \emph{veto} cut-based Id, transverse momentum $\pt > 10$ GeV is vetoed. The detailed set of cuts to define a \emph{veto} cut-based Id electron are reported in the Table~\ref{tab:EGcutBar}.
-
-%The detailed set of cuts are reported in the Table~\ref{tab:EGcutBar}. $\Delta \eta_{in}^{seed}$ and $\Delta \varphi_{in}$ are the difference in $\eta$ and $\varphi$ between the track position as measured in the inner layer, extrapolated to the interaction vertex and then extrapolated to the calorimeter and the $\eta$ of the seed cluster or the $\varphi$ of the supercluster, $H/E$ is the ratio of the hadronic energy of the CaloTowers in a cone of radius 0.15 centred on the electron's position in the calorimeter to the electromagnetic energy of the electron's supercluster, $\sigma_{i\eta i\eta}$ is the spread in eta in units of crystals of the electrons energy in 5x5 block centred on the seed crystal, and $1/E - 1/p$ is the difference of the inverse of the energy and the momentum.
-% $E^{2x5}/E^{5x5}$ is fraction of energy in 2x5 crystals around seed to the energy in 5x5 crystals around the seed, 
+\noindent Since in this analysis aims at a final state without any lepton, every electron identified with the looser cut-based criteria (\emph{veto Id}), transverse momentum $\pt > 10$ GeV is vetoed. The detailed set of cuts to define a \emph{veto} cut-based Id electron are reported in tab.~\ref{tab:EGcutBar}; this set of selctions allow to identify an electron with an efficiency of $\sim 95$\%. The supercluster width is indicated as $\sigma_{i\eta i\eta}$; $\Delta \eta_{in}^{seed}$ and $\Delta \phi_{in}$ are the difference in $\eta$ and $\phi$ between the track position as it is measured in the inner layer, and then extrapolated to the interaction vertex and to the calorimeter, and the $\eta$ of the seed cluster or the $\phi$ of the supercluster; $H/E$ is the hadronic leakage, \textit{i.e.} the ratio of the hadronic energy of the calorimetric towers to the electromagnetic energy of the electron supercluster; \emph{relIso} indicates the relative isolation calculated with the effective area approach; $1/E - 1/p$ is the difference of the inverse of the energy and the momentum; $d_0$ and $d_z$ are the transverse and longitudinal impact parameters. A dedicated conversion veto is applied to mitigate the effects of electrons undergoing bremsstrahlung in the silicon detector.
 
 \begin{table}[htb]
  \centering
@@ -65,9 +43,9 @@ Since in this analysis we are aiming at a final state without any lepton, every 
  \hline
     $\sigma_{i\eta i\eta} $     & $ < $  &0.0115   &0.037  \\
     $\Delta \eta_{in}^{seed}$   & $ < $  &0.00749  &0.00895 \\
-    $\Delta \varphi_{in} $      & $ < $  &0.228    &0.213   \\
+    $\Delta \phi_{in} $      & $ < $  &0.228    &0.213   \\
     $H/E $                      & $ < $  &0.356    &0.211   \\
-    relIso (EA)                 & $<$    &0.175    &0.159   \\
+    relIso (Effective Area)                 & $<$    &0.175    &0.159   \\
     $|1/E - 1/p|$               & $ < $  &0.299    &0.15    \\
     $|d_0|$                     & $ < $  &0.05     &0.10   \\
     $|d_z|$                     & $ < $  &0.10     &0.20   \\
@@ -76,91 +54,16 @@ Since in this analysis we are aiming at a final state without any lepton, every 
     
  \hline
 \end{tabular}
-\caption{ Summer16 cut-based selection for 25ns conditions. EB: barrel cuts ( $|\eta_\text{supercluster}| \leq 1.479$); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$)}
+\caption{Electron cut-based selection for 25 ns bunch spacing conditions. EB: barrel cuts ( $|\eta_\text{supercluster}| \leq 1.479$); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$)}
 \label{tab:EGcutBar}
 \end{table}
 
-Scale factors for electron identification (including isolation) are provided by Egamma POG, derived for 80X (Moriond 17 recommendation), that can be found in~\cite{EGammaPOG_ele_SF}.
-
-
+%Per-event data-MC scale factors for electron identification are calculated and applied in the analysis.
 %\clearpage
 
-\subsection{Muons}\label{ssec:muons}
-
-{\color{red} How the muons are reconstructed}
-
-In the standard CMS reconstruction for $pp$ collisions, muon tracks are first reconstructed independently in the inner tracker (tracker track) and in the muon system (standalone-muon track). Based on these objects, two reconstruction approaches are used~\cite{bib:CMS-PAPER-MUO-10-004}: \emph{Global Muon} (outside-in) and \emph{Tracker Muon} (inside-out).
-\begin{itemize}
-  \item[\emph{Global Muon reconstruction (outside-in)}:] for each standalone-muon track, a matching tracker track is found by comparing parameters of the two tracks propagated onto a common surface, and a global-muon track is fitted combining hits from the tracker track and standalone-muon track, using the Kalman-filter technique~\cite{bib:kalman}. At large transverse momenta, $\pt > 200 \GeV$, the global-muon fit can improve the momentum resolution compared to the tracker-only fit.
-  \item[\emph{Tracker Muon reconstruction (inside-out)}:] in this approach, all tracker tracks with $\pt > 0.5 \GeV$ and the total momentum $p > 2.5 \GeV$ are considered as possible muon candidates and are extrapolated to the muon system taking into account the magnetic field, the average expected energy losses, and multiple scattering in the detector material. If at least one muon segment (i.e., a short track stub made of DT or CSC hits) matches the extrapolated track, the corresponding tracker track qualifies as a Tracker Muon.
-\end{itemize}
-
-Tracker Muon reconstruction is more efficient than the Global Muon reconstruction at low momenta, $\pt \lesssim 5 \GeV$, because it requires only a single muon segment in the muon system, whereas Global Muon reconstruction is designed to have high efficiency for muons penetrating through more than one muon station and typically requires segments in at least two muon stations. Thanks to the high tracker-track efficiency and a very high efficiency of reconstructing segments in the muon system, about 99\% of muons produced in $pp$ collisions and having sufficiently high momentum are reconstructed either as a Global Muon or a Tracker Muon, and very often as both. Muons reconstructed only as standalone-muon tracks have worse momentum resolution and less favorable collision muon to cosmic-ray muon ratio than the Global and Tracker Muons and are usually not used in physics analyses.
-
-Muons are usually based on the \emph{Particle Flow Muon} selection, considering Global Muon or a Tracker Muon candidates and by applying minimal requirements on the track components in the muon system and taking into account a matching with small energy deposits in the calorimeters. %However, in the boosted $\Z \to \mu\mu$ regimes, muons have similar problems to electrons. The Global muon reconstruction suffers a drop in efficiency as the $\Delta R$ between the muon decreases. This is a consequence of the seeding algorithm, which includes in the seed some segments of the other muon, and after the final muon trajectory builder, a cleaning is applied based on the number of segments and the $\chi^2$ of the muon track. After the cleaning, only one muon track is selected among the group of tracks that share segments, and this effect avoids the reconstruction of the other muon (Figure~\ref{fig:Muon_Multi}).
-
-%The reconstruction of muons very close in $\Delta R$ is also a problem for the PF algorithm, which is based on the hypothesis that the muon is a minimum-ionizing particle. Another high-\pt track close to a reconstructed muon can also fail to pass the PF identification of the nearby muon, further lowering the efficiency at small angles, as shown in Figure~\ref{fig:Muon_Multi}.
-%The adopted compromise between efficiency and fake-muons rejection is then to require that \emph{at least} one of the two muons (not necessarily the highest-\pt) fulfills both the PF and the \texttt{HighPt}, while the other has to satisfy a looser selection. This asymmetric selections ensures a high efficiency ($\gtrsim 95\%$) in the whole \pt, $\eta$ %(Figure~\ref{fig:Muon_pt_eta})
-%and $\Delta R$ ranges (Figure~\ref{fig:Muon_Multi}). 
-%The \texttt{HighPt} Id is a set of cuts specifically designed for high-momentum muons from the Muon POG~\cite{MuonPOG}:
-
-%\begin{itemize}
-%   \item to be reconstructed also as Global muon
-%   \item at least one muon chamber hit included in the global-muon track fit
-%   \item muon segments in at least two muon stations
-%   \item the track used to obtain the muon momentum needs to pass $\delta\pt/\pt < 0.3$
-%   \item tracker track transverse impact parameter $d_{xy} < \unit{2}{\text{mm}}$ w.r.t. the primary vertex
-%   \item longitudinal impact parameter $d_z < \unit{5}{\text{mm}}$ w.r.t. the primary vertex
-%   \item number of pixel hits $>0$
-%   \item number of tracker layers with hits $> 5$.
-%\end{itemize}
-
-%The other muons in the event, if present, should be identified with a tracker-only selection. A tight \texttt{CustomTracker} Id is defined using the same quality cuts on the muon track as the \texttt{HighPt}, but dropping the requirements that force the muon to be Global or PF:
-
-%\begin{itemize}
-%    \item to be reconstructed as a standard Tracker muon (was Global muon in HightPt Id)
-%    \item at least one muon chamber hit included in the global-muon track fit
-%    \item muon segments in at least two muon stations
-%    \item the track used to obtain the muon momentum needs to pass $d\pt/\pt < 0.3$.
-%    \item TuneP-track transverse impact parameter $d_{xy} < \unit{2}{\text{mm}}$ w.r.t. the primary vertex (was Tracker-track)
-%    \item longitudinal impact parameter $d_z < \unit{5}{\text{mm}}$ w.r.t. the primary vertex
-%    \item number of pixel hits $>0$
-%    \item number of tracker layers with hits $> 5$.
-%\end{itemize}
-
-%Having dropped the PF identification requirements, the best estimation of the muon momentum is then extracted via the TuneP algorithm, better suited for high-\pt muons.
-
-For muons reconstructed using the PF algorithm, the standard muon isolation is defined as the ratio of the \pt sum of all charged and neutral particle-flow candidates in the event within a cone with a radius of $\Delta R=0.4$ centered along the lepton direction. Corrections in order to reduce the PU contamination are also applied, using the $\Delta \beta$ method.
-Charged candidates falling into the cone that are not compatible with the primary vertex are removed from the sum. Additionally, the neutral contribution from PU is estimated to be half the one coming from charged candidates, and this quantity is also subtracted from the total. Eventually, the scalar sum is divided by the lepton \pt itself. The general formula for the standard \emph{particle-flow} isolation is then:
-$$I_{rel} = \left[ \sum \pt^\text{ch \ had} + \max(\sum \pt^\text{neu \ had} + \sum \pt^{\gamma} - 0.5 \cdot \sum \pt^\text{pu \ ch \ had}, \ 0) \right] /\pt^\ell $$
-where $\sum \pt^\text{ch \ had}$ is the sum of the transverse momenta of the charged hadrons, $\sum \pt^\text{neu \ had}$ is the sum of transverse energies of the neutral hadrons, $\pt^{\gamma}$ is the sum of the transverse energy of particle flow photons and $\sum \pt^\text{pu \ ch \ had}$ is the sum of transverse momenta of the charged particles in the cone of interest but with particles not originating from the primary vertex (for pileup corrections). %With this definition of the isolation the other electron of the system does not enter the calculation.
-
-%In the case of muons not reconstructed using the PF algorithm, as in the case of the \texttt{CustomTracker} id used to select muons in this analysis, the MuonPOG provides a Tracker-based definition of isolation.
-%This isolation is computed as the scalar sum of the \pt of all the track from the leading PV in the event within a cone with a radius of $\Delta R=0.3$ centered along the muon direction, normalized by the muon \pt.
-
-In the VZ event selection, all muons identified with the \texttt{Loose} standard id, \pt over 10 GeV, PF isolation below 0.25, $\eta<|2.4|$ are vetoed.
-
-%In the VZ event selection, at least one muon is required to be identified with the \texttt{HighPt} standard id, while the other is selected if passes wither the \texttt{CustomTracker} requirements or the standard \texttt{HighPt}. The \emph{loose} working point ($<0.1$) of the tracker-based isolation criterion is used to select the leptons. When evaluating the tracker-isolation for each muon, if the other selected muon falls in the $\Delta R < 0.3$ isolation cone, the tracker-based isolation is recomputed after removing the inner tracker track \pt of the other muon.
- 
-Scale factors for muon identification and isolation are centrally provided as a function of the muon \pt and $\eta$ by the Muon POG~\cite{MuonSF}, and are applied consistently in the analysis.
-
-
-\subsection{Taus}\label{sec:tau}
-{\color{red} How the taus are reconstructed}
- 
-The presence of hadronically-decaying taus only act as veto for the events both in the signal and in the control regions to suppress electroweak backgrounds. The selection criteria for taus are $\pt > 18$ GeV and $|\eta| < 2.3$. The Run2 TauPOG recomended identification criteria~\cite{TauPOG} (\texttt{decayModeFinding}, \texttt{byLooseCombinedIsolationDeltaBetaCorr3Hits})  are required and applied in order to identify possible tau candidates.
-% % The tau-lepton multiplicity in the inclusive $\Z \to \mu\mu$ is reported in Fig.~\ref{fig:ZmmInc_taupho}.
-% 
 \subsection{Photons}
-{\color{red} How the photons are reconstructed}
+As in the case of electrons, a photon veto is applied in the analysis both for the signal and the control regions. Events are rejected if they contains one (or more) photon with $\pt > 15$ GeV , $|\eta| < 2.5$, passing the \texttt{Loose} cut-based photon Id, whose definition is reported in tab.~\ref{tab:PhotonId}. The isolation cuts (using the rho-area method for the mitigation of the pileup) and conversion safe electron veto are applied. The isolation value is computed in a $\Delta R$ cone of 0.3 and is corrected for pileup by subtracting the event-by-event energy density ($\rho$) times an effective area.
 
-As in the case of tau leptons, a photon veto is applied in the analysis both for the signal and the control regions.
-Events are rejected if they contains one (or more) photon with $\pt > 15$ GeV , $|\eta| < 2.5$, passing the \texttt{Loose} cut-based photon ID. The \texttt{Loose} photon Id is applied as in the EGamma POG recommandations for Run2 analyses~\cite{EGammaPOG_pho} (tuned on \texttt{ Spring16} 25 ns samples).
-The isolation cuts (using the rho-area method for the mitigation of the pileup) and conversion safe electron veto are applied.
-The isolation value is computed in a $\Delta R$ cone of 0.3 and is corrected for pileup by subtracting the event-by-event energy density ($\rho$) times an effective area.
-The applied cut-based definition of the \texttt{Loose} photon Id is reported in Table~\ref{tab:PhotonId}.
-% % The photon multiplicity in the inclusive $\Z \to \mu\mu$ is reported in Fig.~\ref{fig:ZmmInc_taupho}.
-% 
  \begin{table}[htb]
   \centering
      \begin{tabular}{lccc}
@@ -177,34 +80,26 @@ The applied cut-based definition of the \texttt{Loose} photon Id is reported in 
      conversion veto                           &       & yes     &yes     \\
   \hline
  \end{tabular}
-  \caption{Photon cut-based Id for Spring16 25ns conditions. EB: barrel cuts ( $|\eta_\text{supercluster}| \leq 1.479$); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$)}\label{tab:PhotonId}
+  \caption{Photon cut-based selection for 25 ns bunch spacing conditions. EB: barrel cuts ( $|\eta_\text{supercluster}| \leq 1.479$); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$)}\label{tab:PhotonId}
  \end{table}
 
-Scale factors for photon identification (including isolation) are provided by Egamma POG, derived for 80X (Moriond 17 recommendation), that can be found in~\cite{EGammaPOG_ele_SF}.
+%Scale factors for photon identification (including isolation) are provided by Egamma POG, derived for 80X (Moriond 17 recommendation), that can be found in~\cite{EGammaPOG_ele_SF}.
 
-\clearpage
+\subsection{Muons}\label{ssec:muons}
+
+%Tracker Muon reconstruction is more efficient than the Global Muon reconstruction at low momenta, $\pt \lesssim 5 \GeV$, because it requires only a single muon segment in the muon system, whereas Global Muon reconstruction is designed to have high efficiency for muons penetrating through more than one muon station and typically requires segments in at least two muon stations. Thanks to the high tracker-track efficiency and a very high efficiency of reconstructing segments in the muon system, about 99\% of muons produced in $pp$ collisions and having sufficiently high momentum are reconstructed either as a Global Muon or a Tracker Muon, and very often as both. Muons reconstructed only as standalone-muon tracks have worse momentum resolution and less favorable collision muon to cosmic-ray muon ratio than the Global and Tracker Muons and are usually not used in physics analyses.
+
+The minimal criteria to define a muon is that it must be identified by the Particle-Flow algorithm, and should be reconstructed either as a global muon or as a tracker muon (sec.~\ref{ssec:physicsobjects}). The muon isolation is defined in cone with a radius of $\Delta R=0.4$ centered along the lepton direction. In the analysis event selection, all muons identified with the loosest criteria previously described, \pt over 10 GeV, PF isolation below 0.25, $\eta<|2.4|$ are vetoed.
+ 
+%Scale factors for muon identification and isolation are centrally provided as a function of the muon \pt and $\eta$ by the Muon POG~\cite{MuonSF}, and are applied consistently in the analysis.
+
+
+\subsection{Taus}\label{sec:tau}
+The presence of hadronically-decaying taus only act as veto for the events both in the signal and in the control regions to suppress electroweak backgrounds. The selection criteria for taus are $\pt > 18$ GeV and $|\eta| < 2.3$. Loose identification criteria of the hadronic tau reconstruction algortihms are required and applied in order to identify possible tau candidates.
 
 
 \subsection{Jets}\label{ssec:jets}
-{\color{red} How the jets are reconstructed}
-
-%Events in the CMS detector are reconstructed using the particle-flow algorithm~\cite{bib:PF1,bib:PF2}, which combines information from all sub-detectors in order to reconstruct stable particles (muons, electrons, photons, neutral and charged hadrons). The charged hadron subtraction algorithm (CHS) removes candidates not associated to the primary vertex in order to remove contributions from pileup~\cite{CMS-PAS-JME-14-001}. The remaining particles are used as input to jet clustering algorithms to reconstruct particle-flow jets. The jets are clustered using the {\sc FastJet} package~\cite{bib:fastjet} with the anti-\kt jet clustering algorithm~\cite{Cacciari:2008gp} with a clustering parameter of $R = 0.8$ (``fat''-jets or AK8 jets) or $R = 0.4$ (``standard''-jets or AK4 jets). In order to avoid double-counting of PF candidates, AK4 jets are considered only if the angular separation from the leading AK8 jet is larger than $\Delta R>0.8$.
-%Several levels of jet energy corrections are applied to the momentum of the clustered (raw) jets in order to obtain the energy value that is closer to the true energy of the initial parton~\cite{bib:1748-0221-6-11-P11002}:
-
-%\begin{itemize}
-%  \item[\emph{L1 Offset}:] the pileup and electronic noise effects are removed. This correction can be estimated using events collected by a random trigger, without any preconditions except a beam crossing, referred as \emph{zero bias} events. The offset contribution from pileup is estimated by the FastJet method which relies on the definition of a jet area~\cite{bib:fastjet} from which a median energy density ($\rho$, in \GeV/Area) per event can be defined. The correction subtracted to the jet \pt equals to $\rho$ times the jet area. FastJet has the advantage of being able to remove the out-of-time pileup component, but has the disadvantage of subtracting the underlying event contribution as well.
-%  \item[\emph{L2 Relative ($\eta$)}:] the variation in jet response with $\eta$ is flattened. The unbalance between the jets transverse momentum that is observed on average, is due to the variation of the jet response across the detector versus $\eta$.
-%  \item[\emph{L3 Absolute (\pt)}:] the calorimetric energy response varies as a function of the jet \pt. The absolute correction removes these variations and makes the response equal to unity. This correction is obtained from simulation using the Monte Carlo truth information.
-%  \item[\emph{L2L3 Residual}:] differences between data and simulation after L2 and L3 corrections are removed by applying a specific calibration to data events. Residual corrections are extracted from data using the transverse momentum balance in $\gamma$+jets and \Z+jets events~\cite{bib:1748-0221-6-11-P11002}.
-%\end{itemize}
-
-The latest jet energy corrections are applied to AK4 and AK8 CHS jets, and the tags are {\tt Summer16 23Sep2016V3}.
-
-In this analysis, jets are considered if the corrected \pt is larger than 30 \GeV for AK4 jets and 200\GeV for AK8 jets, and lie in the tracker acceptance ($|\eta|<2.4$). Additionally, AK4 are required to pass \emph{loose} jet identification requirements, AK8 are required to pass \emph{tight} jet identification requirements defined by the JETMET POG for Run2 analyses~\cite{JetMETPOG}, listed in Table~\ref{tab:JetId}. AK8 jets are used to reconstruct the hadronically decaying electroweak boson candidate, whilst AK4 jets are used to suppress the contribution of top and QCD background events.\\
-
-{\color{red} EFFICIENZA di TIGHT ID?}\\
-
-Figure~\ref{fig:n_AK8}-~\ref{fig:AK8jet_eta} show the data/simulation comparison after the analysis selections~(Tab.~\ref{tab:sel} without Top cleaning and Event cleaning).
+In this analysis, jets are considered if the corrected \pt is larger than 30 \GeV for AK4 jets and 200\GeV for AK8 jets, and lie in the tracker acceptance ($|\eta|<2.4$). Additionally, AK4 jets are required to pass \emph{loose} jet identification requirements, AK8 are required to pass \emph{tight} jet identification requirements defined in tab.~\ref{tab:JetId}. AK8 jets are used to reconstruct the hadronically decaying electroweak boson candidate, whilst AK4 jets are used to suppress the contribution of top and QCD background events. Jet energy corrections are applied to AK4 and AK8 CHS jets. Fig.~\ref{fig:n_AK8}-~\ref{fig:AK8jet_eta} show the data/simulation comparison after the analysis selections~(tab.~\ref{tab:sel} without Top cleaning and Event cleaning).
 
 \begin{table}[htb]
  \centering
@@ -224,12 +119,12 @@ Charged Multiplicity            & $> 0   $& $> 0   $\\
 Charged EM Fraction             & $< 0.99$& $< 0.99$\\
 \hline
  \end{tabular}
- \caption{ \emph{Loose} and \emph{Tight} jet identification requirements for Run2 (Spring16) 25ns conditions.\label{tab:JetId}}
+ \caption{ \emph{Loose} and \emph{Tight} jet identification requirements for 25 ns bunch spacing conditions.\label{tab:JetId}}
 \end{table}
 
 \begin{figure}[!htb]
   \begin{center}
-    %\includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/nFatJets.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/nFatJets.pdf}
   \end{center}
   \caption{Number of reconstructed AK8 jets after selections.}
   \label{fig:n_AK8}
@@ -237,7 +132,7 @@ Charged EM Fraction             & $< 0.99$& $< 0.99$\\
 
 \begin{figure}[!htb]
   \begin{center}
-    %\includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/FatJet1_pt.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/FatJet1_pt.pdf}
   \end{center}
   \caption{Leading AK8 jet \pt spectra after selections.}
   \label{fig:AK8jet_pt}
@@ -245,30 +140,36 @@ Charged EM Fraction             & $< 0.99$& $< 0.99$\\
 
 \begin{figure}[!htb]
   \begin{center}
-    %\includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/FatJet1_eta.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9_U/XVZnnInc/FatJet1_eta.pdf}
   \end{center}
   \caption{Leading AK8 jet $\eta$ spectra after selections.}
   \label{fig:AK8jet_eta}
 \end{figure}
 
+\noindent Since it has been measured that the jet energy resolution (JER) is not the same in data and MC, an additional smearing is applied in simulation, in order to get a better agreement. There are two independent ways to get the smearing. The scaling method rescales the corrected four-momentum of a reconstructed jet by a factor
+\begin{equation}
+c_{\text{JER}} = 1 + (s_{\text{JER}} - 1) \frac{p_T - p_T^{\text{gen}}}{p_T},
+\end{equation}
+where \pt is the transverse momentum of the jet, $p_T^{\text{gen}}$ is the transverse momentum of the generator level particle corresponding to the reconstructed jet, and $s_{\text{JER}}$ is the data-simulation resolution scale factor. The factor $c_{\text{JER}}$ is positively defined, hence if negative it is set equal to zero. %This method only works if a well-matched particle-level jet is present and can result in a large shift of the response otherwise.
+The generator level particle and a reconstructed jet are defined as matched if:
+\begin{equation}
+\Delta R < R_{\text{cone}} / 2, |p_T - p_T^{\text{ptcl}}| < 3 \sigma_{\text{JER}} p_{T},
+\end{equation}
+where $R_{\text{cone}}$ is the jet clustering parameter and $\sigma_{\text{JER}}$ is the relative \pt resolution measured in simulation.
 
-Since it has been measured that the jet energy resolution (JER) is not the same in data and MC, an additional smearing is applied in simulation, in order to get a better agreement, as suggested by JETMET POG~\cite{bib:jetsmear}.
+\noindent The alternative approach is the stochastic smearing, and it does not require the matching with the generator level particle. The jet four-momentum is rescaled by a factor
+\begin{equation}
+c_{\text{JER}} = 1 + \mathcal{N}(0, \sigma_{\text{JER}}) \sqrt{max(s_{\text{JER}}^2 - 1, 0)},
+\end{equation}
+where $\sigma_{\text{JER}}$ is the relative \pt resolution in simulation, $s_{\text{JER}}$ is the data-simulation scale factor, and $\mathcal{N}(0, \sigma)$ 
+is a random number extracted from a gaussian normal distribution, whose mean is zero and variance $\sigma^2$. Scaling factor $c_{\text{JER}}$ is positively defined.% This method only allows to degrade the resolution.
 
-There are two independent ways to get the smearing. With the scaling method, corrected four-momentum of a reconstructed jet is rescaled with a factor
-$$c_{\text{JER}} = 1 + (s_{\text{JER}} - 1) \frac{p_T - p_T^{\text{ptcl}}}{p_T},$$
-where $p_T$ is its transverse momentum, $p_T^{\text{ptcl}}$ is the transverse momentum of the corresponding jet clustered from generator-level particles, and $s_{\text{JER}}$ is the data-to-simulation core resolution scale factor. Factor $c_{\text{JER}}$ is truncated at zero, i.e. if it is negative, it is set to zero.
-This method only works if a well-matched particle-level jet is present and can result in a large shift of the response otherwise. The following requirements are imposed for the matching:
-$$\Delta R < R_{\text{cone}} / 2, |p_T - p_T^{\text{ptcl}}| < 3 \sigma_{\text{JER}} p_{T}.$$
-Here $R_{\text{cone}}$ is the jet cone size parameter (for instance, 0.4 for AK4 jets) and $\sigma_{\text{JER}}$ is the relative \pt resolution as measured in simulation.
-
-An alternative approach, which does not require the presence of a matching particle-level jet, is the stochastic smearing. In this case corrected jet four-momentum is rescaled with a factor $$c_{\text{JER}} = 1 + \mathcal{N}(0, \sigma_{\text{JER}}) \sqrt{max(s_{\text{JER}}^2 - 1, 0)},$$ where $\sigma_{\text{JER}}$ and $s_{\text{JER}}$ are the relative \pt resolution in simulation and data-to-simulation scale factors, and $\mathcal{N}(0, \sigma)$ denotes a random number sampled from a normal distribution with a zero mean and variance $\sigma^2$. As before, scaling factor $c_{\text{JER}}$ is truncated at zero. This method only allows to degrade the resolution.
-
-The smearing procedure adopted in this analysis is the hybrid method: when matching particle-level jet is found, the scaling method is used; otherwise the stochastic smearing is applied. The smearing coefficients and their errors, provided by JETMET POG, are reported in Tab.~\ref{tab:smear} for 2016 data (tag: {\tt Spring1625nsV10}).
+\noindent The smearing procedure adopted in this analysis is the hybrid method: when a matching jet at generator level is found, the scaling method is adopted, else the stochastic smearing is chosen. The smearing coefficients (scale factors, SF) as a function of the jet $\eta$ and their uncertainties are reported in tab.~\ref{tab:smear} for 2016 data.
 
 \begin{table}[!htb]
   \centering
   \begin{tabular}{l|ccccccc}
-    Jet $\eta$ & SF \\
+    Jet $\eta$ & Smearing SF \\
     \hline
     $0.0-0.5$ & $1.109 \pm 0.008$ \\
     $0.5-0.8$ & $1.138 \pm 0.013$ \\
@@ -285,55 +186,36 @@ The smearing procedure adopted in this analysis is the hybrid method: when match
     $3.2-5.0$ & $1.16  \pm 0.029$ \\
   \end{tabular}
   
-  \caption{Smearing coefficients and JER uncertainties.}
+  \caption{Data-simulation jet smearing coefficients and their corresponding uncertainties.}
   \label{tab:smear}
 \end{table}
 
-\clearpage
 \subsection{Jet mass}\label{ssec:jetmass}
 
-The jet mass is the main observable in distinguishing a V-jet from a QCD jet. Jet grooming consists in the suppression of uncorrelated UE/PU (underlying event and pile-up) radiation from the target jet and improves the discrimination pushing the jet mass for QCD jets towards lower values while maintaining the jet mass for V-jets around the boson-mass.
+The jet mass is the main observable in distinguishing a \V jet from a jet produced by colour interaction (QCD jets). Jet grooming procedure consists in the suppression of uncorrelated underlying event, pile-up and soft radiation from the jet and improves the discrimination, by pushing the jet mass for QCD jets towards lower values while maintaining the jet mass for \V-jets around the electroweak boson mass window.
 
-%Two different grooming algorithms were originally considered:
-The grooming algorithm considered in this analysis is the following:
-\begin{itemize}
-%%  \item[\bf{Trimming}:] Trimming is a technique that ignores regions within a jet that falls below a minimum \pt threshold. Trimming reclusters the jet's constituents with a radius $R_{sub}$ and then accepts only the subjets that have $p_{T,sub} > f_{cut}$, where $f_{cut}$ is typically taken proportional to \HT , the scalar sum of the \pt of all jet reconstructed in the event.
-%%  \item[\bf{Filtering}:] This procedure provides a hierarchical structure for the clustering like the \kt algorithm, but in angles rather than in relative transverse momenta. It creates a series of n new subjects $s_1, s_2, \dots s_n$ ordered in descending \pt. The final jet is redefined as the sum of the four-momenta of the three highest \pt subjets $\sum_i^{min(n,3)} s_i$.
-%  \item[\bf{Pruning}:] The idea is to take a jet of interest and then to recluster it using a vetoed sequential clustering algorithm. Clustering is performed with the CA algorithm, but particles are discarded if they are too far away in $\Delta R$: 
-% %\begin{linenomath}\begin{equation}
-% $$ \Delta R_{ij} > D_{cut} \alpha \frac{m_j}{p_{T,j}}$$
-% %\end{equation}\end{linenomath}
-%  and the energy sharing is too asymmetric: 
-% % \begin{linenomath}\begin{equation}
-% $$ z_{ij} = \frac{min(p_{T,i}, p_{T,j})}{p_{T,i+j}} < z_{cut} $$
-% % \end{equation}\end{linenomath}
-%  where $z_{cut}$ and $\alpha$ are parameters of the algorithm. If both these conditions are satisfied the softer of the two particles is not considered.
-  \item[\bf{Soft-drop}:] The ``soft drop declustering'' is a jet substructure technique which recursively removes soft wide-angle radiation from a jet~\cite{Larkoski:2014wba}. The soft drop algorithm depends on two parameters: a soft threshold $z$ cut and an angular exponent $\beta$. Like any grooming method, soft drop declustering removes wide-angle soft radiation from a jet in order to mitigate the effects of contamination from initial state radiation (ISR), underlying event (UE), and multiple hadron scattering (pileup). Given a jet of radius $R_0$ with only two constituents, the soft drop procedure removes the softer constituent unless:
-%\begin{linenomath}\begin{equation}
- $$\frac{\min(\pt^1,\pt^2)}{\pt^1+\pt^2} > z_{cut} \left( \frac{\Delta R_{12}}{R_0} \right)^\beta$$
-%\end{equation}\end{linenomath}
-By construction, this condition fail for wide-angle soft radiation. The degree of jet grooming is controlled by $z_{cut}$ and $\beta$, with $\beta \to \infty$ returning back an ungroomed jet.  The $\beta=0$ limit of the energy loss is particularly interesting, since it is largely insensitive to the value of the strong coupling constant. The default parameters used by CMS are $\beta=0$ and $z_{cut}=0.1$.
-\end{itemize}
+\noindent The grooming technique of the analysis relies on the ``soft drop declustering'' algorithm, a jet substructure technique that recursively removes soft wide-angle radiation from a jet~\cite{Larkoski:2014wba}, in order to mitigate the contaminations from initial state radiation, along with pile-up and multiple scatterings. The soft drop algorithm is described by two parameters, a soft threshold $z_{\text{cut}}$ and an angular exponent $\beta$. Starting with a jet of radius $R_0$ with only two constituents, the soft drop algorithm removes the soft constituent until the soft drop condition holds:
+\begin{equation}
+\frac{\min(\pt^1,\pt^2)}{\pt^1+\pt^2} > z_{cut} \left( \frac{\Delta R_{12}}{R_0} \right)^\beta,
+\end{equation}
+where $\pt^1$ and $\pt^2$ are the constituents, $\Delta R_{12}$ is their angular distance. $z_{cut}$ and $\beta$ parameters affect the degree of jet grooming: if $\beta \to \infty$ the jet remains ungroomed. The soft drop algorithm %The $\beta=0$ limit of the energy loss is particularly interesting, since it is largely insensitive to the value of the strong coupling constant. 
+The default parameters used by CMS are $\beta=0$ and $z_{cut}=0.1$.
 
-%In general, the filtering algorithm is the least aggressive grooming technique, with groomed jet masses close to the original case. The trimming algorithm is moderately aggressive and produces a much wider final mass distribution. Pruning is the most aggressive technique and a bimodal distribution begins to appear: in cases where the pruned jet mass is small, jets usually have most of their energy configured in core components with little gluon radiation, which leads to narrow jets. Instead, when the pruned jet mass is large, the jets are split more symmetrically.
+The main grooming algorithm, soft drop, is used in association with PUPPI~\cite{Bertolini2014} in order to remove soft and wide-angle radiations and the pile-up contribution.
 
-The grooming algorithm, {\bf soft-drop}, is used in association with {\bf PUPPI} in order to remove soft and wide-angle radiations and the pile-up contribution. It is a shared choice among all the diboson analyses, praised by theoreticians.
-
-Unfortunately, the default soft-drop + PUPPI jet mass suffers from a systematic shift from the expected value of about $\sim 10\%$, and some residual dependence on the jet \pt. Further corrections to the jet mass have been applied:
+\noindent The default soft-drop + PUPPI jet mass suffers from a systematic shift from the expected value of about $\sim 10\%$, and some residual dependence on the jet \pt. Further corrections to the jet mass have been applied:
 
 \begin{enumerate}
   \item[{\bf Gen}:] a \pt-dependent correction to account for a small shift in the generated vector boson mass, applied only on simulated samples
-  \item[{\bf Reco}:] a \pt-dependent correction to the reconstructed jet mass, applied separately for jets in the barrel and endcaps regions
+  \item[{\bf Reco}:] a \pt-dependent correction to the reconstructed jet mass, applied separately for jets in the barrel and endcaps regions.
 \end{enumerate}
 
-These corrections are evaluated centrally by JMAR and documented in~\cite{AN-16-215}, and applied accordingly within the analysis.
-
-Figure~\ref{fig:fatjet_pre_softdroppuppimass_ZZ}-~\ref{fig:fatjet_softdroppuppimass} show the jet mass for \PW or \Z bosons before and after the correction, without applying any cut on this variable.
+\noindent Figure~\ref{fig:fatjet_pre_softdroppuppimass_ZZ}-~\ref{fig:fatjet_softdroppuppimass} show the jet mass for \W or \Z bosons before and after the correction, without applying any cut on this variable.
 
 \begin{figure}[!htb]
   \begin{center}
-    %\includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMass_signalZZ.pdf}
-    %\includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalZZ.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMass_signalZZ.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalZZ.pdf}
   \end{center}
   \caption{Softdrop + PUPPI mass of AK8 jet reconstructed for different bulk graviton signal samples; left: before corrections. right: after corrections.}
   \label{fig:fatjet_pre_softdroppuppimass_ZZ}
@@ -341,8 +223,8 @@ Figure~\ref{fig:fatjet_pre_softdroppuppimass_ZZ}-~\ref{fig:fatjet_softdroppuppim
 
 \begin{figure}[!htb]
   \begin{center}
-    %\includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMass_signalWZ.pdf}
-    %\includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalWZ.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMass_signalWZ.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalWZ.pdf}
   \end{center}
   \caption{Softdrop + PUPPI mass of AK8 jet reconstructed for different $W^{'}$ signal samples; left: before corrections. right: after corrections.}
   \label{fig:fatjet_pre_softdroppuppimass_ZZ}
@@ -350,14 +232,14 @@ Figure~\ref{fig:fatjet_pre_softdroppuppimass_ZZ}-~\ref{fig:fatjet_softdroppuppim
 
 \begin{figure}[!htb]
   \begin{center}
-    %\includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMass.pdf}
-    %\includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMassCorr.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMass.pdf}
+    \includegraphics[width=.495\textwidth]{plots/v9/XVZnnPre/FatJet1_softdropPuppiMassCorr.pdf}
   \end{center}
   \caption{Softdrop + PUPPI mass of AK8 jet; left: before corrections. right: after corrections.}
   \label{fig:fatjet_softdroppuppimass}
 \end{figure}
 
-Furthermore, in order to obtain a better data-Monte Carlo agreement, a smearing procedure has been applied to the puppi softdrop mass, by using the stochastic method, with a constant smearing coefficent provided by JETMET POG ($1.00 \pm 0.20$), that does not depend on jet pseudorapidity if it is restricted to $|\eta|<2.5$.
+\noindent In order to obtain a better data-Monte Carlo agreement, a smearing procedure has been applied to the soft drop + PUPPI jet mass, by using the stochastic method, with a constant smearing coefficent ($1.00 \pm 0.20$), that does not depend on jet pseudorapidity if it is restricted to $|\eta|<2.5$.
 
 %\clearpage
 \subsection{Jet substructure}\label{ssec:jetsub}
@@ -487,21 +369,23 @@ In this analysis, b-tagging is used in order to reject events where a top quark 
 The \MET is the imbalance in the transverse momentum of all visible particles, and it is reconstructed with the particle flow algorithm~\cite{bib:PF1}. The \emph{raw} \MET is defined as the inverse vectorial sum of the transverse momentum of all the reconstructed charged and neutral particle flow candidates: $\vec{\MET}= - \sum_{i=0}^{all} \vec{\pt}_i$.
 The raw \MET is systematically different from true \MET, for many reasons including the non-compensating nature of the calorimeters and detector misalignment. To better estimate the true \MET, corrections can be applied:
 \begin{itemize}
-   \item[\emph{Type-0}:] a mitigation for the degradation of the \MET reconstruction due to the pileup interactions, by applying the CHS algorithm. However, the \MET contribution from pileup neutral particles cannot be easily subtracted; the assumption is that the \MET contribution term of charged and neutral pileup particles are the same, and cancellation at the true level is exact: $\sum_{neuPU} \vec{\pt}_i^{true} + \sum_{chPU} \vec{\pt}_i^{true} = 0$. An additional \MET term is then added to the raw \MET to take into account the neutral PU contribution, which is equal to the charged one with a multiplicative scale factor taking into account calorimeter mismeasurements of low-\pt energy deposits.
+   \item[\emph{Type-0}:] a mitigation for the degradation of the \MET reconstruction due to the pileup interactions, by applying the CHS algorithm. However, the \MET contribution from pileup neutral particles cannot be easily subtracted; the assumption is that the \MET contribution term of charged and neutral pileup particles are the same, and cancellation at the true level is exact:% $\sum_{neuPU} \vec{\pt}_i^{true} + \sum_{chPU} \vec{\pt}_i^{true} = 0$.
+%per qualche motivo non gli piace sta formula
+ An additional \MET term is then added to the raw \MET to take into account the neutral PU contribution, which is equal to the charged one with a multiplicative scale factor taking into account calorimeter mismeasurements of low-\pt energy deposits.
    \item[\emph{Type-1}:] propagation of the jet energy corrections (JEC) to MET. The Type-I correction replaces the vector sum of transverse momenta of particles which can be clustered as jets with the vector sum of the transverse momenta of the jets to which JEC is applied. 
  \end{itemize}
 % 
-Particle flow \MET with type-1 corrections applied is currently the default one used by CMS physics analyses. Additionaly, some \MET filters have been recommended by JETMET POG for Run2 analyses~\cite{JetMETPOG}, in order to remove events with spurios \MET related to detector noise and bad reconstructions, and they are listed in sec.~\ref{sec:data}.
-%\begin{itemize}
-%\item {\tt HBHENoiseFilter}
-%\item {\tt HBHENoiseIsoFilter}
-%\item {\tt EcalDeadCellTriggerPrimitiveFilter}
-%\item {\tt goodVertices}
-%\item {\tt eeBadScFilter} (not recommended for Monte Carlo, hence not applied)
-%\item {\tt globalTightHalo2016Filter}
-%\item {\tt BadPFMuonFilter}
-%\item {\tt BadChargedCandidateFilter}
-%\end{itemize}
+Particle flow \MET with type-1 corrections applied is currently the default one used by CMS physics analyses. Additionaly, some \MET filters have been recommended by JETMET POG for Run2 analyses~\cite{JetMETPOG}, in order to remove events with spurios \MET related to detector noise and bad reconstructions.
+\begin{itemize}
+  \item {\tt HBHENoiseFilter}
+  \item {\tt HBHENoiseIsoFilter}
+  \item {\tt EcalDeadCellTriggerPrimitiveFilter}
+  \item {\tt goodVertices}
+  \item {\tt eeBadScFilter} (not recommended for Monte Carlo, hence not applied)
+  \item {\tt globalTightHalo2016Filter}
+    \item {\tt BadPFMuonFilter}
+    \item {\tt BadChargedCandidateFilter}
+\end{itemize}
 
 %\section{Re-computation of \MET corrections and uncertainties}
 Since the \MET corrections and uncertainties depend on the JEC applied, they are re-computed accordingly following the JETMETPOG recommendation:
