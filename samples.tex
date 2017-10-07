@@ -2,7 +2,7 @@
 %\begin{tcolorbox}[breakable,colback=black!5!white,colframe=red!80!black,width=\textwidth]
 %\chapter*{Data and Monte Carlo samples}
 %\end{tcolorbox}
-\label{chap:samples}
+\label{sec:samples}
 
 \subsection{Signal samples}
 
@@ -196,12 +196,9 @@ The physics processes yielding final states with two neutrinos in association wi
   \item {\bf Z + jets}: this process represents the main irreducible background for the signal. The production of a \Z boson in association with one or more partons in the final state has a similar topology to the signal. This \Z+jets background is produced in samples binned in \pt of the \Z boson starting from 100 \GeV with the {\sc aMC@NLO} generator, with FXFX merging~\cite{bib:FXFX}. The contribution from events with $\pt<100$~GeV is negligible after we require the \met to be greater than 200~\GeV (sec.~\ref{sec:selections}).
 
   \item {\bf W + jets}: the leptonic decay of a \W boson can be an irreducible background in the case the charged lepton escapes undetected (e.g. outside the detector acceptance) or fails the lepton identification requirements. The production of a \W boson has a cross section larger by an order of magnitude with respect to the \Z, and this makes the \W+jets a relevant background also when a lepton veto is applied. This \W+jets background is produced in samples binned in \pt of the \W boson starting from 100 \GeV with the {\sc aMC@NLO} generator.% \W+jets background binned in \HT (the sum of the \pt of the hadrons at generator level) starting from 100 \GeV with the \MADGRAPH LO generator are kept as backup samples.
-\color{red}
-  \item $\mathbf{top}$: production of \ttbar pairs represents a particularly challenging background at the LHC, given its large production cross section. These events always contain two energetic b-jets and two \W bosons which may decay to leptons that escape the detector or fail to be identified as leptons. Inclusive \ttbar decays have been considered. The primary handles to reduce the \ttbar background are topological, such as the azimuthal opening angle between the \Z boson and the dijet system, which is more broadly distributed in top pair production than in signal events. In \ttbar production the dilepton mass is not resonating in the Z mass region, and their \pt spectrum is sharply falling, given the absence of a single boosted resonance. This analysis makes use of \ttbar samples based on \POWHEG v2~\cite{bib:POWHEGst} NLO generator.
-  Single-top and single-antitop samples are produced in the 5-flavours scheme using \POWHEG v2~\cite{bib:POWHEGtt} NLO generator.
-  
-  \item {\bf Diboson}: the production of two vector bosons in the SM is a rare process inducing and irreducible background for this search, with a similar kinematics to that of the signal. 
-  Inclusive diboson production processes (\W\W, \W\Z, \Z\Z) are considered.
+  \item $\mathbf{Top}$: the pair and single production of top quarks represent a source of background, given the decay chain $t \rightarrow b \W$, always including an electroweak \W boson and a b-quark. The \ttbar pair production manifests as two b-jets and two \W bosons in the final state, that can decay to leptons that escape the detector or fail to be identified as leptons. This analysis makes use of \ttbar inclusive decays samples based on \POWHEG v2~\cite{bib:POWHEGst} NLO generator. Single-top and single-antitop samples are produced in the 5-flavours scheme using \POWHEG v2~\cite{bib:POWHEGtt} NLO generator. Different production mechanism are considered: $t \W$ channel, when a top quark is produced in association with a \W boson, due to a gluon -- bottom quark scattering; s-channel, due to quark-antiquark scattering, producing a top and an anti-bottom quark in the final state; t-channel, via a virtual \W in a quark -- b-quark scattering, resulting in a top quark and a quark jet in the final state.
+  \item {\bf Diboson}: the SM production of a pair of vector bosons is topologically close to the searched signal, by the way the cross-section of the process is low. The \W\W production is the most probable process, that imitates the signal when one of the \W decays leptonically and the charged lepton fall outside the detector acceptance or it is mis-identified; the \W\Z and \Z\Z processes have smaller cross-sections but are topologically identical to the signal, except for the fact that the invariant mass of the diboson system has a smoothly falling spectrum, in contrast to the resonant signal distribution. Inclusive diboson production processes (\W\W, \W\Z, \Z\Z) are considered; they are simulated at LO by \PYTHIA generator.
+  \item {\bf Multi-jet}: despite the production of multi-jet events, initiated by the strong interactions, has a very high cross-seection, this source of background is negligible for the analysis, because a dedicated selection to reduce this contribution is applied (sec.~\ref{sec:objects}).
 \end{itemize}
 
 
@@ -209,9 +206,9 @@ The physics processes yielding final states with two neutrinos in association wi
 
 %\begin{sidewaystable}[!htb]\centering
 \begin{table}[!htb]\centering
-\caption{Simulated samples. The cross section $\times$ branching ratio is shown in \pb.\label{tab:bkg_datasets1} (*) cross sections taken from McM.}
+\caption{Simulated Monte Carlo samples. The cross-section $\times$ branching ratio for each process is shown in \pb.\label{tab:bkg_datasets1}}
 \begin{tabular}{lcccc}
- Signal process &  Kinematical cuts & Generator & $\sigma\times\mathcal{B}$ [pb] & Events \\
+ Signal process &  Kinematical cuts & Generator & $\sigma\times\mathcal{B}$ [pb] & N. of events \\
  \hline 
 $Z \rightarrow \nu \nu$ + jets & $100 < p_{T,Z} < 250$ \GeV & amcatnloFXFX -- Pythia8 &170.4 & 5353639\\
 $Z \rightarrow \nu \nu$ + jets & $100 < p_{T,Z} < 250$ \GeV & amcatnloFXFX -- Pythia8 &170.4 & 5356674\\
@@ -266,164 +263,39 @@ $ZZ$ inclusive & - & Pythia8 & 16.6 & 998034\\
 %\end{sidewaystable}
 \end{table}
 
-\clearpage
+%\clearpage
 
-\subsection{V boson momentum corrections}
+\subsection{Vector boson momentum corrections}
 
-%\subsubsection{NLO QCD}
+\subsubsection{NLO electroweak corrections}
 
-%In Run II, the use of next-to-leading order generators, such as aMCatNLO, allowed to have a much better description of the vector bosons (\Z, \W) with respect to Run I, when only leading order generators were available. This is confirmed by data/simulation comparison. Unfortunately, NLO genarators have not been used to generate large exclusive samples with the high statistics needed for analyses in the high-\pt regime. Instead, exclusive \MADGRAPH samples are available. In these, the \pt spectra of the (\W and) \Z bosons is know to be non-perfecly described, compared to data and the inclusive aMCatNLO sample, as seen in Fig.~\ref{fig:kfactors1}-left. Corrections are derived to improve the simulation description. Instead of a correction function as a function of the \pt at generation level, separate multiplicative factors (k-factors) are derived for exclusive \MADGRAPH starting from the inclusive aMCatNLO smaple, in order to take into account the effect of QCD NLO processes.
-
-
-%The Spring16 campaign has been produced using the same GEN fragments of the previous Spring15 samples.
-%The analysis is therfore currently exploiting the k-factors evaluated in B2G-16-003~\cite{CMS:2016dzw} using Spring15 simulated samples.
-
-
-%The procedure to derive the k-factors is the following. Since in the V \pt spectum there is overlap between the HT-binned exclusive samples, one solution could be to separate the \pt spectrum in at least four regions and solve a linear system for the normalization of the samples in each of these regions. However, the transverse momentum at generation level of a certain exclusive sample never goes above upper HT threshold. This is always true before showering, but even after taking showering into account the effect is very small ($<0.3\%$). The matrix representing the linear system can thus be considered diagonal, and a simpler approach is followed. The ratio between the inclusive and the higher-HT exclusive sample, normalized to the corresponding cross sections and eveluated in the \pt range above the lower HT threshold, is taken as the k-factor for the sample, and its normalization is then considered as fixed. In the following steps, k-factors for the lower HT exclusive sample are evaluated with the same procedure, but taking into account the fixed contribution of the exclusive samples with higher-HT binning.
-
-%% This k-factor extraction procedure will be performed for DYJetsToLL samples. 
-%% Small differences arise, but generally the k-factor can be as large as 1.5 in the lower part of the \pt spectrum, and very close to 1 in the higher-HT samples. 
-%The numerical results obtained in B2G-16-003~\cite{CMS:2016dzw} are reported in Table~\ref{tab:kfactors}. 
-%% The agreement with the inclusive NLO sample after the reweighting is flat at 1, and is reported in Figure~\ref{fig:kfactors1} and~\ref{fig:kfactors2}.
-
-%\begin{figure}[!htb]
-% \centering
-%   \includegraphics[width=.495\textwidth]{figures/GenWJetsToLNuRatio.pdf}
-%   %\includegraphics[width=.495\textwidth]{figures/GenDYJetsToLLRatio.pdf}
-% \caption{\pt spectrum for the inclusive NLO and exclusive LO samples for the $\W \to \ell\nu$ process after the k-factor application, from B2G-16-003~\cite{CMS:2016dzw}.}
-% \label{fig:kfactors1}
-%\end{figure}
-
-%% \begin{figure}[!htb]
-%%  \centering
-%%    \includegraphics[width=.495\textwidth]{figures/GenDYJetsToNuNuRatio.pdf}
-%%    \includegraphics[width=.495\textwidth]{figures/GenWJetsToLNuRatio.pdf}
-%%  \caption{\pt spectrum for the inclusive NLO and exclusive LO samples for the $\Z \to \nu\nu$ (\cmsLeft) and $\W \to\ell\nu$  processes (\cmsRight) after the k-factor application.}
-%%  \label{fig:kfactors2}
-%% \end{figure}
-% 
-
-%\begin{table}[!htb]\centering
-%\begin{tabular}{lc}
-% \hline
-% Dataset & k-factor \\
-%% \hline
-%%DYJetsToLL\_M-50\_HT-100to200 & 1.588 \\
-%%DYJetsToLL\_M-50\_HT-200to400 & 1.438 \\
-%%DYJetsToLL\_M-50\_HT-400to600 & 1.494 \\
-%%DYJetsToLL\_M-50\_HT-600toInf & 1.139 \\
-%% \hline
-%% ZJetsToNuNu\_HT-100To200 & 1.626 \\
-%% ZJetsToNuNu\_HT-200To400 & 1.617 \\
-%% ZJetsToNuNu\_HT-400To600 & 1.459 \\
-%% ZJetsToNuNu\_HT-600ToInf & 1.391 \\
-% \hline
-% WJetsToLNu\_HT-100To200 & 1.459 \\
-% WJetsToLNu\_HT-200To400 & 1.434 \\
-% WJetsToLNu\_HT-400To600 & 1.532 \\
-% WJetsToLNu\_HT-600ToInf & 1.004 \\
-%\hline
-%\end{tabular}
-%\caption{K-factors for the V+jets samples.}
-%\label{tab:kfactors}
-%\end{table}
-
-
-\subsubsection{NLO Electroweak}
-
-Corrections to the V \pt spectrum comes from NLO electroweak contributions, that are enhanced at \TeV scale. These corrections are effectively applied on a per-event basis depending on the \pt of the vector boson at generation level. The calculation of these contributions is explained in Ref.~\cite{Kallweit:2015dum}. Figure~\ref{fig:ewk} shows the amount of the correction for the \W and \Z bosons.
-
+Corrections to the \pt spectrum of the \V boson, due to NLO electroweak contributions, are enhanced at \TeV scale~\cite{Kallweit:2015fta}, and they become significant for the purpose of this search. These corrections are effectively applied on a per-event basis depending on the \pt of the vector boson at generation level. Figure~\ref{fig:ewk} shows the amount of the corrections for the \W and \Z bosons.
 
 \begin{figure}[!htb]
  \centering
-   \includegraphics[width=.75\textwidth]{figures/EWK.pdf}
- \caption{Electroweak corrections for the \Z (green line) and \W boson (purple line) as a function of the transverse momentum~\cite{Kallweit:2015dum}.}
+   \includegraphics[width=.5\textwidth]{figures/EWK.pdf}
+ \caption{Electroweak corrections for the \Z (green line) and \W boson (purple line) as a function of the transverse momentum~\cite{Kallweit:2015fta}.}
  \label{fig:ewk}
 \end{figure}
 
 
 %\clearpage
 
-\subsection{Data}
+\subsection{Data samples}
 \label{sec:data}
 
-Data samples used in this analysis have been collected during 2016 RunB, RunC, RunD, RunE, RunF, RunG and RunH, at a center-of-mass energy of 13 TeV, in 25ns runs and with the magnetic field enabled. The {\tt MET} datasets are used for data selected with a \met trigger. {\tt SingleMuon} and {\tt SingleElectron} datasets are used to measure trigger efficiency on data. The full list of datasets used is shown in Table~\ref{tab:datasets}. Data is processed from {\tt ReMiniAOD} campaign.
-
-The JSON file used in the analysis is the following:
+Data samples used in this analysis have been collected during proton-proton collisions produced at LHC in 2016, at a center-of-mass energy of 13 TeV, with colliding bunches spaced by 25 ns, and with the magnetic field enabled. Three group of datasets have been considered:
 \begin{itemize}
-%   \item[{\bf Golden}:] {\tt Cert\_271036-275125\_13TeV\_PromptReco\_Collisions16\_JSON.txt} includes all the runs certified as ``good'' for all subsystems. The integrated luminosity amounts to $3.99$ \fbinv.
-  \item[{\bf Golden}:] {\tt Cert\_271036-284044\_13TeV\_23Sep2016ReReco\_Collisions16\_JSON.txt} includes all the runs certified as ``good'' for all subsystems. The integrated luminosity amounts to $35.867$ \fbinv.
+\item the {\tt MET} dataset, where the analysis is performed, is collected by triggers requiring a large amount of \met at HLT level in the event;
+\item the {\tt SingleMuon} dataset, used to perform an unbiased trigger efficiency estimate, is collected by triggers requiring at least one well defined muon at HLT level;
+\item the {\tt SingleElectron} dataset, used as cross-check for the trigger efficiency estimation, is collected by triggers requiring at least one well defined electron at HLT level.
 \end{itemize}
 
+\noindent Data selected for the analysis include all the runs certified as ``good'' for all subsystems. The corresponding integrated luminosity amounts to $35.9 \pm 0.9$ \fbinv~\cite{CMS:2017sdi}. In order to remove problematic or noise-dominated events, dedicated \MET filters have been applied on data (and simulations).
 
-%\begin{figure}[!htb]
-%  \begin{center}
-%    \includegraphics[width=.495\textwidth]{figures/int_lumi_per_day_cumulative_pp_2016.pdf}
-%  \end{center}
-%  \caption{Cumulative luminosity versus day delivered to (blue), and recorded by CMS (orange) during stable beams and for pp collisions at 13 TeV centre-of-mass energy in 2016. The delivered luminosity accounts for the luminosity delivered from the start of stable beams until the LHC requests CMS to turn off the sensitive detectors to allow a beam dump or beam studies. Given is the luminosity as determined from counting rates measured by the luminosity detectors}
-%  \label{fig:lumi}
-%\end{figure}
-
-% The ``golden'' JSON file is applied for categories that require a full PF event description, and make use of the PF missing energy; this is the case of the zero- and 1-lepton channels. In the 2-lepton channel, PF \MET is not used, and an list of runs and lumisections are included in the ``silver'' JSON file.
-
-In order to remove problematic or noise-dominated events, the following list of filters~\cite{JMETPOG_filt}(ICHEP version) have been applied on data and MC:
-
-\begin{itemize}
-  \item {\tt HBHENoiseFilter}
-  \item {\tt HBHENoiseIsoFilter}
-  \item {\tt EcalDeadCellTriggerPrimitiveFilter}
-  \item {\tt goodVertices}
-  \item {\tt eeBadScFilter} (not recommended for Monte Carlo, hence not applied)
-  \item {\tt globalTightHalo2016Filter}
-    \item {\tt BadPFMuonFilter}
-    \item {\tt BadChargedCandidateFilter}
-\end{itemize}
-
-\begin{table}[!htb]
-\centering
-  \caption{Datasets Run2016B-H.\label{tab:datasets}}
- \begin{tabular}{l} 
- \hline
- Dataset \\
- \hline
- MET/Run2016B-03Feb2017-v2 \\
- MET/Run2016C-03Feb2017-v1 \\
- MET/Run2016D-03Feb2017-v1 \\
- MET/Run2016E-03Feb2017-v1 \\
- MET/Run2016F-03Feb2017-v1 \\
- MET/Run2016G-03Feb2017-v1 \\
- MET/Run2016H-03Feb2017\_ver2-v1 \\
- MET/Run2016H-03Feb2017\_ver3-v1 \\
- \hline
- SingleMuon/Run2016B-03Feb2017-v2 \\
- SingleMuon/Run2016C-03Feb2017-v1 \\
- SingleMuon/Run2016D-03Feb2017-v1 \\
- SingleMuon/Run2016E-03Feb2017-v1 \\
- SingleMuon/Run2016F-03Feb2017-v1 \\
- SingleMuon/Run2016G-03Feb2017-v1 \\
- SingleMuon/Run2016H-03Feb2017\_ver1-v1 \\
- SingleMuon/Run2016H-03Feb2017\_ver2-v1 \\
- \hline
- SingleElectron/Run2016B-03Feb2017-v2 \\
- SingleElectron/Run2016C-03Feb2017-v1 \\
- SingleElectron/Run2016D-03Feb2017-v1 \\
- SingleElectron/Run2016E-03Feb2017-v1 \\
- SingleElectron/Run2016F-03Feb2017-v1 \\
- SingleElectron/Run2016G-03Feb2017-v1 \\
- SingleElectron/Run2016H-03Feb2017\_ver2-v1 \\
- SingleElectron/Run2016H-03Feb2017\_ver3-v1 \\
- \hline
- \end{tabular}
-\end{table}
-
-\clearpage
-
-\subsection{Trigger}\label{ssec:trigger}
-
-Events are selected on-line by a two-stage trigger. The Level 1 (L1) trigger consists of hardware processors that perform a very basic selection and counting of physics objects, and reduce the rate from 40 MHz down to 100 kHz. Events passing the L1 decision are acquired by the DAQ system, and a complete and more accurate reconstruction is performed by the High Level Trigger (HLT), which exploits similar but faster variations of the same algorithms used in the offline event reconstruction. A trigger path is a string that identifies a list of selections performed at HLT.
-\met triggers have been used in this analysis: they are the logic OR of different trigger quantities, with thresholds on both the \met and the ${H}_T^{\text{miss}}$ computed using particle flow objects. 
-
-The list of triggers used, along with the L1 seeds, is reported in Table~\ref{tab:trig_default}.
+\subsection{Trigger}
+\label{ssec:trigger}
+The most remarkable feature of the signal topology is the presence of a boosted \Z decaying into neutrinos; the natural choice for the trigger requirement is to filter data firing at least one of the \met trigger HLT paths listed in tab.~\ref{tab:trig_default}, along with their corresponding L1 missing energy or jet seeds. {\tt PFMETNoMu} indicates the $E_T^{\text{miss}}$ (no $\mu$) quantity, defined as the magnitude of the missing transverse momentum, reconstructed with the Particle-Flow algorithm at HLT, removing the muon candidates from the vector sum. {\tt PFMHTNoMu} indicates the missing hadronic activity $H_T^{\text{miss}}$ (no $\mu$), defined as the magnitude of the vector sum of the transverse momenta of the jets, reconstructed with the Particle-Flow algorithm at HLT, once the muon candidates have been removed. {\tt PFMET} indicates the pure \MET calculated with Particle-Flow algorithm at HLT; different filters are applied at HLT (cleaning events from noise in the detector). Different thresholds are applied to $E_T^{\text{miss}}$ (no $\mu$) and $H_T^{\text{miss}}$ (no $\mu$).
 
 \begin{table}[!htb]
 \centering
@@ -461,39 +333,38 @@ The list of triggers used, along with the L1 seeds, is reported in Table~\ref{ta
  \end{tabular}
 \end{table}
 
-%On principle, the same set of trigger paths should be re required to be fired for both data and simulated events.
-%However, in the current version of the MiniAOD samples the trigger information is not present (or not valid for the HLT paths included). %Therefore the trigger is not required to have fired in MC.
-The approach adopted in this analysis consists in calculating the trigger efficiency on data, and applying the measured efficiency to Monte Carlo samples. Therefore the trigger is not required to have fired in MC.
+\noindent The approach adopted in this analysis consists in calculating the trigger efficiency on data, and applying the measured efficiency to Monte Carlo samples. Therefore the trigger is not required to have fired in MC.
 
-The efficiency of the \met triggers is measured on {\tt SingleMuon} dataset by selecting $\W \to \mu \nu$ events using a single muon trigger ({\tt HLT\_IsoMu24 OR HLT\_IsoTkMu24\_v}), asking to have one isolated {\tt TightId} muon, with the suitable \pt threshold to be in the plateu of the muon trigger. The efficiency has been calculated as a function of the minimum quantity between the offline reconstructed missing transverse momentum, where the contribution of the muon is subtracted from the \met computation as in the online algorithm, and the offline ${H}_T^{\text{miss}}$, defined as ${H}_T^{\text{miss}} = \sum_{j}^{\text{n. of AK4 jets}} p_T^{j}$. This approach guarantees to mimic the behaviour of the online L1 trigger seeds. The detailed selections:
+\noindent Given that the final state probed by the analysis consists into one AK8 jet, large \MET and no charged leptons, an unbiased measurement of the \MET trigger efficiency can be performed in an orthogonal dataset, collected with different triggers, and requiring events where a $\W \rightarrow \ell \nu$ semileptonic decay is taking place. This guarantees the presence of real \met in the event, due to the neutrino; furthermore, the presence of a charged lepton guarantees that the semileptonic \W-like events are not overlapped with the search region. The additional requirement to have at least one AK8 jet is applied in the trigger measurement, in order to probe a kinematical region similar to that of the signal region of the analysis.
+
+\noindent The efficiency of the \met triggers is measured on {\tt SingleMuon} dataset by selecting $\W \to \mu \nu$ events using a logic or of single muon triggers {\tt HLT\_IsoMu24 OR HLT\_IsoTkMu24\_v}, namely, triggers asking for a PF muon reconstructed at HLT, with a \pt threshold of 24 \GeV, that is isolated (in the whole reconstruction or at tracker level only). Offline selections consist in asking to have one isolated muon, with the suitable \pt threshold to be in the plateu of the muon trigger. The efficiency has been calculated as a function of the minimum quantity between the offline reconstructed $E_T^{\text{miss}}$ (no $\mu$):
+\begin{equation}
+\MET \text{ (no } \mu \text{)} = \left| \met + \sum_i \vec{p_T}^{\mu,i} \right|,
+\end{equation}
+where the contribution of all the offline PF muons are subtracted from the \met computation as in the online algorithm, and the offline ${H}_T^{\text{miss}}$, defined as
+\begin{equation}
+{H}_T^{\text{miss}} = \left| \sum_{j}^{\text{n. of AK4 jets}} p_T^{j} \right|.
+\end{equation}
+
+\noindent This approach guarantees to mimic the behaviour of the online L1 trigger seeds. The detailed selections are listed below:
 \begin{itemize}
 \item {\tt HLT\_IsoMu24\_v OR HLT\_IsoTkMu24\_v}
-\item 1 muon, tight ID, \pt$>35$ GeV, tight isolation
-\item at least one AK8 jet, \pt$>170$ GeV, $|\eta<|2.5$, LooseID
-\item AK4 jets included in ${H}_T^{\text{miss}}$: \pt$>30$ GeV, $|\eta<|2.5$, LooseID
+\item 1 isolated muon \pt$>35$ GeV, identified with tight requirements
+\item at least one AK8 jet, \pt$>170$ GeV, $|\eta<|2.5$, identified with loose requirements
+\item AK4 jets included in ${H}_T^{\text{miss}}$: \pt$>30$ GeV, $|\eta<|2.5$, identified with loose requirements
 \end{itemize}
 
-The efficiency of the \met triggers has independently been measured also on {\tt SingleElectron} dataset, by selecting $\W \rightarrow e \nu$ events using a single electron trigger ({\tt HLT\_Ele27\_WPLoose\_Gsf OR HLT\_Ele27\_WPTight\_GsfOR HLT\_Ele32\_WPTight\_Gsf}), asking to have one {\tt TightId} electron, with the suitable \pt threshold, and asking to the electron and the \met to be separated in $\phi$ in order to suppress fake events ($\Delta \phi > 0.5$).
+\vspace*{1\baselineskip}
+
+\noindent The efficiency of the \met triggers has independently been measured also on {\tt SingleElectron} dataset, by selecting $\W \rightarrow e \nu$ events using a single electron trigger ({\tt HLT\_Ele27\_WPLoose\_Gsf OR HLT\_Ele27\_WPTight\_GsfOR HLT\_Ele32\_WPTight\_Gsf}), asking to have one well identified electron, with the suitable \pt threshold, and asking to the electron and the \met to be separated in $\phi$ in order to suppress fake jet events identified as electrons at trigger level ($\Delta \phi > 0.5$).
 \begin{itemize}
 \item {\tt HLT\_Ele27\_WPLoose\_Gsf OR HLT\_Ele27\_WPTight\_GsfOR HLT\_Ele32\_WPTight\_Gsf}
-\item 1 electron, tight ID, \pt$>35$ GeV
-\item at least one AK8 jet, \pt$>170$ GeV, $|\eta<|2.5$, LooseID
-\item AK4 jets included in ${H}_T^{\text{miss}}$: \pt$>30$ GeV, $|\eta<|2.5$, LooseID
+\item 1 electron, \pt$>35$ GeV, identified with tight requirements
+\item at least one AK8 jet, \pt$>170$ GeV, $|\eta<|2.5$, identified with loose requirements
+\item AK4 jets included in ${H}_T^{\text{miss}}$: \pt$>30$ GeV, $|\eta<|2.5$, identified with loose requirements
 \end{itemize}
 
-
-%The contributions of passed-failed events coming from both datasets have been added together.
-The full available statistics has been employed to derive the efficiency. The final turn-on curve for the \met trigger used in this analysis is shown in fig.\ref{fig:MetTrigMu}-\ref{fig:MetTrigEle}, divided in muon-electron dataset. The {\tt METNoMu} trigger efficiencies are displayed separately, together with their OR. The quantity plotted in the x axis depends on the dataset, according to what was explained previously.
-
-The difference needed to cover the gap between these two curves is taken as trigger systematic uncertainty, and it amounts to 1\% at 200 GeV. %A complete description of the method used to derive trigger efficencies and scale factor can be found in Ref. [25]. Trigger scale factors are applied consistently in simulation to take into account residual efficiency differences.
-%[SISTEMA LA REFERENZA]
-
-%The efficiencies of the single muon triggers are provided centrally by the Muon POG~\cite{MuonSF} with a tag and probe procedure by selecting $\Z \to \ell\ell$ events.
-%HighPt lepton ID and tracker isolation requirements are applied to the \emph{probes}. The trigger efficiency is then evaluated studying the \emph{tag} lepton efficiency as a function of both \pt and $\eta$ for both data and MC.
-%The muon trigger efficiency is applied consistently to the simulation throughout the analysis.
-%The average scale factor for the triggers used is about $\--\%$.
-
-%Figure~\ref{fig:MuonTrig} shows the trigger efficiency as centrally provided by the muon POG.
+\noindent The full available statistics has been employed to derive the efficiency. The final turn-on curve for the \met trigger is shown in fig.\ref{fig:MetTrigMu}-\ref{fig:MetTrigEle}, measured in muon and electron dataset respectively. The {\tt PFMETNoMu} trigger efficiencies are displayed separately, together with their logic OR. The trigger efficiency measured on {\tt SingleMuon} dataset amounts to 96\% at \MET=200 GeV; the trigger efficiency measured on {\tt SingleElectron} dataset amounts to 95\% at \MET=200 GeV. The difference needed to cover the gap between the measurements is taken as trigger systematic uncertainty, and it amounts to 1\% at 200 GeV.
 
  \begin{figure}[!htb]
    \begin{center}
