@@ -411,7 +411,7 @@ FUNCTION {format.date.paren}
 FUNCTION {format.collaboration}
 { collaboration empty$
     { "" }
-    { "{\scshape " collaboration * "} " * "collaboration" * }
+    { "{\scshape " Collaboration * "} " * "Collaboration" * }
   if$
 }
 
