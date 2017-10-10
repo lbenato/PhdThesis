@@ -120,6 +120,7 @@ A detailed description of the CMS detector can be found in~\cite{Chatrchyan:2008
 \end{figure}
 
 \subsection{The coordinate system}
+\label{ssec:coord_syst}
 The CMS coordinate system is depicted in fig.~\ref{fig:CMS_CoordSys}. $x$ and $y$ are the coordinates in the transverse plane, $z$ is the longitudinal coordinate. The $x$ axis points at the center of the LHC ring, the $y$ axis points upward, the $z$ axis is along the beam direction. The azimuthal angle $\phi$ lies in the transverse plane, and it is measured starting from the $x$ axis; the radial coordinate is $r$. The polar angle $\theta$ lies in the plane $rz$. The transverse component of the 3-momentum, $\vec{p}_T$, is orthogonal to the beam axis and lies in the plane $xy$. The transverse energy is defined as the magnitude of $\vec{p}_T$: $E_T = E \sin{\theta}$.\\
 Two other commonly used variables are the rapidity, \rap, and pseudorapidity, $\eta$, defined as functions of the particle energy $E$, the longitudinal component of the momentum $p_z$ and the 3-momentum modulus:
 \begin{equation}
@@ -378,6 +379,7 @@ By tuning the selections, working points with different efficiencies have been s
 %It is known that b-tagging efficiency is not the same in data and MC. In order to take into account this shortcoming, the BTV POG provides collections of b-tagging scale factors for b-jets and mistagged light jets, measured for different physics processes, for the supported tagging algorithms and the three standard working points [42]. A weight is calculated on a per-event basis as a function of the b-tagging status and the flavour of the hadron that initiated the jet in the event [40].
 
 \subsubsection{Missing transverse energy reconstruction}
+\label{ssec:met_description}
 Neutrinos can interact with the other particles only via the electroweak interactions; hence, when a neutrino is produced in the proton-proton collisions, it passes through the CMS experiment, undetected. Its only experimental signature is the momentum imbalance (\met) in the transverse plane $(r, \phi)$. The magnitude of \met vector is also called missing transverse energy, \MET. Given its definition, it is evident that \MET is a delicate variable to deal with, since it depends on all the other objects, on their imperfect measurements, on the detector noise and the pile-up events.\\
 The PF \MET is the negative sum of the transverse momenta of the PF candidates reconstructed in the event. Inefficiencies in the tracker reconstruction and non-linear responses of the calorimeters can be corrected by propagating the jet energy corrections to \met~\cite{CMS:2016ljj}:
 \begin{equation}
