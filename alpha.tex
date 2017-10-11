@@ -1,104 +1,109 @@
 \section{Background estimation technique}
 \label{sec:alpha}
 
-The goal of the analysis is to look for localised excesses in the \mtVZ spectrum. The \emph{$\alpha$-method} is used in searches for heavy resonances since the LHC Run 1~\cite{Khachatryan:2015cwa}, and it has been introduced to be less dependent on the MC simulation for the background \mtVZ estimation, due to the many sources of systematic uncertainties that are hard to understand and control. The two exclusive regions, \emph{signal region} (SR) and \emph{sidebands region} (SB), define a signal enriched or signal depleted phase space, respectively. First, the background normalization is extracted from data in the SB. Then, the $\alpha$-method extracts a predicted shape from the data in the SB to the SR using a transfer function (the $\alpha$ function) derived from simulation. The method relies on the assumption that the correlation between \mtVZ and the groomed jet mass is reasonably well reproduced by the MC. The $\alpha$ ratio is deemed to be more trustworthy since many systematic uncertainties would approximately cancel in the ratio.
+The goal of the analysis is to look for localized excesses in the \mtVZ spectrum. The \emph{$\alpha$-method} is used in searches for heavy resonances since Run 1~\cite{Khachatryan:2015cwa}, and it has been introduced to be less dependent on the MC simulation for the background \mtVZ estimation, due to the many sources of systematic uncertainties that are hard to understand and control. The two exclusive regions, \emph{signal region} (SR) and \emph{sidebands region} (SB), define a signal enriched or signal depleted phase space, respectively. First, the background normalization is extracted from data in the SB. Then, the $\alpha$-method extracts a predicted shape from the data in the SB to the SR using a transfer function (the $\alpha$ function) derived from simulation. The method relies on the assumption that the correlation between \mtVZ and the groomed jet mass is reasonably well reproduced by the MC. The $\alpha$ ratio is deemed to be more trustworthy since many systematic uncertainties would approximately cancel in the ratio.
 
-{\color{red} EXPLAIN WHY Z+jet and W+jet are together}
-
-\noindent The $\alpha$ function is defined as the ratio of the two functions describing the simulated \mtVZ shape in the SR and SB:
+\noindent Let's assume that, in the simplest case, only one dominant background is present. The $\alpha$ function is defined as the ratio of the two functions describing the simulated \mtVZ shape in the SR and SB:
 %In the simplest case, only one dominant background is present. 
-$$\alpha(\mtVZ) = \frac{N_{\text{SR}}^{\text{MC,bkg}}(\mtVZ)}{N_{\text{SB}}^{\text{MC,bkg}}(\mtVZ)}$$
-%
-and the background distribution in the SR is thus estimated as the product of  $\alpha(\mtVZ)$ with the shape in the data SB:
-%
-$$N_{\text{bkg}}(\mtVZ) = N_{\text{SB}}(\mtVZ) \times \alpha(\mtVZ)$$
-%
-Notice that in the above description does not include the definition of the SB and SR. Ideally, the best choice would be a variable such that the distribution of \mtVZ in the Signal and Sideband regions are similar. In this analysis, the softdrop+PUPPI corrected jet mass $m_j$ (see Section~\ref{ssec:jetmass}) is chosen as the control variable, and the cut values are those reported in Section~\ref{ssec:massopt}. All the selections used in the $\alpha$ method background prediction are the same reported in Section~\ref{sec:selections}.
-In order to respect the blinding policy of the diboson VV searches, the Higgs mass window is not used neither for the background estimation (it can be potentially contamined by a signal) nor as signal region.
 
-In a real case scenario, the background is not purely composed of one single process neither in the SR nor in the SB. The background composition is assumed to be dominated by one single process (\V+jets) whose modeling in simulation is considered not to be trustworthy. Other subdominant backgrounds (\ttbar and single-t production (Top), and \V\V) generally have smaller contributions (of the order of 5\% for \V\V, and 9\% for Top) , and are considered quite well understood and modeled by MC generators. 
+\begin{equation}
+\alpha(\mtVZ) = \frac{f_{\text{SR}}^{\text{MC,bkg}}(\mtVZ)}{f_{\text{SB}}^{\text{MC,bkg}}(\mtVZ)}
+\end{equation}
 
-{\color{red} EXPLAIN WHY Z+jet and W+jet are together}
+\noindent and the background distribution in the SR is thus estimated as the product of  $\alpha(\mtVZ)$ with the shape in the data SB:
 
-The shape and normalization of the diboson and Top production is taken from the simulation.
-The sub-dominant backgrounds are then subtracted from the \V+jets contribution when fitting this template to data.
+\begin{equation}
+f_{\text{bkg}}(\mtVZ) = f_{\text{SB}}(\mtVZ) \times \alpha(\mtVZ)
+\end{equation}
+
+\noindent In the above description, no definition of the SB and SR is included. Ideally, the best choice would be a variable such that the distribution of \mtVZ in the signal region and sidebands are similar. In this analysis, the soft drop PUPPI corrected jet mass $m_j$ (sec.~\ref{ssec:jetmass}) is chosen as the control variable, and the cut values are those reported in tab.~\ref{tab:SR-SB}. All the selections used in the $\alpha$ method background prediction are the same reported in sec.~\ref{ssec:final_dib_cand}.
+%In order to respect the blinding policy of the diboson VV searches, the Higgs mass window is not used neither for the background estimation (it can be potentially contamined by a signal) nor as signal region.
+
+\noindent In a real case scenario, the background is not purely composed of one single process neither in the SR nor in the SB. As already pointed out in sec.~\ref{ssec:backgrounds} and confirmed in sec.~\ref{sec:datamc_comp}, the background composition is dominated by two processes, \Z + jets ($\sim 50\%$ in the whole SR) and \W + jets ($\sim 35\%$ in the whole SR), grouped together as \V+jets, whose modeling in simulation is considered not to be trustworthy. Other subdominant backgrounds, \ttbar and single-t production, groupde as Top, and diboson (\V\V), generally have smaller contributions (of the order of 5\% for \V\V, and 9\% for Top, in the whole SR), and are considered quite well understood and modeled by MC generators. The justification of fixing \W + jets and \Z + jets is provided in sec.~\ref{ssec:alpha_validation}
+
+\noindent The shape and normalization of the \V\V and Top production is taken from the simulation. The sub-dominant backgrounds are then subtracted from the \V+jets contribution when fitting this template to data. The shape and normalization of the main background is evaluated with the $\alpha$ approach.
 
 %One single $\alpha$ function is defined for each channel and category, that is obtained with the simulated background composition, and multiplied by the data distribution in the SB. This implies that the shape change between SB and SR does not heavily depend on the background process, and even if it does, the $\alpha$ function is already built with the expected ratio between various processes. With respect to the subtraction of the sub-dominant background, this choice has the advantage to take into account the shape variation also for the sub-dominant backgrounds, which can be non-negligible in some channels. Anyway, the normalization for the sub-dominant backgrounds is estimated separately due to the different jet mass distribution.
 
-A different background prediction is derived for each category separately, thus dividing low- and high-purity categories, and it is calculated in a transverse mass range $950 <$ \mtVZ $<4750$ GeV.
+\noindent A different background prediction is derived for each category separately, thus dividing low- and high-purity categories, and it is calculated in a transverse mass range $950 <$ \mtVZ $<4750$ GeV.
 
 \subsection{Background normalization}\label{ssec:alphaNorm}
 
-The first step in the background prediction consists in a proper estimation of the background normalization. The three main backgrounds (\V+jets, Top, and VV) are considered separately due to the different shape in the jet mass distribution. The three contributions are described with functional forms determined by fits on the simulated backgrounds.
-%The so-built templates are summed together, maintaining the relative weights between the three, and finally fitted to the data in the jet mass sidebands. The integral of the fitted function over the SR jet mass range represents the background normalization in the SR.
-The number of expected events in the SR is extracted through the same equation:
-$$N_{SR}^{data} = \left[ N_{SB}^{data} - N_{SB}^{Top} - N_{SB}^{VV} \right] \times \left[ \frac{N_{SR}^{Vjet}}{N_{SB}^{Vjet}} \right]  + N_{SR}^{Top} + N_{SR}^{VV}$$
-where in this case $N$ are the number of events, and not functions.
+The first step in the background prediction consists in a proper estimation of the background normalization. The three main backgrounds (\V+jets, Top, and \V\V) are considered separately due to the different shape in the jet mass distribution. The three contributions are described with functional forms determined by fits on the simulated backgrounds. The so-built templates are summed together, maintaining the relative weights between the three, and finally fitted to the data in the jet mass sidebands. During the fit to data SB, the parameters of the \V + jets background are left free to float and adapt to the data distribution. The integral of the final sum of the fitted functions over the SR jet mass range represents the background normalization in the SR.
+%The number of expected events in the SR is extracted through the following equation:
 
-The empirical functional forms for each background are chosen to reflect the physics properties of the samples. In the low-purity category, the \V+jets background is a falling background with no peaks, modelled as a power law, while in the high-purity category the \V+jets background component is characterized by a broad distribution roughly centered at $m_\V$, modelled as a gaussian, with an exponential tail at high mass values. The exponential falling VV $m_j$ spectrum shows a peak, corresponding to the vector boson hadronic decay reconstruction, that is modelled as a gaussian. For the jet mass spectrum of the Top backgrounds, the peaks corresponding to the $W$ and top mass can be modelled as gaussian functions, superimposed to a falling exponential background.
+%\begin{equation}
+%N_{\text{SR}}^{\text{data}} = \left[ N_{\text{SB}}^{\text{data}} - N_{\text{SB}}^{\text{Top}} - N_{\text{SB}}^{\text{VV}} \right]  + N_{\text{SR}}^{\text{Top}} + N_{\text{SR}}^{\text{VV}}
+%\label{eq:alpha_norm}
+%\end{equation}
+%where in this case $N$ are the number of events, and not functions.
 
-%The empirical functional forms for each background are chosen to reflect the physics properties of the samples. 
-%In the low-purity category, the \V+jets background has a falling background with no peaks, while in the high-purity category the \V+jets background component is characterized by a broad distribution roughly centered at $m_\V$, with an exponential tail at high mass values.
+\noindent The empirical functional forms for each background are chosen to reflect the physics properties of the samples. In the low-purity category, the \V+ jets background is a falling background with no peaks, modelled as a power law, while in the high-purity category the \V+jets background component is characterized by a broad distribution roughly centered at $m_\V$, modelled as a gaussian, with an exponential tail at high mass values. The exponential falling \V\V $m_j$ spectrum shows a peak, corresponding to the vector boson hadronic decay reconstruction, that is modelled as a gaussian. The hadronic decays of \W and \Z bosons cannot be distinguished, hence they are fitted together. For the jet mass spectrum of the Top backgrounds, the peaks corresponding to the $W$ and top quark mass can be modelled as gaussian functions, superimposed to a falling exponential background.
 
-%On top of the jet mass spectrum, the VV has one peak, corresponding to the vector boson hadronic decay reconstruction.
-%% , and possibly a second one due to the presence of the Higgs. In certain channels, the latter is not visible due to the smaller cross section with respect to the former. 
-%For the Top background the jet mass spectrum is similar to the V+jet one, with a falling behaviour for the low-purity category, and broader distribution roughly peaked at $m_\V$ and with the exponential tail at high mass for the high-purity categories.
-The functional forms chosen to build the jet mass templates are:
+\noindent The functional forms chosen to build the jet mass templates are:
 
 \begin{itemize}
-  %\item[{\bf Exp}:] an exponential function: $$F_{\rm Exp}(x)=e^{ax}$$
-  %\item[{\bf Pol}:] a third order polynomial: $$F_{\rm Pol}(x)=a_0 \cdot x + a_2 \cdot x^2 + a_3 \cdot x^3 $$
-  \item[{\bf ErfExp}:] an ``error function'', that consists of an exponential multiplied by an Erf: $$F_{\rm ErfExp}(x)=e^{ax} \cdot \frac{1 + {\rm Erf}((x-b)/w)}{2}$$
-  \item[{\bf ErfExpTail}:] an ErfExp modified to account for an additional term in the exponential: $$F_{\rm ErfExpTail}(x)=e^{-x/(a+b*x)} \cdot \frac{1 + {\rm Erf}((x-o)/w)}{2}$$
-  \item[{\bf ErfPow2}:] an Erf multiplied by a power law: $$F_{\rm ErfPow2}(x)={ \left( \frac{x}{\sqrt{s}} \right)}^{- c_0 + c_1 \log(x/\sqrt{s})} \cdot \frac{1 + {\rm Erf}((x-o)/w)}{2}$$
+  %%\item[{\bf Exp}:] an exponential function: $$F_{\rm Exp}(x)=e^{ax}$$
+  %%\item[{\bf Pol}:] a third order polynomial: $$F_{\rm Pol}(x)=a_0 \cdot x + a_2 \cdot x^2 + a_3 \cdot x^3 $$
+  %\item {\tt ErfExp}: an exponential multiplied by an ``error function'' {\tt Erf}: $$F_{\rm ErfExp}(x)=e^{ax} \cdot \frac{1 + {\rm Erf}((x-b)/w)}{2}$$ %an exponential times an ``error function'', that consists of 
+  %\item {\tt ErfExpTail}: an {\tt ErfExp} modified to account for an additional term in the exponential, that results in a tail ad high masses: $$F_{\rm ErfExpTail}(x)=e^{-x/(a+b*x)} \cdot \frac{1 + {\rm Erf}((x-o)/w)}{2}$$
+  \item {\tt ErfPow2}: an error function ({\tt Erf}) multiplied by a power law: $$F_{\rm ErfPow2}(x)={ \left( \frac{x}{\sqrt{s}} \right)}^{- c_0 + c_1 \log(x/\sqrt{s})} \cdot \frac{1 + {\rm Erf}((x-o)/w)}{2}$$
   %
   %\item[{\bf Gaus}:] one gaussian: $$F_{\rm Gaus}(x) = \cdot e^{2(x-a)^2/b}$$
   %\item[{\bf Gaus2}:] two gaussians: $$F_{\rm Gaus2}(x) = f_0 \cdot e^{2(x-a)^2/b} + (1-f_0) \cdot e^{2(x-c)^2/d}$$
-  \item[{\bf Gaus3}:] three gaussians: $$F_{\rm Gaus3}(x) = f_0 \cdot e^{2(x-a)^2/b} +f_1 \cdot e^{2(x-c)^2/d} + (1-f_0-f_1) \cdot e^{2(x-e)^2/g}$$
+  %\item {\tt Gaus3}: three gaussians: $$F_{\rm Gaus3}(x) = f_0 \cdot e^{2(x-a)^2/b} +f_1 \cdot e^{2(x-c)^2/d} + (1-f_0-f_1) \cdot e^{2(x-e)^2/g}$$
   %
-  \item[{\bf ExpGaus}:] an exponential plus one gaussian: $$F_{\rm ExpGaus}(x) = f_0 \cdot e^{ax} + (1-f_0) \cdot e^{2(x-b)^2/c}$$
+  \item {\tt ExpGaus}: an exponential plus one gaussian: $$F_{\rm ExpGaus}(x) = f_0 \cdot e^{ax} + (1-f_0) \cdot e^{2(x-b)^2/c}$$
   %\item[{\bf ExpGaus2}:] an exponential plus two gaussians: $$F_{\rm ExpGaus2}(x) = f_0 \cdot e^{ax} + f_1 \cdot e^{2(x-b)^2/c} + (1-f_0-f_1) \cdot e^{2(x-d)^2/e}$$
-  \item[{\bf ErfExpGaus}:] an error function plus one gaussian: $$F_{\rm ErfExpGaus}(x) = f_0 \cdot F_{\rm ErfExp}(x,a,b,c) + (1-f_0) \cdot e^{2(x-d)^2/e}$$
-  \item[{\bf ErfExpGaus2}:] an error function plus two gaussians: $$F_{\rm ExpGaus2}(x) = f_0 \cdot F_{\rm ErfExp}(x,a,b,c) + f_1 \cdot e^{2(x-d)^2/e} + (1-f_0-f_1) \cdot e^{2(x-f)^2/g}$$
+  \item {\tt ErfExpGaus}: an error function plus one gaussian: $$F_{\rm ErfExpGaus}(x) = f_0 \cdot F_{\rm ErfExp}(x,a,b,c) + (1-f_0) \cdot e^{2(x-d)^2/e}$$
+  \item {\tt ErfExpGaus2}: an error function plus two gaussians: $$F_{\rm ExpGaus2}(x) = f_0 \cdot F_{\rm ErfExp}(x,a,b,c) + f_1 \cdot e^{2(x-d)^2/e} + (1-f_0-f_1) \cdot e^{2(x-f)^2/g}$$
 \end{itemize}
 
-The choice of the functions is channel-dependent, and it depends on the background shape and the available statistics, and is summarized in Table~\ref{tab:MassFunctions}.
+\noindent The choice of the functions is channel-dependent, and it depends on the background shape and the available statistics, and is summarized in tab.~\ref{tab:MassFunctions}. In order to make the background evaluation less dependent as possible from the choice of the function describing the jet mass of the main background, an alternative function has been used to fit the \V + jets background. The absolute difference bewteen the number of expected events calculated with the main \V + jets function and the alternative is taken as systematic uncertainty.
 
 \begin{table}[!htb]
   \begin{center}
-    \begin{tabular}{cc|ccccc}
-      \multicolumn{2}{c}{category} & \V+jets & alt. \V+jets & Top & VV \\
+    \begin{tabular}{c|ccccc}
+      category & \V+jets & alt. \V+jets & Top & VV \\
       \hline
-      & $2\nu$, low-purity  & ErfPow2 & ExpGaus & ErfExpGaus2 & ExpGaus \\
       \hline
-      & $2\nu$, high-purity & ExpGaus & ErfExpGaus & ErfExpGaus2 & ExpGaus \\
+      low-purity  & ErfPow2 & ExpGaus & ErfExpGaus2 & ExpGaus \\
       \hline
+      high-purity & ExpGaus & ErfExpGaus & ErfExpGaus2 & ExpGaus \\
     \end{tabular}
   \end{center}
   \caption{Chosen functions to fit the jet mass distribution for each channel.}\label{tab:MassFunctions}
 \end{table}
 
-The following plots (Figure~\ref{fig:XVZnn_JetMass}-\ref{fig:XVZnn_JetMass}) show the mass fits to the jet mass in the different channels. Table~\ref{tab:BkgNorm} summarizes the expected background yield in the signal region, that is in agreement with observation in both the purity categories.
+
+
+\noindent The following plots (fig.~\ref{fig:XVZnn_JetMass}-\ref{fig:XVZnn_JetMass}) show the mass fits to the jet mass in the different channels, along with the alternative functions for the main background. Table~\ref{tab:BkgNorm} summarizes the expected background yield in the signal region, that is in agreement with observation in both the purity categories. The quoted uncertainties are calculated as follows:
+\begin{itemize}
+\item the statistic uncertainty is the uncertainty of the fit to the \V + jet background;
+\item the systematic uncertainty is the propagation of the uncertainties of the fits to the \V\V and Top backgrounds;
+\item the alternative function uncertainty describes the discrepancy in the background yield in SR depending on the choice of the function to describe the \V + jets background.
+\end{itemize}
 
 %[FIXME: numbers in table to be updated]
 
 \begin{table}[!htb]
   \begin{center}
-    \begin{tabular}{cc|cccccc}
-      region & category   & Expected  & Stat.       & Syst.      & Alt. function & Observed \\
+    \begin{tabular}{cc|c|ccc|c}
+      Region & Category   & Expected & Statistical       & Systematic     & Alternative function& Observed \\
+       &  & events & uncertainty       & uncertainty     & uncertainty & events\\
+      \hline
       \hline
       SB     & low-purity & $2356.6$ & $\pm 52.5$ & $\pm 16.0$ & $\pm 1.1$    & $2314$ \\
       SR     & low-purity & $1093.2$  & $\pm 48.1$ & $\pm 16.4$ & $\pm 49.1$   & $1153$ \\
       \hline
       SB & high-purity    & $779.8$  & $\pm 29.1$ & $\pm 13.1$ & $\pm 0.3$  & $774$ \\
       SR & high-purity    & $254.4$  & $\pm 15.3$ & $\pm 17.9$ & $\pm 7.8$  & $271$ \\
-      \hline
     \end{tabular}
   \end{center}
   \caption{Expected background yield in the SB ($30 < m_j < 65\GeV$, $m_j > 135\GeV$ )and in the SR ($65 < m_j < 105\GeV$) and relative uncertainties.}\label{tab:BkgNorm}
 \end{table}
 
-\clearpage
+%\clearpage
 
 
 %%% 2 electrons %%%
@@ -108,7 +113,7 @@ The following plots (Figure~\ref{fig:XVZnn_JetMass}-\ref{fig:XVZnn_JetMass}) sho
     \includegraphics[width=.32\textwidth]{v9/plotsAlpha/XVZnnlp/VjetMass.pdf}
     \includegraphics[width=.32\textwidth]{v9/plotsAlpha/XVZnnlp/VVMass.pdf}
     \includegraphics[width=.32\textwidth]{v9/plotsAlpha/XVZnnlp/TopMass.pdf}
-  \caption{Fit to the simulated $m_j$ in the low-purity category for the three backgrounds: \V+jets (left), VV (center), Top (right). For the main background prediction, the alternative function is displayed with a dotted red line, superimposed to the main choice (continuous light blue curve).}
+  \caption{Fit to the simulated $m_j$ in the low-purity category for the three backgrounds: \V+jets (left), \V\V (center), Top (right). For the main background prediction, the alternative function is displayed with a dotted red line, superimposed to the main choice (continuous light blue curve).}
   \label{fig:XVZnnlp_JetMass}
 \end{figure}
 
@@ -118,7 +123,7 @@ The following plots (Figure~\ref{fig:XVZnn_JetMass}-\ref{fig:XVZnn_JetMass}) sho
     \includegraphics[width=.32\textwidth]{v9/plotsAlpha/XVZnnhp/VjetMass.pdf}
     \includegraphics[width=.32\textwidth]{v9/plotsAlpha/XVZnnhp/VVMass.pdf}
     \includegraphics[width=.32\textwidth]{v9/plotsAlpha/XVZnnhp/TopMass.pdf}
-  \caption{Fit to the simulated $m_j$ in the high-purity category for the three backgrounds: \V+jets (left), VV (center), Top (right). For the main background prediction, the alternative function is displayed with a dotted red line, superimposed to the main choice (continuous light blue curve).}
+  \caption{Fit to the simulated $m_j$ in the high-purity category for the three backgrounds: \V+jets (left), \V\V (center), Top (right). For the main background prediction, the alternative function is displayed with a dotted red line, superimposed to the main choice (continuous light blue curve).}
   \label{fig:XVZnnhp_JetMass}
 \end{figure}
 
@@ -134,14 +139,16 @@ The following plots (Figure~\ref{fig:XVZnn_JetMass}-\ref{fig:XVZnn_JetMass}) sho
 
 
 
-\clearpage
+%\clearpage
 
 
 
 
 \subsection{Background shape}\label{ssec:alphaShape}
 
-The mass of the resonance candidate (\mtVZ) is parametrized separately for the V+jets ($N_{SR}^{Vjet}(\mtVZ)$, $N_{SB}^{Vjet}(\mtVZ)$), Top production  ($N_{SR}^{Top}(\mtVZ)$, $N_{SB}^{Top}(\mtVZ)$), and dibosons ($N_{SR}^{VV}(\mtVZ)$, $N_{SB}^{VV}(\mtVZ)$). These functions are extracted fitting the simulated \mtVZ spectra in SR and SB, respectively. The top and the diboson are normalized to luminosity. The V+jets functions are used to extract the $\alpha$-function: $$\alpha(\mtVZ) = \frac{N_{SR}^{Vjet}(\mtVZ)}{N_{SB}^{Vjet}(\mtVZ)}$$
+{\color{red} HERE}
+
+The mass of the resonance candidate (\mtVZ) is parametrized separately for the \V + jets ($N_{SR}^{Vjet}(\mtVZ)$, $N_{SB}^{Vjet}(\mtVZ)$), Top production  ($N_{SR}^{Top}(\mtVZ)$, $N_{SB}^{Top}(\mtVZ)$), and dibosons ($N_{SR}^{VV}(\mtVZ)$, $N_{SB}^{VV}(\mtVZ)$). These functions are extracted fitting the simulated \mtVZ spectra in SR and SB, respectively. The top and the diboson are normalized to luminosity. The V+jets functions are used to extract the $\alpha$-function: $$\alpha(\mtVZ) = \frac{N_{SR}^{Vjet}(\mtVZ)}{N_{SB}^{Vjet}(\mtVZ)}$$
 
 The main background is extracted through a fit to data in the SB, after subtracting the corresponding the Top and VV contribution from data. The resulting shape is then multiplied by the $\alpha$-function in order to get the main background expectation in the SR. Finally, the Top and diboson contribution in the SR is added to the main background estimation.
 
@@ -263,6 +270,8 @@ Fig.~\ref{fig:XVZnn_Exp} summarizes the final background predictions as a functi
 \clearpage
 
 \subsection{Alpha method validation}
+\label{ssec:alpha_validation}
+{\color{red} EXPLAIN WHY Z+jet and W+jet are together}
 
 As a validation of the $\alpha$-ratio method described in this Section, a closure test is performed on data. Instead of predicting the background in the real \V SR form both the lower and the upper jet mass sidebands, the SB and SR are redefined for the purposes of this test. 
 
@@ -272,6 +281,8 @@ With this configuration, the prediction of the background in the SR region is es
 In Figure~\ref{fig:alphaClosure} and Table~\ref{tab:alphaClosure}, the predicted shapes and normalizations are compared to the observed ones in data. 
 A good overall agreement both in normalization and shape is obtained. There is a bit of tension in normalization for high-purity category, due to an upper fluctuation in data around 60 \GeV.
 This cross check confirms that the method to extract the \V+jets background is reliable and can be used to model the background in the search for potential excesses in the signal region defined in the analysis.
+
+
 
 %Comments about not perfect agreement
 
