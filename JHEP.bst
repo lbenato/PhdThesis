@@ -725,7 +725,7 @@ FUNCTION {article}
 
 FUNCTION {book}
 { output.bibitem
-  format.collaboration output
+  %format.collaboration output
   author empty$
     { format.editors "author and editor" output.check }
     { format.authors output.nonnull
@@ -996,7 +996,7 @@ FUNCTION {proceedings}
 
 FUNCTION {techreport}
 { output.bibitem
-  format.collaboration output
+  %format.collaboration output
   format.authors "author" output.check
   format.title "title" output.check
   blank.sep
