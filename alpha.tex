@@ -16,7 +16,7 @@ The goal of the analysis is to look for localized excesses in the \mtVZ spectrum
 f_{\text{bkg}}(\mtVZ) = f_{\text{SB}}(\mtVZ) \times \alpha(\mtVZ)
 \end{equation}
 
-\noindent In the above description, no definition of the SB and SR is included. Ideally, the best choice would be a variable such that the distribution of \mtVZ in the signal region and sidebands are similar. In this analysis, the soft drop PUPPI corrected jet mass $m_V$ (sec.~\ref{ssec:jetmass}) is chosen as the control variable, and the cut values are those reported in tab.~\ref{tab:SR-SB}. All the selections used in the $\alpha$ method background prediction are the same reported in sec.~\ref{ssec:final_dib_cand}.
+\noindent In the above description, no definition of the SB and SR is included. Ideally, the best choice would be a variable such that the distribution of \mtVZ in the signal region and sidebands are similar. In this analysis, the soft drop PUPPI corrected jet mass $m_V$ (sec.~\ref{ssec:jetmass}) is chosen as the control variable, and the cut values are those reported in tab.~\ref{tab:SR-SB}. All the selections used in the $\alpha$ method background prediction are the same as reported in sec.~\ref{ssec:final_dib_cand}.
 %In order to respect the blinding policy of the diboson VV searches, the Higgs mass window is not used neither for the background estimation (it can be potentially contamined by a signal) nor as signal region.
 
 \noindent In a real case scenario, the background is not purely composed of one single process neither in the SR nor in the SB. As already pointed out in sec.~\ref{ssec:backgrounds} and confirmed in sec.~\ref{sec:datamc_comp}, the background composition is dominated by two processes, \Z + jets ($\sim 50\%$ in the whole SR) and \W + jets ($\sim 35\%$ in the whole SR), grouped together as \V + jets, whose modeling in simulation is considered not to be trustworthy. Other subdominant backgrounds, \ttbar and single-t production, grouped as Top, and diboson (\VV), generally have smaller contributions (of the order of 5\% for \VV, and 9\% for Top, in the whole SR), and are considered quite well understood and modeled by MC generators. The justification of merging \W + jets and \Z + jets together as a single \V + jets background is provided in sec.~\ref{ssec:alpha_validation}
@@ -41,7 +41,7 @@ The first step in the background prediction consists in a proper estimation of t
 
 \noindent The empirical functional forms for each background are chosen to reflect the physics properties of the samples. In the low-purity category, the \V+ jets background is a falling background with no peaks, modelled as a power law, while in the high-purity category the \V + jets background component is characterized by a broad distribution roughly centered at $m_\V$, modelled as a gaussian, with an exponential tail at high mass values. The exponential falling \VV $m_\V$ spectrum shows a peak, corresponding to the reconstruction of a vector boson hadronic decay. The hadronic decays of \W and \Z bosons cannot be distinguished, hence they are modelled together as a gaussian. For the jet mass spectrum of the Top backgrounds, two peaks corresponding to the $W$ and top quark mass can be observed; they are modelled as gaussian functions, superimposed to a falling exponential background.
 
-\noindent An extended likelihood fit is performed, hence the functional forms chosen to build the jet mass templates are normalized to unity (becoming probability density functions) through normalization factors ($f_0$, $f_1$):
+\noindent An unbinned extended likelihood fit is performed, hence the functional forms chosen to build the jet mass templates are normalized to unity (becoming probability density functions) through normalization factors ($f_0$, $f_1$):
 
 \begin{itemize}
   %%\item[{\bf Exp}:] an exponential function: $$F_{\rm Exp}(x)=e^{ax}$$
@@ -381,14 +381,14 @@ A good overall agreement both in normalization and shape is obtained. There is a
 %\newpage
 \subsection{Signal modeling}
 
-The simulated signal samples, with different resonance mass hypoteses, are fitted in the SR with an empirical function in order to be able to perform an unbinned likelihood fit for the signal extraction. The function chosen to model the signal samples is a \emph{Crystal Ball} function~\cite{Oreglia:1980cs,Skwarnicki:1986xj}, which is composed by a gaussian-like core convoluted to two power-law tails. %Both spin-2 (fig.~\ref{fig:XVZnnlp_Signal}-~\ref{fig:XVZnnhp_Signal}) and spin-1 (fig.~\ref{fig:XWZnnlp_Signal}-~\ref{fig:XWZnnhp_Signal}) signal samples are fitted.
+The simulated signal samples, with different resonance mass hypoteses, are fitted in the SR with an empirical function in order to be able to perform an unbinned likelihood fit for the signal extraction. The function chosen to model the signal samples is a \emph{Crystal Ball} function~\cite{Oreglia:1980cs,Skwarnicki:1986xj}, which is composed by a gaussian-like core convolved to two power-law tails. %Both spin-2 (fig.~\ref{fig:XVZnnlp_Signal}-~\ref{fig:XVZnnhp_Signal}) and spin-1 (fig.~\ref{fig:XWZnnlp_Signal}-~\ref{fig:XWZnnhp_Signal}) signal samples are fitted.
 Both spin-2 (fig.~\ref{figXZZInv_Signal}) and spin-1 (fig.~\ref{fig:XWZInv_Signal}) signal samples are fitted.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnlp/XZZInv_Signal.pdf}
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnhp/XZZInv_Signal.pdf}
-  \caption{Interpolation of the signal as a function of the resonace transverse mass \mtVZ, for a spin-2 (bulk graviton) signal hypothesis with an arbitrary cross section of 1 \pb in the low- (left) and high-purity category (right).}
+  \caption{Interpolation of the signal as a function of the resonace transverse mass \mtVZ, for a spin-2 (bulk graviton) signal hypothesis with an arbitrary cross section of 1 \pb in the low- (left) and high-purity category (right). Signal distributions are normalized to unity.}
   \label{fig:XZZInv_Signal}
 \end{figure}
 
@@ -396,7 +396,7 @@ Both spin-2 (fig.~\ref{figXZZInv_Signal}) and spin-1 (fig.~\ref{fig:XWZInv_Signa
   \centering
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnlp/XWZInv_Signal.pdf}
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnhp/XWZInv_Signal.pdf}
-  \caption{Interpolation of the signal as a function of the resonace transverse mass \mtVZ, for a spin-1 ($W^{'}$) signal hypothesis with an arbitrary cross section of 1 \pb in the low- (left) and high-purity category (right).}
+  \caption{Interpolation of the signal as a function of the resonace transverse mass \mtVZ, for a spin-1 ($W^{'}$) signal hypothesis with an arbitrary cross section of 1 \pb in the low- (left) and high-purity category (right). Signal distributions are normalized to unity.}
   \label{fig:XWZInv_Signal}
 \end{figure}
 
@@ -488,14 +488,14 @@ Both spin-2 (fig.~\ref{figXZZInv_Signal}) and spin-1 (fig.~\ref{fig:XWZInv_Signa
 \subsubsection{Signal parametrization}
 \label{ssec:signal_parametrization}
 
-The signal is parametrized by interpolating the fitted parameters separately for each category in order to have a continous variation of the signal shape for every possible \mtVZ value within the range. A linear fit is performed on the mean and the width of the gaussian core of the Crystal Ball functions. The interpolations are shown in fig.~\ref{fig:XZZ_SignalShapeLP}-~\ref{fig:XZZ_SignalShapeHP} for the spin-2 signal model, and in fig.~\ref{fig:XWZ_SignalShapeLP}-~\ref{fig:XWZ_SignalShapeHP} for the spin-1 signal model. Shape systematic uncertainties, as described in sec.~\ref{sec:uncertainties}, are taken into account while describing the mean and sigma of the gaussian core, and they are related to the effects of the jet mass scale and resolution. Other shape parameters describing the tails of the Crystal Ball are fitted as $3^{\text{rd}}$ degree polynomial.
+The signal is parametrized by interpolating the fitted parameters separately for each category in order to have a continous variation of the signal shape for every possible mass value within the range. A linear fit is performed on the mean and the width of the gaussian core of the Crystal Ball functions. The interpolations are shown in fig.~\ref{fig:XZZ_SignalShapeLP}-~\ref{fig:XZZ_SignalShapeHP} for the spin-2 signal model, and in fig.~\ref{fig:XWZ_SignalShapeLP}-~\ref{fig:XWZ_SignalShapeHP} for the spin-1 signal model. Shape systematic uncertainties, as described in sec.~\ref{sec:uncertainties}, are taken into account while describing the mean and sigma of the gaussian core, and they are related to the effects of the jet mass scale and resolution. Other shape parameters describing the tails of the Crystal Ball are fitted as $3^{\text{rd}}$ degree polynomial.
 
 %[FIXME: since some Crystal Ball fits are partially failing, some parameters have awkward uncertainties, so the polynomial function is off, especially for the exponential slope parameter (bottom right). In this case, the SPLINE approach is chosen.]
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.95\textwidth]{plotsAlpha_tesi/XVZnnlp/XZZInv_SignalShape.pdf}
-  \caption{Interpolation of the fitted parameters as a function of the resonace transverse mass \mtVZ, for a spin-2 (bulk graviton) signal hypothesis, low-purity category.}
+  \caption{Interpolation of the fitted parameters as a function of the resonace mass, for a spin-2 (bulk graviton) signal hypothesis, low-purity category.}
   \label{fig:XZZ_SignalShapeLP}
 \end{figure}
 
@@ -503,14 +503,14 @@ The signal is parametrized by interpolating the fitted parameters separately for
   \centering
     \includegraphics[width=.95\textwidth]{plotsAlpha_tesi/XVZnnhp/XZZInv_SignalShape.pdf}
 
-  \caption{Interpolation of the fitted parameters as a function of the resonace transverse mass \mtVZ, for a spin-2 (bulk graviton) signal hypothesis, high-purity category.}
+  \caption{Interpolation of the fitted parameters as a function of the resonace mass, for a spin-2 (bulk graviton) signal hypothesis, high-purity category.}
   \label{fig:XZZ_SignalShapeHP}
 \end{figure}
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.95\textwidth]{plotsAlpha_tesi/XVZnnlp/XWZInv_SignalShape.pdf}
-  \caption{Interpolation of the fitted parameters as a function of the resonace transverse mass \mtVZ, for a spin-1 (\Wp) signal hypothesis, low-purity category.}
+  \caption{Interpolation of the fitted parameters as a function of the resonace mass, for a spin-1 (\Wp) signal hypothesis, low-purity category.}
   \label{fig:XWZ_SignalShapeLP}
 \end{figure}
 
@@ -518,18 +518,18 @@ The signal is parametrized by interpolating the fitted parameters separately for
   \centering
     \includegraphics[width=.95\textwidth]{plotsAlpha_tesi/XVZnnhp/XWZInv_SignalShape.pdf}
 
-  \caption{Interpolation of the fitted parameters as a function of the resonace transverse mass \mtVZ, for a spin-1 (\Wp) signal hypothesis, high-purity category.}
+  \caption{Interpolation of the fitted parameters as a function of the resonace mass, for a spin-1 (\Wp) signal hypothesis, high-purity category.}
   \label{fig:XWZ_SignalShapeHP}
 \end{figure}
 
 
-\noindent The normalization of the signal samples is extrapolated from the fitted integral of the Crystal Ball functions. The points are then connected with a line, in order to have an acceptable description of the normalization as a function of \mtVZ. The interpolations are shown in fig.~\ref{fig:XZZ_SignalNorm} for the spin-2 signal model, and in fig.~\ref{fig:XWZ_SignalNorm} for the spin-1 signal model.% and Fig.~\ref{fig:XWZ_SignalNorm}.
+\noindent The number of expected events (normalization) of an arbitrary signal mass point can be extrapolated from the distribution of the fitted integrals of the Crystal Ball functions. The points are connected with a line, in order to have an acceptable description of the normalization as a function of the resonance mass. The interpolations are shown in fig.~\ref{fig:XZZ_SignalNorm} for the spin-2 signal model, and in fig.~\ref{fig:XWZ_SignalNorm} for the spin-1 signal model.% and Fig.~\ref{fig:XWZ_SignalNorm}.
 
 \begin{figure}[!htb]
   \centering
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnlp/XZZInv_SignalNorm.pdf}
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnhp/XZZInv_SignalNorm.pdf}
-  \caption{Interpolation of the signal normalization as a function of the resonace transverse mass \mtVZ, for a spin-2 (bulk graviton) signal hypothesis. From left to right: low-purity, high-purity.}
+  \caption{Interpolation of the signal normalization as a function of the resonace mass, for a spin-2 (bulk graviton) signal hypothesis. From left to right: low-purity, high-purity.}
   \label{fig:XZZ_SignalNorm}
 \end{figure}
 
@@ -537,7 +537,7 @@ The signal is parametrized by interpolating the fitted parameters separately for
   \centering
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnlp/XWZInv_SignalNorm.pdf}
     \includegraphics[width=.495\textwidth]{plotsAlpha_tesi/XVZnnhp/XWZInv_SignalNorm.pdf}
-  \caption{Interpolation of the signal normalization as a function of the resonace transverse mass \mtVZ, for a spin-1 ($W^{'}$) signal hypothesis. From left to right: low-purity, high-purity.}
+  \caption{Interpolation of the signal normalization as a function of the resonace mass, for a spin-1 ($W^{'}$) signal hypothesis. From left to right: low-purity, high-purity.}
   \label{fig:XWZ_SignalNorm}
 \end{figure}
 

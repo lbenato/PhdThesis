@@ -49,7 +49,7 @@ Jet uncertainties are evaluated in the signal regions by moving up and down by o
 \subsubsection{Jet mass uncertainties}
 \noindent The soft drop PUPPI corrected jet mass is affected by two different uncertainties sources.
 
-\noindent Soft drop jet mass calibration is varied within $\pm \sqrt{ \left( \text{JES}_\text{unc.}^2 + \text{JMS}_\text{unc.}^2 \right) }$, where $\text{JES}_\text{unc.}$ is the uncertainty of the JES, described aboce, and $\text{JMS}_\text{unc.}=0.0094$ is a constant coefficent (~\ref{ssec:jetmass},\cite{bib:1748-0221-6-11-P11002},~\cite{CMS-DP-2016-020}). The impact is calculated on signal and secondary backgrounds, both in normalization and shape.
+\noindent Soft drop jet mass calibration is varied within $\pm \sqrt{ \left( \text{JES}_\text{unc.}^2 + \text{JMS}_\text{unc.}^2 \right) }$, where $\text{JES}_\text{unc.}$ is the uncertainty of the JES, described above, and $\text{JMS}_\text{unc.}=0.0094$ is a constant coefficent (~\ref{ssec:jetmass},\cite{bib:1748-0221-6-11-P11002},~\cite{CMS-DP-2016-020}). The impact is calculated on signal and secondary backgrounds, both in normalization and shape.
 
 \noindent As regarding the smearing, the soft drop PUPPI corrected jet mass of the signal samples and sub-dominant backgrounds has been smeared up or down by a smearing coefficient (described in sec.~\ref{ssec:jetmass}), that is $ \text{JMR} = 1.00 \pm 0.20$.
 \begin{table}[!htb]
@@ -125,7 +125,7 @@ Jet uncertainties are evaluated in the signal regions by moving up and down by o
 \subsubsection{\V-tagging uncertainties}
 \label{sec:wtagunc}
 
-Data-Monte Carlo \V-tagging scale factors are applied to the signal and secondary background yields (sec.~\ref{ssec:jetsub_corr}), and their uncertainty is taken as systematic. The contribution of the uncertainty is 11\% for the high-purity and 23\% for low-purity category, applied on signal and secondary backgrounds. While combining the categories, \V-tagging uncertainties are considered as anti-correlated.
+Data-Monte Carlo \V-tagging scale factors are applied to the signal and secondary background yields (sec.~\ref{ssec:jetsub_corr}), and their uncertainty is taken as systematic uncertainty. The contribution of the uncertainty is 11\% for the high-purity and 23\% for low-purity category, applied on signal and secondary backgrounds. While combining the categories, \V-tagging uncertainties are considered as anti-correlated.
 
 \noindent The \V-tagging scale factors are measured in \ttbar samples, hence at \pt values generally not larger than 200--300 \GeV. An uncertainty due to the \V-tagging extrapolation at higher momenta is considered by using an alternative showering scheme (HERWIG~\cite{bib:HERWIG}). It is parametrized as a function of the jet \pt: $X \times \log(\pt/200 \GeV)$, where $X=0.085$ for the high-purity category and $X=0.039$ for low-purity category. It amounts to 9-20\%, depending on the mass of the signal sample considered, to 2-3\% for \VV and Top backgrounds in high-low purity category. While combining the categories, \V-tagging extrapolation uncertainties are considered as correlated.
 
@@ -147,13 +147,13 @@ As described in sec.~\ref{ssec:met_description}, the \MET evaluation depends on 
 \noindent The last contribution in \MET uncertainty is related to unclustered energy, whose impact is evaluated scaling up or down the central value by its own resolution, depending on the particle type. The uncertainty is negligible on signal and background normalizations and shape.
 
 \subsubsection{Pile-up uncertainty}
-An additional source of systematic uncertainty is the limited knowledge of the total proton-proton inelastic cross-section at $13$ \TeV, used to get the expected number of vertices distribution for the pile-up reweighting procedure. A $4.6\%$ uncertainty is assumed for the default value of $69\,200$ mb, and the vertices distributions are varied accordingly (fig.~\ref{fig:PU_updown}). Changing the pile-up weight varies also the MC normalizations in the signal region, and the relative difference is estimated to be 0.2\% for the diboson background, 0.3\% for top processes, and 0.4-0.7\% for signal samples. Pile-up impacts on signal shapes are negligible, and it affects by 0.8\% and 0.4\% the diboson and top shapes (fig.~\ref{fig:syspileup}). %No shape uncertainties are considered for PU. %$3\%$ for the diboson and top samples, and a flat $0.5\%$ for signal samples. No shape uncertainties are considered for PU.
+An additional source of systematic uncertainty is the limited knowledge of the total proton-proton inelastic cross-section at $13$ \TeV, used to get the expected number of vertices distribution for the pile-up reweighting procedure. A $4.6\%$ uncertainty is assumed for the default value of $69.2$ mb, and the vertices distributions are varied accordingly (fig.~\ref{fig:PU_updown}). Changing the pile-up weight varies also the MC normalizations in the signal region, and the relative difference is estimated to be 0.2\% for the diboson background, 0.3\% for top processes, and 0.4-0.7\% for signal samples. Pile-up impacts on signal shapes are negligible, and it affects by 0.8\% and 0.4\% the diboson and top shapes (fig.~\ref{fig:syspileup}). %No shape uncertainties are considered for PU. %$3\%$ for the diboson and top samples, and a flat $0.5\%$ for signal samples. No shape uncertainties are considered for PU.
 
 \begin{figure}[!htb]
   \begin{center}
     \includegraphics[width=.495\textwidth]{figures/PU_Moriond17.pdf}
   \end{center}
-  \caption{Pile-up scenario in 2016 data (black curve), and scenarios obtained by shifting up (red curve) or down (blue curve) the central value of the total inelastic cross-section ($69\,200$ mb), compared to pile-up distribution simulated in Monte Carlo samples (dotted curve).}
+  \caption{Pile-up scenario in 2016 data (black curve), and scenarios obtained by shifting up (red curve) or down (blue curve) the central value of the total inelastic cross-section ($69.2$ mb), compared to pile-up distribution simulated in Monte Carlo samples (dotted curve).}
   \label{fig:PU_updown}
 \end{figure}
 

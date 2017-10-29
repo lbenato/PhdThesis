@@ -21,7 +21,7 @@ where $z_{vtx}$ and $d_0$ are the distance along and perpendicular to the beam l
  \begin{figure}[!htb]
   \centering
     \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnInc/nPV.pdf}
-  \caption{Primary vertices distributions in data and MC samples, after reweighting.}
+  \caption{Primary vertices multiplicity in data and MC samples, after reweighting.}
   \label{fig:npv}
  \end{figure}
 
@@ -31,7 +31,7 @@ where $z_{vtx}$ and $d_0$ are the distance along and perpendicular to the beam l
 
 Electrons considered in this analysis, reconstructed from energy deposits in the ECAL matched to tracks reconstructed in the silicon tracker, are required to pass the particle flow criteria, and to fall in the ECAL pseudorapidity fiducial range ($|\eta|<2.5$). The electron identification is defined with a ``cut-based'' approach. In the isolation definition, the effect of neutral pile-up contributions is considered by taking into account the energy deposits in the calorimeter, estimated through the so-called \emph{$\rho$-area} method, by subtracting the median energy density in the event $\rho$ multiplied by the electron energy deposits effective area. The isolation value is computed in a $\Delta$R cone of 0.3 centered along the lepton direction.
 
-\noindent Since in this analysis aims at a final state without any lepton, every electron identified with the looser cut-based criteria (\emph{veto Id}) and transverse momentum $\pt > 10$ GeV is vetoed. The detailed set of cuts to define a \emph{veto Id} cut-based electron are reported in tab.~\ref{tab:EGcutBar}; this set of selections allow to identify an electron with an efficiency of $\sim 95$\%. The supercluster width is indicated as $\sigma_{i\eta i\eta}$; $\Delta \eta_{in}^{seed}$ and $\Delta \varphi_{in}$ are the difference in $\eta$ and $\varphi$ between the track position as it is measured in the inner layer, and then extrapolated to the interaction vertex and to the calorimeter, and the $\eta$ of the seed cluster or the $\varphi$ of the supercluster; $H/E$ is the hadronic leakage, \textit{i.e.} the ratio of the hadronic energy of the calorimetric towers to the electromagnetic energy of the electron supercluster; \emph{Iso} indicates the particle flow isolation corrected with the effective area approach; $1/E - 1/p$ is the difference of the inverse of the energy and the momentum; $d_0$ and $d_z$ are the transverse and longitudinal impact parameters. A dedicated conversion veto is applied to mitigate the effects of electrons undergoing bremsstrahlung in the silicon detector.
+\noindent Since this analysis aims at a final state without any charged lepton, every electron identified with the looser cut-based criteria (\emph{veto Id}) and transverse momentum $\pt > 10$ GeV is vetoed. The detailed set of cuts to define a \emph{veto Id} cut-based electron are reported in tab.~\ref{tab:EGcutBar}; this set of selections identify an electron with an efficiency of $\sim 95$\%. The supercluster width is indicated as $\sigma_{i\eta i\eta}$; $\Delta \eta_{in}^{seed}$ and $\Delta \varphi_{in}$ are the difference in $\eta$ and $\varphi$ between the track position as it is measured in the inner layer, and then extrapolated to the interaction vertex and to the calorimeter, and the $\eta$ of the seed cluster or the $\varphi$ of the supercluster; $H/E$ is the hadronic leakage, \textit{i.e.} the ratio of the hadronic energy of the calorimetric towers to the electromagnetic energy of the electron supercluster; \emph{Iso} indicates the particle flow isolation corrected with the effective area approach; $1/E - 1/p$ is the difference of the inverse of the energy and the momentum; $d_0$ and $d_z$ are the transverse and longitudinal impact parameters. A dedicated conversion veto is applied to mitigate the effects of electrons undergoing bremsstrahlung in the silicon detector.
 
 \begin{table}[htb]
  \centering
@@ -61,7 +61,7 @@ Electrons considered in this analysis, reconstructed from energy deposits in the
 %\clearpage
 
 \subsection{Photons}
-As in the case of electrons, a photon veto is applied in the analysis both for the signal and the control regions. Events are rejected if they contains one (or more) photon with $\pt > 15$ GeV , $|\eta| < 2.5$, passing the \emph{loose} cut-based photon Id, whose definition is reported in tab.~\ref{tab:PhotonId}. The isolation cuts (using the $\rho$-area method for the mitigation of the pile-up) and conversion-safe veto are applied. The isolation value is computed in a $\Delta R$ cone of 0.3 and it is corrected for pile-up by subtracting the event-by-event energy density ($\rho$) times the photon energy deposits effective area.
+As in the case of electrons, a photon veto is applied in the analysis both for the signal and the control regions. Events are rejected if they contain one (or more) photon with $\pt > 15$ GeV , $|\eta| < 2.5$, passing the \emph{loose} cut-based photon Id, whose definition is reported in tab.~\ref{tab:PhotonId}. The isolation cuts (using the $\rho$-area method for the mitigation of the pile-up) and conversion-safe veto are applied. The isolation value is computed in a $\Delta R$ cone of 0.3 and it is corrected for pile-up by subtracting the event-by-event energy density ($\rho$) times the photon energy deposits effective area.
 
  \begin{table}[htb]
   \centering
@@ -87,7 +87,7 @@ As in the case of electrons, a photon veto is applied in the analysis both for t
 
 %Tracker Muon reconstruction is more efficient than the Global Muon reconstruction at low momenta, $\pt \lesssim 5 \GeV$, because it requires only a single muon segment in the muon system, whereas Global Muon reconstruction is designed to have high efficiency for muons penetrating through more than one muon station and typically requires segments in at least two muon stations. Thanks to the high tracker-track efficiency and a very high efficiency of reconstructing segments in the muon system, about 99\% of muons produced in $pp$ collisions and having sufficiently high momentum are reconstructed either as a Global Muon or a Tracker Muon, and very often as both. Muons reconstructed only as standalone-muon tracks have worse momentum resolution and less favorable collision muon to cosmic-ray muon ratio than the Global and Tracker Muons and are usually not used in physics analyses.
 
-The minimal criteria to define a muon is that it must be identified by the particle flow algorithm, and should be reconstructed either as a global muon or as a tracker muon (sec.~\ref{ssec:physicsobjects}). The muon isolation is defined in a cone with a radius of $\Delta R=0.4$ centered along the lepton direction. In the analysis event selection, all muons identified with the loosest criteria previously described, \pt over 10 GeV, PF isolation below 0.25, $\eta<|2.4|$ are vetoed.
+The minimal criteria to define a muon is that it must be identified by the particle flow algorithm, and should be reconstructed either as a global muon or as a tracker muon (sec.~\ref{ssec:physicsobjects}). The muon isolation is defined in a cone with a radius of $\Delta R=0.4$ centered along the lepton direction. In the analysis event selection, events with at least one muon identified with the loosest criteria previously described, \pt over 10 GeV, PF isolation below 0.25, $\eta<|2.4|$ are vetoed.
  
 %Scale factors for muon identification and isolation are centrally provided as a function of the muon \pt and $\eta$ by the Muon POG~\cite{MuonSF}, and are applied consistently in the analysis.
 
@@ -144,11 +144,11 @@ Charged EM Fraction             & $< 0.99$& $< 0.99$\\
   \label{fig:AK8jet_eta}
 \end{figure}
 
-\noindent Since it has been measured that the jet energy resolution (JER) is not the same in data and MC, an additional smearing is applied in simulation, in order to get a better agreement. There are two independent ways to get the smearing. The scaling method rescales the corrected four-momentum of a reconstructed jet by a factor
+\noindent Since the jet energy resolution (JER) is not the same in data and MC, an additional smearing is applied in simulation, in order to get a better agreement. There are two independent ways to get the smearing. The scaling method rescales the corrected four-momentum of a reconstructed jet by a factor
 \begin{equation}
 c_{\text{JER}} = 1 + (s_{\text{JER}} - 1) \frac{p_T - p_T^{\text{gen}}}{p_T},
 \end{equation}
-where \pt is the transverse momentum of the jet, $p_T^{\text{gen}}$ is the transverse momentum of the generator level particle corresponding to the reconstructed jet, and $s_{\text{JER}}$ is the data-simulation resolution scale factor. The factor $c_{\text{JER}}$ is positively defined, hence, when negative, it is set equal to zero. %This method only works if a well-matched particle-level jet is present and can result in a large shift of the response otherwise.
+where \pt is the transverse momentum of the jet, $p_T^{\text{gen}}$ is the transverse momentum of the generator level particle corresponding to the reconstructed jet, and $s_{\text{JER}}$ is the data-simulation resolution scale factor. The factor $c_{\text{JER}}$ must be positively defined. %, hence, when negative, it is set equal to zero. %This method only works if a well-matched particle-level jet is present and can result in a large shift of the response otherwise.
 The generator level particle and a reconstructed jet are defined as matched if:
 \begin{equation}
 \begin{split}
@@ -195,11 +195,11 @@ is a random number extracted from a gaussian normal distribution, whose mean is 
 
 \subsection{Jet mass}\label{ssec:jetmass}
 
-The jet mass is the main observable in distinguishing a \V jet from a jet produced by colour interaction (QCD jets). Jet grooming procedure consists in the suppression of uncorrelated underlying event, pile-up and soft radiation from the jet: it improves the signal and background discrimination, by pushing the jet mass for QCD jets towards lower values of the spectrum, while maintaining the jet mass for \V-jets around the electroweak boson mass window.
+The jet mass is the main observable in distinguishing a jet due to a \V decay from a jet produced by colour interaction (QCD jets). Jet grooming procedure consists in the suppression of uncorrelated underlying event, pile-up and soft radiation from the jet: it improves the signal and background discrimination, by pushing the jet mass for QCD jets towards lower values of the spectrum, while maintaining the jet mass for \V-jets around the electroweak boson mass window.
 
-\noindent The grooming technique of the analysis relies on the ``soft drop declustering'' algorithm, a jet substructure technique that recursively removes soft wide-angle radiation from a jet~\cite{Larkoski:2014wba}, in order to mitigate the contaminations from initial state radiation, along with pile-up and multiple scatterings.
+\noindent The grooming technique of the analysis relies on the ``soft drop declustering'' algorithm, a technique that recursively removes soft wide-angle radiation from a jet~\cite{Larkoski:2014wba}, in order to mitigate the contaminations from initial state radiation, along with pile-up and multiple scatterings.
 
-\noindent The soft drop algorithm starts with a jet clustered with the anti-$k_T$ algorithm with a parameter $R_0$; the jet is then reclustered with the Cambridge-Aachen method~\cite{Dokshitzer:1997in}, whose definition is included in eq.~\ref{eq:dist_akt}, once the exponent $a$ is set $a=0$. The soft drop algorithm is ruled by two parameters, a soft threshold $z_{\text{cut}}$, that cuts on the energy fraction of soft radiation, and an angular exponent $\beta$. The procedure is the following:
+\noindent The soft drop algorithm starts with a jet clustered with the anti-$k_T$ algorithm with a parameter $R_0$; the jet is then reclustered with the Cambridge-Aachen method~\cite{Dokshitzer:1997in}, whose definition is included in eq.~\ref{eq:dist_akt}, with $a=0$. The soft drop algorithm is ruled by two parameters, a soft threshold $z_{\text{cut}}$, that cuts on the energy fraction of soft radiation, and an angular exponent $\beta$. The procedure is the following:
 \begin{itemize}
 \item the jet is declustered into two subjets, $j_1$ and $j_2$, by reverting the final step of Cambridge-Aachen algorithm;
 \item if $j_1$ and $j_2$ respect the soft drop condition (eq.~\ref{eq:softdrop_condition}), $j$ is defined as the groomed jet;
@@ -207,7 +207,7 @@ The jet mass is the main observable in distinguishing a \V jet from a jet produc
 \item if $j$ can't be declustered anymore, it is defined as the groomed jet.
 \end{itemize}
 
-\noindent The parameters $z_{\text{cut}} = 0.1$ and $\beta = 0$ are set in the soft drop condition:
+\noindent The parameters $z_{\text{cut}} = 0.1$ and $\beta = 0$ are set in the soft drop condition~\cite{Larkoski:2014wba}:
 \begin{equation}
 \frac{\min(\pt^1,\pt^2)}{\pt^1+\pt^2} > z_{\text{cut}} \left( \frac{\Delta R_{12}}{R_0} \right)^\beta,
 \label{eq:softdrop_condition}
@@ -219,15 +219,16 @@ The jet mass is the main observable in distinguishing a \V jet from a jet produc
     \includegraphics[width=.495\textwidth]{figures/Wtagging_W_spectrum.pdf}
     \includegraphics[width=.495\textwidth]{figures/Wtagging_j_spectrum.pdf}
   \end{center}
-  \caption{Distributions of the jet mass in \W + jeta signal simulations (left) and multi-jet QCD background (right), before (in black) and after applying soft drop algorithm. Each curve corresponds to a different value of the parameter $\beta$.~\cite{Larkoski:2014wba}}
+  \caption{Distributions of the jet mass in \W + jet signal simulations (left) and multi-jet QCD background (right), before (in black) and after applying soft drop algorithm. Each curve corresponds to a different value of the parameter $\beta$.~\cite{Larkoski:2014wba}}
   \label{fig:softdrop_original}
 \end{figure}
 
-\noindent The net effect of the soft drop algorithm is studied in Monte Carlo simulations of a \W hadronic decay process (signal), in association with jets, and of a multi-jet QCD process (background). Jets are clustered with the anti-\kt algorithm with a parameter $R_0 = 1$ and asked to have $\pt>500$ \GeV and $|\mathcal{Y}|<4$. The parameter $z_{\text{cut}}$ is chosen such in a way that the number of events falling in the \W mass window ($[70,90]$ \GeV) is the 35\% of the total number of events. The results before (black curve) and after the application of soft drop algorithm (coloured curves, depending on the value of $\beta$) are presented in fig.~\ref{fig:softdrop_original}~\cite{Larkoski:2014wba}. In particular, by comparing the ungroomed jet mass (in black) with the mass groomed with a parameter $\beta = 0$ (adopted in this analysis and displayed with a green curve), the soft drop mass of the leading jet is a very narrow distribution peaking around the nominal \W window in the signal sample, whilst it is pushed at lower values in the background sample.
+\noindent The net effect of the soft drop algorithm is studied in Monte Carlo simulations of a \W hadronic decay process (signal), in association with jets, and of a multi-jet QCD process (background). Jets are clustered with the anti-\kt algorithm with a parameter $R_0 = 1$ and asked to have $\pt>500$ \GeV and $|\mathcal{Y}|<4$. The parameter $z_{\text{cut}}$ is chosen such in a way that the number of events falling in the \W mass window ($[70,90]$ \GeV) amounts to 35\% of the total number of events. The results before (black curve) and after the application of the soft drop algorithm (coloured curves, depending on the value of $\beta$) are presented in fig.~\ref{fig:softdrop_original}~\cite{Larkoski:2014wba}. In particular, by comparing the ungroomed jet mass (in black) with the mass groomed with a parameter $\beta = 0$ (adopted in this analysis and displayed with a green curve), the soft drop mass of the leading jet is a very narrow distribution peaking around the nominal \W window in the signal sample, whilst it is pushed at lower values in the background sample.
 
 \vspace*{1\baselineskip}
 
-\noindent The soft drop algorithm is used in association with the Pile Up Per Particle Identification algorithm (PUPPI)~\cite{Bertolini2014}, designed to combine detector informations in order to compute a local metric $\alpha$, that describes with a weight how likely it is that one particle is coming from the primary vertex or from a pile-up event. A fundamental feature exploited by the algorithm is the \pt spectrum of the primary vertex particles, expected to be harder than that of the pile-up ones.
+\noindent The soft drop algorithm is used in association with the Pile Up Per Particle Identification algorithm (PUPPI)~\cite{Bertolini2014}, designed to combine detector informations in order to compute a local metric $\alpha$, that %describes with a weight how likely it is that one particle is coming 
+assigns a weight to each particle according to the probability that it comes from the primary vertex or from a pile-up event. A fundamental feature exploited by the algorithm is the \pt spectrum of the primary vertex particles, expected to be harder than that of the pile-up ones.
 
 \noindent The local shape $\alpha$ is defined as:
 
@@ -236,14 +237,14 @@ The jet mass is the main observable in distinguishing a \V jet from a jet produc
 \label{eq:puppi_shape_def}
 \end{equation}
 
-\noindent where $\Theta$ is the Heaviside step function, $\Delta R_{ij}$ is the angular distance between the considered $i$ particle and the neighbour $j$ particle, laying  in a cone $R_0 = 0.4$ centered around $i$ direction, within a minimum distance $R_{\text{min}} = 0.0001$. Given the softer \pt spectra of pile-up particles, $\alpha_i$ is smaller when $i$ particle does not originate from the primary vertex.
+\noindent where $\Theta$ is the Heaviside step function, $\Delta R_{ij}$ is the angular distance between the considered $i$ particle and the neighbour $j$ particle, laying  in a cone $R_0 = 0.4$ centered around $i$ direction, within a minimum distance $R_{\text{min}} = 0.0001$. Due to the softer \pt spectra of pile-up particles, $\alpha_i$ is smaller when $i$ particle does not originate from the primary vertex.
 
 \noindent The function
 \begin{equation}
 \chi_i^2 = \Theta (\alpha_i - \bar{\alpha}_{PU}) \frac{\left(  \alpha_i -  \bar{\alpha}_{PU}  \right)^2}{\sigma^2_{PU}}
 \label{eq:puppi_chi2}
 \end{equation}
-\noindent estimates how much $\alpha_i$ fluctuates from the median of the pile-up local shape $\bar{\alpha}_{PU}$ (that has a variance $\sigma^2_{PU}$), and it is distributed like a $\chi^2$ with 1 degree of freedom. The PUPPI weight is defined as the cumulative $\chi^2$ distribution $F_{\chi^2\text{, 1 d.o.f.}}$,
+\noindent estimates how much $\alpha_i$ fluctuates from the median of the pile-up local shape $\bar{\alpha}_{PU}$ (that has a variance $\sigma^2_{PU}$), and it is distributed like a $\chi^2$ with 1 degree of freedom. The distributions of $\alpha_{PU}$ is calculated with the charged particles belonging to pile-up vertices. The PUPPI weight is defined as the cumulative $\chi^2$ distribution $F_{\chi^2\text{, 1 d.o.f.}}$,
 
 \begin{equation}
 w_i = F_{\chi^2\text{, 1 d.o.f.}} (\chi_i^2).
@@ -261,36 +262,39 @@ w_i = F_{\chi^2\text{, 1 d.o.f.}} (\chi_i^2).
   \item a \pt-$\eta$-dependent correction to the reconstructed jet mass, applied separately for jets in the barrel and endcaps regions.
 \end{enumerate}
 
-\noindent Fig.~\ref{fig:fatjet_pre_softdroppuppimass_ZZ}-~\ref{fig:fatjet_pre_softdroppuppimass_WZ} show the jet mass for hadronically decaying \W or \Z bosons in bulk graviton and \W' signal samples, before and after the correction, without applying any selections. In fig.~\ref{fig:fatjet_softdroppuppimass}, the distribution of soft drop PUPPI jet mass is shown for the expected backgrounds of the analysis (coloured histograms) and data (black markers), before and after the corrections.
+%non mostrare i plot, la risoluzione peggiora
+%\noindent Fig.~\ref{fig:fatjet_pre_softdroppuppimass_ZZ}-~\ref{fig:fatjet_pre_softdroppuppimass_WZ} show the jet mass for hadronically decaying \W or \Z bosons in bulk graviton and \W' signal samples, before and after the correction, without applying any selections. In fig.~\ref{fig:fatjet_softdroppuppimass}, the distribution of soft drop PUPPI jet mass is shown for the expected backgrounds of the analysis (coloured histograms) and data (black markers), before and after the corrections.
 
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMass_signalZZ.pdf}
-    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalZZ.pdf}
-  \end{center}
-  \caption{Soft drop PUPPI mass of AK8 jet reconstructed for different bulk graviton signal samples, before corrections (left) and after corrections (right).}
-  \label{fig:fatjet_pre_softdroppuppimass_ZZ}
-\end{figure}
+%non mostrare i plot, la risoluzione peggiora
+%\begin{figure}[!htb]
+%  \begin{center}
+%    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMass_signalZZ.pdf}
+%    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalZZ.pdf}
+%  \end{center}
+%  \caption{Soft drop PUPPI mass of AK8 jet reconstructed for different bulk graviton signal samples, before corrections (left) and after corrections (right).}
+%  \label{fig:fatjet_pre_softdroppuppimass_ZZ}
+%\end{figure}
 
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMass_signalWZ.pdf}
-    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalWZ.pdf}
-  \end{center}
-  \caption{Soft drop PUPPI mass of AK8 jet reconstructed for different $W^{'}$ signal samples, before corrections (left) and after corrections (right).}
-  \label{fig:fatjet_pre_softdroppuppimass_WZ}
-\end{figure}
+%\begin{figure}[!htb]
+%  \begin{center}
+%    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMass_signalWZ.pdf}
+%    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMassCorr_signalWZ.pdf}
+%  \end{center}
+%  \caption{Soft drop PUPPI mass of AK8 jet reconstructed for different $W^{'}$ signal samples, before corrections (left) and after corrections (right).}
+%  \label{fig:fatjet_pre_softdroppuppimass_WZ}
+%\end{figure}
 
-\begin{figure}[!htb]
-  \begin{center}
-    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMass.pdf}
-    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMassCorr.pdf}
-  \end{center}
-  \caption{Soft drop PUPPI mass of AK8 jet; left: before corrections. right: after corrections.}
-  \label{fig:fatjet_softdroppuppimass}
-\end{figure}
+%non mostrare i plot, la risoluzione peggiora
+%\begin{figure}[!htb]
+%  \begin{center}
+%    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMass.pdf}
+%    \includegraphics[width=.495\textwidth]{plots/v9_thesis/XVZnnPre/FatJet1_softdropPuppiMassCorr.pdf}
+%  \end{center}
+%  \caption{Soft drop PUPPI mass of AK8 jet; left: before corrections. right: after corrections.}
+%  \label{fig:fatjet_softdroppuppimass}
+%\end{figure}
 
-\noindent In order to obtain a better data-Monte Carlo agreement, a smearing procedure has been applied to the soft drop PUPPI jet mass, by using the stochastic method, with a constant smearing coefficent ($1.00 \pm 0.20$), that does not depend on jet pseudorapidity, if it is restricted to $|\eta|<2.5$.
+\noindent In order to obtain a better data-Monte Carlo agreement, a smearing procedure has been applied to the soft drop PUPPI jet mass of simulation samples, by using the stochastic method, with a constant smearing coefficent ($1.00 \pm 0.20$), that does not depend on jet pseudorapidity, if it is restricted to $|\eta|<2.5$.
 
 \vspace*{1\baselineskip}
 
@@ -309,7 +313,7 @@ w_i = F_{\chi^2\text{, 1 d.o.f.}} (\chi_i^2).
  \label{tab:SR-SB}
 \end{table}
 
-\noindent The "signal region" (SR) refers to the \V-region, where the largest signal yield is expected. The "sidebands" (SB) refer to the low-sideband and high-sideband, where a negligible amount of signal is expected. Events with a jet mass value lower than 30 \GeV are discarded, because of the high background contamination. The jet mass distribution of the \V candidate, in the sidebands and in the signal region, is shown in fig.~\ref{fig:mj_paper}. If the soft drop, PUPPI corrected mass of a large-con jet falls into the \V-region, the jet is defined as \V-tagged.
+\noindent The "signal region" (SR) refers to the \V-region, where the largest signal yield is expected. The "sidebands" (SB) refer to the low-sideband and high-sideband, where a negligible amount of signal is expected. Events with a jet mass value lower than 30 \GeV are discarded, because of the high background contamination. The jet mass distribution of the \V candidate, in the sidebands and in the signal region, is shown in fig.~\ref{fig:mj_paper}. If the soft drop, PUPPI corrected mass of a large-cone jet falls into the \V-region, the jet is defined as \V-tagged.
 
 \begin{figure}[!htb]
   \begin{center}
@@ -322,14 +326,14 @@ w_i = F_{\chi^2\text{, 1 d.o.f.}} (\chi_i^2).
 
 \subsection{Jet substructure}\label{ssec:jetsub}
 
-In order to further discriminate signal from background, the inner structure of the jet is investigated. Studying the distribution of the jet constituents with respect to the jet axis allows to test the hypothesis of the existence of multiple substructures, that could be an evidence of jets originated by more than one parton. The constituents of the considered jet are clustered again with the $k_T$ algorithm, and it is forced to return $n$ subjets. The $n$-subjettiness~\cite{Thaler2011}, $\tau_n$, is defined as
+In order to further discriminate signal from background, the inner structure of the jet is investigated. Studying the distribution of the jet constituents with respect to the jet axis tests the hypothesis of the existence of multiple substructures, that could be an evidence of jets originated by more than one parton. The constituents of the considered jet are clustered again with the $k_T$ algorithm, and it is forced to return $n$ subjets. The $n$-subjettiness~\cite{Thaler2011}, $\tau_n$, is defined as
 
 \begin{equation}
 \tau_n = \frac{1}{d_0} \sum_k p_{T,k} \text{min} \left( \Delta R_{1,k}^\beta, \Delta R_{2,k}^\beta, \dots, \Delta R_{n,k}^\beta \right),
 \label{eq:n_subjettiness_def}
 \end{equation}
 
-\noindent where $k$ labels the particles included in the jet, $p_{T,k}$ is the corrisponding transverse momentum of the $k$ constituent, and $\Delta R_{i,k}$ is the solid angle between the $k$ constituent and the $i$ subjet candidate. The parameter $d_0$ is a normalization factor:
+\noindent where $k$ labels the particles included in the jet, $p_{T,k}$ is the corrisponding transverse momentum of the $k$ constituent, and $\Delta R_{i,k}$ is the angle between the $k$ constituent and the $i$ subjet candidate. The parameter $d_0$ is a normalization factor:
 
 \begin{equation}
 d_0 = \sum_k p_{T,k} R_0,
@@ -473,7 +477,7 @@ The presence of a b-tagged quark can be an hint to identify the top quark decays
   
 \end{table}
 
-\noindent Events where an AK4 jet, not laying in the AK8 jet cone, is b-tagged with the \emph{loose} working point threshold, are rejected. This veto allows to suppress the single-top events and \ttbar events by one half.
+\noindent Events where an AK4 jet, not laying in the AK8 jet cone, is b-tagged with the \emph{loose} working point threshold, are rejected. This veto allows the rejection of the single-top events and \ttbar events by one half.
 
 \noindent The b-tagging efficiency is not the same in data and MC. In order to take into account this difference, b-tagging scale factors for b-jets and mis-tagged light jets, measured for different physics processes, are calculated. A weight is extracted on a per-event basis, as a function of the b-tagging status of the jets and their kinematic variables~\cite{bib:btagsf}.
 
@@ -481,7 +485,7 @@ The presence of a b-tagged quark can be an hint to identify the top quark decays
 %; this is a simple and effective method if there are a small number of possible combinations of jets and b-tagged jets.%Unfortunately, this is not the case of the present analysis. Other techniques allow to take into account the scale factors provided by BTV by \emph{reshaping} the discriminator output; this method has been already successfully applied in the SM VH analysis~\cite{bib:SMVH}, and is also described in detail in Ref.~\cite{bib:AZh,Khachatryan:2015lba}. The reshaping method does not sensibly increase the b-tagging scale factors uncertainty with respect to using single operating point SFs or other techniques used to apply the same scale factors.
 
 \subsection{Missing Energy}
-As pointed out in sec.~\ref{ssec:met_description}, Type-I corrected \MET is used in the analysis, along with dedicated filters to remove detector noise and events with bad reconstruction. In order to lie in the plateau of the trigger efficiency, $\MET > 200 \GeV$. Fig.~\ref{fig:type1_met} shows the \MET distribution for data and Monte Carlo after the corrections and filters.
+As pointed out in sec.~\ref{ssec:met_description}, Type-I corrected \MET is used in the analysis, along with dedicated filters to remove detector noise and events with bad reconstruction. In order to lie in the plateau of the trigger efficiency, the bound $\MET > 200 \GeV$ is applied. Fig.~\ref{fig:type1_met} shows the \MET distribution for data and Monte Carlo after the corrections and filters.
  
  \begin{figure}[!htb]
    \centering
