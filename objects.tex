@@ -8,15 +8,15 @@ In this section, the selections applied to the physics objects used in the analy
 \subsection{Vertex and Pile-up}
 Due to the pile-up effect, several vertices are typically reconstructed in one event. The primary vertex of the event is defined as the one with the highest sum of transverse momenta $\sum \pt^2$ of clustered physics objects associated to it, which passes the following selections:
 \begin{itemize}
-  \item number of degrees of freedom $N_{DoF}>4$
-  \item vertex position along the beampipe $|z_{vtx}|<24\cm$
-  \item vertex distance with respect the beam pipe $d_0<2\cm$
+  \item number of degrees of freedom $N_{\text{d.o.f.}}>4$
+  \item vertex position along the beampipe $|z_{\text{vtx}}|<24$ \cm
+  \item vertex distance with respect the beam pipe $d_0<2$ \cm
 \end{itemize}
-where $z_{vtx}$ and $d_0$ are the distance along and perpendicular to the beam line of the vertex with respect the nominal interaction point $(0,0,0)$.
+where $z_{\text{vtx}}$ and $d_0$ are the distances along and perpendicular to the beam line of the vertex with respect the nominal interaction point $(0,0,0)$.
 
 \noindent The Monte Carlo samples listed in sec.~\ref{sec:samples} are generated simulating the pile-up conditions, as expected in the 25 ns bunch crossing pile-up scenario. Nevertheless, the MC pile-up description does not match exactly the conditions in data, and there is therefore the need to reweight the simulated events in order to improve the agreement with the data. 
 
-\noindent The MC samples are reweighted assuming a total inelastic cross section of $\sigma_{in} = 69\,200 \mu b$. The comparison between the distributions of primary vertices in data and MC after the pile-up reweighting is applied is shown in fig.~\ref{fig:npv} for an event selection (called inclusive selection, described in sec.~\ref{sec:datamc_comp}) requiring large amount of \met recoiling against an AK8 fat jet~(tab.~\ref{tab:sel}).
+\noindent The MC samples are reweighted assuming a total inelastic cross section of $\sigma_{in} = 69.2$ mb. The comparison between the distributions of primary vertices in data and MC after the pile-up reweighting is applied is shown in fig.~\ref{fig:npv} for an event selection (called inclusive selection, described in sec.~\ref{sec:datamc_comp}) requiring large amount of \met recoiling against an AK8 jet~(tab.~\ref{tab:sel}).
  
  \begin{figure}[!htb]
   \centering
@@ -29,13 +29,13 @@ where $z_{vtx}$ and $d_0$ are the distance along and perpendicular to the beam l
 \subsection{Electrons}\label{ssec:electrons}
 %{\color{red} How the electrons are reconstructed: The electron identification variables that have been found to be the most powerful, and are used in the selection, are: the energy-momentum match between the seed cluster and the trackE seed/pin, the variables measuring spatial matching between the track and the supercluster, ∆ηin and ∆φin, the supercluster η width,σiη iη(as taken from the covariance matrix using logarithmic weights), and the hadronic leakage variable H/E. The supercluster η width is to a very good approximation unaffected by the spreading due to the magnetic field of the showering in the tracker material.\\ Isolation variables are computed in three sub-detectors: the tracker, the ECAL, and the HCAL. Transverse energy/momentum sums are evaluated in regions of ∆R<0.3. As electrons undergo bremsstrahlung energy loss in the tracker material, care is taken to remove from the isolation sums the contributions from bremsstrahlung photons and possible resulting conversion electrons.}
 
-Electrons considered in this analysis, reconstructed from energy deposits in the ECAL matched to tracks reconstructed in the silicon tracker, are required to pass the particle flow criteria, and to fall in the ECAL pseudorapidity fiducial range ($|\eta|<2.5$). The electron identification is defined with a ``cut-based'' approach. In the isolation definition, the effect of neutral pile-up contributions is considered by taking into account the energy deposits in the calorimeter, estimated through the so-called \emph{$\rho$-area} method, by subtracting the median energy density in the event $\rho$ multiplied by the electron energy deposits effective area. The isolation value is computed in a $\Delta$R cone of 0.3 centered along the lepton direction.
+Electrons considered in this analysis, reconstructed from energy deposits in the ECAL matched to tracks reconstructed in the silicon tracker, are required to pass the Particle-Flow criteria, and to fall in the ECAL pseudorapidity fiducial range ($|\eta|<2.5$). The electron identification is defined with a ``cut-based'' approach. In the isolation definition, the effect of neutral pile-up contributions is considered by taking into account the energy deposits in the calorimeter, estimated through the so-called \emph{$\rho$-area} method, by subtracting the median energy density in the event $\rho$ multiplied by the electron energy deposits effective area. The isolation value is computed in a $\Delta$R cone of 0.3 centered along the lepton direction.
 
-\noindent Since this analysis aims at a final state without any charged lepton, every electron identified with the looser cut-based criteria (\emph{veto Id}) and transverse momentum $\pt > 10$ GeV is vetoed. The detailed set of cuts to define a \emph{veto Id} cut-based electron are reported in tab.~\ref{tab:EGcutBar}; this set of selections identify an electron with an efficiency of $\sim 95$\%. The supercluster width is indicated as $\sigma_{i\eta i\eta}$; $\Delta \eta_{in}^{seed}$ and $\Delta \varphi_{in}$ are the difference in $\eta$ and $\varphi$ between the track position as it is measured in the inner layer, and then extrapolated to the interaction vertex and to the calorimeter, and the $\eta$ of the seed cluster or the $\varphi$ of the supercluster; $H/E$ is the hadronic leakage, \textit{i.e.} the ratio of the hadronic energy of the calorimetric towers to the electromagnetic energy of the electron supercluster; \emph{Iso} indicates the particle flow isolation corrected with the effective area approach; $1/E - 1/p$ is the difference of the inverse of the energy and the momentum; $d_0$ and $d_z$ are the transverse and longitudinal impact parameters. A dedicated conversion veto is applied to mitigate the effects of electrons undergoing bremsstrahlung in the silicon detector.
+\noindent Since this analysis aims at a final state without any charged lepton, every event with at least one electron identified with the looser cut-based criteria (\emph{veto Id}) and transverse momentum $\pt > 10$~GeV is rejected. The detailed requirements used to define a \emph{veto Id} cut-based electron are reported in tab.~\ref{tab:EGcutBar}; this set of selections identify an electron with an efficiency of $\sim 95$\%. The supercluster width is indicated as $\sigma_{i\eta i\eta}$; $\Delta \eta_{in}^{seed}$ and $\Delta \varphi_{in}$ are the difference in $\eta$ and $\varphi$ between the track position as it is measured in the inner layer, and then extrapolated to the interaction vertex and to the calorimeter, and the $\eta$ of the seed cluster or the $\varphi$ of the supercluster; $H/E$ is the hadronic leakage, \textit{i.e.} the ratio of the hadronic energy of the calorimetric towers to the electromagnetic energy of the electron supercluster; \emph{Iso} indicates the Particle-Flow isolation corrected with the effective area approach; $1/E - 1/p$ is the difference of the inverse of the energy and the momentum; $d_0$ and $d_z$ are the transverse and longitudinal impact parameters. A dedicated conversion veto is applied to mitigate the effects of electrons undergoing bremsstrahlung in the silicon detector.
 
 \begin{table}[htb]
  \centering
-\caption{Electron cut-based selection for 25 ns bunch spacing conditions. EB: barrel cuts (~$|\eta_\text{supercluster}| \leq 1.479$~); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$)}
+\caption{Electron cut-based selections for 25 ns bunch spacing conditions. EB: barrel cuts (~$|\eta_\text{supercluster}| \leq 1.479$~); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$).}
     \begin{tabular}{l|ccc}
     Electrons                   &        & \multicolumn{2}{c}{\emph{Veto Id}}\\
                                 &        & EB      & EE     \\
@@ -65,7 +65,7 @@ As in the case of electrons, a photon veto is applied in the analysis both for t
 
  \begin{table}[htb]
   \centering
-  \caption{Photon cut-based selection for 25 ns bunch spacing conditions. EB: barrel cuts ( $|\eta_\text{supercluster}| \leq 1.479$); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$)}\label{tab:PhotonId}
+  \caption{Photon cut-based selections for 25 ns bunch spacing conditions. EB: barrel cuts ( $|\eta_\text{supercluster}| \leq 1.479$); EE: endcap cuts ( $|\eta_\text{supercluster}| > 1.479$).}\label{tab:PhotonId}
      \begin{tabular}{l|ccc}
      Photons                                   &       & \multicolumn{2}{c}{\emph{Loose Id}}\\
                                                &       & EB      & EE  \\
@@ -87,7 +87,7 @@ As in the case of electrons, a photon veto is applied in the analysis both for t
 
 %Tracker Muon reconstruction is more efficient than the Global Muon reconstruction at low momenta, $\pt \lesssim 5 \GeV$, because it requires only a single muon segment in the muon system, whereas Global Muon reconstruction is designed to have high efficiency for muons penetrating through more than one muon station and typically requires segments in at least two muon stations. Thanks to the high tracker-track efficiency and a very high efficiency of reconstructing segments in the muon system, about 99\% of muons produced in $pp$ collisions and having sufficiently high momentum are reconstructed either as a Global Muon or a Tracker Muon, and very often as both. Muons reconstructed only as standalone-muon tracks have worse momentum resolution and less favorable collision muon to cosmic-ray muon ratio than the Global and Tracker Muons and are usually not used in physics analyses.
 
-The minimal criteria to define a muon is that it must be identified by the particle flow algorithm, and should be reconstructed either as a global muon or as a tracker muon (sec.~\ref{ssec:physicsobjects}). The muon isolation is defined in a cone with a radius of $\Delta R=0.4$ centered along the lepton direction. In the analysis event selection, events with at least one muon identified with the loosest criteria previously described, \pt over 10 GeV, PF isolation below 0.25, $\eta<|2.4|$ are vetoed.
+The minimal criteria to define a muon is that it must be identified by the Particle-Flow algorithm, and should be reconstructed either as a global muon or as a tracker muon (sec.~\ref{ssec:physicsobjects}). The muon isolation is defined in a cone with a radius of $\Delta R=0.4$ centered along the lepton direction. In the analysis event selection, events with at least one muon identified with the loosest criteria previously described, \pt over 10 GeV, PF isolation below 0.25, $\eta<|2.4|$ are vetoed.
  
 %Scale factors for muon identification and isolation are centrally provided as a function of the muon \pt and $\eta$ by the Muon POG~\cite{MuonSF}, and are applied consistently in the analysis.
 
@@ -97,13 +97,13 @@ The presence of hadronically decaying taus acts as a veto for the events both in
 
 
 \subsection{Jets}\label{ssec:jets}
-In this analysis, jets are considered if the corrected \pt is larger than 30 \GeV for AK4 jets, and larger than 200 \GeV for AK8 jets, and lie in the tracker acceptance ($|\eta|<2.4$). The requirement on AK8 jets transverse momentum is motivated by the fact that $\pt = 200$ \GeV is the minimum kinematical threshold ensuring to enclose the lighter hadronically decaying vector boson (namely, the \W boson) in the jet cone. Additionally, AK4 jets are required to pass \emph{loose} jet identification requirements, AK8 are required to pass \emph{tight} jet identification requirements defined in tab.~\ref{tab:JetId}. AK8 jets are used to reconstruct the hadronically decaying electroweak boson candidate, whilst AK4 jets are used to suppress the contribution of top and QCD background events. Jet energy corrections are applied to AK4 and AK8 CHS jets. Fig.~\ref{fig:n_AK8}-~\ref{fig:AK8jet_eta} show the data/simulation comparison after the analysis selections~(tab.~\ref{tab:sel} without Top cleaning and Event cleaning).
+In this analysis, jets are considered if the corrected \pt is larger than 30 \GeV for AK4 jets, and larger than 200 \GeV for AK8 jets, and lie in the tracker acceptance ($|\eta|<2.4$). The requirement on AK8 jets transverse momentum is motivated by the fact that $\pt = 200$ \GeV is the minimum kinematical threshold ensuring to enclose the lighter hadronically decaying vector boson (namely, the \W boson) in the jet cone. Additionally, AK4 jets are required to pass \emph{loose} jet identification requirements, AK8 are required to pass \emph{tight} jet identification requirements defined in tab.~\ref{tab:JetId}. AK8 jets are used to reconstruct the hadronically decaying electroweak boson candidate, whilst AK4 jets are used to suppress the contribution of top and QCD background events. Jet energy corrections are applied to AK4 and AK8 CHS jets. Fig.~\ref{fig:n_AK8}-~\ref{fig:AK8jet_eta} show the data/simulation comparison after the analysis selections~(tab.~\ref{tab:sel}).
 
 \begin{table}[htb]
  \centering
  \caption{ \emph{Loose} and \emph{Tight} jet identification requirements for 25 ns bunch spacing conditions.\label{tab:JetId}}
  \begin{tabular}{l|cc}
-Particle flow jet ID                       & \emph{Loose}   & \emph{Tight}   \\
+Particle-Flow jet ID                       & \emph{Loose}   & \emph{Tight}   \\
 \hline
  \hline
 Neutral Hadron Fraction         & $< 0.99  $     & $< 0.90  $    \\
@@ -163,7 +163,7 @@ where $R_{0}$ is the jet clustering parameter and $\sigma_{\text{JER}}$ is the r
 c_{\text{JER}} = 1 + \mathcal{N}(0, \sigma_{\text{JER}}) \sqrt{\text{max}(s_{\text{JER}}^2 - 1, 0)},
 \end{equation}
 where $\sigma_{\text{JER}}$ is the relative \pt resolution in simulation, $s_{\text{JER}}$ is the data-simulation scale factor, and $\mathcal{N}(0, \sigma)$ 
-is a random number extracted from a gaussian normal distribution, whose mean is zero and variance $\sigma^2$. Scaling factor $c_{\text{JER}}$ is positively defined.% This method only allows to degrade the resolution.
+is a random number extracted from a Gaussian normal distribution, whose mean is zero and variance $\sigma^2$. Scaling factor $c_{\text{JER}}$ is positively defined.% This method only allows to degrade the resolution.
 
 \noindent The smearing procedure adopted in this analysis is the hybrid method: when a matching jet at generator level is found, the scaling method is adopted, else the stochastic smearing is chosen. The smearing coefficients (scale factors, SF) as a function of the jet $\eta$ and their uncertainties are reported in tab.~\ref{tab:smear} for 2016 data~\cite{CMS-DP-2016-020}.
 
@@ -237,14 +237,14 @@ assigns a weight to each particle according to the probability that it comes fro
 \label{eq:puppi_shape_def}
 \end{equation}
 
-\noindent where $\Theta$ is the Heaviside step function, $\Delta R_{ij}$ is the angular distance between the considered $i$ particle and the neighbour $j$ particle, laying  in a cone $R_0 = 0.4$ centered around $i$ direction, within a minimum distance $R_{\text{min}} = 0.0001$. Due to the softer \pt spectra of pile-up particles, $\alpha_i$ is smaller when $i$ particle does not originate from the primary vertex.
+\noindent where $\Theta$ is the Heaviside step function, $\Delta R_{ij}$ is the angular distance between the considered $i$ particle and the neighbour $j$ particle, lying  in a cone $R_0 = 0.4$ centered around $i$ direction, within a minimum distance $R_{\text{min}} = 0.0001$. Due to the softer \pt spectra of pile-up particles, $\alpha_i$ is smaller when $i$ particle does not originate from the primary vertex.
 
 \noindent The function
 \begin{equation}
 \chi_i^2 = \Theta (\alpha_i - \bar{\alpha}_{PU}) \frac{\left(  \alpha_i -  \bar{\alpha}_{PU}  \right)^2}{\sigma^2_{PU}}
 \label{eq:puppi_chi2}
 \end{equation}
-\noindent estimates how much $\alpha_i$ fluctuates from the median of the pile-up local shape $\bar{\alpha}_{PU}$ (that has a variance $\sigma^2_{PU}$), and it is distributed like a $\chi^2$ with 1 degree of freedom. The distributions of $\alpha_{PU}$ is calculated with the charged particles belonging to pile-up vertices. The PUPPI weight is defined as the cumulative $\chi^2$ distribution $F_{\chi^2\text{, 1 d.o.f.}}$,
+\noindent estimates how much $\alpha_i$ fluctuates from the median of the pile-up local shape $\bar{\alpha}_{PU}$ (that has a variance $\sigma^2_{PU}$), and it is distributed like a $\chi^2$ with 1 degree of freedom. The distribution of $\alpha_{PU}$ is calculated with the charged particles belonging to pile-up vertices. The PUPPI weight is defined as the cumulative $\chi^2$ distribution $F_{\chi^2\text{, 1 d.o.f.}}$,
 
 \begin{equation}
 w_i = F_{\chi^2\text{, 1 d.o.f.}} (\chi_i^2).
@@ -313,7 +313,7 @@ w_i = F_{\chi^2\text{, 1 d.o.f.}} (\chi_i^2).
  \label{tab:SR-SB}
 \end{table}
 
-\noindent The "signal region" (SR) refers to the \V-region, where the largest signal yield is expected. The "sidebands" (SB) refer to the low-sideband and high-sideband, where a negligible amount of signal is expected. Events with a jet mass value lower than 30 \GeV are discarded, because of the high background contamination. The jet mass distribution of the \V candidate, in the sidebands and in the signal region, is shown in fig.~\ref{fig:mj_paper}. If the soft drop, PUPPI corrected mass of a large-cone jet falls into the \V-region, the jet is defined as \V-tagged.
+\noindent The ``signal region'' (SR) refers to the \V-region, where the largest signal yield is expected. The ``sidebands'' (SB) refer to the low-sideband and high-sideband, where a negligible amount of signal is expected. Events with a jet mass value lower than 30 \GeV are discarded, because of the high background contamination. The jet mass distribution of the \V candidate, in the sidebands and in the signal region, is shown in fig.~\ref{fig:mj_paper}. If the soft drop PUPPI corrected mass of a large-cone jet falls into the \V-region, the jet is defined as \V-tagged.
 
 \begin{figure}[!htb]
   \begin{center}
@@ -340,7 +340,7 @@ d_0 = \sum_k p_{T,k} R_0,
 \label{eq:n_subjettiness_d0}
 \end{equation}
 
-\noindent where $R_0$ is the clustering parameter of the considered jet. The $\tau_n$ variable describes to what degree a jet can be considered as composed by $n$ substructures; smaller values of $\tau_n$ correspond to higher compatibility to the $n$-prong hypotesis. A large-cone jet generated by the hadronic decay of an electroweak boson is expected to be a 2-prong object, whilst light flavour and gluon jets generated by colour interaction have a 1-prong monolithic structure. The $\tau_2$ or the $\tau_1$ alone, by the way, do not provide an optimal signal and background discrimination, as shown in fig.~\ref{fig:tau21_original_paper} (left and center); by looking at fig.~\ref{fig:tau21_original_paper} (right), it is clear that the most powerful discriminating variable is their ratio $\tau_{21} = \tau_2/\tau_1$:
+\noindent where $R_0$ is the clustering parameter of the considered jet. The $\tau_n$ variable describes to what degree a jet can be considered as composed by $n$ substructures; smaller values of $\tau_n$ correspond to higher compatibility with the $n$-prong hypotesis. A large-cone jet generated by the hadronic decay of an electroweak boson is expected to be a 2-prong object, whilst light flavour and gluon jets generated by colour interaction have a 1-prong monolithic structure. The $\tau_2$ or the $\tau_1$ alone, by the way, do not provide an optimal signal and background discrimination, as shown in fig.~\ref{fig:tau21_original_paper} (left and center); by looking at fig.~\ref{fig:tau21_original_paper} (right), it is clear that the most powerful discriminating variable is their ratio $\tau_{21} = \tau_2/\tau_1$:
 
 \begin{equation}
 \tau_{21} = \frac{ \frac{1}{d_0} \sum_k p_{T,k} \text{min}( \Delta R_{1,k}, \Delta R_{2,k} ) }{ \frac{1}{d_0} \sum_k p_{T,k} \Delta R_{1,k} }.
@@ -376,7 +376,7 @@ d_0 = \sum_k p_{T,k} R_0,
 %[FIXME: SCALE FACTORS WILL BE UPDATED TO MORIOND17 ACCORDING TO THE 80X RECOMMENDATIONS FROM JMAR]
 % The $\tau_{21}$ is a potentially discriminating variable (described in Section~\ref{ssec:jetsub}) between H-jets and QCD-jets, so a test to verify how much it can improve the signal significance is performed. The figure of merit is the same as the one described in Section~\ref{ssec:massopt}, and it is computed after applying pre-selection cuts, \V and \h \pt and mass cuts. A number of possible cuts are tested, ranging from $\tau_{21} < 0.3$ to $\tau_{21} < 0.7$, and compared between each other and the null cut option. Figure~\ref{fig:signal_tau21} shows the discriminating power of $\tau_{21}$ for all sources of SM background compared to the the signal, Higgs di-subjet decays. The significance for each selection is shown in Figure~\ref{fig:sign_tau21}, demonstrating that cutting on $\tau_{21}$ has no advantage  with the current luminosity. The $\tau_{21}$variable is therefore not used in the present analysis.
 
-\noindent The choice of the $\tau_{21}$ categorization listed above is based on a study of the analysis sensitivity. Another $\tau_{21}$ categorization is probed, according to which events are grouped into different high-purity ($\tau_{21} < 0.40$) and low-purity ($0.40 < \tau_{21} < 0.75$) categories. This different set of $\tau_{21}$ cuts has been tested, along with that chosen for this analysis. Two figures of merit are considered: the discovery reach, namely the bulk graviton signal significance (displayed in fig.~\ref{fig:test_significance}), and the expected exclusion limit on cross-section times branching fraction at 95\% CL (displayed in fig.~\ref{fig:test_exclusion}), as a function of the reconstructed transverse mass of the resonance. To this purpose, the entire analysis workflow has been applied, performing an unbinned shape analysis with the analysis background estimation method, taking into account all the systematic uncertainties. In each figure, on the left, the figure of merit is plotted separately for each purity category, while in the right part of the figures the low and purity categories are combined together. Significance has been computed with a limited number of toys (100), hence the curves are non perfectly smooth, while the exclusion limit has been computed with the asymptotic formula. The procedures to extract signal significance and exclusion limits are described in sec.~\ref{sec:results}. Considering that the search region is 1-4 TeV, the choice of $0.35$-$0.75$ $\tau_{21}$ working points is legitimated.
+\noindent The choice of the $\tau_{21}$ categorization listed above is based on a study of the analysis sensitivity. Another $\tau_{21}$ categorization is probed, according to which events are grouped into different high-purity ($\tau_{21} < 0.40$) and low-purity ($0.40 < \tau_{21} < 0.75$) categories. This different set of $\tau_{21}$ cuts has been tested, along with that chosen for this analysis. Two figures of merit are considered: the discovery reach, namely the bulk graviton signal significance (displayed in fig.~\ref{fig:test_significance}), and the expected exclusion limit on cross-section times branching fraction at 95\% CL (displayed in fig.~\ref{fig:test_exclusion}), as a function of the mass of the resonance. To this purpose, the entire analysis workflow has been applied, performing an unbinned shape analysis with the analysis background estimation method, taking into account all the systematic uncertainties. In each figure, on the left, the figure of merit is plotted separately for each purity category, while in the right part of the figures the low and purity categories are combined together. Significance has been computed with a limited number of toys (100), hence the curves are non perfectly smooth, while the exclusion limit has been computed with the asymptotic formula. The procedures to extract signal significance and exclusion limits are described in sec.~\ref{sec:results}. Considering that the search region is 1-4 TeV, the choice of $0.35$-$0.75$ $\tau_{21}$ working points is legitimated.
 
  \begin{figure}[!htb]
    \begin{center}
@@ -477,7 +477,7 @@ The presence of a b-tagged quark can be an hint to identify the top quark decays
   
 \end{table}
 
-\noindent Events where an AK4 jet, not laying in the AK8 jet cone, is b-tagged with the \emph{loose} working point threshold, are rejected. This veto allows the rejection of the single-top events and \ttbar events by one half.
+\noindent Events where an AK4 jet, not lying in the AK8 jet cone, is b-tagged with the \emph{loose} working point threshold, are rejected. This veto allows the rejection of the single-top events and \ttbar events by one half.
 
 \noindent The b-tagging efficiency is not the same in data and MC. In order to take into account this difference, b-tagging scale factors for b-jets and mis-tagged light jets, measured for different physics processes, are calculated. A weight is extracted on a per-event basis, as a function of the b-tagging status of the jets and their kinematic variables~\cite{bib:btagsf}.
 
@@ -485,7 +485,7 @@ The presence of a b-tagged quark can be an hint to identify the top quark decays
 %; this is a simple and effective method if there are a small number of possible combinations of jets and b-tagged jets.%Unfortunately, this is not the case of the present analysis. Other techniques allow to take into account the scale factors provided by BTV by \emph{reshaping} the discriminator output; this method has been already successfully applied in the SM VH analysis~\cite{bib:SMVH}, and is also described in detail in Ref.~\cite{bib:AZh,Khachatryan:2015lba}. The reshaping method does not sensibly increase the b-tagging scale factors uncertainty with respect to using single operating point SFs or other techniques used to apply the same scale factors.
 
 \subsection{Missing Energy}
-As pointed out in sec.~\ref{ssec:met_description}, Type-I corrected \MET is used in the analysis, along with dedicated filters to remove detector noise and events with bad reconstruction. In order to lie in the plateau of the trigger efficiency, the bound $\MET > 200 \GeV$ is applied. Fig.~\ref{fig:type1_met} shows the \MET distribution for data and Monte Carlo after the corrections and filters.
+As pointed out in sec.~\ref{ssec:met_description}, Type-I corrected \MET is used in the analysis, along with dedicated filters to remove detector noise and events with bad reconstruction. In order to lie in the plateau of the trigger efficiency, the bound $\MET > 200$ \GeV is applied. Fig.~\ref{fig:type1_met} shows the \MET distribution for data and Monte Carlo after the corrections and filters.
  
  \begin{figure}[!htb]
    \centering

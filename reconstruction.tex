@@ -7,7 +7,7 @@
 %Being the jets composite objects, their mass and internal structure contain valuable information. The jet mass is defined as the invariant mass of all the objects contained inside the jet: the pion mass is associated to charged hadronic tracks, while the reconstructed photons are considered massless.
 The identification of jets produced by the hadronic decays of one vector boson is based on the two concepts:
 \begin{itemize}
-  \item \textit{Jet mass}: jets produced by the decay of a massive particle should have an invariant mass around the nominal mass of the original particle. Oppositely, jets originated by QCD radiation are produced by the emission of quarks or gluons and typically have smaller invariant mass. This effect is further enhanced by the grooming techniques (sec.~\ref{ssec:jetmass}).
+  \item \textit{Jet mass}: jets produced by the decay of a massive particle should have an invariant mass around the nominal mass of the original particle. Oppositely, jets originated by QCD radiation are produced by the emission of quarks or gluons and typically have smaller invariant masses. This effect is further enhanced by the grooming techniques (sec.~\ref{ssec:jetmass}).
   \item \textit{Jet substructure}: looking inside the structure of jets gives an handle in discriminating the original seed of the jet. \Z and \W-jets are produced by two partons merged into a single large-cone jet.
 \end{itemize}
 
@@ -23,7 +23,7 @@ If the \Z boson decays into a pair of neutrinos, no product is visible in the de
 \subsubsection{Composite $\mathbf{\VZ}$ candidate reconstruction}
 \label{ssec:VZcand}
 
-As the longitudinal component of the \Z boson momentum is unknown,a simple and effective solution is to consider the transverse mass of the \VZ candidate, using the jet and \met kinematics, defined by the following formula:
+As the longitudinal component of the \Z boson momentum is unknown, a simple and effective solution is to consider the transverse mass of the \VZ candidate, using the jet and \met kinematics, defined by the following formula:
 
 \begin{equation}
 \mtVZ = \sqrt{ 2 E_T^V \MET \cdot (1 - \cos \Delta \varphi(V,\met)) },
@@ -33,7 +33,7 @@ where $E_T^{V}$ is the transverse energy of the \V candidate (defined in sec.~\r
 \subsection{Final analysis selections}
 \label{sec:selections}
 
-Events considered in this analysis have to pass a certain number of selections before being considered as suitable signal candidates, both in data and in simulations. The selections are reported below and in tab.~\ref{tab:sel}. The selections applied to group the events in purity category, defined on the PUPPI corrected $\tau_{21}$ subjettines variable~(sec.~\ref{ssec:subopt}), and into signal or control region, defined on the PUPPI corrected soft drop mass~(sec.~\ref{ssec:jetmass}) are reported in tab.~\ref{tab:categorization}. The final signal efficiency is shown separately in purity categories in fig.~\ref{fig:eff_n}, for both spin-2 and spin-1 signal hypoteses.
+Events considered in this analysis have to pass a certain number of selections before being considered as suitable signal candidates, both in data and in simulations. The selections are reported below and in tab.~\ref{tab:sel}. The selections applied to group the events in purity category, defined on the PUPPI corrected $\tau_{21}$ subjettines variable~(sec.~\ref{ssec:jetsub}), and into signal or control region, defined on the PUPPI corrected soft drop mass~(sec.~\ref{ssec:jetmass}) are reported in tab.~\ref{tab:categorization}. The final signal efficiency is shown separately in purity categories in fig.~\ref{fig:eff_n}, for both spin-2 and spin-1 signal hypoteses.
 
 \subsubsection{$\mathbf{Z}$ candidate selections}
 
@@ -108,9 +108,9 @@ Minimal requirements are applied to objects that are vetoed:%, in order to rejec
 
 \begin{table}
 \centering
-  \caption{Summary of the selection cuts for the $\VZ \to \nu\nu\text{qq}$ analysis.}
+  \caption{Summary of the selection cuts for the $\VZ \to q \bar{q} \nu\bar{\nu}$ analysis.}
 \begin{tabular}{l|c}
- & $\Z \to \nu \nu$ \\
+ & $\VZ \to q \bar{q} \nu\bar{\nu}$ \\
 \hline
 \hline
 Trigger & \texttt{HLT\_PFMETNoMu90\_PFMHTNoMu90\_IDTight}\\
@@ -120,7 +120,7 @@ Trigger & \texttt{HLT\_PFMETNoMu90\_PFMHTNoMu90\_IDTight}\\
 & or \texttt{HLT\_PFMET170\_JetIdCleaned} \\
 & or \texttt{HLT\_PFMET170\_HBHECleaned}\\
 \hline
-$E_T^{miss}$ & \emph{Type-I} corrected\\
+$E_T^{\text{miss}}$ & \emph{Type-I} corrected\\
  & $>200$ \GeV\\
 \hline
 Veto & $e$, $\mu$, $\tau$, $\gamma$\\
@@ -145,9 +145,9 @@ Event cleaning & $\Delta\varphi(\V,\met)>2$\\
 
 \begin{table}
 \centering
-  \caption{Cuts to categorize the $\VZ \to \nu\nu\text{qq}$ analysis events into low- and high-purity categories, and into signal region and sidebands.}
+  \caption{Cuts to categorize the $\VZ \to q \bar{q} \nu\bar{\nu}$ analysis events into low- and high-purity categories, and into signal region and sidebands.}
 \begin{tabular}{l|c}
- & $\Z \to \nu \nu$ \\
+ & $\VZ \to q \bar{q} \nu\bar{\nu}$ \\
 \hline
 \hline
 V mass  & Signal Region: $65<m_V<105$\\

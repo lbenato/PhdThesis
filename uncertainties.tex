@@ -8,7 +8,7 @@ The background and signal predictions are affected by systematic uncertainties t
 
 \subsubsection{Normalization}
 
-The predictiond of the normalization and shape of main background, \V + jets, are both taken from data. The normalization is extracted from fits to the jet mass sidebands with arbitrary functions tested on simulation. The effects related to the contribution of the sub-dominant backgrounds are also taken into account, for both the normalization and the shape.
+The predictions of the normalization and shape of main background, \V + jets, are both taken from data. The normalization is extracted from fits to the jet mass sidebands with arbitrary functions tested on simulation. The effects related to the contribution of the sub-dominant backgrounds are also taken into account, for both the normalization and the shape.
 
 \noindent The uncertainties on the sub-dominant backgrounds normalization, namely the uncertainties on the parameters describing the jet mass spectra obtained with the fits performed on simulations, are propagated to the main background yield prediction. An additional uncertainty on the main background yield comes from the fit with the alternative function. In this case, the difference in the predicted number of events due to the function choice is taken as a systematic uncertainty. The limited number of events in data in the sidebands is treated separately as a source of statistical uncertainty. Numerical values are reported in tab.~\ref{tab:BkgNorm}.
 
@@ -16,17 +16,17 @@ The predictiond of the normalization and shape of main background, \V + jets, ar
 
 \subsubsection{Shape}
 
-The shape uncertainties on the main background are determined with the $\alpha$ method, discussed in sec.~\ref{ssec:alphaShape}. The uncertainties on the parameters of the main background prediction in the signal regions are affected by the parameter uncertianties of the fit to \mtVZ in data in the jet mass sidebands, and by the parameter uncertainties of the two components of the $\alpha$ function (numerator and denominator), that are the \mtVZ fits to the simulated \V + jets distributions in SR and SB. These uncertainties are propagated to the shape of the main background in the signal region. Before being provided to the likelihood fit, these parameters are decorrelated through a linear transformation.
+The shape uncertainties on the main background are determined with the $\alpha$ method, discussed in sec.~\ref{ssec:alphaShape}. The uncertainties on the parameters of the main background prediction in the signal region are affected by the uncertainties on the fit parameters in data in the sidebands, and by the uncertainties on the parameters of the two components of the $\alpha$ function (numerator and denominator), that are the \mtVZ fits to the simulated \V + jets distributions in SR and SB. These uncertainties are propagated to the shape of the main background in the signal region. Before being provided to the likelihood fit, these parameters are decorrelated through a linear transformation.
 
 \subsection{Uncertainties affecting the signal and the sub-dominant backgrounds}
 
 \subsubsection{Trigger uncertainty}
 
-Trigger uncertainty is evaluated shifting by one standard deviation (\textit{i.e.} 1\%, as discussed in sec.~\ref{ssec:trigger}) the \MET trigger efficiency calculated on data, that is applied as per-event weight to MC samples. The impact has been studied in signal and secondary background samples: it amounts to 0.7-0.5\% for signal samples, depending on the mass hypotesis, whilst it affects by 1\% the top and diboson normalization. No effect can be appreciated in signal and background shapes.
+The effect of trigger uncertainty is evaluated shifting by one standard deviation (\textit{i.e.} 1\%, as discussed in sec.~\ref{ssec:trigger}) the \MET trigger efficiency calculated on data, that is applied as per-event weight to MC samples. The impact has been studied in signal and secondary background samples: it amounts to 0.7-0.5\% for signal samples, depending on the mass hypotesis, whilst it affects by 1\% the top and diboson normalization. No effect can be appreciated in signal and background shapes.
 
 \subsubsection{Jet momentum uncertainties}
 
-Jet uncertainties are evaluated in the signal regions by moving up and down by one standard deviation the source of the uncertainty. The two sources are the uncertainty on the jet energy correction, also identified as jet energy scale (JES)~\cite{bib:1748-0221-6-11-P11002},~\cite{CMS-DP-2016-020}, and the uncertainty due to the different jet momentum resolution (JER)~\cite{CMS-DP-2016-020}.
+Jet uncertainties are evaluated in the signal region by moving up and down by one standard deviation the source of the uncertainty. The two sources are the uncertainty on the jet energy correction, also identified as jet energy scale (JES)~\cite{bib:1748-0221-6-11-P11002},~\cite{CMS-DP-2016-020}, and the uncertainty due to the different jet momentum resolution (JER)~\cite{CMS-DP-2016-020}.
 
 \noindent Considering the jet energy scale, the transverse momenta of the jets are shifted by the uncertainty value of the corresponding jet energy correction. The impact on the normalization due to the jet energy correction is evaluated in the signal region, by taking into account its effect on jets and on \MET simultaneously, in a correlated fashion.
 
@@ -75,7 +75,7 @@ Jet uncertainties are evaluated in the signal regions by moving up and down by o
 
 \begin{table}[!htb]
   \centering
-  \caption{Summary of et mass resolution corrections systematic uncertainties (JMR). The symbol $\Delta$ indicates the variation for each variable, due to the considered systematic uncertainty shift. \label{tab:jet_mass_res_corr}}
+  \caption{Summary of jet mass resolution corrections systematic uncertainties (JMR). The symbol $\Delta$ indicates the variation for each variable, due to the considered systematic uncertainty shift. \label{tab:jet_mass_res_corr}}
   \begin{tabular}{l|cc}
 	%& \multicolumn{2}{c}{ }\\
 	\mtVZ & 1 TeV & 4 TeV \\
@@ -147,7 +147,7 @@ As described in sec.~\ref{ssec:met_description}, the \MET evaluation depends on 
 \noindent The last contribution in \MET uncertainty is related to unclustered energy, whose impact is evaluated scaling up or down the central value by its own resolution, depending on the particle type. The uncertainty is negligible on signal and background normalizations and shape.
 
 \subsubsection{Pile-up uncertainty}
-An additional source of systematic uncertainty is the limited knowledge of the total proton-proton inelastic cross-section at $13$ \TeV, used to get the expected number of vertices distribution for the pile-up reweighting procedure. A $4.6\%$ uncertainty is assumed for the default value of $69.2$ mb, and the vertices distributions are varied accordingly (fig.~\ref{fig:PU_updown}). Changing the pile-up weight varies also the MC normalizations in the signal region, and the relative difference is estimated to be 0.2\% for the diboson background, 0.3\% for top processes, and 0.4-0.7\% for signal samples. Pile-up impacts on signal shapes are negligible, and it affects by 0.8\% and 0.4\% the diboson and top shapes (fig.~\ref{fig:syspileup}). %No shape uncertainties are considered for PU. %$3\%$ for the diboson and top samples, and a flat $0.5\%$ for signal samples. No shape uncertainties are considered for PU.
+An additional source of systematic uncertainty is the limited knowledge of the total proton-proton inelastic cross-section at $13$ \TeV, used to get the expected number of vertices distribution for the pile-up reweighting procedure. A $4.6\%$ uncertainty is assumed for the default value of $69.2$ mb, and the vertices distributions are varied accordingly (fig.~\ref{fig:PU_updown}). Changing the pile-up weight varies also the MC normalizations in the signal region, and the relative difference is estimated to be 0.2\% for the diboson background, 0.3\% for top processes, and 0.4-0.7\% for signal samples. Pile-up impacts on signal shapes are negligible, and they affect by 0.8\% and 0.4\% the diboson and top shapes (fig.~\ref{fig:syspileup}). %No shape uncertainties are considered for PU. %$3\%$ for the diboson and top samples, and a flat $0.5\%$ for signal samples. No shape uncertainties are considered for PU.
 
 \begin{figure}[!htb]
   \begin{center}
@@ -173,9 +173,9 @@ An additional source of systematic uncertainty is the limited knowledge of the t
 
 \subsubsection{QCD renormalization and factorization scale uncertainties}
 
-Divergencies appearing in perturbative QCD calculation, used to predict the cross-sections and the spectra of the observables in Monte Carlo simulations, are absorbed in the renormalization and factorization scales, $\mu_R$ and $\mu_F$. Per-event weights are calculated for a variation of these scales by a factor 2. The two scales can be varied separately and independently, or together assuming 100\% correlation; the first approach is adopted. The weight is propagated up to the final distributions, accounting for normalization and shape uncertainties.
+Divergencies appearing in perturbative QCD calculations, used to predict the cross-sections and the spectra of the observables in Monte Carlo simulations, are absorbed in the renormalization and factorization scales, $\mu_R$ and $\mu_F$. Per-event weights are calculated for a variation of these scales by a factor 2. The two scales can be varied separately and independently, or together assuming 100\% correlation; the first approach is adopted. The weight is propagated up to the final distributions, accounting for normalization and shape uncertainties.
 
-\noindent The QCD variations have negligible effect on signal acceptance and on the mean and sigma of the gaussian core of the Crystal Ball functions. The QCD factorization has an impact on top background shape (1.1\%) and normalization (3.1\%), and on diboson normalization (0.9\%). The QCD renormalization affects the top normalization (7.3\%) and diboson normalization (1.3\%).
+\noindent The QCD variations have negligible effect on signal acceptance and on the mean and sigma of the Gaussian core of the Crystal Ball functions. The QCD factorization has an impact on top background shape (1.1\%) and normalization (3.1\%), and on diboson normalization (0.9\%). The QCD renormalization affects the top normalization (7.3\%) and diboson normalization (1.3\%).
 
  \begin{figure}[!htb]
    \begin{center}
