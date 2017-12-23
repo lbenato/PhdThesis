@@ -33,6 +33,8 @@
 \usepackage{etoolbox}
 \usepackage{xspace}
 \usepackage{gensymb}
+\usepackage{arydshln}
+\usepackage{hyperref}%try to get pdf/a
 %\usepackage[utf8]{inputenc}
 \makeatletter
 \patchcmd{\ttlh@hang}{\parindent\z@}{\parindent\z@\leavevmode}{}{}
@@ -200,7 +202,7 @@
 
 \newcommand{\pt}{\ensuremath{p_T}\xspace}
 \newcommand{\kt}{\ensuremath{k_T}\xspace}
-\newcommand{\Z}{\text{Z}\xspace}
+\newcommand{\PZ}{\text{Z}\xspace}
 \newcommand{\PW}{\text{W}\xspace}
 \newcommand{\cm}{\text{cm}\xspace}
 \newcommand{\GeV}{\text{GeV}\xspace}
@@ -210,9 +212,32 @@
 \newcommand{\pb}{\text{pb}\xspace}
 \newcommand{\invfb}{\text{fb}^{-1}\xspace}
 \newcommand{\invpb}{\text{pb}^{-1}\xspace}
+\newcommand{\pbinv} {\mbox{\ensuremath{\,\text{pb}^\text{$-$1}}}\xspace}
+\newcommand{\fbinv} {\mbox{\ensuremath{\,\text{fb}^\text{$-$1}}}\xspace}
 \newcommand{\rap}{\ensuremath{\mathcal{Y}}\xspace}
 \newcommand{\met}{\ensuremath{\vec{p}_T^{\text{miss}}}\xspace}
 \newcommand{\MET}{\ensuremath{E_T^{\text{miss}}}\xspace}
+\newcommand{\VZ}{\ensuremath{VZ}\xspace}
+\newcommand{\W}{\ensuremath{W}\xspace}
+\newcommand{\Z}{\ensuremath{Z}\xspace}
+\newcommand{\V}{\ensuremath{V}\xspace}
+\newcommand{\VV}{\ensuremath{VV}\xspace}
+\newcommand{\G}{\ensuremath{G}\xspace}
+\newcommand{\Wp}{\ensuremath{W'}\xspace}
+\newcommand{\HT}{\ensuremath{H_{\mathrm{T}}}\xspace}
+\newcommand{\VZinv}{\ensuremath{VZ \rightarrow q \bar{q} \nu \bar{\nu}}\xspace}
+\newcommand{\BGinv}{\ensuremath{G \rightarrow ZZ \rightarrow q \bar{q} \nu \bar{\nu}}\xspace}
+\newcommand{\Wpinv}{\ensuremath{W' \rightarrow WZ \rightarrow q \bar{q}' \nu \bar{\nu}}\xspace}
+\newcommand{\mtVZ}{\ensuremath{m_{\VZ}^T}\xspace}
+\newcommand{\mVZ}{\ensuremath{m_{\VZ}}\xspace}
+\newcommand{\mX}{\ensuremath{m_{X}}\xspace}
+\newcommand{\ttbar}{\ensuremath{t \bar{t}}\xspace}
+
+\newcommand{\PYTHIA} {{\textsc{pythia}}\xspace}
+\newcommand{\MADGRAPH} {\textsc{MadGraph}\xspace}
+\newcommand{\POWHEG} {{\textsc{powheg}}\xspace}
+\newcommand{\MCATNLO} {\textsc{mc@nlo}\xspace}
+\newcommand{\GEANTfour} {{\textsc{Geant4}}\xspace}
 
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
@@ -220,7 +245,7 @@
 \title{Search for heavy resonances decaying into a $Z$ boson and a vector boson in the $\nu \bar{\nu}$ $q\bar{q}$ final state at CMS}
 
 \date{}
-\author{Supervisor: Prof. Franco Simonetto \\ Candidate: Lisa Benato} %, {\itshape Universit\`a degli studi di Padova}}
+\author{\Large{ \textbf{Coordinatore:} Ch.mo Prof. Gianguido Dall'Agata \\ \textbf{Supervisore}: Ch.mo Prof. Franco Simonetto \\ \vspace*{1\baselineskip} \textbf{Dottoranda}: Lisa Benato}} %, {\itshape Universit\`a degli studi di Padova}}
 \affil{Universit\`a degli studi di Padova}
 
 
@@ -230,13 +255,23 @@
 \begin{center}
 \includegraphics[height=3.5cm]{logo}\\ %Put the logo you want here
 \begin{large}
-Universit\`a degli studi di Padova \\ %The name your university
+\vspace*{1.cm}
+Sede Amministrativa: Universit\`a degli Studi di Padova \\ %The name your university
+\vspace*{0.5\baselineskip}
 Dipartimento di Fisica e Astronomia\\
 \end{large}
-\vspace{1.5cm} %You can control the vertical distance
-\begin{large}
-Tesi di Dottorato \\
-\end{large}
+\vspace{2.cm} %Put the distance you need.
+\begin{huge}
+Corso di Dottorato di Ricerca in Fisica
+
+\vspace*{1\baselineskip}
+
+XXX ciclo
+\end{huge}
+%\vspace{1.5cm} %You can control the vertical distance
+%\begin{large}
+%Tesi di Dottorato \\
+%\end{large}
 \vspace{1.5cm}
 \begin{tcolorbox}[breakable,colback=black!5!white,colframe=red!80!black,width=\textwidth]
 \begin{center}
@@ -247,8 +282,6 @@ Tesi di Dottorato \\
 \end{tcolorbox}
 \vspace{3.5cm}
 \theauthor\\
-\vspace{5cm} %Put the distance you need.
-Scuola di Dottorato di Ricerca, XXX ciclo
 %\thedate
 \end{center}
 \end{titlingpage}
@@ -259,7 +292,7 @@ Scuola di Dottorato di Ricerca, XXX ciclo
 \begin{flushright}
 \null\vspace{\stretch{1}}
 %Joy in looking and comprehending is nature's most beautiful gift.
-"I have no special talent. I am only passionately curious."\\
+``I have no special talent. I am only passionately curious.''\\
 (A. Einstein)
 \vspace{\stretch{2}}\null
 \end{flushright}
@@ -270,40 +303,51 @@ Scuola di Dottorato di Ricerca, XXX ciclo
 \frontmatter %numeri romani
 \tableofcontents
 
-\linenumbers
-\chapter*{Abstract} 
+%\linenumbers
+%\chapter*{Abstract}
+\input{abstract}
+
+%\chapter*{Riassunto}
+\input{riassunto}
+
 \mainmatter %numeri arabi da qui in poi
 
-\chapter{Introduction}%Dummy
-%\input{introduction}
+%\chapter{Introduction}%Dummy
+\input{introduction}
 
-\chapter{Theoretical motivation}%Dummy
-%\input{theory}
+%\chapter{Theoretical motivation}%Dummy
+\input{theory}
 
+%\chapter{The Large Hadron Collider and the CMS experiment}%Dummy
 \input{CMSexperiment}
 
-%\input{analysis_intro}
+\chapter{Search for diboson resonances in the $\mathbf{VZ \rightarrow  q \bar{q} \nu \bar{\nu}}$ final state}
+\label{ch:analysis}
+\input{analysis_intro}
 
-%\input{samples}
+\input{samples}
 
-%\input{objects}
+\input{objects}
 
-%\input{reconstruction}
+\input{reconstruction}
 
-%\input{alpha}
+\input{comparison}
 
-%\input{uncertainties}
+\input{alpha}
 
-%\input{results}
+\input{uncertainties}
+
+\input{results}
 
 %\input{combination}
 
-%\input{conclusions}
+\input{conclusions}
 
 \clearpage
 
 \bibliography{Benato_PhD_Thesis}
-\bibliographystyle{ieeetr}
+%\bibliographystyle{ieeetr}
+\bibliographystyle{JHEP}
 %siam
 
 
