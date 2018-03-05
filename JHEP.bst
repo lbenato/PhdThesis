@@ -1011,11 +1011,28 @@ FUNCTION {techreport}
   fin.entry
 }
 
+FUNCTION {webpage}
+{ output.bibitem
+  %format.collaboration output
+  format.authors "author" output.check
+  format.title "title" output.check
+  blank.sep
+  %format.tr.number output.nonnull
+  institution "institution" output.check
+  address output
+  format.date "year" output.check
+  new.block
+  format.url output
+  % note output
+  doi output
+  fin.entry
+}
+
 FUNCTION {unpublished}
 { output.bibitem
   format.collaboration output
   format.authors "author" output.check
-  format.title.p "title" output.check
+  format.title "title" output.check
   blank.sep
   % note "note" output.check
   format.date output
