@@ -238,7 +238,7 @@
 \item[3.] {\bf hierarchy problem}:
 %\begin{itemize}
 \myitem electroweak ($\sim 100$ GeV) and Planck ($\sim 10^{19}$ GeV) scales are not decoupled
-\myitem Higgs mass is UV-sensitive: divergencies require fine tuning cancellations (1 over $10^{34}$)
+\myitem Higgs mass is UV-sensitive: divergencies require fine tuning cancellations %(1 over $10^{34}$)
 %\end{itemize}
 \end{itemize}
 
@@ -489,7 +489,7 @@ CMS EXO-15-004, 2015 data: local excess @ 760 GeV (2.6 $\sigma$)
 \begin{variableblock}{\small General approach}{bg=gray!5,fg=black}{bg=gray!10,fg=red!80!black}
 \begin{itemize}
 \small
-\item narrow resonances $\rightarrow$ natural width $<$ resolution
+%\item narrow resonances $\rightarrow$ natural width $<$ resolution
 \item build the di-boson candidate
 \item estimate the background (simulations and data driven)
 \item look for a local excess w.r.t. background in the invariant mass spectrum
@@ -547,14 +547,14 @@ CMS EXO-15-004, 2015 data: local excess @ 760 GeV (2.6 $\sigma$)
 %\item informations from all sub-detector combined together
 %\end{itemize}
 \vspace*{0.1cm}
-\item {Heavy} ($\sim$1 TeV) {\color{green!60!black}$X \rightarrow V_{\text{had}} Z_{\text{lep}}$}: Lorentz boost
+\item {Heavy} ($\sim$1 TeV) {\color{green!60!black}$X \rightarrow V_{\text{had}} Z_{\text{inv}}$}: Lorentz boost
 \myitem {\color{red} $V_{\text{had}} \rightarrow q \bar{q}'$}:
 %\begin{itemize}
 %\item
  1 large-cone boosted jet (2 merged subjets)
 %%\item large-cone jet substructure is investigated (reject background)
 %\end{itemize}
-\myitem {\color{red!30!yellow} $Z_{\text{lep}} \rightarrow \nu \nu$}: 
+\myitem {\color{red!30!yellow} $Z_{\text{inv}} \rightarrow \nu \nu$}: 
 %\item 
 large amount of $E_T^{miss}$ recoiling against the boosted jet (back-to-back)
 %\begin{itemize}
@@ -579,6 +579,7 @@ $$E_T^{\text{miss}} = \left| \met \right|  = \left| - \sum_{j \in \text{event}} 
 %\item $E_T^{\text{miss}}$ $\rightarrow$ no longitudinal information
 \item Search for local excess: transverse mass of $V_{\text{had}} Z_{\text{lep}} \rightarrow q \bar{q} \nu \nu$ candidate
 $$\mtVZ = \sqrt{ 2 E_T^V \MET \cdot (1 - \cos \Delta \varphi(V,\met)) }$$
+\item narrow resonances $\rightarrow$ natural width $<$ resolution
 
 
 \end{itemize}
@@ -608,11 +609,11 @@ $$\mtVZ = \sqrt{ 2 E_T^V \MET \cdot (1 - \cos \Delta \varphi(V,\met)) }$$
 \small
 \myitem Given the topology ($Z \rightarrow \nu \nu$): \MET trigger
 \item Events collected if $E_T^{\text{miss}} >$ certain threshold at trigger level
-\myitem Trigger efficiency measured on independent data
-\item $W \rightarrow \mu \nu$ topology (1 good quality $\mu$) and 1 boosted jet
+\myitem Trigger efficiency measured on independent data samples
+\item $W \rightarrow \mu \nu$ topology and 1 large-cone jet
 \item[1.] W leptonic decay $\rightarrow$ true \MET
 \item[2.] $W \rightarrow \mu \nu$ $\rightarrow$ orthogonal dataset w.r.t. the signal region
-\item[3.] fat jet requirement $\rightarrow$ kinematics similar to the signal region
+\item[3.] large-cone jet requirement $\rightarrow$ kinematics similar to the signal region
 \end{itemize}
 \end{variableblock}
 \end{column}
@@ -910,7 +911,7 @@ Groomed mass of the jets defines the signal region:
 \textit{Normalization recipe:}
 \begin{itemize}
 \small
-\item[1.] Fit the whole MC spectra of $m_j$ for all the backgrounds with physical motivated functions
+\item[1.] Fit the whole MC spectra of $m_j$ for all the backgrounds with physically motivated functions
 \item[2.] Fix the parameters of the secondary backgrounds
 \end{itemize}
 %\vspace*{-0.6cm}
@@ -945,7 +946,7 @@ Groomed mass of the jets defines the signal region:
 \textit{Normalization recipe:}
 \begin{itemize}
 \small
-\item[1.] Fit the whole MC spectra of $m_j$ for all the backgrounds with physical motivated functions
+\item[1.] Fit the whole MC spectra of $m_j$ for all the backgrounds with physically motivated functions
 \item[2.] Fix the parameters of the secondary backgrounds
 \end{itemize}
 %\vspace*{-0.6cm}
@@ -1161,7 +1162,7 @@ $${ \color{red!80!black}f_{SR}^{data}(m_{VZ}^{T})} =  \left[ {\color{blue}f_{SB}
 \end{tikzpicture}
 \begin{tikzpicture}
 \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height = 0.36 \textheight]{../../BackgroundFunctionValidation/Exclusion_XWZInv_main_vs_alt_LPHP_test.pdf}};
-\node[align=center,red!50!black,font={\small\bfseries}] at (3.0,1.8) {W' expected limits};
+\node[align=center,red!50!black,font={\small\bfseries}] at (3.0,1.8) {W' exclusion limits};
 \end{tikzpicture}
 \end{center}
 \end{column}
@@ -1175,7 +1176,7 @@ $${ \color{red!80!black}f_{SR}^{data}(m_{VZ}^{T})} =  \left[ {\color{blue}f_{SB}
 \end{tikzpicture}
 \begin{tikzpicture}
 \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[height = 0.36 \textheight]{../../BackgroundFunctionValidation/Exclusion_XWZInv_main_vs_alt_comb_test.pdf}};
-\node[align=center,red!50!black,font={\small\bfseries}] at (3.0,1.8) {W' expected limits};
+\node[align=center,red!50!black,font={\small\bfseries}] at (3.0,1.8) {W' exclusion limits};
 \end{tikzpicture}
 \end{center}
 \end{column}
@@ -1204,13 +1205,13 @@ $${ \color{red!80!black}f_{SR}^{data}(m_{VZ}^{T})} =  \left[ {\color{blue}f_{SB}
 \item Aim: comparing signal and background distributions in the interval 1--4 TeV
 \item Few signal MC simulations available $\rightarrow$ model distributions (continuous parametrization as a function of $m_{VZ}$) 
 \item $m_{VZ}^T$ signal distributions modelled as Crystal Ball functions: gaussian (2 D.O.F.) with power-law tails (2 D.O.F.) ({\color{red!70!black} shape parameters}) and yield (1 D.O.F.) ({\color{green!70!black} normalization parameter})%for Low Purity and High Purity categories
-\item {\color{green!70!black} normalization parameter} from a linear interpolation, as a function of $m_{VZ}$
-\item {\color{red!70!black} shape parameters} fitted with a 1st-3rd degree polynomial, as a function of $m_{VZ}$
+%\item {\color{green!70!black} normalization parameter} from a linear interpolation, as a function of $m_{VZ}$
+%\item {\color{red!70!black} shape parameters} fitted with a 1st-3rd degree polynomial, as a function of $m_{VZ}$
 \end{enumerate}
 \end{variableblock}
 
 \centering
-\includegraphics[height = 0.28 \textheight]{../../plotsAlpha_tesi/XVZnnhp/XZZInv_SignalNorm.pdf}
+\includegraphics[height = 0.42 \textheight]{../../plotsAlpha_tesi/XVZnnhp/XZZInv_SignalNorm.pdf}
 \end{column}
 
 \begin{column}{0.5\textwidth}
@@ -1409,7 +1410,7 @@ $${ \color{red!80!black}f_{SR}^{data}(m_{VZ}^{T})} =  \left[ {\color{blue}f_{SB}
 
 
 \begin{frame}
-\frametitle{Interpretation of the results}
+\frametitle{Interpretation of the results: HVT model}
 \small
 \vspace*{-0.3cm}
  \begin{center}
@@ -1418,7 +1419,7 @@ $${ \color{red!80!black}f_{SR}^{data}(m_{VZ}^{T})} =  \left[ {\color{blue}f_{SB}
 
 %\begin{columns}
 %\begin{column}{0.35\textwidth}
-\begin{variableblock}{\small Parameter space exclusion}{bg=gray!5,fg=black}{bg=gray!10,fg=red!80!black}
+\begin{variableblock}{\small HVT parameter space exclusion}{bg=gray!5,fg=black}{bg=gray!10,fg=red!80!black}
 \begin{itemize}
 \item Upper limits on $\sigma \mathcal{B} (W')$ interpreted in parameter space $\left( g_V c_H, g^2 c_F /g_V \right)$
 \item Benchmark model A $\left( g_V = 1, c_H = -0.556, c_F = -1.316 \right)$ (blue dot)
